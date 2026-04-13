@@ -19,18 +19,33 @@ SOURCES = {
 }
 
 def fetch_rss(name, url):
-    print(f"Fetching {name}...")
+    print(f"[DEBUG][抓取开始] 来源: {name} | URL: {url}")
     try:
         feed = feedparser.parse(url)
-        return [{
-            "title": entry.title,
-            "link": entry.link,
-            "source": name,
-            "time": entry.get('published', ''),
-            "content": entry.get('summary') or entry.get('description', '') # 提取 RSS 摘要
-        } for entry in feed.entries[:20]]
+        if not feed.entries:
+            print(f"[WARN][空数据] {name} 未能获取到任何条目，可能受到拦截或RSS解析失败。")
+        
+        items = []
+        for entry in feed.entries[:20]:
+            content = entry.get('summary') or entry.get('description', '')
+            img_match = None
+            if content:
+                import re
+                img_match = re.search(r'<img[^>]+src="([^">]+)"', content)
+            
+            print(f"  - [DEBUG][条目提取] {entry.title[:30]}... | 正文全长: {len(content)} | 图片: {img_match.group(1) if img_match else 'None'}")
+            
+            items.append({
+                "title": entry.title,
+                "link": entry.link,
+                "source": name,
+                "time": entry.get('published', ''),
+                "content": content
+            })
+        print(f"[SUCCESS][完成] {name} 抓取成功，共 {len(items)} 条。")
+        return items
     except Exception as e:
-        print(f"Error {name}: {e}")
+        print(f"[ERROR][抓取异常] {name} 失败: {e}")
         return []
 
 def fetch_hacker_news():

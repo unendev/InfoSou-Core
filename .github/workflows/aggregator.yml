@@ -35,4 +35,6 @@ jobs:
           # 检查文件是否有变动
           git add public/data/latest.json
           git commit -m "chore: auto-sync information feeds [skip ci]" || echo "No changes to commit"
-          git push
+          # 先拉取最新改动防止冲突，再推送
+          git pull --rebase origin main
+          git push origin main

@@ -123,14 +123,63 @@
             }
         }
 
+        let expandedGroups = new Set(['Reddit', 'HN']); // 默认展开的核心组
+
         function renderSidebar() {
             const nav = document.getElementById('source-filter');
-            const sources = [...new Set(rawData.map(i => i.source))];
-            nav.innerHTML = `<button onclick="filterBySource('all')" class="w-full text-left px-5 py-3 rounded-xl transition-all text-sm ${activeSource==='all'?'sidebar-active':'text-amber-100/40 hover:bg-white/5'}" data-source="all">全部来源</button>` + 
-                sources.map(s => `
-                    <button onclick="filterBySource('${s}')" class="w-full text-left px-5 py-3 rounded-xl transition-all text-sm ${activeSource===s?'sidebar-active':'text-amber-100/40 hover:bg-white/5'}" data-source="${s}">${s}</button>
-                `).join('');
+            const allSources = [...new Set(rawData.map(i => i.source))];
+            
+            // 来源分组逻辑
+            const groups = { 'Others': [] };
+            allSources.forEach(s => {
+                if (s.startsWith('Reddit |')) {
+                    if (!groups['Reddit']) groups['Reddit'] = [];
+                    groups['Reddit'].push(s);
+                } else if (s.startsWith('HN |')) {
+                    if (!groups['HN']) groups['HN'] = [];
+                    groups['HN'].push(s);
+                } else {
+                    groups['Others'].push(s);
+                }
+            });
+
+            const renderItem = (s, label) => `
+                <button onclick="filterBySource('${s}')" class="w-full text-left px-5 py-2.5 rounded-xl transition-all text-xs ${activeSource===s?'sidebar-active':'text-amber-100/40 hover:bg-white/5'}" data-source="${s}">${label || s}</button>
+            `;
+
+            const renderGroup = (name, items) => {
+                if (items.length === 0) return '';
+                const isExpanded = expandedGroups.has(name);
+                const hasActiveInGroup = items.includes(activeSource);
+                
+                return `
+                    <div class="mb-2">
+                        <button onclick="toggleGroup('${name}')" class="w-full flex items-center justify-between px-5 py-3 text-[10px] font-bold uppercase tracking-[0.2em] ${hasActiveInGroup ? 'text-amber-400' : 'text-amber-500/30'} hover:text-amber-300 transition-colors">
+                            ${name} (${items.length})
+                            <span>${isExpanded ? '−' : '+'}</span>
+                        </button>
+                        <div class="space-y-1 ml-2 border-l border-amber-900/20 ${isExpanded ? '' : 'hidden'}">
+                            ${items.map(s => renderItem(s, s.split('|')[1]?.trim() || s)).join('')}
+                        </div>
+                    </div>
+                `;
+            };
+
+            nav.innerHTML = `
+                <button onclick="filterBySource('all')" class="w-full text-left px-5 py-3 rounded-xl transition-all text-sm mb-4 ${activeSource==='all'?'sidebar-active':'text-amber-100/40 hover:bg-white/5'}" data-source="all">全部来源</button>
+                ${renderGroup('Reddit', groups['Reddit'] || [])}
+                ${renderGroup('HN', groups['HN'] || [])}
+                <div class="pt-4 border-t border-amber-900/10 space-y-1">
+                    ${groups['Others'].map(s => renderItem(s)).join('')}
+                </div>
+            `;
         }
+
+        window.toggleGroup = (name) => {
+            if (expandedGroups.has(name)) expandedGroups.delete(name);
+            else expandedGroups.add(name);
+            renderSidebar();
+        };
 
         window.filterBySource = (s) => {
             activeSource = s;

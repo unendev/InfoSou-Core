@@ -225,7 +225,8 @@
                 btn.disabled = true;
                 btn.innerText = "🍃 审阅秋叶中...";
                 content.innerText = "管家正在秋叶纷飞中快速审校各大源的热点情报...";
-                const result = await AIConfig.summarizeDaily(rawData.slice(0, 50));
+                // 解除 50 条限制，发送全量数据给支持 1M 上下文的模型
+                const result = await AIConfig.summarizeDaily(rawData);
                 content.innerText = result;
             } catch (e) {
                 content.innerText = "🍂 解析受阻：" + e.message;

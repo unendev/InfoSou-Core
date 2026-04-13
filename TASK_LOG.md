@@ -8,8 +8,8 @@
 - [x] TODO: 移除卡片图片展示 | 意见区: 用户要求精简，已完成改动
 - [x] TODO: 解除 AI 50 条限制 | 意见区: 已支持全量数据深度分析
 - [x] TODO: 优化 Hacker News 来源展示 | 意见区: 提取原始域名以区分内容提供方
-- [x] TODO: 集成 Reddit 抓取逻辑 | 意见区: 已恢复 Reddit 基本抓取
-- [-] TODO: 聚焦 Reddit 游戏开发板块 | 意见区: 按照用户清单精准配置 Subreddit
+- [x] TODO: 聚焦 Reddit 游戏开发板块 | 意见区: 已精准配置 Subreddit
+- [-] TODO: 抓取 Reddit & Linux.do 精彩评论 | 意见区: 探索在 403 限制下获取评论的可行逻辑
 
 ---
 ### 运行快照

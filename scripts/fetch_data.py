@@ -28,6 +28,9 @@ SOURCES = {
 def fetch_rss(name, url):
     print(f"[DEBUG][抓取开始] 来源: {name} | URL: {url}")
     try:
+        # 为针对 Linux.do 的特殊处理做准备
+        is_linux_do = "linux.do" in url.lower()
+        
         feed = feedparser.parse(url)
         if not feed.entries:
             print(f"[WARN][空数据] {name} 未能获取到任何条目，可能受到拦截或RSS解析失败。")
@@ -42,13 +45,36 @@ def fetch_rss(name, url):
             
             print(f"  - [DEBUG][条目提取] {entry.title[:30]}... | 正文全长: {len(content)} | 图片: {img_match.group(1) if img_match else 'None'}")
             
-            items.append({
+            item = {
                 "title": entry.title,
                 "link": entry.link,
                 "source": name,
                 "time": entry.get('published', ''),
-                "content": content
-            })
+                "content": content,
+                "comments": []
+            }
+
+            # 如果是 Linux.do，尝试获取评论 (Discourse 支持单个话题 RSS)
+            if is_linux_do and "/t/" in entry.link:
+                try:
+                    topic_rss = entry.link + ".rss"
+                    topic_feed = feedparser.parse(topic_rss)
+                    # 排除掉第一条（那是原帖本身），取后续的作为评论
+                    replies = topic_feed.entries[1:4] # 取前 3 条评论
+                    for reply in replies:
+                        reply_clean = reply.get('summary') or reply.get('description', '')
+                        import re
+                        reply_clean = re.sub(r'<[^>]+>', '', reply_clean).strip()
+                        if reply_clean:
+                            item["comments"].append({
+                                "author": reply.get('author', '匿名'),
+                                "text": reply_clean[:100] + "..." if len(reply_clean) > 100 else reply_clean
+                            })
+                    print(f"    - [DEBUG][评论提取] {name} | 获取到 {len(item['comments'])} 条评论")
+                except:
+                    pass
+
+            items.append(item)
         print(f"[SUCCESS][完成] {name} 抓取成功，共 {len(items)} 条。")
         return items
     except Exception as e:

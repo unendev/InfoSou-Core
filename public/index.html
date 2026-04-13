@@ -178,6 +178,19 @@
                                             </div>
                                             <h4 class="text-amber-50/90 font-bold leading-snug text-lg group-hover:text-amber-400 transition-colors mb-3">${item.title}</h4>
                                             ${desc ? `<p class="text-amber-100/40 text-[13px] leading-relaxed font-light line-clamp-3">${desc}...</p>` : ''}
+                                            
+                                            ${item.comments && item.comments.length > 0 ? `
+                                            <div class="mt-6 space-y-3">
+                                                <div class="text-[10px] font-bold text-amber-500/40 uppercase tracking-widest border-b border-amber-500/10 pb-2 mb-3">精彩评论</div>
+                                                ${item.comments.map(c => `
+                                                    <div class="text-[11px] leading-relaxed">
+                                                        <span class="text-amber-500/60 font-medium">@${c.author}:</span>
+                                                        <span class="text-amber-100/30 flex-1">${c.text}</span>
+                                                    </div>
+                                                `).join('')}
+                                            </div>
+                                            ` : ''}
+
                                             <div class="flex items-center justify-between mt-6 pt-4 border-t border-white/5">
                                                 <div class="flex items-center gap-1.5 opacity-60">
                                                     <span class="text-xs">✨</span>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoSou - 每日信息聚合</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen p-4 md:p-8">
+    <div class="max-w-4xl mx-auto">
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800">InfoSou <span class="text-sm font-normal text-gray-500">v1.0</span></h1>
+            <button onclick="toggleSettings()" class="p-2 hover:bg-gray-200 rounded-full">⚙️ 设置</button>
+        </header>
+
+        <!-- AI Digest Section -->
+        <div id="ai-section" class="mb-8 hidden">
+            <div class="glass border border-indigo-100 rounded-2xl p-6 shadow-sm">
+                <h2 class="text-indigo-600 font-bold mb-3 flex items-center">
+                    ✨ AI 管家简报
+                    <button onclick="generateSummary()" class="ml-auto text-xs bg-indigo-50 px-3 py-1 rounded-full hover:bg-indigo-100">一键审阅</button>
+                </h2>
+                <div id="ai-content" class="text-gray-700 leading-relaxed whitespace-pre-wrap">点击右侧按钮，让 AI 为您梳理今日信息流...</div>
+            </div>
+        </div>
+
+        <!-- News Feed -->
+        <div id="feed" class="space-y-4">
+            <div class="text-center py-20 text-gray-400">正在同步今日信息流...</div>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl p-6 w-full max-w-md shadow-xl">
+            <h3 class="text-xl font-bold mb-4">设置</h3>
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm text-gray-600 mb-1">Gemini API Key</label>
+                    <input type="password" id="api-key-input" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-indigo-500 outline-none">
+                </div>
+            </div>
+            <div class="mt-6 flex gap-2">
+                <button onclick="saveSettings()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg flex-1">保存</button>
+                <button onclick="toggleSettings()" class="bg-gray-100 px-4 py-2 rounded-lg">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { AIConfig } from './js/ai_manager.js';
+
+        let currentData = [];
+
+        // 初始化加载数据
+        async function loadFeed() {
+            try {
+                const res = await fetch('./data/latest.json');
+                const json = await res.json();
+                currentData = json.items;
+                renderFeed(currentData);
+                document.getElementById('ai-section').classList.remove('hidden');
+            } catch (e) {
+                document.getElementById('feed').innerHTML = '<div class="text-red-400">数据拉取失败，请检查仓库配置。</div>';
+            }
+        }
+
+        function renderFeed(items) {
+            const container = document.getElementById('feed');
+            container.innerHTML = items.map(item => `
+                <a href="${item.link}" target="_blank" class="block bg-white p-4 rounded-xl border border-gray-100 hover:border-indigo-300 hover:shadow-md transition-all">
+                    <div class="text-xs text-indigo-500 mb-1 font-medium">${item.source} @ ${item.time || '今日'}</div>
+                    <div class="text-gray-800 font-semibold">${item.title}</div>
+                </a>
+            `).join('');
+        }
+
+        window.toggleSettings = () => {
+            const modal = document.getElementById('settings-modal');
+            modal.classList.toggle('hidden');
+            if (!modal.classList.contains('hidden')) {
+                document.getElementById('api-key-input').value = AIConfig.getSettings().apiKey;
+            }
+        };
+
+        window.saveSettings = () => {
+            const key = document.getElementById('api-key-input').value;
+            AIConfig.saveSettings({ ...AIConfig.getSettings(), apiKey: key });
+            toggleSettings();
+            alert("设置已保存！模型现在可以为您服务了。");
+        };
+
+        window.generateSummary = async () => {
+            const btn = event.target;
+            const content = document.getElementById('ai-content');
+            try {
+                btn.disabled = true;
+                btn.innerText = "思考中...";
+                content.innerText = "管家正在阅读今日情报，请稍候...";
+                const result = await AIConfig.summarizeDaily(currentData);
+                content.innerText = result;
+            } catch (e) {
+                content.innerText = "失败了：" + e.message;
+            } finally {
+                btn.disabled = false;
+                btn.innerText = "一键审阅";
+            }
+        };
+
+        loadFeed();
+    </script>
+</body>
+</html>

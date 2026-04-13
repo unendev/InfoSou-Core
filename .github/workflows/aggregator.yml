@@ -1,0 +1,34 @@
+name: Information Aggregator
+on:
+  schedule:
+    # 每一小时运行一次，建议避开整点以防竞争
+    - cron: '25 * * * *'
+  workflow_dispatch: # 支持手动触发
+
+jobs:
+  run-aggregator:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install requests feedparser
+
+      - name: Fetch and Aggregate Data
+        run: |
+          python scripts/fetch_data.py
+
+      - name: Commit and Push Static Data
+        run: |
+          git config --local user.email "aggregator-bot@github.com"
+          git config --local user.name "Aggregator Bot"
+          # 检查文件是否有变动
+          git add public/data/latest.json
+          git commit -m "chore: auto-sync information feeds [skip ci]" || echo "No changes to commit"
+          git push

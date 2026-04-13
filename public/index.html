@@ -41,7 +41,12 @@
             <div class="space-y-4">
                 <div>
                     <label class="block text-sm text-gray-600 mb-1">Gemini API Key</label>
-                    <input type="password" id="api-key-input" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-indigo-500 outline-none">
+                    <input type="password" id="api-key-input" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-indigo-500 outline-none" placeholder="输入您的 API KEY">
+                </div>
+                <div>
+                    <label class="block text-sm text-gray-600 mb-1">API 代理地址 (Base URL)</label>
+                    <input type="text" id="api-base-input" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-indigo-500 outline-none" placeholder="https://generativelanguage.googleapis.com">
+                    <p class="text-xs text-gray-400 mt-1">留空则默认使用 Google 官方接口</p>
                 </div>
             </div>
             <div class="mt-6 flex gap-2">
@@ -83,15 +88,24 @@
             const modal = document.getElementById('settings-modal');
             modal.classList.toggle('hidden');
             if (!modal.classList.contains('hidden')) {
-                document.getElementById('api-key-input').value = AIConfig.getSettings().apiKey;
+                const settings = AIConfig.getSettings();
+                document.getElementById('api-key-input').value = settings.apiKey || '';
+                document.getElementById('api-base-input').value = settings.apiBase || 'https://generativelanguage.googleapis.com';
             }
         };
 
         window.saveSettings = () => {
             const key = document.getElementById('api-key-input').value;
-            AIConfig.saveSettings({ ...AIConfig.getSettings(), apiKey: key });
+            let base = document.getElementById('api-base-input').value.trim();
+            if (!base) base = 'https://generativelanguage.googleapis.com';
+            
+            AIConfig.saveSettings({
+                ...AIConfig.getSettings(),
+                apiKey: key,
+                apiBase: base
+            });
             toggleSettings();
-            alert("设置已保存！模型现在可以为您服务了。");
+            alert("设置已保存！");
         };
 
         window.generateSummary = async () => {

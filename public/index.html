@@ -107,9 +107,9 @@
                 
                 // 渲染 AI 简报
                 const aiEl = document.getElementById('ai-content');
-                if (json.ai_summary) {
+                if (json.metadata && json.metadata.ai_summary) {
                     // 简单的 Markdown 换行转换
-                    aiEl.innerHTML = json.ai_summary.replace(/\n/g, '<br>').replace(/### (.*?)<br>/g, '<h3 class="text-amber-400 font-bold mt-4 mb-2">$1</h3>');
+                    aiEl.innerHTML = json.metadata.ai_summary.replace(/\n/g, '<br>').replace(/### (.*?)<br>/g, '<h3 class="text-amber-400 font-bold mt-4 mb-2">$1</h3>');
                 } else {
                     aiEl.innerText = "暂无今日简报，请等待下一轮 Action 运行。";
                 }

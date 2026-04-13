@@ -98,7 +98,7 @@
         let activeSource = 'all';
         let expandedGroups = new Set(['Reddit', 'HN']);
 
-        async function loadData(path = './data/latest.json') {
+        async function loadData(path = 'data/latest.json') {
             try {
                 const res = await fetch(path + '?' + new Date().getTime());
                 const json = await res.json();

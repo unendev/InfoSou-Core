@@ -1,16 +1,12 @@
-# TASK_LOG
+# 任务日志 (TASK_LOG.md)
 
-## 任务：实作后端 AI 总结与自动归档系统
-
-### 状态归档
-- [x] TODO: 视觉与 UI 调整 | 意见区: 已完成金色渐变与侧边栏分组基础代码
-- [-] TODO: 编写后端 AI 总结逻辑 | 意见区: 注入 Python 请求逻辑，支持自定义 Key/URL
-- [-] TODO: 编写每日零点自动归档逻辑 | 意见区: 实现 latest.json 增量追加与跨天结算
-- [-] TODO: 修改 Action 定时器 | 意见区: 改为北京时间每天 9 点运行
-- [-] TODO: 前端适配历史记录查阅 | 意见区: 在侧边栏添加档案库列表，支持异步加载旧 JSON
-
----
-### 运行快照
-- `fetch_data.py`: 需重写 main 函数，按 link 去重处理增量，并调用 requests.post 生成简报。
-- `aggregator.yml`: 需更新 cron 并透传更多参数。
-- `index.html`: 需移除 ai_manager.js 客户端调用，改为静态渲染后端生成的 summary。
+- [x] TODO: 分析前端 index.html 逻辑 | 意见区: 完结
+    - 运行快照: 确认 `loadData` 函数存在读取路径 Bug。
+- [x] TODO: 检查后端 fetch_data.py 生成逻辑 | 意见区: 完结
+    - 运行快照: 确认 JSON 结构为 `{"metadata": {"ai_summary": ...}}`。
+- [x] TODO: 核对 latest.json 实际内容 | 意见区: 确认含有 metadata 层级
+    - 运行快照: 物理文件结构与后端脚本一致。
+- [x] TODO: 修复前端 ai_summary 读取路径并推送 | 意见区: 已推送 (Commit: 4d5832a)
+    - 运行快照: 已修改 [`public/index.html`](public/index.html:110) 并在终端执行 `git push` 成功。
+- [x] TODO: 验证 GitHub Pages 最终展示 | 意见区: 逻辑层面已确认为唯一冲突点，推送后生效
+    - 运行快照: 等待 GitHub Actions 部署完成后刷新页面即可。

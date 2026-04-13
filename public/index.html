@@ -159,27 +159,17 @@
                     <div class="waterfall columns-1 md:columns-2 lg:columns-3 space-y-6">
                         ${groups[date].map(item => {
                             console.debug("[Nexus] 处理条目渲染:", item.title);
-                            // 尝试从内容中提取第一张图片
-                            let img = null;
-                            if (item.content) {
-                                const imgMatch = item.content.match(/<img[^>]+src="([^">]+)"/);
-                                if (imgMatch) img = imgMatch[1];
-                            } else {
-                                console.warn("[Nexus] 条目缺失 content 字段:", item.title);
-                            }
+                            // 移除图片提取，专注于文字与摘要
+                            
                             // 清理并截取正文摘要
-                            const desc = (item.description || item.content || "").replace(/<[^>]+>/g, '').trim().slice(0, 85);
-                            if (!desc) {
-                                console.warn("[Nexus] 摘要提取结果为空:", item.title);
+                            const desc = (item.description || item.content || "").replace(/<[^>]+>/g, '').trim().slice(0, 120); // 没图片了，可以适当增加摘要长度
+                            if (!desc && !item.content) {
+                                console.warn("[Nexus] 条目缺失 content 且无法提取摘要:", item.title);
                             }
                             
                             return `
                                 <div class="waterfall-item break-inside-avoid">
                                     <a href="${item.link}" target="_blank" class="block glass rounded-[1.5rem] overflow-hidden card-hover transition-all duration-500 group border border-white/5">
-                                        ${img ? `
-                                        <div class="relative w-full overflow-hidden">
-                                            <img src="${img}" class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" loading="lazy" />
-                                        </div>` : ''}
                                         <div class="p-6">
                                             <div class="flex items-center gap-2 mb-4 text-[10px] font-bold tracking-widest text-amber-200/40 uppercase">
                                                 <span>${item.source}</span>

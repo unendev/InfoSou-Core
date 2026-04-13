@@ -2,24 +2,21 @@ import requests
 import json
 import os
 import feedparser
+import praw
 from datetime import datetime
 
 # 硬编码配置来源 (Hardcoded Sources)
 # 用户偏好：个人项目，直接写死即可
 SOURCES = {
-   "rss": [
-       {"name": "Linux.do", "url": "https://linux.do/latest.rss"},
-       # Reddit 游戏开发聚焦 (GameDev Focus)
-       {"name": "Reddit | GameDev", "url": "https://www.reddit.com/r/gamedev.rss"},
-       {"name": "Reddit | Unreal", "url": "https://www.reddit.com/r/unrealengine.rss"},
-       {"name": "Reddit | Unity", "url": "https://www.reddit.com/r/Unity3D.rss"},
-       {"name": "Reddit | Godot", "url": "https://www.reddit.com/r/godot.rss"},
-       {"name": "Reddit | Indie", "url": "https://www.reddit.com/r/IndieGames.rss"},
-       {"name": "Reddit | Jobs", "url": "https://www.reddit.com/r/gamedevjobs.rss"},
-       {"name": "阮一峰的网志", "url": "https://feeds.feedburner.com/ruanyifeng"},
-       {"name": "少数派", "url": "https://sspai.com/feed"},
-       {"name": "机核网", "url": "https://www.gcores.com/rss"},
-   ],
+    "rss": [
+        {"name": "Linux.do", "url": "https://linux.do/latest.rss"},
+        {"name": "阮一峰的网志", "url": "https://feeds.feedburner.com/ruanyifeng"},
+        {"name": "少数派", "url": "https://sspai.com/feed"},
+        {"name": "机核网", "url": "https://www.gcores.com/rss"},
+    ],
+    "reddit_subs": [
+        "gamedev", "unrealengine", "Unity3D", "godot", "IndieGames", "gamedevjobs"
+    ],
    # Hacker News 官方 API
    "hn_top": "https://hacker-news.firebaseio.com/v0/topstories.json",
    "hn_item": "https://hacker-news.firebaseio.com/v0/item/{}.json"
@@ -105,11 +102,56 @@ def fetch_hacker_news():
         print(f"Error HN: {e}")
         return []
 
+def fetch_reddit_with_praw():
+    client_id = os.environ.get("REDDIT_CLIENT_ID")
+    client_secret = os.environ.get("REDDIT_CLIENT_SECRET")
+    
+    if not client_id or not client_secret:
+        print("[WARN][Reddit] 缺失 API Key，跳过 PRAW 抓取。")
+        return []
+    
+    print("[DEBUG][Reddit] 正在通过 PRAW 获取深度讨论...")
+    try:
+        reddit = praw.Reddit(
+            client_id=client_id,
+            client_secret=client_secret,
+            user_agent="InfoSou Aggregator 1.0"
+        )
+        
+        items = []
+        for sub_name in SOURCES["reddit_subs"]:
+            print(f"  - 正在抓取 r/{sub_name}...")
+            subreddit = reddit.subreddit(sub_name)
+            for submission in subreddit.hot(limit=10):
+                item = {
+                    "title": submission.title,
+                    "link": f"https://www.reddit.com{submission.permalink}",
+                    "source": f"Reddit | {sub_name}",
+                    "time": datetime.fromtimestamp(submission.created_utc).isoformat(),
+                    "content": submission.selftext[:500] if submission.is_self else submission.url,
+                    "comments": []
+                }
+                
+                # 抓取前 3 条顶级评论
+                submission.comment_sort = 'top'
+                submission.comments.replace_more(limit=0)
+                for comment in submission.comments[:3]:
+                    item["comments"].append({
+                        "author": str(comment.author),
+                        "text": comment.body[:150] + "..." if len(comment.body) > 150 else comment.body
+                    })
+                items.append(item)
+        return items
+    except Exception as e:
+        print(f"[ERROR][Reddit] PRAW 抓取失败: {e}")
+        return []
+
 def main():
     all_items = []
     
     # 执行各路聚合
     all_items.extend(fetch_hacker_news())
+    all_items.extend(fetch_reddit_with_praw())
     for rss_source in SOURCES["rss"]:
         all_items.extend(fetch_rss(rss_source['name'], rss_source['url']))
     

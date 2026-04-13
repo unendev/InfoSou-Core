@@ -21,14 +21,29 @@ SOURCES = {
 def fetch_linux_do():
     print("Fetching Linux.do...")
     try:
-        response = requests.get(SOURCES["linux_do"], headers={'User-Agent': 'Mozilla/5.0'}, timeout=10)
+        # 优化 Header 模拟真实浏览器，规避部分 Cloudflare 拦截
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Accept': 'application/json, text/javascript, */*; q=0.01',
+            'Referer': 'https://linux.do/',
+            'X-Requested-With': 'XMLHttpRequest'
+        }
+        response = requests.get(SOURCES["linux_do"], headers=headers, timeout=15)
+        
+        # 打印状态码用于在 GitHub Actions 日志中排查
+        print(f"Linux.do Response Status: {response.status_code}")
+        
+        if response.status_code != 200:
+            print(f"Warning: Linux.do returned {response.status_code}. It might be blocked by Cloudflare.")
+            return []
+
         data = response.json()
         return [{
-            "title": t['title'], 
-            "link": f"https://linux.do/t/topic/{t['id']}", 
+            "title": t['title'],
+            "link": f"https://linux.do/t/topic/{t['id']}",
             "source": "Linux.do",
             "time": t['created_at']
-        } for t in data['topic_list']['topics'][:15]]
+        } for t in data['topic_list']['topics'][:50]]
     except Exception as e:
         print(f"Error Linux.do: {e}")
         return []
@@ -42,7 +57,7 @@ def fetch_rss(name, url):
             "link": entry.link,
             "source": name,
             "time": entry.get('published', '')
-        } for entry in feed.entries[:8]]
+        } for entry in feed.entries[:20]]
     except Exception as e:
         print(f"Error {name}: {e}")
         return []
@@ -50,7 +65,7 @@ def fetch_rss(name, url):
 def fetch_hacker_news():
     print("Fetching Hacker News...")
     try:
-        top_ids = requests.get(SOURCES["hn_top"], timeout=10).json()[:10]
+        top_ids = requests.get(SOURCES["hn_top"], timeout=10).json()[:30]
         items = []
         for id in top_ids:
             item = requests.get(SOURCES["hn_item"].format(id), timeout=10).json()

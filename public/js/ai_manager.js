@@ -39,7 +39,18 @@ export const AIConfig = {
             })
         });
 
-        const data = await response.json();
+        const text = await response.text();
+        let data;
+        try {
+            data = JSON.parse(text);
+        } catch (e) {
+            throw new Error(`API 返回异常 (非 JSON): ${text.substring(0, 50)}... 请检查 Key 或代理状态。`);
+        }
+
+        if (data.error) {
+            throw new Error(`AI 出错: ${data.error.message || '未知错误'}`);
+        }
+        
         return data.candidates[0].content.parts[0].text;
     }
 };

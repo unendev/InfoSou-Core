@@ -9,7 +9,13 @@ from datetime import datetime
 SOURCES = {
    "rss": [
        {"name": "Linux.do", "url": "https://linux.do/latest.rss"},
-       {"name": "Reddit | Technology", "url": "https://www.reddit.com/r/technology.rss"},
+       # Reddit 游戏开发聚焦 (GameDev Focus)
+       {"name": "Reddit | GameDev", "url": "https://www.reddit.com/r/gamedev.rss"},
+       {"name": "Reddit | Unreal", "url": "https://www.reddit.com/r/unrealengine.rss"},
+       {"name": "Reddit | Unity", "url": "https://www.reddit.com/r/Unity3D.rss"},
+       {"name": "Reddit | Godot", "url": "https://www.reddit.com/r/godot.rss"},
+       {"name": "Reddit | Indie", "url": "https://www.reddit.com/r/IndieGames.rss"},
+       {"name": "Reddit | Jobs", "url": "https://www.reddit.com/r/gamedevjobs.rss"},
        {"name": "阮一峰的网志", "url": "https://feeds.feedburner.com/ruanyifeng"},
        {"name": "少数派", "url": "https://sspai.com/feed"},
        {"name": "机核网", "url": "https://www.gcores.com/rss"},

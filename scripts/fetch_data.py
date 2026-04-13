@@ -9,6 +9,7 @@ from datetime import datetime
 SOURCES = {
    "rss": [
        {"name": "Linux.do", "url": "https://linux.do/latest.rss"},
+       {"name": "Reddit | Technology", "url": "https://www.reddit.com/r/technology.rss"},
        {"name": "阮一峰的网志", "url": "https://feeds.feedburner.com/ruanyifeng"},
        {"name": "少数派", "url": "https://sspai.com/feed"},
        {"name": "机核网", "url": "https://www.gcores.com/rss"},

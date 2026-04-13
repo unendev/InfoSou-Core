@@ -55,10 +55,15 @@ def fetch_hacker_news():
         items = []
         for id in top_ids:
             item = requests.get(SOURCES["hn_item"].format(id), timeout=10).json()
+            url = item.get('url', f"https://news.ycombinator.com/item?id={id}")
+            # 提取域名作为子来源标识
+            from urllib.parse import urlparse
+            domain = urlparse(url).netloc.replace('www.', '') if item.get('url') else "HN"
+            
             items.append({
                 "title": item.get('title'),
-                "link": item.get('url', f"https://news.ycombinator.com/item?id={id}"),
-                "source": "Hacker News",
+                "link": url,
+                "source": f"HN | {domain}",
                 "time": datetime.fromtimestamp(item.get('time')).isoformat() if item.get('time') else "",
                 "content": item.get('text', '') # HN 有时会有 text 正文
             })

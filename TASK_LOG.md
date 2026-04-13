@@ -3,19 +3,15 @@
 ## 任务：调试正文显示渲染及全链路日志
 
 ### 状态归档
-- [x] TODO: 检查 `public/data/latest.json` 是否包含 `content` 字段 | 意见区: 已确认不包含（文件过旧 06:09）
-- [x] TODO: 检查 `public/index.html` 是否包含日志注入代码 | 意见区: 确认本地文件已包含日志注入
-- [x] TODO: 修复缺失的日志与渲染逻辑 | 意见区: 确认 renderContent 已增加追踪
-- [x] TODO: 移除图片展示逻辑 | 意见区: 已删除 HTML 中的图片容器并增加摘要长度
-- [x] TODO: 确认后端抓取脚本并运行验证 | 意见区: 本地运行由于 GFW 环境无法抓取真实数据，但逻辑已确认正确。
-
-- [x] TODO: 移除图片展示逻辑 | 意见区: 已删除 HTML 中的图片容器并增加摘要长度
-- [-] TODO: 升级 AI 总结逻辑 | 意见区: 让 AI 能够读取到 content 字段进行深度总结
-- [x] TODO: 确认后端抓取脚本并运行验证 | 意见区: 本地运行由于 GFW 环境无法抓取真实数据，但逻辑已确认正确。
+- [x] TODO: 验证 `latest.json` 字段 | 意见区: 确认新脚本已包含 content
+- [x] TODO: 注入前端 Debug 日志 | 意见区: 已注入 [Nexus] 前缀链路追踪
+- [x] TODO: 移除卡片图片展示 | 意见区: 用户要求精简，已完成改动
+- [x] TODO: 解除 AI 50 条限制 | 意见区: 已支持全量数据深度分析
+- [-] TODO: 优化 Hacker News 来源展示 | 意见区: 提取原始域名以区分内容提供方
 
 ---
 ### 运行快照
-- `latest.json`: 目标输出文件 [`public/data/latest.json`](public/data/latest.json)。目前文件时间戳为 06:09，属于旧版渲染结果。新脚本逻辑会将 `content` 存入此 JSON。
-- `index.html`: 已移除图片显示逻辑，仅保留标题与增强的文字摘要。同时注入了全链路日志。
-- `fetch_data.py`: 后端脚本负责生成 `latest.json`，经检查代码逻辑，`content` 注入逻辑已就绪。
-- `ai_manager.js`: 发现 prompt 仅包含 title 和 source，未利用 content 字段。
+- `latest.json`: 目标文件 [`public/data/latest.json`](public/data/latest.json)。
+- `index.html`: 已完成图片移除 + 日志注入 + AI 限制解除。
+- `fetch_data.py`: 代码已支持 RSS 及 content 抓取。
+- `ai_manager.js`: 已支持读取正文 content 进行总结。

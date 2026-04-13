@@ -44,7 +44,11 @@ export const AIConfig = {
         3. 语气要硬核且干练。
         
         待处理情报流：
-        ${JSON.stringify(newsItems.map(i => ({t: i.title, s: i.source})))}`;
+        ${JSON.stringify(newsItems.map(i => ({
+            t: i.title,
+            s: i.source,
+            c: (i.content || "").replace(/<[^>]+>/g, '').slice(0, 150) // 提取前150字纯文本供 AI 深度分析
+        })))}`;
 
         // 2. 发起标准请求
         const response = await fetch(finalUrl, {

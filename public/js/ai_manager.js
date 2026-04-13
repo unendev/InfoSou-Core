@@ -51,6 +51,14 @@ export const AIConfig = {
             throw new Error(`AI 出错: ${data.error.message || '未知错误'}`);
         }
         
+        if (!data.candidates || data.candidates.length === 0) {
+            // 可能是由于安全过滤导致消息为空
+            if (data.promptFeedback && data.promptFeedback.blockReason) {
+                throw new Error(`内容被安全过滤拦截: ${data.promptFeedback.blockReason}`);
+            }
+            throw new Error("AI 未返回有效候选项，请检查模型名称或 Key 是否支持该操作。");
+        }
+        
         return data.candidates[0].content.parts[0].text;
     }
 };

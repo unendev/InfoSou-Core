@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InfoSou - 深色秋季情报台</title>
+    <title>InfoSou - 金色游戏开发情报枢纽</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            background:
+            background: 
                 radial-gradient(circle at 20% 30%, rgba(217, 119, 6, 0.15) 0%, transparent 50%),
                 radial-gradient(circle at 80% 70%, rgba(180, 83, 9, 0.1) 0%, transparent 50%),
                 linear-gradient(135deg, #130f0a 0%, #261e11 50%, #130f0a 100%);
@@ -40,100 +40,91 @@
         }
         ::-webkit-scrollbar { width: 4px; }
         ::-webkit-scrollbar-thumb { background: rgba(217, 119, 6, 0.3); border-radius: 10px; }
+        
+        pre { white-space: pre-wrap; word-wrap: break-word; }
+        .markdown-content h1, .markdown-content h2, .markdown-content h3 { color: #fbbf24; font-weight: bold; margin-top: 1rem; margin-bottom: 0.5rem; }
+        .markdown-content ul { list-style-type: disc; margin-left: 1.5rem; }
     </style>
 </head>
 <body class="min-h-screen font-sans">
     <div class="flex flex-col md:flex-row min-h-screen">
         <!-- Sidebar -->
         <aside class="w-full md:w-64 sidebar-glass sticky top-0 h-auto md:h-screen p-8 flex flex-col z-50">
-            <h1 class="text-3xl font-black bg-gradient-to-r from-amber-400 to-orange-600 bg-clip-text text-transparent mb-10 tracking-tighter">InfoSou</h1>
+            <h1 class="text-3xl font-black bg-gradient-to-r from-amber-400 to-orange-600 bg-clip-text text-transparent mb-10 tracking-tighter cursor-pointer" onclick="location.reload()">InfoSou</h1>
             
-            <nav id="source-filter" class="flex-1 space-y-2">
-                <button onclick="filterBySource('all')" class="w-full text-left px-5 py-3 rounded-xl text-amber-100/60 hover:bg-white/5 transition-all text-sm sidebar-active" data-source="all">全部来源</button>
-            </nav>
+            <div class="flex-1 overflow-y-auto pr-2">
+                <nav id="source-filter" class="space-y-2 mb-8"></nav>
+                
+                <div class="border-t border-amber-900/20 pt-6">
+                    <h3 class="text-[10px] font-bold text-amber-500/40 uppercase tracking-[0.2em] mb-4">历史档案库</h3>
+                    <div id="archive-list" class="space-y-1">
+                        <div class="text-[10px] text-amber-200/20 italic">Action 运行后将自动生成...</div>
+                    </div>
+                </div>
+            </div>
 
             <div class="mt-auto pt-8 border-t border-amber-900/30">
-                <button onclick="toggleSettings()" class="w-full text-xs py-3 px-4 bg-white/5 hover:bg-white/10 rounded-xl transition-all text-amber-200/50 flex items-center justify-center gap-2 border border-white/5">⚙️ 系统配置中心</button>
+                <div class="text-[9px] text-amber-500/30 uppercase text-center mb-2">Automated By Action</div>
             </div>
         </aside>
 
         <!-- Main Content -->
         <main class="flex-1 p-6 md:p-12 lg:px-20 overflow-x-hidden">
             <!-- AI Summary Section -->
-            <section id="ai-section" class="mb-12 hidden">
+            <section id="ai-section" class="mb-12">
                 <div class="bg-gradient-to-br from-amber-500/30 to-orange-800/30 p-px rounded-3xl shadow-2xl">
                     <div class="glass rounded-[23px] p-8 border-none">
-                        <div class="flex items-center justify-between mb-6">
-                            <h2 class="font-bold text-amber-200 flex items-center gap-3 tracking-wide">
-                                <span class="bg-amber-500/20 p-2 rounded-lg text-xl">🍂</span> 今日情报摘要
-                            </h2>
-                            <button id="ai-btn" onclick="generateSummary()" class="text-xs font-bold bg-amber-600 text-white px-6 py-2 rounded-full hover:bg-amber-500 shadow-lg shadow-orange-900/40 transition-all uppercase tracking-widest">生成简报</button>
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="bg-amber-500/20 p-2 rounded-lg text-xl">🍂</span>
+                            <h2 class="font-bold text-amber-200 tracking-wide">今日情报简报</h2>
+                            <span id="ai-status" class="ml-auto text-[9px] text-amber-500/40 uppercase font-mono">Synced</span>
                         </div>
-                        <div id="ai-content" class="text-amber-100/70 text-sm leading-relaxed whitespace-pre-wrap font-light tracking-wide italic">点击按钮，让 AI 为您梳理当前的深色秋季情报流...</div>
+                        <div id="ai-content" class="markdown-content text-amber-100/70 text-sm leading-relaxed font-light">
+                            情报管家正在核对当日全量信息流，请稍后...
+                        </div>
                     </div>
                 </div>
             </section>
 
             <!-- Data List -->
             <div id="feed-container">
-                <div id="loader" class="text-center py-24 text-amber-200/20 animate-pulse text-lg tracking-widest">正在链接深色秋季情报网络...</div>
+                <div id="loader" class="text-center py-24 text-amber-200/20 animate-pulse text-lg tracking-widest text-[Nexus] 正在接入网络...</div>
             </div>
         </main>
     </div>
 
-    <!-- Settings Modal -->
-    <div id="settings-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden flex items-center justify-center z-[100] p-4">
-        <div class="glass rounded-[2rem] p-10 w-full max-w-md shadow-2xl border border-amber-500/20">
-            <h3 class="text-2xl font-bold mb-8 text-amber-100">系统配置</h3>
-            <div class="space-y-6">
-                <div>
-                    <label class="block text-[10px] font-bold text-amber-500 uppercase tracking-[0.2em] mb-3">Gemini API Key</label>
-                    <input type="password" id="api-key-input" class="w-full bg-black/40 border border-amber-500/10 rounded-2xl p-4 text-amber-100 focus:ring-2 focus:ring-amber-500 outline-none transition-all placeholder-amber-900" placeholder="KEY...">
-                </div>
-                <div>
-                    <label class="block text-[10px] font-bold text-amber-500 uppercase tracking-[0.2em] mb-3">API 代理 (Base URL)</label>
-                    <input type="text" id="api-base-input" class="w-full bg-black/40 border border-amber-500/10 rounded-2xl p-4 text-amber-100 focus:ring-2 focus:ring-amber-500 outline-none transition-all" placeholder="URL...">
-                </div>
-                <div>
-                    <label class="block text-[10px] font-bold text-amber-500 uppercase tracking-[0.2em] mb-3">模型名称 (Model)</label>
-                    <input type="text" id="api-model-input" class="w-full bg-black/40 border border-amber-500/10 rounded-2xl p-4 text-amber-100 focus:ring-2 focus:ring-amber-500 outline-none transition-all" placeholder="MODEL...">
-                </div>
-            </div>
-            <div class="mt-10 flex gap-4">
-                <button onclick="saveSettings()" class="bg-amber-600 text-white font-bold px-8 py-4 rounded-2xl flex-1 hover:bg-amber-500 shadow-xl shadow-orange-900/20 transition-all">保存设置</button>
-                <button onclick="toggleSettings()" class="bg-white/5 text-amber-300 px-8 py-4 rounded-2xl hover:bg-white/10 transition-all">取消</button>
-            </div>
-        </div>
-    </div>
-
-    <script type="module">
-        import { AIConfig } from './js/ai_manager.js';
-
+    <script>
         let rawData = [];
         let activeSource = 'all';
+        let expandedGroups = new Set(['Reddit', 'HN']);
 
-        async function init() {
+        async function loadData(path = './data/latest.json') {
             try {
-                const res = await fetch('./data/latest.json?' + new Date().getTime());
+                const res = await fetch(path + '?' + new Date().getTime());
                 const json = await res.json();
-                console.info("[Nexus] 数据加载成功:", json);
-                rawData = json.data || json.items || [];
-                console.debug("[Nexus] 原始数据项数量:", rawData.length);
+                console.info("[Nexus] 数据加载成功:", path);
+                rawData = json.items || [];
+                
+                // 渲染 AI 简报
+                const aiEl = document.getElementById('ai-content');
+                if (json.ai_summary) {
+                    // 简单的 Markdown 换行转换
+                    aiEl.innerHTML = json.ai_summary.replace(/\n/g, '<br>').replace(/### (.*?)<br>/g, '<h3 class="text-amber-400 font-bold mt-4 mb-2">$1</h3>');
+                } else {
+                    aiEl.innerText = "暂无今日简报，请等待下一轮 Action 运行。";
+                }
+
                 renderSidebar();
                 renderContent();
-                document.getElementById('ai-section').classList.remove('hidden');
             } catch (e) {
-                document.getElementById('feed-container').innerHTML = `<div class="glass text-amber-500 p-8 rounded-3xl text-center">无法加载情报数据，请检查 Action 运行状态。</div>`;
+                document.getElementById('feed-container').innerHTML = `<div class="glass text-amber-500 p-8 rounded-3xl text-center">数据加载异常，请确认后端抓取状态。</div>`;
             }
         }
-
-        let expandedGroups = new Set(['Reddit', 'HN']); // 默认展开的核心组
 
         function renderSidebar() {
             const nav = document.getElementById('source-filter');
             const allSources = [...new Set(rawData.map(i => i.source))];
             
-            // 来源分组逻辑
             const groups = { 'Others': [] };
             allSources.forEach(s => {
                 if (s.startsWith('Reddit |')) {
@@ -148,21 +139,20 @@
             });
 
             const renderItem = (s, label) => `
-                <button onclick="filterBySource('${s}')" class="w-full text-left px-5 py-2.5 rounded-xl transition-all text-xs ${activeSource===s?'sidebar-active':'text-amber-100/40 hover:bg-white/5'}" data-source="${s}">${label || s}</button>
+                <button onclick="filterBySource('${s}')" class="w-full text-left px-4 py-2 rounded-xl transition-all text-[11px] ${activeSource===s?'sidebar-active':'text-amber-100/40 hover:bg-white/5'}" data-source="${s}">${label || s}</button>
             `;
 
             const renderGroup = (name, items) => {
                 if (items.length === 0) return '';
                 const isExpanded = expandedGroups.has(name);
-                const hasActiveInGroup = items.includes(activeSource);
-                
+                const hasActive = items.includes(activeSource);
                 return `
                     <div class="mb-2">
-                        <button onclick="toggleGroup('${name}')" class="w-full flex items-center justify-between px-5 py-3 text-[10px] font-bold uppercase tracking-[0.2em] ${hasActiveInGroup ? 'text-amber-400' : 'text-amber-500/30'} hover:text-amber-300 transition-colors">
+                        <button onclick="toggleGroup('${name}')" class="w-full flex items-center justify-between px-4 py-2.5 text-[10px] font-bold uppercase tracking-[0.15em] ${hasActive ? 'text-amber-400' : 'text-amber-500/30'}">
                             ${name} (${items.length})
-                            <span>${isExpanded ? '−' : '+'}</span>
+                            <span class="font-mono text-[8px]">${isExpanded ? '▼' : '▶'}</span>
                         </button>
-                        <div class="space-y-1 ml-2 border-l border-amber-900/20 ${isExpanded ? '' : 'hidden'}">
+                        <div class="space-y-0.5 ml-2 border-l border-amber-900/10 ${isExpanded ? '' : 'hidden'}">
                             ${items.map(s => renderItem(s, s.split('|')[1]?.trim() || s)).join('')}
                         </div>
                     </div>
@@ -170,139 +160,68 @@
             };
 
             nav.innerHTML = `
-                <button onclick="filterBySource('all')" class="w-full text-left px-5 py-3 rounded-xl transition-all text-sm mb-4 ${activeSource==='all'?'sidebar-active':'text-amber-100/40 hover:bg-white/5'}" data-source="all">全部来源</button>
+                <button onclick="filterBySource('all')" class="w-full text-left px-5 py-3 rounded-xl transition-all text-sm mb-4 ${activeSource==='all'?'sidebar-active':'text-amber-100/40 hover:bg-white/5'}">全部视野</button>
                 ${renderGroup('Reddit', groups['Reddit'] || [])}
                 ${renderGroup('HN', groups['HN'] || [])}
-                <div class="pt-4 border-t border-amber-900/10 space-y-1">
+                <div class="pt-4 mt-4 border-t border-amber-900/10 space-y-0.5">
                     ${groups['Others'].map(s => renderItem(s)).join('')}
                 </div>
             `;
         }
 
-        window.toggleGroup = (name) => {
-            if (expandedGroups.has(name)) expandedGroups.delete(name);
-            else expandedGroups.add(name);
-            renderSidebar();
-        };
-
-        window.filterBySource = (s) => {
-            activeSource = s;
-            renderSidebar();
-            renderContent();
-        }
+        window.toggleGroup = (n) => { expandedGroups.has(n) ? expandedGroups.delete(n) : expandedGroups.add(n); renderSidebar(); };
+        
+        window.filterBySource = (s) => { activeSource = s; renderSidebar(); renderContent(); };
 
         function renderContent() {
-            console.log("[Nexus] 渲染内容开始, 当前来源:", activeSource);
             const container = document.getElementById('feed-container');
             let filtered = activeSource === 'all' ? rawData : rawData.filter(i => i.source === activeSource);
             
             const groups = {};
             filtered.forEach(item => {
-                const dateRaw = item.time ? new Date(item.time) : new Date();
-                const d = dateRaw.toLocaleDateString('zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit' });
+                const d = item.time ? new Date(item.time).toLocaleDateString('zh-CN') : '今日';
                 if (!groups[d]) groups[d] = [];
                 groups[d].push(item);
             });
 
             container.innerHTML = Object.keys(groups).sort((a,b) => new Date(b) - new Date(a)).map(date => `
                 <div class="mb-16">
-                    <h3 class="text-xs font-bold text-amber-500/60 uppercase tracking-[0.4em] mb-10 flex items-center gap-6">
-                        ${date} <span class="h-px flex-1 bg-amber-500/10"></span>
+                    <h3 class="text-[10px] font-bold text-amber-500/40 uppercase tracking-[0.4em] mb-10 flex items-center gap-6">
+                        ${date} <span class="h-px flex-1 bg-amber-500/5"></span>
                     </h3>
                     <div class="waterfall columns-1 md:columns-2 lg:columns-3 space-y-6">
-                        ${groups[date].map(item => {
-                            console.debug("[Nexus] 处理条目渲染:", item.title);
-                            // 移除图片提取，专注于文字与摘要
-                            
-                            // 清理并截取正文摘要
-                            const desc = (item.description || item.content || "").replace(/<[^>]+>/g, '').trim().slice(0, 120); // 没图片了，可以适当增加摘要长度
-                            if (!desc && !item.content) {
-                                console.warn("[Nexus] 条目缺失 content 且无法提取摘要:", item.title);
-                            }
-                            
-                            return `
-                                <div class="waterfall-item break-inside-avoid">
-                                    <a href="${item.link}" target="_blank" class="block glass rounded-[1.5rem] overflow-hidden card-hover transition-all duration-500 group border border-white/5">
-                                        <div class="p-6">
-                                            <div class="flex items-center gap-2 mb-4 text-[10px] font-bold tracking-widest text-amber-200/40 uppercase">
-                                                <span>${item.source}</span>
-                                                <span class="opacity-30">•</span>
-                                                <span>${item.time ? new Date(item.time).toLocaleDateString('zh-CN', {month:'2-digit', day:'2-digit'}) : '--/--'}</span>
-                                            </div>
-                                            <h4 class="text-amber-50/90 font-bold leading-snug text-lg group-hover:text-amber-400 transition-colors mb-3">${item.title}</h4>
-                                            ${desc ? `<p class="text-amber-100/40 text-[13px] leading-relaxed font-light line-clamp-3">${desc}...</p>` : ''}
-                                            
-                                            ${item.comments && item.comments.length > 0 ? `
-                                            <div class="mt-6 space-y-3">
-                                                <div class="text-[10px] font-bold text-amber-500/40 uppercase tracking-widest border-b border-amber-500/10 pb-2 mb-3">精彩评论</div>
+                        ${groups[date].map(item => `
+                            <div class="waterfall-item break-inside-avoid">
+                                <a href="${item.link}" target="_blank" class="block glass rounded-[1.5rem] overflow-hidden card-hover transition-all duration-500 group border border-white/5">
+                                    <div class="p-6">
+                                        <div class="flex items-center gap-2 mb-4 text-[9px] font-bold tracking-widest text-amber-200/40 uppercase">
+                                            <span>${item.source}</span>
+                                            <span class="opacity-20">•</span>
+                                            <span>${new Date(item.time).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})}</span>
+                                        </div>
+                                        <h4 class="text-amber-50/90 font-bold leading-snug text-lg group-hover:text-amber-400 transition-colors mb-3">${item.title}</h4>
+                                        <p class="text-amber-100/40 text-[12px] leading-relaxed font-light line-clamp-4">${item.content || '无正文摘要'}</p>
+                                        
+                                        ${item.comments && item.comments.length > 0 ? `
+                                            <div class="mt-6 pt-4 border-t border-amber-500/10 space-y-3">
                                                 ${item.comments.map(c => `
-                                                    <div class="text-[11px] leading-relaxed">
-                                                        <span class="text-amber-500/60 font-medium">@${c.author}:</span>
-                                                        <span class="text-amber-100/30 flex-1">${c.text}</span>
+                                                    <div class="text-[10px] leading-relaxed">
+                                                        <span class="text-amber-500/60">@${c.author}:</span>
+                                                        <span class="text-amber-100/20">${c.text}</span>
                                                     </div>
                                                 `).join('')}
                                             </div>
-                                            ` : ''}
-
-                                            <div class="flex items-center justify-between mt-6 pt-4 border-t border-white/5">
-                                                <div class="flex items-center gap-1.5 opacity-60">
-                                                    <span class="text-xs">✨</span>
-                                                    <span class="text-[10px] text-amber-500 font-bold uppercase tracking-tighter">AI Insight</span>
-                                                </div>
-                                                <span class="text-[10px] text-amber-200/20 font-mono">#${item.source.toLowerCase().replace(/\s+/g, '')}</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            `;
-                        }).join('')}
+                                        ` : ''}
+                                    </div>
+                                </a>
+                            </div>
+                        `).join('')}
                     </div>
                 </div>
-            `).join('') || '<div class="text-amber-900/40 text-center py-24 italic tracking-widest">深处暂无回音...</div>';
+            `).join('') || '<div class="text-amber-900/20 text-center py-24 italic tracking-widest">深处暂无回音...</div>';
         }
 
-        window.toggleSettings = () => {
-            const modal = document.getElementById('settings-modal');
-            modal.classList.toggle('hidden');
-            if (!modal.classList.contains('hidden')) {
-                const settings = AIConfig.getSettings();
-                document.getElementById('api-key-input').value = settings.apiKey || '';
-                document.getElementById('api-base-input').value = settings.apiBase || 'https://generativelanguage.googleapis.com';
-                document.getElementById('api-model-input').value = settings.model || 'gemini-1.5-flash';
-            }
-        };
-
-        window.saveSettings = () => {
-            const key = document.getElementById('api-key-input').value;
-            let base = document.getElementById('api-base-input').value.trim();
-            let model = document.getElementById('api-model-input').value.trim();
-            if (!base) base = 'https://generativelanguage.googleapis.com';
-            if (!model) model = 'gemini-1.5-flash';
-            
-            AIConfig.saveSettings({ apiKey: key, apiBase: base, model: model });
-            toggleSettings();
-            alert("✨ 深色秋季配置已同步");
-        };
-
-        window.generateSummary = async () => {
-            const btn = document.getElementById('ai-btn');
-            const content = document.getElementById('ai-content');
-            try {
-                btn.disabled = true;
-                btn.innerText = "🍃 审阅秋叶中...";
-                content.innerText = "管家正在秋叶纷飞中快速审校各大源的热点情报...";
-                // 解除 50 条限制，发送全量数据给支持 1M 上下文的模型
-                const result = await AIConfig.summarizeDaily(rawData);
-                content.innerText = result;
-            } catch (e) {
-                content.innerText = "🍂 解析受阻：" + e.message;
-            } finally {
-                btn.disabled = false;
-                btn.innerText = "生成简报";
-            }
-        };
-
-        init();
+        loadData();
     </script>
 </body>
 </html>

@@ -3,10 +3,10 @@ import json
 import os
 import feedparser
 import praw
+import re
 from datetime import datetime
 
-# 硬编码配置来源 (Hardcoded Sources)
-# 用户偏好：个人项目，直接写死即可
+# 硬编码配置来源
 SOURCES = {
     "rss": [
         {"name": "Linux.do", "url": "https://linux.do/latest.rss"},
@@ -17,164 +17,149 @@ SOURCES = {
     "reddit_subs": [
         "gamedev", "unrealengine", "Unity3D", "godot", "IndieGames", "gamedevjobs"
     ],
-   # Hacker News 官方 API
-   "hn_top": "https://hacker-news.firebaseio.com/v0/topstories.json",
-   "hn_item": "https://hacker-news.firebaseio.com/v0/item/{}.json"
+    "hn_top": "https://hacker-news.firebaseio.com/v0/topstories.json",
+    "hn_item": "https://hacker-news.firebaseio.com/v0/item/{}.json"
 }
 
 def fetch_rss(name, url):
-    print(f"[DEBUG][抓取开始] 来源: {name} | URL: {url}")
+    print(f"[DEBUG][抓取开始] 来源: {name}")
     try:
-        # 为针对 Linux.do 的特殊处理做准备
         is_linux_do = "linux.do" in url.lower()
-        
         feed = feedparser.parse(url)
-        if not feed.entries:
-            print(f"[WARN][空数据] {name} 未能获取到任何条目，可能受到拦截或RSS解析失败。")
-        
         items = []
         for entry in feed.entries[:20]:
             content = entry.get('summary') or entry.get('description', '')
-            img_match = None
-            if content:
-                import re
-                img_match = re.search(r'<img[^>]+src="([^">]+)"', content)
-            
-            print(f"  - [DEBUG][条目提取] {entry.title[:30]}... | 正文全长: {len(content)} | 图片: {img_match.group(1) if img_match else 'None'}")
-            
             item = {
                 "title": entry.title,
                 "link": entry.link,
                 "source": name,
-                "time": entry.get('published', ''),
-                "content": content,
+                "time": entry.get('published', datetime.now().isoformat()),
+                "content": re.sub(r'<[^>]+>', '', content).strip(),
                 "comments": []
             }
-
-            # 如果是 Linux.do，尝试获取评论 (Discourse 支持单个话题 RSS)
             if is_linux_do and "/t/" in entry.link:
                 try:
-                    topic_rss = entry.link + ".rss"
-                    topic_feed = feedparser.parse(topic_rss)
-                    # 排除掉第一条（那是原帖本身），取后续的作为评论
-                    replies = topic_feed.entries[1:4] # 取前 3 条评论
-                    for reply in replies:
-                        reply_clean = reply.get('summary') or reply.get('description', '')
-                        import re
-                        reply_clean = re.sub(r'<[^>]+>', '', reply_clean).strip()
-                        if reply_clean:
-                            item["comments"].append({
-                                "author": reply.get('author', '匿名'),
-                                "text": reply_clean[:100] + "..." if len(reply_clean) > 100 else reply_clean
-                            })
-                    print(f"    - [DEBUG][评论提取] {name} | 获取到 {len(item['comments'])} 条评论")
-                except:
-                    pass
-
+                    topic_feed = feedparser.parse(entry.link + ".rss")
+                    for reply in topic_feed.entries[1:4]:
+                        r_text = re.sub(r'<[^>]+>', '', reply.get('summary', '')).strip()
+                        if r_text:
+                            item["comments"].append({"author": reply.get('author', '匿名'), "text": r_text[:100]})
+                except: pass
             items.append(item)
-        print(f"[SUCCESS][完成] {name} 抓取成功，共 {len(items)} 条。")
         return items
     except Exception as e:
-        print(f"[ERROR][抓取异常] {name} 失败: {e}")
+        print(f"[ERROR] {name} 失败: {e}")
         return []
 
 def fetch_hacker_news():
-    print("Fetching Hacker News...")
+    print("[DEBUG] Fetching HN...")
     try:
-        top_ids = requests.get(SOURCES["hn_top"], timeout=10).json()[:30]
+        from urllib.parse import urlparse
+        top_ids = requests.get(SOURCES["hn_top"], timeout=10).json()[:20]
         items = []
         for id in top_ids:
-            item = requests.get(SOURCES["hn_item"].format(id), timeout=10).json()
-            url = item.get('url', f"https://news.ycombinator.com/item?id={id}")
-            # 提取域名作为子来源标识
-            from urllib.parse import urlparse
-            domain = urlparse(url).netloc.replace('www.', '') if item.get('url') else "HN"
-            
+            i = requests.get(SOURCES["hn_item"].format(id), timeout=10).json()
+            if not i: continue
+            url = i.get('url', f"https://news.ycombinator.com/item?id={id}")
+            domain = urlparse(url).netloc.replace('www.', '') if i.get('url') else "HN"
             items.append({
-                "title": item.get('title'),
+                "title": i.get('title'),
                 "link": url,
                 "source": f"HN | {domain}",
-                "time": datetime.fromtimestamp(item.get('time')).isoformat() if item.get('time') else "",
-                "content": item.get('text', '') # HN 有时会有 text 正文
+                "time": datetime.fromtimestamp(i.get('time')).isoformat() if i.get('time') else datetime.now().isoformat(),
+                "content": re.sub(r'<[^>]+>', '', i.get('text', '')).strip(),
+                "comments": []
             })
         return items
     except Exception as e:
-        print(f"Error HN: {e}")
+        print(f"[ERROR] HN 失败: {e}")
         return []
 
 def fetch_reddit_with_praw():
-    client_id = os.environ.get("REDDIT_CLIENT_ID")
-    client_secret = os.environ.get("REDDIT_CLIENT_SECRET")
-    
-    if not client_id or not client_secret:
-        print("[WARN][Reddit] 缺失 API Key，跳过 PRAW 抓取。")
-        return []
-    
-    print("[DEBUG][Reddit] 正在通过 PRAW 获取深度讨论...")
+    cid = os.environ.get("REDDIT_CLIENT_ID")
+    sec = os.environ.get("REDDIT_CLIENT_SECRET")
+    if not cid or not sec: return []
+    print("[DEBUG] Fetching Reddit via PRAW...")
     try:
-        reddit = praw.Reddit(
-            client_id=client_id,
-            client_secret=client_secret,
-            user_agent="InfoSou Aggregator 1.0"
-        )
-        
+        reddit = praw.Reddit(client_id=cid, client_secret=sec, user_agent="InfoSou 1.0")
         items = []
         for sub_name in SOURCES["reddit_subs"]:
-            print(f"  - 正在抓取 r/{sub_name}...")
-            subreddit = reddit.subreddit(sub_name)
-            for submission in subreddit.hot(limit=10):
+            for submission in reddit.subreddit(sub_name).hot(limit=7):
                 item = {
                     "title": submission.title,
                     "link": f"https://www.reddit.com{submission.permalink}",
                     "source": f"Reddit | {sub_name}",
                     "time": datetime.fromtimestamp(submission.created_utc).isoformat(),
-                    "content": submission.selftext[:500] if submission.is_self else submission.url,
+                    "content": submission.selftext[:300] if submission.is_self else submission.url,
                     "comments": []
                 }
-                
-                # 抓取前 3 条顶级评论
                 submission.comment_sort = 'top'
-                submission.comments.replace_more(limit=0)
-                for comment in submission.comments[:3]:
-                    item["comments"].append({
-                        "author": str(comment.author),
-                        "text": comment.body[:150] + "..." if len(comment.body) > 150 else comment.body
-                    })
+                for c in submission.comments[:3]:
+                    if hasattr(c, 'body'):
+                        item["comments"].append({"author": str(c.author), "text": c.body[:100]})
                 items.append(item)
         return items
     except Exception as e:
-        print(f"[ERROR][Reddit] PRAW 抓取失败: {e}")
+        print(f"[ERROR] Reddit 失败: {e}")
         return []
 
+def generate_ai_summary(items):
+    key = os.environ.get("AI_API_KEY")
+    base = os.environ.get("AI_BASE_URL", "https://generativelanguage.googleapis.com/v1")
+    model = os.environ.get("AI_MODEL_NAME", "gemini-1.5-flash")
+    if not key: return "未配置 AI_API_KEY，无法生成今日简报。"
+    
+    print(f"[DEBUG] AI 正在生成简报 ({model})...")
+    context = "\n---\n".join([f"[{i['source']}] {i['title']}\n内容: {i['content'][:150]}" for i in items[:80]])
+    prompt = f"你是一个硬核游戏开发情报官。请根据以下情报流，总结今日最值得关注的 3-5 个技术、引擎或行业动态。语气锐利、干练、专业。使用 Markdown。\n\n情报：\n{context}"
+    
+    try:
+        url = base.rstrip('/') + ("/chat/completions" if "/chat/completions" not in base else "")
+        res = requests.post(url, headers={"Authorization": f"Bearer {key}"}, json={
+            "model": model, "messages": [{"role": "user", "content": prompt}], "temperature": 0.3
+        }, timeout=60)
+        return res.json()['choices'][0]['message']['content']
+    except Exception as e:
+        return f"AI 简报生成失败: {e}"
+
 def main():
-    all_items = []
+    data_dir = 'public/data'
+    archive_dir = os.path.join(data_dir, 'archive')
+    os.makedirs(archive_dir, exist_ok=True)
+    latest_path = os.path.join(data_dir, 'latest.json')
     
-    # 执行各路聚合
-    all_items.extend(fetch_hacker_news())
-    all_items.extend(fetch_reddit_with_praw())
-    for rss_source in SOURCES["rss"]:
-        all_items.extend(fetch_rss(rss_source['name'], rss_source['url']))
+    existing_items = []
+    if os.path.exists(latest_path):
+        with open(latest_path, 'r', encoding='utf-8') as f:
+            old = json.load(f)
+            last_date = datetime.fromisoformat(old['metadata']['last_updated']).date()
+            if datetime.now().date() > last_date:
+                print(f"[SYSTEM] 归档 {last_date}...")
+                with open(os.path.join(archive_dir, f"{last_date}.json"), 'w', encoding='utf-8') as af:
+                    json.dump(old, af, ensure_ascii=False, indent=2)
+            else:
+                existing_items = old.get('items', [])
+
+    new_batch = fetch_hacker_news() + fetch_reddit_with_praw()
+    for s in SOURCES["rss"]: new_batch.extend(fetch_rss(s['name'], s['url']))
     
-    # 按时间降序排序（如果时间格式统一的话）
-    # 这里简单按来源顺序堆叠，前端再做展示过滤
+    seen = {i['link'] for i in new_batch}
+    final_items = new_batch + [i for i in existing_items if i['link'] not in seen]
     
-    # 结构化输出
+    summary = generate_ai_summary(final_items)
+    
     output = {
         "metadata": {
             "last_updated": datetime.now().isoformat(),
-            "total_count": len(all_items),
-            "status": "success"
+            "total_count": len(final_items),
+            "ai_summary": summary
         },
-        "items": all_items
+        "items": final_items
     }
     
-    # 确保存储目录存在
-    os.makedirs('public/data', exist_ok=True)
-    
-    with open('public/data/latest.json', 'w', encoding='utf-8') as f:
+    with open(latest_path, 'w', encoding='utf-8') as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
-    
-    print(f"Aggregation completed: {len(all_items)} items saved.")
+    print("完成。")
 
 if __name__ == "__main__":
     main()

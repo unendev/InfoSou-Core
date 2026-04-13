@@ -1,11 +1,10 @@
 name: Information Aggregator
 on:
   schedule:
-    # 每一小时运行一次，建议避开整点以防竞争
-    - cron: '25 * * * *'
-  workflow_dispatch: # 支持手动触发
+    # 北京时间每天上午 9 点运行 (UTC 1:00)
+    - cron: '0 1 * * *'
+  workflow_dispatch:
 
-# 给机器人赋予写权限，否则无法 commit 回仓库
 permissions:
   contents: write
 
@@ -18,7 +17,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
+          python-version: '3.11'
 
       - name: Install dependencies
         run: |
@@ -28,6 +27,9 @@ jobs:
         env:
           REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
           REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          AI_API_KEY: ${{ secrets.AI_API_KEY }}
+          AI_BASE_URL: ${{ secrets.AI_BASE_URL }}
+          AI_MODEL_NAME: ${{ secrets.AI_MODEL_NAME }}
         run: |
           python scripts/fetch_data.py
 
@@ -35,9 +37,7 @@ jobs:
         run: |
           git config --local user.email "aggregator-bot@github.com"
           git config --local user.name "Aggregator Bot"
-          # 检查文件是否有变动
-          git add public/data/latest.json
-          git commit -m "chore: auto-sync information feeds [skip ci]" || echo "No changes to commit"
-          # 先拉取最新改动防止冲突，再推送
+          git add public/data/
+          git commit -m "chore: daily information aggregation and ai summary [skip ci]" || echo "No changes"
           git pull --rebase origin main
           git push origin main

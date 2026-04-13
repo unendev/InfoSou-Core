@@ -42,7 +42,8 @@ def fetch_linux_do():
             "title": t['title'],
             "link": f"https://linux.do/t/topic/{t['id']}",
             "source": "Linux.do",
-            "time": t['created_at']
+            "time": t['created_at'],
+            "content": t.get('excerpt', '') # Linux.do API 提供的摘要字段
         } for t in data['topic_list']['topics'][:50]]
     except Exception as e:
         print(f"Error Linux.do: {e}")
@@ -56,7 +57,8 @@ def fetch_rss(name, url):
             "title": entry.title,
             "link": entry.link,
             "source": name,
-            "time": entry.get('published', '')
+            "time": entry.get('published', ''),
+            "content": entry.get('summary') or entry.get('description', '') # 提取 RSS 摘要
         } for entry in feed.entries[:20]]
     except Exception as e:
         print(f"Error {name}: {e}")
@@ -73,7 +75,8 @@ def fetch_hacker_news():
                 "title": item.get('title'),
                 "link": item.get('url', f"https://news.ycombinator.com/item?id={id}"),
                 "source": "Hacker News",
-                "time": datetime.fromtimestamp(item.get('time')).isoformat() if item.get('time') else ""
+                "time": datetime.fromtimestamp(item.get('time')).isoformat() if item.get('time') else "",
+                "content": item.get('text', '') # HN 有时会有 text 正文
             })
         return items
     except Exception as e:

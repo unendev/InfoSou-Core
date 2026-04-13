@@ -1,13 +1,17 @@
 /**
- * AI API 调用管理模块 (BYOK 模式)
- * 核心逻辑：本地持久化 API Key，部署不丢失。
+ * AI API 调用管理模块 (OpenAI 兼容协议版)
+ * 适配：OpenAI, Gemini (V1 兼容模式), Claude (中转), DeepSeek 等
  */
 
 export const AIConfig = {
     // 获取配置
     getSettings() {
         const saved = localStorage.getItem('INFOSOU_AI_SETTINGS');
-        return saved ? JSON.parse(saved) : { apiKey: '', model: 'gemini-1.5-flash', apiBase: 'https://generativelanguage.googleapis.com' };
+        return saved ? JSON.parse(saved) : { 
+            apiKey: '', 
+            model: 'gemini-1.5-flash', 
+            apiBase: 'https://generativelanguage.googleapis.com/v1' 
+        };
     },
 
     // 保存配置
@@ -16,49 +20,74 @@ export const AIConfig = {
     },
 
     /**
-     * 调用 AI 总结每日信息流
-     * @param {Array} newsItems 从 latest.json 读取的新闻列表
+     * 调用 AI 总结情报
+     * 使用标准的 OpenAI Chat Completions 协议，容错率最高
      */
     async summarizeDaily(newsItems) {
-        const { apiKey, model, apiBase } = this.getSettings();
-        if (!apiKey) throw new Error("请先在设置中配置 API Key");
+        let { apiKey, model, apiBase } = this.getSettings();
+        if (!apiKey) throw new Error("AUTH_TOKEN_NOT_FOUND");
 
-        const prompt = `你是我个人的信息管家。以下是聚合站今日抓取的热点信息：
-        ${JSON.stringify(newsItems.map(i => ({title: i.title, source: i.source})))}
+        // 1. 智能修正 URL 拼接逻辑
+        let baseUrl = apiBase.trim();
+        if (baseUrl.endsWith('/')) baseUrl = baseUrl.slice(0, -1);
         
-        请完成以下任务：
-        1. 挑选出最值得关注的 3 个技术或行业热点。
-        2. 针对这 3 个热点，用一句话说明为什么值得关注。
-        3. 用毒舌但客观的语气点评一下今天的整体信息质量。`;
+        // 自动补齐标准 OpenAI 路径
+        let finalUrl = baseUrl;
+        if (!finalUrl.includes('/chat/completions')) {
+            finalUrl = finalUrl.endsWith('/v1') ? `${finalUrl}/chat/completions` : `${finalUrl}/v1/chat/completions`;
+        }
 
-        const response = await fetch(`${apiBase}/v1beta/models/${model}:generateContent?key=${apiKey}`, {
+        const prompt = `你是一个高级情报分析官。请审阅以下提供的新闻聚合数据，并为其撰写一份核心简报。
+        任务：
+        1. 总结今日最重要的 3 个技术或行业动态。
+        2. 指出潜在的深度阅读价值项。
+        3. 语气要硬核且干练。
+        
+        待处理情报流：
+        ${JSON.stringify(newsItems.map(i => ({t: i.title, s: i.source})))}`;
+
+        // 2. 发起标准请求
+        const response = await fetch(finalUrl, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 
+                'Authorization': `Bearer ${apiKey}`,
+                'Content-Type': 'application/json' 
+            },
             body: JSON.stringify({
-                contents: [{ parts: [{ text: prompt }] }]
+                model: model,
+                messages: [
+                    { role: "system", content: "You are a professional intelligence officer." },
+                    { role: "user", content: prompt }
+                ],
+                temperature: 0.5
             })
         });
 
-        const text = await response.text();
+        // 3. 稳健解析逻辑
+        const rawText = await response.text();
         let data;
+        
         try {
-            data = JSON.parse(text);
+            data = JSON.parse(rawText);
         } catch (e) {
-            throw new Error(`API 返回异常 (非 JSON): ${text.substring(0, 50)}... 请检查 Key 或代理状态。`);
+            throw new Error(`SERVER_RESPONSE_NOT_JSON: ${rawText.substring(0, 100)}...`);
         }
 
-        if (data.error) {
-            throw new Error(`AI 出错: ${data.error.message || '未知错误'}`);
+        // 4. 报错详情透传
+        if (!response.ok || data.error) {
+            const errorMsg = data.error?.message || data.error || rawText.substring(0, 100);
+            throw new Error(`API_STATUS_${response.status}: ${errorMsg}`);
         }
-        
-        if (!data.candidates || data.candidates.length === 0) {
-            // 可能是由于安全过滤导致消息为空
-            if (data.promptFeedback && data.promptFeedback.blockReason) {
-                throw new Error(`内容被安全过滤拦截: ${data.promptFeedback.blockReason}`);
-            }
-            throw new Error("AI 未返回有效候选项，请检查模型名称或 Key 是否支持该操作。");
+
+        // 5. 适配所有主流 API 返回格式 (OpenAI, Gemini-v1-compatible, etc.)
+        const result = data.choices?.[0]?.message?.content || 
+                       data.candidates?.[0]?.content?.parts?.[0]?.text;
+
+        if (!result) {
+            console.error("DEBUG_PAYLOAD:", data);
+            throw new Error("EMPTY_RESPONSE: API 返回内容为空。可能是安全过滤或模型参数错误。");
         }
-        
-        return data.candidates[0].content.parts[0].text;
+
+        return result;
     }
 };

@@ -11,10 +11,10 @@
                         url('https://images.unsplash.com/photo-1507502707541-f369a3b18502?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat fixed;
             color: #fef3c7;
         }
-        .glass { 
-            background: rgba(30, 25, 20, 0.65); 
-            backdrop-filter: blur(16px); 
-            border: 1px solid rgba(251, 191, 36, 0.15);
+        .glass {
+            background: rgba(30, 25, 20, 0.45);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
         .sidebar-glass {
             background: rgba(22, 18, 15, 0.8);
@@ -153,18 +153,44 @@
                     <h3 class="text-xs font-bold text-amber-500/60 uppercase tracking-[0.4em] mb-10 flex items-center gap-6">
                         ${date} <span class="h-px flex-1 bg-amber-500/10"></span>
                     </h3>
-                    <div class="waterfall columns-1 md:columns-2 lg:columns-3">
-                        ${groups[date].map(item => `
-                            <div class="waterfall-item">
-                                <a href="${item.link}" target="_blank" class="block glass p-6 rounded-3xl card-hover transition-all duration-500 group">
-                                    <div class="flex items-center gap-3 mb-5">
-                                        <span class="text-[9px] font-black px-2 py-0.5 rounded-md bg-amber-500/10 text-amber-500 uppercase tracking-tighter border border-amber-500/20">${item.source}</span>
-                                        <span class="text-[9px] text-amber-200/20 ml-auto font-mono uppercase">${item.time ? new Date(item.time).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}) : '--:--'}</span>
-                                    </div>
-                                    <h4 class="text-amber-50/90 font-bold leading-relaxed text-base group-hover:text-amber-300 transition-colors">${item.title}</h4>
-                                </a>
-                            </div>
-                        `).join('')}
+                    <div class="waterfall columns-1 md:columns-2 lg:columns-3 space-y-6">
+                        ${groups[date].map(item => {
+                            // 尝试从内容中提取第一张图片
+                            let img = null;
+                            if (item.content) {
+                                const imgMatch = item.content.match(/<img[^>]+src="([^">]+)"/);
+                                if (imgMatch) img = imgMatch[1];
+                            }
+                            // 清理并截取正文摘要
+                            const desc = (item.description || item.content || "").replace(/<[^>]+>/g, '').trim().slice(0, 85);
+                            
+                            return `
+                                <div class="waterfall-item break-inside-avoid">
+                                    <a href="${item.link}" target="_blank" class="block glass rounded-[1.5rem] overflow-hidden card-hover transition-all duration-500 group border border-white/5">
+                                        ${img ? `
+                                        <div class="relative w-full overflow-hidden">
+                                            <img src="${img}" class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" loading="lazy" />
+                                        </div>` : ''}
+                                        <div class="p-6">
+                                            <div class="flex items-center gap-2 mb-4 text-[10px] font-bold tracking-widest text-amber-200/40 uppercase">
+                                                <span>${item.source}</span>
+                                                <span class="opacity-30">•</span>
+                                                <span>${item.time ? new Date(item.time).toLocaleDateString('zh-CN', {month:'2-digit', day:'2-digit'}) : '--/--'}</span>
+                                            </div>
+                                            <h4 class="text-amber-50/90 font-bold leading-snug text-lg group-hover:text-amber-400 transition-colors mb-3">${item.title}</h4>
+                                            ${desc ? `<p class="text-amber-100/40 text-[13px] leading-relaxed font-light line-clamp-3">${desc}...</p>` : ''}
+                                            <div class="flex items-center justify-between mt-6 pt-4 border-t border-white/5">
+                                                <div class="flex items-center gap-1.5 opacity-60">
+                                                    <span class="text-xs">✨</span>
+                                                    <span class="text-[10px] text-amber-500 font-bold uppercase tracking-tighter">AI Insight</span>
+                                                </div>
+                                                <span class="text-[10px] text-amber-200/20 font-mono">#${item.source.toLowerCase().replace(/\s+/g, '')}</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            `;
+                        }).join('')}
                     </div>
                 </div>
             `).join('') || '<div class="text-amber-900/40 text-center py-24 italic tracking-widest">深处暂无回音...</div>';

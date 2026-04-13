@@ -3,79 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InfoSou - 专业情报控制台</title>
+    <title>InfoSou - 深色秋季情报台</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); }
+        body {
+            background: linear-gradient(rgba(18, 14, 10, 0.85), rgba(18, 14, 10, 0.85)), 
+                        url('https://images.unsplash.com/photo-1507502707541-f369a3b18502?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat fixed;
+            color: #fef3c7;
+        }
+        .glass { 
+            background: rgba(30, 25, 20, 0.65); 
+            backdrop-filter: blur(16px); 
+            border: 1px solid rgba(251, 191, 36, 0.15);
+        }
+        .sidebar-glass {
+            background: rgba(22, 18, 15, 0.8);
+            backdrop-filter: blur(20px);
+            border-right: 1px solid rgba(251, 191, 36, 0.1);
+        }
         .waterfall { column-gap: 1.5rem; }
-        .waterfall-item { break-inside: avoid; margin-bottom: 1.5rem; }
-        .sidebar-active { background-color: #4f46e5; color: white !important; }
+        .waterfall-item { break-inside: avoid; margin-bottom: 2rem; }
+        .sidebar-active { 
+            background: linear-gradient(to right, #d97706, #b45309) !important; 
+            color: #fff !important; 
+            box-shadow: 0 4px 15px rgba(180, 83, 9, 0.3);
+        }
+        .card-hover:hover {
+            border-color: rgba(251, 191, 36, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            background: rgba(45, 35, 25, 0.8);
+        }
         ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb { background: rgba(217, 119, 6, 0.3); border-radius: 10px; }
     </style>
 </head>
-<body class="bg-slate-50 min-h-screen font-sans text-slate-900">
+<body class="min-h-screen font-sans">
     <div class="flex flex-col md:flex-row min-h-screen">
         <!-- Sidebar -->
-        <aside class="w-full md:w-64 glass border-r border-slate-200 sticky top-0 h-auto md:h-screen p-6 flex flex-col z-50">
-            <h1 class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent mb-8">InfoSou</h1>
+        <aside class="w-full md:w-64 sidebar-glass sticky top-0 h-auto md:h-screen p-8 flex flex-col z-50">
+            <h1 class="text-3xl font-black bg-gradient-to-r from-amber-400 to-orange-600 bg-clip-text text-transparent mb-10 tracking-tighter">InfoSou</h1>
             
-            <nav id="source-filter" class="flex-1 space-y-1">
-                <button onclick="filterBySource('all')" class="w-full text-left px-4 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-all sidebar-active" data-source="all">全部来源</button>
-                <!-- 动态注入来源 -->
+            <nav id="source-filter" class="flex-1 space-y-2">
+                <button onclick="filterBySource('all')" class="w-full text-left px-5 py-3 rounded-xl text-amber-100/60 hover:bg-white/5 transition-all text-sm sidebar-active" data-source="all">全部来源</button>
             </nav>
 
-            <div class="mt-auto pt-6 border-t border-slate-100 flex gap-2">
-                <button onclick="toggleSettings()" class="flex-1 text-xs py-2 px-3 bg-slate-100 hover:bg-slate-200 rounded-lg transition-all text-slate-600 flex items-center justify-center gap-1">⚙️ 系统设置</button>
+            <div class="mt-auto pt-8 border-t border-amber-900/30">
+                <button onclick="toggleSettings()" class="w-full text-xs py-3 px-4 bg-white/5 hover:bg-white/10 rounded-xl transition-all text-amber-200/50 flex items-center justify-center gap-2 border border-white/5">⚙️ 系统配置中心</button>
             </div>
         </aside>
 
         <!-- Main Content -->
-        <main class="flex-1 p-4 md:p-8 lg:p-12 overflow-x-hidden">
+        <main class="flex-1 p-6 md:p-12 lg:px-20 overflow-x-hidden">
             <!-- AI Summary Section -->
-            <section id="ai-section" class="mb-10 hidden">
-                <div class="bg-gradient-to-br from-indigo-600 to-violet-700 rounded-2xl p-px shadow-lg group">
-                    <div class="bg-white/95 rounded-[15px] p-6 group-hover:bg-white/90 transition-all">
-                        <div class="flex items-center justify-between mb-4">
-                            <h2 class="font-bold text-indigo-900 flex items-center gap-2">
-                                <span class="text-xl">✨</span> 今日情报摘要
+            <section id="ai-section" class="mb-12 hidden">
+                <div class="bg-gradient-to-br from-amber-500/30 to-orange-800/30 p-px rounded-3xl shadow-2xl">
+                    <div class="glass rounded-[23px] p-8 border-none">
+                        <div class="flex items-center justify-between mb-6">
+                            <h2 class="font-bold text-amber-200 flex items-center gap-3 tracking-wide">
+                                <span class="bg-amber-500/20 p-2 rounded-lg text-xl">🍂</span> 今日情报摘要
                             </h2>
-                            <button id="ai-btn" onclick="generateSummary()" class="text-xs bg-indigo-600 text-white px-4 py-1.5 rounded-full hover:bg-indigo-700 shadow-md shadow-indigo-200 transition-all">生成简报</button>
+                            <button id="ai-btn" onclick="generateSummary()" class="text-xs font-bold bg-amber-600 text-white px-6 py-2 rounded-full hover:bg-amber-500 shadow-lg shadow-orange-900/40 transition-all uppercase tracking-widest">生成简报</button>
                         </div>
-                        <div id="ai-content" class="text-slate-600 text-sm leading-relaxed whitespace-pre-wrap italic">点击按钮，让 AI 为您梳理当前的聚合情报...</div>
+                        <div id="ai-content" class="text-amber-100/70 text-sm leading-relaxed whitespace-pre-wrap font-light tracking-wide italic">点击按钮，让 AI 为您梳理当前的深色秋季情报流...</div>
                     </div>
                 </div>
             </section>
 
             <!-- Data List -->
             <div id="feed-container">
-                <div id="loader" class="text-center py-20 text-slate-400 animate-pulse">正在链接情报网络...</div>
-                <!-- 动态注入日期分组和内容 -->
+                <div id="loader" class="text-center py-24 text-amber-200/20 animate-pulse text-lg tracking-widest">正在链接深色秋季情报网络...</div>
             </div>
         </main>
     </div>
 
     <!-- Settings Modal -->
-    <div id="settings-modal" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm hidden flex items-center justify-center z-[100] p-4">
-        <div class="bg-white rounded-3xl p-8 w-full max-w-md shadow-2xl border border-slate-100">
-            <h3 class="text-xl font-bold mb-6 text-slate-800">系统配置</h3>
-            <div class="space-y-5">
+    <div id="settings-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden flex items-center justify-center z-[100] p-4">
+        <div class="glass rounded-[2rem] p-10 w-full max-w-md shadow-2xl border border-amber-500/20">
+            <h3 class="text-2xl font-bold mb-8 text-amber-100">系统配置</h3>
+            <div class="space-y-6">
                 <div>
-                    <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Gemini API Key</label>
-                    <input type="password" id="api-key-input" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 focus:ring-2 focus:ring-indigo-500 outline-none transition-all" placeholder="粘贴秘钥...">
+                    <label class="block text-[10px] font-bold text-amber-500 uppercase tracking-[0.2em] mb-3">Gemini API Key</label>
+                    <input type="password" id="api-key-input" class="w-full bg-black/40 border border-amber-500/10 rounded-2xl p-4 text-amber-100 focus:ring-2 focus:ring-amber-500 outline-none transition-all placeholder-amber-900" placeholder="KEY...">
                 </div>
                 <div>
-                    <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">API 代理 (Base URL)</label>
-                    <input type="text" id="api-base-input" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 focus:ring-2 focus:ring-indigo-500 outline-none transition-all" placeholder="https://generativelanguage.googleapis.com">
+                    <label class="block text-[10px] font-bold text-amber-500 uppercase tracking-[0.2em] mb-3">API 代理 (Base URL)</label>
+                    <input type="text" id="api-base-input" class="w-full bg-black/40 border border-amber-500/10 rounded-2xl p-4 text-amber-100 focus:ring-2 focus:ring-amber-500 outline-none transition-all" placeholder="URL...">
                 </div>
                 <div>
-                    <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">模型名称 (Model) </label>
-                    <input type="text" id="api-model-input" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 focus:ring-2 focus:ring-indigo-500 outline-none transition-all" placeholder="gemini-1.5-flash">
+                    <label class="block text-[10px] font-bold text-amber-500 uppercase tracking-[0.2em] mb-3">模型名称 (Model)</label>
+                    <input type="text" id="api-model-input" class="w-full bg-black/40 border border-amber-500/10 rounded-2xl p-4 text-amber-100 focus:ring-2 focus:ring-amber-500 outline-none transition-all" placeholder="MODEL...">
                 </div>
             </div>
-            <div class="mt-8 flex gap-3">
-                <button onclick="saveSettings()" class="bg-indigo-600 text-white font-bold px-6 py-3 rounded-xl flex-1 hover:bg-indigo-700 shadow-lg shadow-indigo-100 transition-all">确认保存</button>
-                <button onclick="toggleSettings()" class="bg-slate-100 text-slate-500 px-6 py-3 rounded-xl hover:bg-slate-200 transition-all">取消</button>
+            <div class="mt-10 flex gap-4">
+                <button onclick="saveSettings()" class="bg-amber-600 text-white font-bold px-8 py-4 rounded-2xl flex-1 hover:bg-amber-500 shadow-xl shadow-orange-900/20 transition-all">保存设置</button>
+                <button onclick="toggleSettings()" class="bg-white/5 text-amber-300 px-8 py-4 rounded-2xl hover:bg-white/10 transition-all">取消</button>
             </div>
         </div>
     </div>
@@ -95,16 +117,16 @@
                 renderContent();
                 document.getElementById('ai-section').classList.remove('hidden');
             } catch (e) {
-                document.getElementById('feed-container').innerHTML = `<div class="bg-red-50 text-red-500 p-6 rounded-2xl text-center">无法加载情报数据，请检查 latest.json 路径。</div>`;
+                document.getElementById('feed-container').innerHTML = `<div class="glass text-amber-500 p-8 rounded-3xl text-center">无法加载情报数据，请检查 Action 运行状态。</div>`;
             }
         }
 
         function renderSidebar() {
             const nav = document.getElementById('source-filter');
             const sources = [...new Set(rawData.map(i => i.source))];
-            nav.innerHTML = `<button onclick="filterBySource('all')" class="w-full text-left px-4 py-2 rounded-lg transition-all ${activeSource==='all'?'sidebar-active':'text-slate-600 hover:bg-slate-100'}" data-source="all">全部来源</button>` + 
+            nav.innerHTML = `<button onclick="filterBySource('all')" class="w-full text-left px-5 py-3 rounded-xl transition-all text-sm ${activeSource==='all'?'sidebar-active':'text-amber-100/40 hover:bg-white/5'}" data-source="all">全部来源</button>` + 
                 sources.map(s => `
-                    <button onclick="filterBySource('${s}')" class="w-full text-left px-4 py-2 rounded-lg transition-all ${activeSource===s?'sidebar-active':'text-slate-600 hover:bg-slate-100'}" data-source="${s}">${s}</button>
+                    <button onclick="filterBySource('${s}')" class="w-full text-left px-5 py-3 rounded-xl transition-all text-sm ${activeSource===s?'sidebar-active':'text-amber-100/40 hover:bg-white/5'}" data-source="${s}">${s}</button>
                 `).join('');
         }
 
@@ -118,34 +140,34 @@
             const container = document.getElementById('feed-container');
             let filtered = activeSource === 'all' ? rawData : rawData.filter(i => i.source === activeSource);
             
-            // 日期分组逻辑
             const groups = {};
             filtered.forEach(item => {
-                const d = item.time ? new Date(item.time).toLocaleDateString() : '未知日期';
+                const dateRaw = item.time ? new Date(item.time) : new Date();
+                const d = dateRaw.toLocaleDateString('zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit' });
                 if (!groups[d]) groups[d] = [];
                 groups[d].push(item);
             });
 
             container.innerHTML = Object.keys(groups).sort((a,b) => new Date(b) - new Date(a)).map(date => `
-                <div class="mb-12">
-                    <h3 class="text-sm font-black text-slate-400 uppercase tracking-[0.2em] mb-6 flex items-center gap-3">
-                        ${date} <span class="h-px flex-1 bg-slate-200"></span>
+                <div class="mb-16">
+                    <h3 class="text-xs font-bold text-amber-500/60 uppercase tracking-[0.4em] mb-10 flex items-center gap-6">
+                        ${date} <span class="h-px flex-1 bg-amber-500/10"></span>
                     </h3>
                     <div class="waterfall columns-1 md:columns-2 lg:columns-3">
                         ${groups[date].map(item => `
                             <div class="waterfall-item">
-                                <a href="${item.link}" target="_blank" class="block bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                                    <div class="flex items-center gap-2 mb-3">
-                                        <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-500 uppercase">${item.source}</span>
-                                        <span class="text-[10px] text-slate-300 ml-auto">${new Date(item.time).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
+                                <a href="${item.link}" target="_blank" class="block glass p-6 rounded-3xl card-hover transition-all duration-500 group">
+                                    <div class="flex items-center gap-3 mb-5">
+                                        <span class="text-[9px] font-black px-2 py-0.5 rounded-md bg-amber-500/10 text-amber-500 uppercase tracking-tighter border border-amber-500/20">${item.source}</span>
+                                        <span class="text-[9px] text-amber-200/20 ml-auto font-mono uppercase">${item.time ? new Date(item.time).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}) : '--:--'}</span>
                                     </div>
-                                    <h4 class="text-slate-800 font-bold leading-snug group-hover:text-indigo-600 transition-colors">${item.title}</h4>
+                                    <h4 class="text-amber-50/90 font-bold leading-relaxed text-base group-hover:text-amber-300 transition-colors">${item.title}</h4>
                                 </a>
                             </div>
                         `).join('')}
                     </div>
                 </div>
-            `).join('') || '<div class="text-slate-400 text-center py-20 italic">该来源下暂无情报...</div>';
+            `).join('') || '<div class="text-amber-900/40 text-center py-24 italic tracking-widest">深处暂无回音...</div>';
         }
 
         window.toggleSettings = () => {
@@ -168,7 +190,7 @@
             
             AIConfig.saveSettings({ apiKey: key, apiBase: base, model: model });
             toggleSettings();
-            alert("✅ 系统配置已更新");
+            alert("✨ 深色秋季配置已同步");
         };
 
         window.generateSummary = async () => {
@@ -176,12 +198,12 @@
             const content = document.getElementById('ai-content');
             try {
                 btn.disabled = true;
-                btn.innerText = "正在解密情报...";
-                content.innerText = "AI 正在快速阅读当前分类下的所有情报，请耐心等待...";
-                const result = await AIConfig.summarizeDaily(rawData.slice(0, 50)); // 喂前50条
+                btn.innerText = "🍃 审阅秋叶中...";
+                content.innerText = "管家正在秋叶纷飞中快速审校各大源的热点情报...";
+                const result = await AIConfig.summarizeDaily(rawData.slice(0, 50));
                 content.innerText = result;
             } catch (e) {
-                content.innerText = "❌ 解析失败：" + e.message;
+                content.innerText = "🍂 解析受阻：" + e.message;
             } finally {
                 btn.disabled = false;
                 btn.innerText = "生成简报";

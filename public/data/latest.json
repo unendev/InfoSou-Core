@@ -1,0 +1,201 @@
+{
+  "metadata": {
+    "last_updated": "2026-04-13T06:09:06.741188",
+    "total_count": 32,
+    "status": "success"
+  },
+  "items": [
+    {
+      "title": "All elementary functions from a single binary operator",
+      "link": "https://arxiv.org/abs/2603.21852",
+      "source": "Hacker News",
+      "time": "2026-04-13T01:49:32"
+    },
+    {
+      "title": "Taking on CUDA with ROCm: 'One Step After Another'",
+      "link": "https://www.eetimes.com/taking-on-cuda-with-rocm-one-step-after-another/",
+      "source": "Hacker News",
+      "time": "2026-04-12T22:38:45"
+    },
+    {
+      "title": "Optimization of 32-bit Unsigned Division by Constants on 64-bit Targets",
+      "link": "https://arxiv.org/abs/2604.07902",
+      "source": "Hacker News",
+      "time": "2026-04-12T09:14:30"
+    },
+    {
+      "title": "Show HN: boringBar – a taskbar-style dock replacement for macOS",
+      "link": "https://boringbar.app/",
+      "source": "Hacker News",
+      "time": "2026-04-12T17:25:44"
+    },
+    {
+      "title": "Bring Back Idiomatic Design (2023)",
+      "link": "https://essays.johnloeber.com/p/4-bring-back-idiomatic-design",
+      "source": "Hacker News",
+      "time": "2026-04-12T12:21:26"
+    },
+    {
+      "title": "DIY Soft Drinks",
+      "link": "https://blinry.org/diy-soft-drinks/",
+      "source": "Hacker News",
+      "time": "2026-04-12T16:38:43"
+    },
+    {
+      "title": "Ask HN: What Are You Working On? (April 2026)",
+      "link": "https://news.ycombinator.com/item?id=47741527",
+      "source": "Hacker News",
+      "time": "2026-04-12T16:24:43"
+    },
+    {
+      "title": "A Perfectable Programming Language",
+      "link": "https://alok.github.io/lean-pages/perfectable-lean/",
+      "source": "Hacker News",
+      "time": "2026-04-12T21:11:24"
+    },
+    {
+      "title": "Most people can't juggle one ball",
+      "link": "https://www.lesswrong.com/posts/jTGbKKGqs5EdyYoRc/most-people-can-t-juggle-one-ball",
+      "source": "Hacker News",
+      "time": "2026-04-09T12:35:20"
+    },
+    {
+      "title": "Apple's accidental moat: How the \"AI Loser\" may end up winning",
+      "link": "https://adlrocha.substack.com/p/adlrocha-how-the-ai-loser-may-end",
+      "source": "Hacker News",
+      "time": "2026-04-13T02:53:10"
+    },
+    {
+      "title": "科技爱好者周刊（第 392 期）：axios 投毒与好莱坞式骗术",
+      "link": "http://www.ruanyifeng.com/blog/2026/04/weekly-issue-392.html",
+      "source": "阮一峰的网志",
+      "time": "Fri, 10 Apr 2026 07:17:13 +0800"
+    },
+    {
+      "title": "科技爱好者周刊（第 391 期）：AI 的贫富分化",
+      "link": "http://www.ruanyifeng.com/blog/2026/04/weekly-issue-391.html",
+      "source": "阮一峰的网志",
+      "time": "Fri, 03 Apr 2026 08:08:02 +0800"
+    },
+    {
+      "title": "科技爱好者周刊（第 390 期）：没有语料，大模型就是智障",
+      "link": "http://www.ruanyifeng.com/blog/2026/03/weekly-issue-390.html",
+      "source": "阮一峰的网志",
+      "time": "Fri, 27 Mar 2026 05:49:12 +0800"
+    },
+    {
+      "title": "套壳中国大模型撑起500亿美元估值？扒一扒 Cursor 的\"套壳\"疑云",
+      "link": "http://www.ruanyifeng.com/blog/2026/03/kimi-cursor.html",
+      "source": "阮一峰的网志",
+      "time": "Sat, 21 Mar 2026 18:19:11 +0800"
+    },
+    {
+      "title": "科技爱好者周刊（第 389 期）：未来如何招聘程序员",
+      "link": "http://www.ruanyifeng.com/blog/2026/03/weekly-issue-389.html",
+      "source": "阮一峰的网志",
+      "time": "Fri, 20 Mar 2026 07:59:16 +0800"
+    },
+    {
+      "title": "科技爱好者周刊（第 388 期）：测试是新的护城河",
+      "link": "http://www.ruanyifeng.com/blog/2026/03/weekly-issue-388.html",
+      "source": "阮一峰的网志",
+      "time": "Fri, 13 Mar 2026 07:59:16 +0800"
+    },
+    {
+      "title": "从 iPhone 随阿尔忒弥斯 2 号升空，谈谈 Apple 设备的太空征程",
+      "link": "https://sspai.com/post/108519",
+      "source": "少数派",
+      "time": "Mon, 13 Apr 2026 11:48:39 +0800"
+    },
+    {
+      "title": "派早报：微软宣布改进和简化 Windows 预览体验计划",
+      "link": "https://sspai.com/post/108568",
+      "source": "少数派",
+      "time": "Mon, 13 Apr 2026 07:30:00 +0800"
+    },
+    {
+      "title": "我是如何进行文件管理的",
+      "link": "https://sspai.com/post/106369",
+      "source": "少数派",
+      "time": "Sun, 12 Apr 2026 17:46:41 +0800"
+    },
+    {
+      "title": "浅谈人工智能时代的用户体验：Agent Experience 导论",
+      "link": "https://sspai.com/post/107600",
+      "source": "少数派",
+      "time": "Sat, 11 Apr 2026 15:18:26 +0800"
+    },
+    {
+      "title": "本周看什么 | 最近值得一看的 11 部作品",
+      "link": "https://sspai.com/post/108496",
+      "source": "少数派",
+      "time": "Fri, 10 Apr 2026 18:02:31 +0800"
+    },
+    {
+      "title": "深入 OPPO Find N6：一场关于大屏和效率的舞蹈",
+      "link": "https://sspai.com/post/108469",
+      "source": "少数派",
+      "time": "Fri, 10 Apr 2026 15:05:33 +0800"
+    },
+    {
+      "title": "Claude Code+HA 自动化实战：给宠物龟请个「电子保姆」",
+      "link": "https://sspai.com/post/108453",
+      "source": "少数派",
+      "time": "Fri, 10 Apr 2026 11:35:33 +0800"
+    },
+    {
+      "title": "派早报：微信支付发布接入 Skill 工具体系等",
+      "link": "https://sspai.com/post/108468",
+      "source": "少数派",
+      "time": "Fri, 10 Apr 2026 08:47:54 +0800"
+    },
+    {
+      "title": "中巴文化年献礼：《影之刃零》受邀参展Gamescom LATAM 2026",
+      "link": "https://www.gcores.com/articles/213225",
+      "source": "机核网",
+      "time": "Mon, 13 Apr 2026 11:55:46 +0800"
+    },
+    {
+      "title": "《超级马力欧银河大电影》以6.29亿美元的成绩成为2026年票房最高的影片",
+      "link": "https://www.gcores.com/articles/213226",
+      "source": "机核网",
+      "time": "Mon, 13 Apr 2026 11:23:33 +0800"
+    },
+    {
+      "title": "R星确认云服务器遭攻破,黑客发出最终通牒",
+      "link": "https://www.gcores.com/articles/213224",
+      "source": "机核网",
+      "time": "Mon, 13 Apr 2026 10:11:19 +0800"
+    },
+    {
+      "title": "《三角洲行动》X《古墓丽影》联动将于4月30日实装，「回声」赛季详情同步揭晓",
+      "link": "https://www.gcores.com/articles/213223",
+      "source": "机核网",
+      "time": "Mon, 13 Apr 2026 09:51:18 +0800"
+    },
+    {
+      "title": "“太空塔科夫”：《逃离塔科夫》开发商正式揭晓《Fragmentary Order》",
+      "link": "https://www.gcores.com/articles/213221",
+      "source": "机核网",
+      "time": "Mon, 13 Apr 2026 09:28:43 +0800"
+    },
+    {
+      "title": "当弹幕射击游戏被做成3A规格：《沙罗周期》（Saros）试玩体验",
+      "link": "https://www.gcores.com/articles/213217",
+      "source": "机核网",
+      "time": "Mon, 13 Apr 2026 08:00:00 +0800"
+    },
+    {
+      "title": "眼见《传奇》起高楼，留下《红色沙漠》 | 韩国网游塌方史（2001-2005）",
+      "link": "https://www.gcores.com/radios/212906",
+      "source": "机核网",
+      "time": "Sun, 12 Apr 2026 23:00:00 +0800"
+    },
+    {
+      "title": "听取玩家意见真不会害了你！和UP主GT凯麒聊聊国产单机",
+      "link": "https://www.gcores.com/radios/213208",
+      "source": "机核网",
+      "time": "Sun, 12 Apr 2026 13:14:03 +0800"
+    }
+  ]
+}

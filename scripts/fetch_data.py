@@ -29,12 +29,18 @@ def fetch_rss(name, url):
         items = []
         for entry in feed.entries[:20]:
             content = entry.get('summary') or entry.get('description', '')
+            plain_content = re.sub(r'<[^>]+>', '', content).strip()
+            
+            # 过滤逻辑：如果内容块中含有明显的 HTML/JS 源码特征，则视为干扰数据
+            if "const " in plain_content and "document.get" in plain_content:
+                continue
+
             item = {
                 "title": entry.title,
                 "link": entry.link,
                 "source": name,
                 "time": entry.get('published', datetime.now().isoformat()),
-                "content": re.sub(r'<[^>]+>', '', content).strip(),
+                "content": plain_content[:2000], # 限制内容长度，防止撑爆 JSON
                 "comments": []
             }
             if is_linux_do and "/t/" in entry.link:
@@ -110,8 +116,11 @@ def generate_ai_summary(items):
     if not key: return "未配置 AI_API_KEY，无法生成今日简报。"
     
     print(f"[DEBUG] AI 正在生成简报 ({model})...")
-    context = "\n---\n".join([f"[{i['source']}] {i['title']}\n内容: {i['content'][:150]}" for i in items[:80]])
-    prompt = f"你是一个硬核游戏开发情报官。请根据以下情报流，总结今日最值得关注的 3-5 个技术、引擎或行业动态。语气锐利、干练、专业。使用 Markdown。\n\n情报：\n{context}"
+    # 过滤掉内容过短或包含源码的条目进入 AI 总结，减小干扰
+    filtered_items = [i for i in items if len(i['content']) > 5 and not ("const " in i['content'] and "render" in i['content'])]
+    
+    context = "\n---\n".join([f"[{i['source']}] {i['title']}\n内容: {i['content'][:200]}" for i in filtered_items[:60]])
+    prompt = f"你是一个硬核游戏开发情报官。请根据以下情报流，总结今日最值得关注的 3-5 个技术、引擎或行业动态。要求：1. 严禁在总结中输出大段源代码。2. 忽略任何关于本项目（InfoSou）本身的论坛讨论帖。3. 语气锐利、干练、专业。使用 Markdown。\n\n情报：\n{context}"
     
     try:
         url = base.rstrip('/') + ("/chat/completions" if "/chat/completions" not in base else "")

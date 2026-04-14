@@ -101,9 +101,19 @@
         async function loadData(path = 'data/latest.json') {
             try {
                 const res = await fetch(path + '?' + new Date().getTime());
+                if (!res.ok) throw new Error("FILE_NOT_FOUND");
+                
                 const json = await res.json();
                 console.info("[Nexus] 数据加载成功:", path);
-                rawData = json.items || [];
+                
+                // 数据归一化，防止脏数据导致渲染崩溃
+                rawData = (json.items || []).map(item => ({
+                    ...item,
+                    title: item.title || '无标题',
+                    source: item.source || '未知来源',
+                    time: item.time || new Date().toISOString(),
+                    content: item.content || ''
+                }));
                 
                 // 渲染 AI 简报
                 const aiEl = document.getElementById('ai-content');
@@ -184,20 +194,27 @@
                 groups[d].push(item);
             });
 
-            container.innerHTML = Object.keys(groups).sort((a,b) => new Date(b) - new Date(a)).map(date => `
+            container.innerHTML = Object.keys(groups).sort((a,b) => {
+                const da = new Date(a), db = new Date(b);
+                return (isNaN(db) ? 0 : db) - (isNaN(da) ? 0 : da);
+            }).map(date => `
                 <div class="mb-16">
                     <h3 class="text-[10px] font-bold text-amber-500/40 uppercase tracking-[0.4em] mb-10 flex items-center gap-6">
                         ${date} <span class="h-px flex-1 bg-amber-500/5"></span>
                     </h3>
                     <div class="waterfall columns-1 md:columns-2 lg:columns-3 space-y-6">
-                        ${groups[date].map(item => `
+                        ${groups[date].map(item => {
+                            const displayTime = !isNaN(new Date(item.time)) 
+                                ? new Date(item.time).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})
+                                : '--:--';
+                            return `
                             <div class="waterfall-item break-inside-avoid">
                                 <a href="${item.link}" target="_blank" class="block glass rounded-[1.5rem] overflow-hidden card-hover transition-all duration-500 group border border-white/5">
                                     <div class="p-6">
                                         <div class="flex items-center gap-2 mb-4 text-[9px] font-bold tracking-widest text-amber-200/40 uppercase">
                                             <span>${item.source}</span>
                                             <span class="opacity-20">•</span>
-                                            <span>${new Date(item.time).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})}</span>
+                                            <span>${displayTime}</span>
                                         </div>
                                         <h4 class="text-amber-50/90 font-bold leading-snug text-lg group-hover:text-amber-400 transition-colors mb-3">${item.title}</h4>
                                         <p class="text-amber-100/40 text-[12px] leading-relaxed font-light line-clamp-4">${item.content || '无正文摘要'}</p>
@@ -206,7 +223,7 @@
                                             <div class="mt-6 pt-4 border-t border-amber-500/10 space-y-3">
                                                 ${item.comments.map(c => `
                                                     <div class="text-[10px] leading-relaxed">
-                                                        <span class="text-amber-500/60">@${c.author}:</span>
+                                                        <span class="text-amber-500/60">@${c.author || '匿名'}:</span>
                                                         <span class="text-amber-100/20">${c.text}</span>
                                                     </div>
                                                 `).join('')}
@@ -215,7 +232,8 @@
                                     </div>
                                 </a>
                             </div>
-                        `).join('')}
+                            `;
+                        }).join('')}
                     </div>
                 </div>
             `).join('') || '<div class="text-amber-900/20 text-center py-24 italic tracking-widest">深处暂无回音...</div>';

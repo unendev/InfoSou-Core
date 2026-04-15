@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            background: 
+            background:
                 radial-gradient(circle at 20% 30%, rgba(217, 119, 6, 0.15) 0%, transparent 50%),
                 radial-gradient(circle at 80% 70%, rgba(180, 83, 9, 0.1) 0%, transparent 50%),
                 linear-gradient(135deg, #130f0a 0%, #261e11 50%, #130f0a 100%);
@@ -27,9 +27,9 @@
         }
         .waterfall { column-gap: 1.5rem; }
         .waterfall-item { break-inside: avoid; margin-bottom: 2rem; }
-        .sidebar-active { 
-            background: linear-gradient(to right, #d97706, #b45309) !important; 
-            color: #fff !important; 
+        .sidebar-active {
+            background: linear-gradient(to right, #d97706, #b45309) !important;
+            color: #fff !important;
             box-shadow: 0 4px 15px rgba(180, 83, 9, 0.3);
         }
         .card-hover:hover {
@@ -40,7 +40,7 @@
         }
         ::-webkit-scrollbar { width: 4px; }
         ::-webkit-scrollbar-thumb { background: rgba(217, 119, 6, 0.3); border-radius: 10px; }
-        
+
         pre { white-space: pre-wrap; word-wrap: break-word; }
         .markdown-content h1, .markdown-content h2, .markdown-content h3 { color: #fbbf24; font-weight: bold; margin-top: 1rem; margin-bottom: 0.5rem; }
         .markdown-content ul { list-style-type: disc; margin-left: 1.5rem; }
@@ -51,10 +51,10 @@
         <!-- Sidebar -->
         <aside class="w-full md:w-64 sidebar-glass sticky top-0 h-auto md:h-screen p-8 flex flex-col z-50">
             <h1 class="text-3xl font-black bg-gradient-to-r from-amber-400 to-orange-600 bg-clip-text text-transparent mb-10 tracking-tighter cursor-pointer" onclick="location.reload()">InfoSou</h1>
-            
+
             <div class="flex-1 overflow-y-auto pr-2">
                 <nav id="source-filter" class="space-y-2 mb-8"></nav>
-                
+
                 <div class="border-t border-amber-900/20 pt-6">
                     <h3 class="text-[10px] font-bold text-amber-500/40 uppercase tracking-[0.2em] mb-4">历史档案库</h3>
                     <div id="archive-list" class="space-y-1">
@@ -88,158 +88,174 @@
 
             <!-- Data List -->
             <div id="feed-container">
-                <div id="loader" class="text-center py-24 text-amber-200/20 animate-pulse text-lg tracking-widest text-[Nexus] 正在接入网络...</div>
+                <div id="loader" class="text-center py-24 text-amber-200/20 animate-pulse text-lg tracking-widest font-serif">正在接入网络...</div>
             </div>
         </main>
     </div>
 
-    <script>
-        let rawData = [];
-        let activeSource = 'all';
-        let expandedGroups = new Set(['Reddit', 'HN']);
+    <!-- 确保脚本置于 body 结束前，并使用标准的 type 声明 -->
+    <script type="text/javascript">
+        (function() {
+            let rawData = [];
+            let activeSource = 'all';
+            let expandedGroups = new Set(['Reddit', 'HN']);
 
-        async function loadData(path = 'data/latest.json') {
-            try {
-                const res = await fetch(path + '?' + new Date().getTime());
-                if (!res.ok) throw new Error("FILE_NOT_FOUND");
-                
-                const json = await res.json();
-                console.info("[Nexus] 数据加载成功:", path);
-                
-                // 数据归一化，防止脏数据导致渲染崩溃
-                rawData = (json.items || []).map(item => ({
-                    ...item,
-                    title: item.title || '无标题',
-                    source: item.source || '未知来源',
-                    time: item.time || new Date().toISOString(),
-                    content: item.content || ''
-                }));
-                
-                // 渲染 AI 简报
-                const aiEl = document.getElementById('ai-content');
-                if (json.metadata && json.metadata.ai_summary) {
-                    // 简单的 Markdown 换行转换
-                    aiEl.innerHTML = json.metadata.ai_summary.replace(/\n/g, '<br>').replace(/### (.*?)<br>/g, '<h3 class="text-amber-400 font-bold mt-4 mb-2">$1</h3>');
-                } else {
-                    aiEl.innerText = "暂无今日简报，请等待下一轮 Action 运行。";
+            async function loadData(path = 'data/latest.json') {
+                try {
+                    const res = await fetch(path + '?t=' + Date.now());
+                    if (!res.ok) throw new Error("FILE_NOT_FOUND");
+
+                    const json = await res.json();
+
+                    // 数据转换逻辑封装
+                    rawData = (json.items || []).map(function(item) {
+                        return {
+                            ...item,
+                            title: item.title || '无标题',
+                            source: item.source || '未知来源',
+                            time: item.time || new Date().toISOString(),
+                            content: item.content || ''
+                        };
+                    });
+
+                    const aiEl = document.getElementById('ai-content');
+                    if (json.metadata && json.metadata.ai_summary) {
+                        aiEl.innerHTML = json.metadata.ai_summary
+                            .replace(/\n/g, '<br>')
+                            .replace(/### (.*?)<br>/g, '<h3 class="text-amber-400 font-bold mt-4 mb-2">$1</h3>');
+                    } else {
+                        aiEl.innerText = "暂无今日简报，请等待下一轮 Action 运行。";
+                    }
+
+                    renderSidebar();
+                    renderContent();
+                } catch (e) {
+                    console.error("Load Error:", e);
+                    document.getElementById('feed-container').innerHTML = '<div class="glass text-amber-500 p-8 rounded-3xl text-center">数据加载异常，请确认后端抓取状态。</div>';
                 }
-
-                renderSidebar();
-                renderContent();
-            } catch (e) {
-                document.getElementById('feed-container').innerHTML = `<div class="glass text-amber-500 p-8 rounded-3xl text-center">数据加载异常，请确认后端抓取状态。</div>`;
             }
-        }
 
-        function renderSidebar() {
-            const nav = document.getElementById('source-filter');
-            const allSources = [...new Set(rawData.map(i => i.source))];
-            
-            const groups = { 'Others': [] };
-            allSources.forEach(s => {
-                if (s.startsWith('Reddit |')) {
-                    if (!groups['Reddit']) groups['Reddit'] = [];
-                    groups['Reddit'].push(s);
-                } else if (s.startsWith('HN |')) {
-                    if (!groups['HN']) groups['HN'] = [];
-                    groups['HN'].push(s);
-                } else {
-                    groups['Others'].push(s);
-                }
-            });
+            function renderSidebar() {
+                const nav = document.getElementById('source-filter');
+                if (!nav) return;
 
-            const renderItem = (s, label) => `
-                <button onclick="filterBySource('${s}')" class="w-full text-left px-4 py-2 rounded-xl transition-all text-[11px] ${activeSource===s?'sidebar-active':'text-amber-100/40 hover:bg-white/5'}" data-source="${s}">${label || s}</button>
-            `;
+                const allSources = [...new Set(rawData.map(i => i.source))];
+                const groups = { 'Others': [] };
 
-            const renderGroup = (name, items) => {
-                if (items.length === 0) return '';
-                const isExpanded = expandedGroups.has(name);
-                const hasActive = items.includes(activeSource);
-                return `
-                    <div class="mb-2">
-                        <button onclick="toggleGroup('${name}')" class="w-full flex items-center justify-between px-4 py-2.5 text-[10px] font-bold uppercase tracking-[0.15em] ${hasActive ? 'text-amber-400' : 'text-amber-500/30'}">
-                            ${name} (${items.length})
-                            <span class="font-mono text-[8px]">${isExpanded ? '▼' : '▶'}</span>
-                        </button>
-                        <div class="space-y-0.5 ml-2 border-l border-amber-900/10 ${isExpanded ? '' : 'hidden'}">
-                            ${items.map(s => renderItem(s, s.split('|')[1]?.trim() || s)).join('')}
+                allSources.forEach(s => {
+                    if (s.indexOf('Reddit |') === 0) {
+                        if (!groups['Reddit']) groups['Reddit'] = [];
+                        groups['Reddit'].push(s);
+                    } else if (s.indexOf('HN |') === 0) {
+                        if (!groups['HN']) groups['HN'] = [];
+                        groups['HN'].push(s);
+                    } else {
+                        groups['Others'].push(s);
+                    }
+                });
+
+                const renderItem = (s, label) => `
+                    <button onclick="window.filterBySource('${s}')" class="w-full text-left px-4 py-2 rounded-xl transition-all text-[11px] ${activeSource===s?'sidebar-active':'text-amber-100/40 hover:bg-white/5'}">${label || s}</button>
+                `;
+
+                const renderGroup = (name, items) => {
+                    if (items.length === 0) return '';
+                    const isExpanded = expandedGroups.has(name);
+                    const hasActive = items.includes(activeSource);
+                    return `
+                        <div class="mb-2">
+                            <button onclick="window.toggleGroup('${name}')" class="w-full flex items-center justify-between px-4 py-2.5 text-[10px] font-bold uppercase tracking-[0.15em] ${hasActive ? 'text-amber-400' : 'text-amber-500/30'}">
+                                ${name} (${items.length})
+                                <span class="font-mono text-[8px]">${isExpanded ? '▼' : '▶'}</span>
+                            </button>
+                            <div class="space-y-0.5 ml-2 border-l border-amber-900/10 ${isExpanded ? '' : 'hidden'}">
+                                ${items.map(s => renderItem(s, s.split('|')[1]?.trim() || s)).join('')}
+                            </div>
                         </div>
+                    `;
+                };
+
+                nav.innerHTML = `
+                    <button onclick="window.filterBySource('all')" class="w-full text-left px-5 py-3 rounded-xl transition-all text-sm mb-4 ${activeSource==='all'?'sidebar-active':'text-amber-100/40 hover:bg-white/5'}">全部视野</button>
+                    ${renderGroup('Reddit', groups['Reddit'] || [])}
+                    ${renderGroup('HN', groups['HN'] || [])}
+                    <div class="pt-4 mt-4 border-t border-amber-900/10 space-y-0.5">
+                        ${groups['Others'].map(s => renderItem(s)).join('')}
                     </div>
                 `;
+            }
+
+            window.toggleGroup = function(n) {
+                expandedGroups.has(n) ? expandedGroups.delete(n) : expandedGroups.add(n);
+                renderSidebar();
             };
 
-            nav.innerHTML = `
-                <button onclick="filterBySource('all')" class="w-full text-left px-5 py-3 rounded-xl transition-all text-sm mb-4 ${activeSource==='all'?'sidebar-active':'text-amber-100/40 hover:bg-white/5'}">全部视野</button>
-                ${renderGroup('Reddit', groups['Reddit'] || [])}
-                ${renderGroup('HN', groups['HN'] || [])}
-                <div class="pt-4 mt-4 border-t border-amber-900/10 space-y-0.5">
-                    ${groups['Others'].map(s => renderItem(s)).join('')}
-                </div>
-            `;
-        }
+            window.filterBySource = function(s) {
+                activeSource = s;
+                renderSidebar();
+                renderContent();
+            };
 
-        window.toggleGroup = (n) => { expandedGroups.has(n) ? expandedGroups.delete(n) : expandedGroups.add(n); renderSidebar(); };
-        
-        window.filterBySource = (s) => { activeSource = s; renderSidebar(); renderContent(); };
+            function renderContent() {
+                const container = document.getElementById('feed-container');
+                if (!container) return;
 
-        function renderContent() {
-            const container = document.getElementById('feed-container');
-            let filtered = activeSource === 'all' ? rawData : rawData.filter(i => i.source === activeSource);
-            
-            const groups = {};
-            filtered.forEach(item => {
-                const d = item.time ? new Date(item.time).toLocaleDateString('zh-CN') : '今日';
-                if (!groups[d]) groups[d] = [];
-                groups[d].push(item);
-            });
+                let filtered = activeSource === 'all' ? rawData : rawData.filter(i => i.source === activeSource);
+                const groups = {};
 
-            container.innerHTML = Object.keys(groups).sort((a,b) => {
-                const da = new Date(a), db = new Date(b);
-                return (isNaN(db) ? 0 : db) - (isNaN(da) ? 0 : da);
-            }).map(date => `
-                <div class="mb-16">
-                    <h3 class="text-[10px] font-bold text-amber-500/40 uppercase tracking-[0.4em] mb-10 flex items-center gap-6">
-                        ${date} <span class="h-px flex-1 bg-amber-500/5"></span>
-                    </h3>
-                    <div class="waterfall columns-1 md:columns-2 lg:columns-3 space-y-6">
-                        ${groups[date].map(item => {
-                            const displayTime = !isNaN(new Date(item.time)) 
-                                ? new Date(item.time).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})
-                                : '--:--';
-                            return `
-                            <div class="waterfall-item break-inside-avoid">
-                                <a href="${item.link}" target="_blank" class="block glass rounded-[1.5rem] overflow-hidden card-hover transition-all duration-500 group border border-white/5">
-                                    <div class="p-6">
-                                        <div class="flex items-center gap-2 mb-4 text-[9px] font-bold tracking-widest text-amber-200/40 uppercase">
-                                            <span>${item.source}</span>
-                                            <span class="opacity-20">•</span>
-                                            <span>${displayTime}</span>
-                                        </div>
-                                        <h4 class="text-amber-50/90 font-bold leading-snug text-lg group-hover:text-amber-400 transition-colors mb-3">${item.title}</h4>
-                                        <p class="text-amber-100/40 text-[12px] leading-relaxed font-light line-clamp-4">${item.content || '无正文摘要'}</p>
-                                        
-                                        ${item.comments && item.comments.length > 0 ? `
-                                            <div class="mt-6 pt-4 border-t border-amber-500/10 space-y-3">
-                                                ${item.comments.map(c => `
-                                                    <div class="text-[10px] leading-relaxed">
-                                                        <span class="text-amber-500/60">@${c.author || '匿名'}:</span>
-                                                        <span class="text-amber-100/20">${c.text}</span>
-                                                    </div>
-                                                `).join('')}
+                filtered.forEach(item => {
+                    const d = item.time ? new Date(item.time).toLocaleDateString('zh-CN') : '今日';
+                    if (!groups[d]) groups[d] = [];
+                    groups[d].push(item);
+                });
+
+                container.innerHTML = Object.keys(groups).sort((a,b) => {
+                    const da = new Date(a), db = new Date(b);
+                    return (isNaN(db) ? 0 : db) - (isNaN(da) ? 0 : da);
+                }).map(date => `
+                    <div class="mb-16">
+                        <h3 class="text-[10px] font-bold text-amber-500/40 uppercase tracking-[0.4em] mb-10 flex items-center gap-6">
+                            ${date} <span class="h-px flex-1 bg-amber-500/5"></span>
+                        </h3>
+                        <div class="waterfall columns-1 md:columns-2 lg:columns-3 space-y-6">
+                            ${groups[date].map(item => {
+                                const displayTime = !isNaN(new Date(item.time))
+                                    ? new Date(item.time).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})
+                                    : '--:--';
+                                return `
+                                <div class="waterfall-item">
+                                    <a href="${item.link}" target="_blank" class="block glass rounded-[1.5rem] overflow-hidden card-hover transition-all duration-500 group border border-white/5">
+                                        <div class="p-6">
+                                            <div class="flex items-center gap-2 mb-4 text-[9px] font-bold tracking-widest text-amber-200/40 uppercase">
+                                                <span>${item.source}</span>
+                                                <span class="opacity-20">•</span>
+                                                <span>${displayTime}</span>
                                             </div>
-                                        ` : ''}
-                                    </div>
-                                </a>
-                            </div>
-                            `;
-                        }).join('')}
+                                            <h4 class="text-amber-50/90 font-bold leading-snug text-lg group-hover:text-amber-400 transition-colors mb-3">${item.title}</h4>
+                                            <p class="text-amber-100/40 text-[12px] leading-relaxed font-light line-clamp-4">${item.content || '无正文摘要'}</p>
+                                            ${item.comments && item.comments.length > 0 ? `
+                                                <div class="mt-6 pt-4 border-t border-amber-500/10 space-y-3">
+                                                    ${item.comments.map(c => `
+                                                        <div class="text-[10px] leading-relaxed">
+                                                            <span class="text-amber-500/60">@${c.author || '匿名'}:</span>
+                                                            <span class="text-amber-100/20">${c.text}</span>
+                                                        </div>
+                                                    `).join('')}
+                                                </div>
+                                            ` : ''}
+                                        </div>
+                                    </a>
+                                </div>
+                                `;
+                            }).join('')}
+                        </div>
                     </div>
-                </div>
-            `).join('') || '<div class="text-amber-900/20 text-center py-24 italic tracking-widest">深处暂无回音...</div>';
-        }
+                `).join('') || '<div class="text-amber-900/20 text-center py-24 italic tracking-widest">深处暂无回音...</div>';
+            }
 
-        loadData();
+            // 初始化
+            loadData();
+        })();
     </script>
 </body>
 </html>

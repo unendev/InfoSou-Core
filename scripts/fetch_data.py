@@ -110,26 +110,28 @@ def fetch_reddit_with_praw():
         return []
 
 def generate_ai_summary(items):
-    key = os.environ.get("AI_API_KEY")
-    base = os.environ.get("AI_BASE_URL", "https://generativelanguage.googleapis.com/v1")
-    model = os.environ.get("AI_MODEL_NAME", "gemini-1.5-flash")
-    if not key: return "未配置 AI_API_KEY，无法生成今日简报。"
-    
-    print(f"[DEBUG] AI 正在生成简报 ({model})...")
-    # 过滤掉内容过短或包含源码的条目进入 AI 总结，减小干扰
+    # 修改：优先读取环境，无环境时自动对齐您指定的 8046 默认配置
+    key = os.environ.get("AI_API_KEY", "sk-263d3dcfe61c4c3da96d2bcbbb22dc11")
+    base = os.environ.get("AI_BASE_URL", "http://localhost:8046/v1")
+    model = os.environ.get("AI_MODEL_NAME", "gemini-3-flash")
+
+    if not key or "sk-" not in key: return "§ SYSTEM_ERROR: AI_LINK_UNAVAILABLE (Key Missing)"
+
+    print(f"[DEBUG] [AI_ENGINE] Model: {model} | Base: {base} | Generating Summary...")
     filtered_items = [i for i in items if len(i['content']) > 5 and not ("const " in i['content'] and "render" in i['content'])]
-    
-    context = "\n---\n".join([f"[{i['source']}] {i['title']}\n内容: {i['content'][:200]}" for i in filtered_items[:60]])
-    prompt = f"你是一个硬核游戏开发情报官。请根据以下情报流，总结今日最值得关注的 3-5 个技术、引擎或行业动态。要求：1. 严禁在总结中输出大段源代码。2. 忽略任何关于本项目（InfoSou）本身的论坛讨论帖。3. 语气锐利、干练、专业。使用 Markdown。\n\n情报：\n{context}"
-    
+
+    context = "\n---\n".join([f"[{i['source']}] {i['title']}\n内容: {i['content'][:250]}" for i in filtered_items[:50]])
+    prompt = f"你是一个硬核游戏开发情报官。请根据以下情报流，总结今日最值得关注的 3-5 个技术、引擎或行业动态。要求：1. 严禁输出源代码。2. 忽略本项目本身讨论。3. 语气锐利、干练、专业。使用 Markdown。\n\n情报：\n{context}"
+
     try:
         url = base.rstrip('/') + ("/chat/completions" if "/chat/completions" not in base else "")
         res = requests.post(url, headers={"Authorization": f"Bearer {key}"}, json={
             "model": model, "messages": [{"role": "user", "content": prompt}], "temperature": 0.3
-        }, timeout=60)
+        }, timeout=80)
         return res.json()['choices'][0]['message']['content']
     except Exception as e:
-        return f"AI 简报生成失败: {e}"
+        print(f"[WARN] 总结生成异常，将标记为待机模式: {e}")
+        return "§ STANDBY: 数据抓取完成，由于本地 API 服务未响应，请稍后手动刷新或追问。"
 
 def main():
     data_dir = 'public/data'

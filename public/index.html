@@ -2,260 +2,106 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InfoSou - 金色游戏开发情报枢纽</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no font-white">
+    <title>InfoSou - Nexus Intelligence Terminal</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { theme: { extend: { colors: { nexus: { bg: '#1c1917', sidebar: '#44403c', accent: '#fbbf24' } } } } }
+    </script>
     <style>
         body {
-            background:
-                radial-gradient(circle at 20% 30%, rgba(217, 119, 6, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(180, 83, 9, 0.1) 0%, transparent 50%),
-                linear-gradient(135deg, #130f0a 0%, #261e11 50%, #130f0a 100%);
-            background-attachment: fixed;
-            color: #fef3c7;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"),
+                linear-gradient(135deg, #1c1917 0%, #292524 20%, #44403c 40%, #78350f 60%, #451a03 80%, #1c1917 100%);
+            background-attachment: fixed; color: #ffffff; font-family: 'Noto Sans SC', sans-serif; overflow-x: hidden;
         }
-        .glass {
-            background: rgba(20, 15, 10, 0.55);
-            backdrop-filter: blur(32px);
-            border: 1px solid rgba(251, 191, 36, 0.08);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+        .sidebar { background-color: #44403c; border-right: 1px solid rgba(0,0,0,0.3); width: 14rem; display: flex; flex-direction: column; justify-content: center; height: 100vh; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); z-index: 50; }
+        @media (max-width: 768px) {
+            .sidebar { position: fixed; transform: translateX(-100%); width: 85%; }
+            .sidebar.open { transform: translateX(0); }
+            .main-view.sidebar-open { opacity: 0.3; pointer-events: none; }
         }
-        .sidebar-glass {
-            background: rgba(15, 12, 8, 0.85);
-            backdrop-filter: blur(40px);
-            border-right: 1px solid rgba(251, 191, 36, 0.05);
-        }
-        .waterfall { column-gap: 1.5rem; }
-        .waterfall-item { break-inside: avoid; margin-bottom: 2rem; }
-        .sidebar-active {
-            background: linear-gradient(to right, #d97706, #b45309) !important;
-            color: #fff !important;
-            box-shadow: 0 4px 15px rgba(180, 83, 9, 0.3);
-        }
-        .card-hover:hover {
-            border-color: rgba(251, 191, 36, 0.4);
-            transform: translateY(-4px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            background: rgba(45, 35, 25, 0.8);
-        }
-        ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-thumb { background: rgba(217, 119, 6, 0.3); border-radius: 10px; }
+        .nexus-card { background: rgba(41, 37, 36, 0.5); backdrop-filter: blur(8px); border: 1px solid rgba(120, 53, 15, 0.15); transition: all 0.3s ease; }
+        .nexus-card:hover { border-color: rgba(251, 191, 36, 0.5); background: rgba(41, 37, 36, 0.7); transform: translateY(-3px); }
 
-        pre { white-space: pre-wrap; word-wrap: break-word; }
-        .markdown-content h1, .markdown-content h2, .markdown-content h3 { color: #fbbf24; font-weight: bold; margin-top: 1rem; margin-bottom: 0.5rem; }
-        .markdown-content ul { list-style-type: disc; margin-left: 1.5rem; }
+        .prose-nexus h3 { color: #fbbf24; font-weight: 800; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.5rem; margin-top: 1rem; margin-bottom: 0.5rem; font-size: 14px; }
+        .prose-nexus b, .prose-nexus strong { color: #fbbf24; }
+
+        /* 悬浮助手 3.0：彻底支持拖拽 & 精简 */
+        .agent-window {
+            position: fixed; bottom: 6rem; right: 2rem; width: 22rem; height: 30rem;
+            background: rgba(30, 28, 25, 0.95); border: 1px solid rgba(251, 191, 36, 0.2);
+            border-radius: 12px; flex-direction: column; display: none;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.9); overflow: hidden; backdrop-filter: blur(40px); z-index: 1000;
+        }
+        .agent-window.active { display: flex; animation: slideUp 0.2s ease-out; }
+        .drag-bar { cursor: grab; background: rgba(251, 191, 36, 0.08); padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .drag-bar:active { cursor: grabbing; }
+
+        .chat-area { flex: 1; overflow-y: auto; padding: 20px; }
+        .chat-input-box { background: rgba(0,0,0,0.4); border-top: 1px solid rgba(255,255,255,0.05); padding: 15px; }
+        .nexus-textarea {
+            width: 100%; height: 3.5rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 6px; color: white; padding: 10px; font-size: 13px; outline: none; transition: all 0.2s; resize: none;
+        }
+        .nexus-textarea:focus { border-color: #fbbf24; background: rgba(255,255,255,0.06); }
+
+        .agent-orb { position: fixed; bottom: 2rem; right: 2rem; width: 3.5rem; height: 3.5rem; background: #fbbf24; color: #000; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 0 20px rgba(251, 191, 36, 0.4); z-index: 999; }
+
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-thumb { background: #701a06; }
     </style>
 </head>
-<body class="min-h-screen font-sans">
-    <div class="flex flex-col md:flex-row min-h-screen">
-        <!-- Sidebar -->
-        <aside class="w-full md:w-64 sidebar-glass sticky top-0 h-auto md:h-screen p-8 flex flex-col z-50">
-            <h1 class="text-3xl font-black bg-gradient-to-r from-amber-400 to-orange-600 bg-clip-text text-transparent mb-10 tracking-tighter cursor-pointer" onclick="location.reload()">InfoSou</h1>
-
-            <div class="flex-1 overflow-y-auto pr-2">
-                <nav id="source-filter" class="space-y-2 mb-8"></nav>
-
-                <div class="border-t border-amber-900/20 pt-6">
-                    <h3 class="text-[10px] font-bold text-amber-500/40 uppercase tracking-[0.2em] mb-4">历史档案库</h3>
-                    <div id="archive-list" class="space-y-1">
-                        <div class="text-[10px] text-amber-200/20 italic">Action 运行后将自动生成...</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-auto pt-8 border-t border-amber-900/30">
-                <div class="text-[9px] text-amber-500/30 uppercase text-center mb-2">Automated By Action</div>
-            </div>
+<body class="min-h-screen">
+    <div class="flex flex-col md:flex-row min-h-screen overflow-hidden">
+        <aside id="sidebar" class="sidebar">
+            <div id="sidebar-scroll" class="w-full overflow-y-auto px-6 py-10 custom-scrollbar"><nav id="source-filter" class="space-y-1"></nav></div>
         </aside>
 
-        <!-- Main Content -->
-        <main class="flex-1 p-6 md:p-12 lg:px-20 overflow-x-hidden">
-            <!-- AI Summary Section -->
-            <section id="ai-section" class="mb-12">
-                <div class="bg-gradient-to-br from-amber-500/30 to-orange-800/30 p-px rounded-3xl shadow-2xl">
-                    <div class="glass rounded-[23px] p-8 border-none">
-                        <div class="flex items-center gap-3 mb-6">
-                            <span class="bg-amber-500/20 p-2 rounded-lg text-xl">🍂</span>
-                            <h2 class="font-bold text-amber-200 tracking-wide">今日情报简报</h2>
-                            <span id="ai-status" class="ml-auto text-[9px] text-amber-500/40 uppercase font-mono">Synced</span>
-                        </div>
-                        <div id="ai-content" class="markdown-content text-amber-100/70 text-sm leading-relaxed font-light">
-                            情报管家正在核对当日全量信息流，请稍后...
-                        </div>
-                    </div>
+        <main id="main-view" class="flex-1 flex flex-col h-screen relative overflow-hidden bg-transparent">
+            <div class="bg-[#44403c] border-b border-white/5 z-20 flex-shrink-0">
+                <div class="px-4 md:px-8 py-3 flex items-center gap-2 text-[9px]">
+                    <button onclick="window.toggleMenu(true)" class="md:hidden border border-amber-900/40 text-amber-500 px-3 py-1 rounded">MENU</button>
+                    <button onclick="window.setDateFilter('today')" id="f-today" class="bg-black/20 text-white px-3 py-1 rounded border border-white/10 uppercase">Today</button>
+                    <button onclick="window.setRecency('history')" id="f-history" class="bg-black/20 text-white px-3 py-1 rounded border border-white/10 uppercase ml-2 tracking-widest">History</button>
+                    <button onclick="window.toggleSettings(true)" class="ml-auto opacity-50 hover:opacity-100 text-amber-500 px-3 py-1 uppercase">⚙ Settings</button>
                 </div>
-            </section>
+            </div>
 
-            <!-- Data List -->
-            <div id="feed-container">
-                <div id="loader" class="text-center py-24 text-amber-200/20 animate-pulse text-lg tracking-widest font-serif">正在接入网络...</div>
+            <div class="flex-1 overflow-y-auto" id="main-scroll">
+                <div class="p-6 lg:p-14">
+                    <section id="ai-section" class="mb-14">
+                        <div class="p-8 rounded-xl border border-amber-900/20 bg-[#44403c]/30 backdrop-blur-md relative overflow-hidden group">
+                           <div class="text-amber-400 font-black text-[10px] tracking-widest uppercase mb-4 opacity-40">§ Intelligence_Report</div>
+                           <div id="ai-content" class="text-white text-[14.5px] leading-relaxed font-normal space-y-4">STANDBY...</div>
+                        </div>
+                    </section>
+                    <div id="feed-container"></div>
+                </div>
             </div>
         </main>
     </div>
 
-    <!-- 确保脚本置于 body 结束前，并使用标准的 type 声明 -->
-    <script type="text/javascript">
-        (function() {
-            let rawData = [];
-            let activeSource = 'all';
-            let expandedGroups = new Set(['Reddit', 'HN']);
+    <!-- 悬浮智能助手 3.0 -->
+    <div id="agent-window" class="agent-window">
+         <div id="agent-drag-handle" class="drag-bar flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></div>
+                <span class="text-[9px] font-black text-amber-500 tracking-[0.4em] uppercase select-none">Nexus_Insight</span>
+            </div>
+            <button onclick="window.toggleAgent(false)" class="text-white opacity-20 hover:opacity-100">✕</button>
+         </div>
+         <div id="chat-history" class="chat-area space-y-6 custom-scrollbar"></div>
+         <div class="chat-input-box">
+            <textarea id="chat-input" class="nexus-textarea custom-scrollbar" placeholder="输入指令并按 Enter 提交..."></textarea>
+         </div>
+    </div>
+    <div class="agent-orb shadow-xl hover:scale-110 transition-transform" onclick="window.toggleAgent()">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+    </div>
 
-            async function loadData(path = 'data/latest.json') {
-                try {
-                    const res = await fetch(path + '?t=' + Date.now());
-                    if (!res.ok) throw new Error("FILE_NOT_FOUND");
-
-                    const json = await res.json();
-
-                    // 数据转换逻辑封装
-                    rawData = (json.items || []).map(function(item) {
-                        return {
-                            ...item,
-                            title: item.title || '无标题',
-                            source: item.source || '未知来源',
-                            time: item.time || new Date().toISOString(),
-                            content: item.content || ''
-                        };
-                    });
-
-                    const aiEl = document.getElementById('ai-content');
-                    if (json.metadata && json.metadata.ai_summary) {
-                        aiEl.innerHTML = json.metadata.ai_summary
-                            .replace(/\n/g, '<br>')
-                            .replace(/### (.*?)<br>/g, '<h3 class="text-amber-400 font-bold mt-4 mb-2">$1</h3>');
-                    } else {
-                        aiEl.innerText = "暂无今日简报，请等待下一轮 Action 运行。";
-                    }
-
-                    renderSidebar();
-                    renderContent();
-                } catch (e) {
-                    console.error("Load Error:", e);
-                    document.getElementById('feed-container').innerHTML = '<div class="glass text-amber-500 p-8 rounded-3xl text-center">数据加载异常，请确认后端抓取状态。</div>';
-                }
-            }
-
-            function renderSidebar() {
-                const nav = document.getElementById('source-filter');
-                if (!nav) return;
-
-                const allSources = [...new Set(rawData.map(i => i.source))];
-                const groups = { 'Others': [] };
-
-                allSources.forEach(s => {
-                    if (s.indexOf('Reddit |') === 0) {
-                        if (!groups['Reddit']) groups['Reddit'] = [];
-                        groups['Reddit'].push(s);
-                    } else if (s.indexOf('HN |') === 0) {
-                        if (!groups['HN']) groups['HN'] = [];
-                        groups['HN'].push(s);
-                    } else {
-                        groups['Others'].push(s);
-                    }
-                });
-
-                const renderItem = (s, label) => `
-                    <button onclick="window.filterBySource('${s}')" class="w-full text-left px-4 py-2 rounded-xl transition-all text-[11px] ${activeSource===s?'sidebar-active':'text-amber-100/40 hover:bg-white/5'}">${label || s}</button>
-                `;
-
-                const renderGroup = (name, items) => {
-                    if (items.length === 0) return '';
-                    const isExpanded = expandedGroups.has(name);
-                    const hasActive = items.includes(activeSource);
-                    return `
-                        <div class="mb-2">
-                            <button onclick="window.toggleGroup('${name}')" class="w-full flex items-center justify-between px-4 py-2.5 text-[10px] font-bold uppercase tracking-[0.15em] ${hasActive ? 'text-amber-400' : 'text-amber-500/30'}">
-                                ${name} (${items.length})
-                                <span class="font-mono text-[8px]">${isExpanded ? '▼' : '▶'}</span>
-                            </button>
-                            <div class="space-y-0.5 ml-2 border-l border-amber-900/10 ${isExpanded ? '' : 'hidden'}">
-                                ${items.map(s => renderItem(s, s.split('|')[1]?.trim() || s)).join('')}
-                            </div>
-                        </div>
-                    `;
-                };
-
-                nav.innerHTML = `
-                    <button onclick="window.filterBySource('all')" class="w-full text-left px-5 py-3 rounded-xl transition-all text-sm mb-4 ${activeSource==='all'?'sidebar-active':'text-amber-100/40 hover:bg-white/5'}">全部视野</button>
-                    ${renderGroup('Reddit', groups['Reddit'] || [])}
-                    ${renderGroup('HN', groups['HN'] || [])}
-                    <div class="pt-4 mt-4 border-t border-amber-900/10 space-y-0.5">
-                        ${groups['Others'].map(s => renderItem(s)).join('')}
-                    </div>
-                `;
-            }
-
-            window.toggleGroup = function(n) {
-                expandedGroups.has(n) ? expandedGroups.delete(n) : expandedGroups.add(n);
-                renderSidebar();
-            };
-
-            window.filterBySource = function(s) {
-                activeSource = s;
-                renderSidebar();
-                renderContent();
-            };
-
-            function renderContent() {
-                const container = document.getElementById('feed-container');
-                if (!container) return;
-
-                let filtered = activeSource === 'all' ? rawData : rawData.filter(i => i.source === activeSource);
-                const groups = {};
-
-                filtered.forEach(item => {
-                    const d = item.time ? new Date(item.time).toLocaleDateString('zh-CN') : '今日';
-                    if (!groups[d]) groups[d] = [];
-                    groups[d].push(item);
-                });
-
-                container.innerHTML = Object.keys(groups).sort((a,b) => {
-                    const da = new Date(a), db = new Date(b);
-                    return (isNaN(db) ? 0 : db) - (isNaN(da) ? 0 : da);
-                }).map(date => `
-                    <div class="mb-16">
-                        <h3 class="text-[10px] font-bold text-amber-500/40 uppercase tracking-[0.4em] mb-10 flex items-center gap-6">
-                            ${date} <span class="h-px flex-1 bg-amber-500/5"></span>
-                        </h3>
-                        <div class="waterfall columns-1 md:columns-2 lg:columns-3 space-y-6">
-                            ${groups[date].map(item => {
-                                const displayTime = !isNaN(new Date(item.time))
-                                    ? new Date(item.time).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})
-                                    : '--:--';
-                                return `
-                                <div class="waterfall-item">
-                                    <a href="${item.link}" target="_blank" class="block glass rounded-[1.5rem] overflow-hidden card-hover transition-all duration-500 group border border-white/5">
-                                        <div class="p-6">
-                                            <div class="flex items-center gap-2 mb-4 text-[9px] font-bold tracking-widest text-amber-200/40 uppercase">
-                                                <span>${item.source}</span>
-                                                <span class="opacity-20">•</span>
-                                                <span>${displayTime}</span>
-                                            </div>
-                                            <h4 class="text-amber-50/90 font-bold leading-snug text-lg group-hover:text-amber-400 transition-colors mb-3">${item.title}</h4>
-                                            <p class="text-amber-100/40 text-[12px] leading-relaxed font-light line-clamp-4">${item.content || '无正文摘要'}</p>
-                                            ${item.comments && item.comments.length > 0 ? `
-                                                <div class="mt-6 pt-4 border-t border-amber-500/10 space-y-3">
-                                                    ${item.comments.map(c => `
-                                                        <div class="text-[10px] leading-relaxed">
-                                                            <span class="text-amber-500/60">@${c.author || '匿名'}:</span>
-                                                            <span class="text-amber-100/20">${c.text}</span>
-                                                        </div>
-                                                    `).join('')}
-                                                </div>
-                                            ` : ''}
-                                        </div>
-                                    </a>
-                                </div>
-                                `;
-                            }).join('')}
-                        </div>
-                    </div>
-                `).join('') || '<div class="text-amber-900/20 text-center py-24 italic tracking-widest">深处暂无回音...</div>';
-            }
-
-            // 初始化
-            loadData();
-        })();
-    </script>
+    <script type="module" src="./js/app-nexus.js"></script>
 </body>
 </html>

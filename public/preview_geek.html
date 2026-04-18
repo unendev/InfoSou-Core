@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview: Geek White (Minimalist Waterfall)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        geek: {
+                            50: '#FFFFFF',
+                            100: '#F8FAFC',
+                            200: '#E2E8F0',
+                            900: '#0F172A'
+                        },
+                        accent: '#3B82F6'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #FFFFFF; color: #0F172A; }
+        .waterfall { column-gap: 1.5rem; }
+        .waterfall-item { break-inside: avoid; margin-bottom: 2rem; }
+        .geek-card {
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            transition: all 0.2s ease;
+        }
+        .geek-card:hover { border-color: #3B82F6; background: #FFF; }
+        .sidebar { border-right: 1px solid #E2E8F0; }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="flex flex-col md:flex-row min-h-screen">
+        <aside class="w-full md:w-64 sidebar p-8 flex flex-col sticky top-0 md:h-screen">
+            <h1 class="text-3xl font-bold tracking-tighter text-geek-900 mb-10">InfoSou</h1>
+            <div class="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-4">Themes / Mode A</div>
+            <nav class="space-y-2 text-sm text-slate-500">
+                <div class="font-bold text-blue-600 border-l-2 border-blue-600 pl-3">全部视界</div>
+                <div class="pl-3 hover:text-slate-900 cursor-pointer">Reddit</div>
+                <div class="pl-3 hover:text-slate-900 cursor-pointer">HackerNews</div>
+            </nav>
+        </aside>
+
+        <main class="flex-1 p-6 md:p-12 lg:px-20">
+            <!-- Summary -->
+            <section class="mb-12 bg-slate-50 p-6 rounded-lg border border-slate-100 italic text-slate-500 text-sm">
+                这是“极客白”配色方案预览。重点在于通透、简洁和理性的空间感。
+            </section>
+
+            <!-- Grid -->
+            <div class="waterfall columns-1 md:columns-2 lg:columns-3">
+                <!-- Mock Card 1 -->
+                <div class="waterfall-item">
+                    <div class="geek-card p-6 rounded-md">
+                        <div class="flex justify-between items-center text-[10px] text-slate-400 font-mono mb-4 uppercase">
+                            <span>GitHub / Tech</span>
+                            <span>10:24 AM</span>
+                        </div>
+                        <h4 class="text-geek-900 font-bold text-lg mb-3">大规模语言模型的极简部署实践</h4>
+                        <p class="text-slate-500 text-xs leading-relaxed line-clamp-3">这里是内容的缩略展示，极客白配色方案使用了细微的边框变化来提示交互，减少了视觉上的杂乱感。</p>
+                    </div>
+                </div>
+                <!-- Mock Card 2 -->
+                <div class="waterfall-item">
+                    <div class="geek-card p-6 rounded-md">
+                        <div class="flex justify-between items-center text-[10px] text-slate-400 font-mono mb-4 uppercase">
+                            <span>Product Hunt</span>
+                            <span>09:12 AM</span>
+                        </div>
+                        <h4 class="text-geek-900 font-bold text-lg mb-3">NextJS 15 性能基准测试报告</h4>
+                        <p class="text-slate-500 text-xs leading-relaxed line-clamp-3">通过提高背景对比度，阅读文字的疲劳度会显著降低。</p>
+                    </div>
+                </div>
+                 <!-- Mock Card 3 -->
+                 <div class="waterfall-item">
+                    <div class="geek-card p-6 rounded-md">
+                        <div class="flex justify-between items-center text-[10px] text-slate-400 font-mono mb-4 uppercase">
+                            <span>V2EX</span>
+                            <span>刚刚</span>
+                        </div>
+                        <h4 class="text-geek-900 font-bold text-lg mb-3">如何构建一个持久的个人情报系统？</h4>
+                        <p class="text-slate-500 text-xs leading-relaxed line-clamp-3">瀑布流布局能够承载不同长度的内容，非常适合这种随机摘要的信息聚合应用。</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

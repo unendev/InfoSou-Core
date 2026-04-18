@@ -178,7 +178,9 @@ class NexusTerminal {
     renderAISummary(content) {
         const el = document.getElementById('ai-content');
         if (content) {
-            el.innerHTML = this.md(content);
+            // 安全过滤：防止极其巨大的 Base64 字符串破坏 DOM
+            const cleaned = content.replace(/[A-Za-z0-9+/]{300,}/g, ' [DATA_BLOCKED] ');
+            el.innerHTML = this.md(cleaned);
         } else {
             el.innerHTML = `
                 <div class="flex flex-col items-center justify-center py-6 border border-white/5 bg-black/10 rounded-lg">
@@ -311,6 +313,7 @@ class NexusTerminal {
 
     renderCard(item) {
         const time = new Date(item.time).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'});
+        const cleanContent = (item.content || 'ENCRYPTED_SIGNALS').replace(/[A-Za-z0-9+/]{200,}/g, ' [BLOCKED] ');
         return `
             <div class="waterfall-item">
                 <a href="${item.link}" target="_blank" class="block nexus-card rounded-lg p-6 group">
@@ -319,7 +322,7 @@ class NexusTerminal {
                         <span class="opacity-20">${time}</span>
                     </div>
                     <h4 class="text-amber-400 font-bold leading-tight text-[14.5px] group-hover:text-white transition-colors mb-4 line-clamp-3 uppercase tracking-tighter font-mono">${item.title}</h4>
-                    <p class="text-white text-[12px] leading-relaxed font-normal line-clamp-6 opacity-95 italic">${item.content || 'ENCRYPTED_SIGNALS'}</p>
+                    <p class="text-white text-[12px] leading-relaxed font-normal line-clamp-6 opacity-95 italic">${cleanContent}</p>
                     ${item.comments && item.comments.length > 0 ? `
                         <div class="mt-6 pt-4 border-t border-white/5 space-y-4">
                             ${item.comments.slice(0,3).map(c => `<div class="text-[10px] leading-relaxed text-stone-400 italic font-light"><span class="font-black text-amber-500/40 uppercase">@${c.author}:</span> ${c.text}</div>`).join('')}

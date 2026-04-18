@@ -21,6 +21,16 @@ SOURCES = {
     "hn_item": "https://hacker-news.firebaseio.com/v0/item/{}.json"
 }
 
+def clean_content(text):
+    if not text:
+        return ""
+    # 移除可能是图片数据的极长无空格字符串 (Base64 特征)
+    # 针对 Base64 的典型特征：长且无空格
+    text = re.sub(r'[A-Za-z0-9+/]{100,}', ' [BINARY_DATA] ', text)
+    # 移除 Data URL
+    text = re.sub(r'data:image/[^;]+;base64,', '', text)
+    return text
+
 def fetch_rss(name, url):
     print(f"[DEBUG][抓取开始] 来源: {name}")
     try:
@@ -30,6 +40,7 @@ def fetch_rss(name, url):
         for entry in feed.entries[:20]:
             content = entry.get('summary') or entry.get('description', '')
             plain_content = re.sub(r'<[^>]+>', '', content).strip()
+            plain_content = clean_content(plain_content)
             
             # 过滤逻辑：如果内容块中含有明显的 HTML/JS 源码特征，则视为干扰数据
             if "const " in plain_content and "document.get" in plain_content:
@@ -40,7 +51,7 @@ def fetch_rss(name, url):
                 "link": entry.link,
                 "source": name,
                 "time": entry.get('published', datetime.now().isoformat()),
-                "content": plain_content[:2000], # 限制内容长度，防止撑爆 JSON
+                "content": plain_content[:2000], # 限制内容长度
                 "comments": []
             }
             if is_linux_do and "/t/" in entry.link:
@@ -49,7 +60,10 @@ def fetch_rss(name, url):
                     for reply in topic_feed.entries[1:4]:
                         r_text = re.sub(r'<[^>]+>', '', reply.get('summary', '')).strip()
                         if r_text:
-                            item["comments"].append({"author": reply.get('author', '匿名'), "text": r_text[:100]})
+                            item["comments"].append({
+                                "author": reply.get('author', '匿名'), 
+                                "text": clean_content(r_text[:150])
+                            })
                 except: pass
             items.append(item)
         return items
@@ -73,7 +87,7 @@ def fetch_hacker_news():
                 "link": url,
                 "source": f"HN | {domain}",
                 "time": datetime.fromtimestamp(i.get('time')).isoformat() if i.get('time') else datetime.now().isoformat(),
-                "content": re.sub(r'<[^>]+>', '', i.get('text', '')).strip(),
+                "content": clean_content(re.sub(r'<[^>]+>', '', i.get('text', '')).strip()),
                 "comments": []
             })
         return items
@@ -96,13 +110,13 @@ def fetch_reddit_with_praw():
                     "link": f"https://www.reddit.com{submission.permalink}",
                     "source": f"Reddit | {sub_name}",
                     "time": datetime.fromtimestamp(submission.created_utc).isoformat(),
-                    "content": submission.selftext[:300] if submission.is_self else submission.url,
+                    "content": clean_content(submission.selftext[:300] if submission.is_self else submission.url),
                     "comments": []
                 }
                 submission.comment_sort = 'top'
                 for c in submission.comments[:3]:
                     if hasattr(c, 'body'):
-                        item["comments"].append({"author": str(c.author), "text": c.body[:100]})
+                        item["comments"].append({"author": str(c.author), "text": clean_content(c.body[:150])})
                 items.append(item)
         return items
     except Exception as e:
@@ -110,7 +124,6 @@ def fetch_reddit_with_praw():
         return []
 
 def generate_ai_summary(items):
-    # 修改：优先读取环境，无环境时自动对齐您指定的 8046 默认配置
     key = os.environ.get("AI_API_KEY", "sk-263d3dcfe61c4c3da96d2bcbbb22dc11")
     base = os.environ.get("AI_BASE_URL", "http://localhost:8046/v1")
     model = os.environ.get("AI_MODEL_NAME", "gemini-3-flash")
@@ -130,8 +143,8 @@ def generate_ai_summary(items):
         }, timeout=80)
         return res.json()['choices'][0]['message']['content']
     except Exception as e:
-        print(f"[WARN] 总结生成异常，将标记为待机模式: {e}")
-        return "§ STANDBY: 数据抓取完成，由于本地 API 服务未响应，请稍后手动刷新或追问。"
+        print(f"[ERROR] AI 总结失败: {e}")
+        return f"§ STANDBY: AI 总结生成失败 ({str(e)})"
 
 def main():
     data_dir = 'public/data'
@@ -141,15 +154,16 @@ def main():
     
     existing_items = []
     if os.path.exists(latest_path):
-        with open(latest_path, 'r', encoding='utf-8') as f:
-            old = json.load(f)
-            last_date = datetime.fromisoformat(old['metadata']['last_updated']).date()
-            if datetime.now().date() > last_date:
-                print(f"[SYSTEM] 归档 {last_date}...")
-                with open(os.path.join(archive_dir, f"{last_date}.json"), 'w', encoding='utf-8') as af:
-                    json.dump(old, af, ensure_ascii=False, indent=2)
-            else:
-                existing_items = old.get('items', [])
+        try:
+            with open(latest_path, 'r', encoding='utf-8') as f:
+                old = json.load(f)
+                last_date = datetime.fromisoformat(old['metadata']['last_updated']).date()
+                if datetime.now().date() > last_date:
+                    with open(os.path.join(archive_dir, f"{last_date}.json"), 'w', encoding='utf-8') as af:
+                        json.dump(old, af, ensure_ascii=False, indent=2)
+                else:
+                    existing_items = old.get('items', [])
+        except: pass
 
     new_batch = fetch_hacker_news() + fetch_reddit_with_praw()
     for s in SOURCES["rss"]: new_batch.extend(fetch_rss(s['name'], s['url']))

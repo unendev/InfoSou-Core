@@ -12,8 +12,7 @@
     </script>
     <style>
         body {
-            background: #1c1917;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"),
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"),
                 linear-gradient(135deg, #1c1917 0%, #292524 20%, #44403c 40%, #78350f 60%, #451a03 80%, #1c1917 100%);
             background-attachment: fixed; color: #ffffff; font-family: 'Noto Sans SC', sans-serif; overflow-x: hidden;
         }
@@ -28,9 +27,8 @@
 
         .prose-nexus h3 { color: #fbbf24; font-weight: 800; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.5rem; margin-top: 1rem; margin-bottom: 0.5rem; font-size: 14px; }
         .prose-nexus b, .prose-nexus strong { color: #fbbf24; }
-        
-        .waterfall-item { break-inside: avoid; margin-bottom: 1.5rem; display: block; width: 100%; position: relative; z-index: 1; }
 
+        /* 悬浮助手 3.0：彻底支持拖拽 & 精简 */
         .agent-window {
             position: fixed; bottom: 6rem; right: 2rem; width: 22rem; height: 30rem;
             background: rgba(30, 28, 25, 0.95); border: 1px solid rgba(251, 191, 36, 0.2);
@@ -54,11 +52,6 @@
         @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         ::-webkit-scrollbar { width: 4px; }
         ::-webkit-scrollbar-thumb { background: #701a06; }
-
-        /* 修复瀑布流重叠与切断问题 */
-        .waterfall-item { break-inside: avoid; margin-bottom: 1.5rem; position: relative; z-index: 10; }
-        #ai-section { position: relative; z-index: 30; }
-        #feed-container { position: relative; z-index: 10; }
     </style>
 </head>
 <body class="min-h-screen">
@@ -67,7 +60,7 @@
             <div id="sidebar-scroll" class="w-full overflow-y-auto px-6 py-10 custom-scrollbar"><nav id="source-filter" class="space-y-1"></nav></div>
         </aside>
 
-        <main id="main-view" class="flex-1 flex flex-col h-screen relative bg-transparent">
+        <main id="main-view" class="flex-1 flex flex-col h-screen relative overflow-hidden bg-transparent">
             <div class="bg-[#44403c] border-b border-white/5 z-20 flex-shrink-0">
                 <div class="px-4 md:px-8 py-3 flex items-center gap-2 text-[9px]">
                     <button onclick="window.toggleMenu(true)" class="md:hidden border border-amber-900/40 text-amber-500 px-3 py-1 rounded">MENU</button>
@@ -80,15 +73,12 @@
             <div class="flex-1 overflow-y-auto" id="main-scroll">
                 <div class="p-6 lg:p-14">
                     <section id="ai-section" class="mb-14">
-                        <div class="p-8 rounded-xl border border-amber-900/20 bg-stone-900/40 backdrop-blur-md relative overflow-hidden group shadow-xl">
-                           <div class="flex items-center justify-between mb-4">
-                                <div class="text-amber-400 font-black text-[10px] tracking-widest uppercase opacity-40">§ Intelligence_Report</div>
-                                <button id="brief-toggle-btn" onclick="window.toggleBrief()" class="text-amber-500 font-mono text-[10px] hover:text-white transition-colors cursor-pointer">[ - ]</button>
-                           </div>
-                           <div id="ai-content" class="text-white text-[14.5px] leading-relaxed font-normal space-y-4 max-h-[40vh] overflow-y-auto pr-4 custom-scrollbar">STANDBY...</div>
+                        <div class="p-8 rounded-xl border border-amber-900/20 bg-[#44403c]/30 backdrop-blur-md relative overflow-hidden group">
+                           <div class="text-amber-400 font-black text-[10px] tracking-widest uppercase mb-4 opacity-40">§ Intelligence_Report</div>
+                           <div id="ai-content" class="text-white text-[14.5px] leading-relaxed font-normal space-y-4">STANDBY...</div>
                         </div>
                     </section>
-                    <div id="feed-container" class="relative z-10 block"></div>
+                    <div id="feed-container"></div>
                 </div>
             </div>
         </main>

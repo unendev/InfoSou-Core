@@ -1,5 +1,5 @@
 /**
- * InfoSou Core App Service - Nexus V5.8 Final Stability Build
+ * InfoSou Core App Service - Layout Fixed Build
  * 实现：自由拖拽、流式渲染、强制回车输入、简报收缩及本地缓存
  */
 

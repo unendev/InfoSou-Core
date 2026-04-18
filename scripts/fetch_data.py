@@ -21,14 +21,24 @@ SOURCES = {
     "hn_item": "https://hacker-news.firebaseio.com/v0/item/{}.json"
 }
 
-def clean_content(text):
+def clean_content(text, source_name=None):
     if not text:
         return ""
+    
     # 移除可能是图片数据的极长无空格字符串 (Base64 特征)
-    # 针对 Base64 的典型特征：长且无空格
     text = re.sub(r'[A-Za-z0-9+/]{100,}', ' [BINARY_DATA] ', text)
     # 移除 Data URL
     text = re.sub(r'data:image/[^;]+;base64,', '', text)
+
+    # 针对特定来源的特殊清洗逻辑
+    if source_name == "阮一峰的网志":
+        # 匹配标准的头部介绍文本并移除 (兼容中英文括号和换行)
+        noise_pattern = r"这里记录每周值得分享的科技内容.*?yifeng\.ruan@gmail\.com.*?。"
+        text = re.sub(noise_pattern, "", text, flags=re.DOTALL).strip()
+        # 同时也移除可能残余的“封面图”字样
+        if text.startswith("封面图"):
+            text = text[3:].strip()
+            
     return text
 
 def fetch_rss(name, url):
@@ -40,7 +50,7 @@ def fetch_rss(name, url):
         for entry in feed.entries[:20]:
             content = entry.get('summary') or entry.get('description', '')
             plain_content = re.sub(r'<[^>]+>', '', content).strip()
-            plain_content = clean_content(plain_content)
+            plain_content = clean_content(plain_content, name)
             
             # 过滤逻辑：如果内容块中含有明显的 HTML/JS 源码特征，则视为干扰数据
             if "const " in plain_content and "document.get" in plain_content:
@@ -169,7 +179,14 @@ def main():
     for s in SOURCES["rss"]: new_batch.extend(fetch_rss(s['name'], s['url']))
     
     seen = {i['link'] for i in new_batch}
-    final_items = new_batch + [i for i in existing_items if i['link'] not in seen]
+    # 同时也对历史数据进行一次清洗，确保老数据也能过滤掉重复开头
+    cleaned_existing = []
+    for item in existing_items:
+        if item['link'] not in seen:
+            item['content'] = clean_content(item['content'], item['source'])
+            cleaned_existing.append(item)
+            
+    final_items = new_batch + cleaned_existing
     
     summary = generate_ai_summary(final_items)
     

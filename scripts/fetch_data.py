@@ -134,7 +134,7 @@ def generate_ai_summary(items):
     filtered_items = [i for i in items if len(i['content']) > 5 and not ("const " in i['content'] and "render" in i['content'])]
 
     context = "\n---\n".join([f"[{i['source']}] {i['title']}\n内容: {i['content'][:250]}" for i in filtered_items[:50]])
-    prompt = f"你是一个硬核游戏开发情报官。请根据以下情报流，总结今日最值得关注的 3-5 个技术、引擎或行业动态。要求：1. 严禁输出源代码。2. 忽略本项目本身讨论。3. 语气锐利、干练、专业。使用 Markdown。\n\n情报：\n{context}"
+    prompt = f"你是一个硬核游戏开发情报官。请根据以下情报流，总结今日最值得关注的 3-5 个技术、引擎或行业动态。要求：1. 严禁输出源代码。2. 忽略本项目本身讨论。3. 语气锐利、干练、专业，严禁内容重复或出现多余的自我介绍。4. 直接输出 Markdown 格式的总结内容。\n\n情报：\n{context}"
 
     try:
         url = base.rstrip('/') + ("/chat/completions" if "/chat/completions" not in base else "")

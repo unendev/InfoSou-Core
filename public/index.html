@@ -17,12 +17,13 @@
                 linear-gradient(135deg, #1c1917 0%, #292524 20%, #44403c 40%, #78350f 60%, #451a03 80%, #1c1917 100%);
             background-attachment: fixed; color: #ffffff; font-family: 'Noto Sans SC', sans-serif; overflow-x: hidden;
         }
-        .sidebar { background-color: #44403c; border-right: 1px solid rgba(0,0,0,0.3); width: 14rem; display: flex; flex-direction: column; justify-content: center; height: 100vh; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); z-index: 50; }
+        .sidebar { background-color: #44403c; border-right: 1px solid rgba(0,0,0,0.3); width: 14rem; display: flex; flex-direction: column; justify-content: center; height: 100vh; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); z-index: 50; flex-shrink: 0; }
         @media (max-width: 768px) {
             .sidebar { position: fixed; transform: translateX(-100%); width: 85%; }
             .sidebar.open { transform: translateX(0); }
             .main-view.sidebar-open { opacity: 0.3; pointer-events: none; }
         }
+        #main-view { min-width: 0; overflow-x: hidden; }
         .nexus-card { background: rgba(41, 37, 36, 0.5); backdrop-filter: blur(8px); border: 1px solid rgba(120, 53, 15, 0.15); transition: all 0.3s ease; }
         .nexus-card:hover { border-color: rgba(251, 191, 36, 0.5); background: rgba(41, 37, 36, 0.7); transform: translateY(-3px); }
 
@@ -77,9 +78,9 @@
                 </div>
             </div>
 
-            <div class="flex-1 overflow-y-auto" id="main-scroll">
-                <div class="p-6 lg:p-14">
-                    <section id="ai-section" class="mb-14">
+            <div class="flex-1 overflow-y-auto overflow-x-hidden" id="main-scroll">
+                <div class="p-4 md:p-10 lg:p-14 w-full box-border">
+                    <section id="ai-section" class="mb-14 w-full">
                         <div class="p-8 rounded-xl border border-amber-900/20 bg-stone-900/40 backdrop-blur-md relative overflow-hidden group shadow-xl">
                            <div class="flex items-center justify-between mb-4">
                                 <div class="text-amber-400 font-black text-[10px] tracking-widest uppercase opacity-40">§ Intelligence_Report</div>

@@ -1,0 +1,1932 @@
+{
+  "metadata": {
+    "last_updated": "2026-04-18T13:59:39.438047",
+    "total_count": 142,
+    "ai_summary": "### 今日硬核游戏开发与 AI 技术情报汇总\n\n#### 1. 编程智能体（Agentic Coding）的“原生化”与“套壳”之争\nAI 编程工具正从简单的代码补全演进为深度介入工作流的智能体。近期 **Cursor Composer 2** 的发布引发了行业对其是否为“套壳中国大模型”的激烈讨论，这反映出开发者对底层模型原生能力的极度敏感。与此同时，**Claude Code** 在移动端（如 Termux）的兼容性适配以及 **Claude Design** 的推出，标志着 Anthropic 正在构建从底层逻辑到前端 UI 设计的全链路自动化闭环。对于游戏开发者而言，这意味着原型开发周期将进一步被压缩。\n\n#### 2. 供应链安全警钟：Axios 投毒事件与发布令牌泄露\n著名 JS 库 **Axios** 近期遭遇供应链攻击，黑客通过获取发布令牌（Release Token）植入木马。由于 Axios 在 Web 游戏开发及各类工具链中下载量极大，此类“好莱坞式”的令牌泄露手段对现代开发环境构成了严重威胁。开发者需重新审视自动化构建流水线中的凭据管理，警惕第三方库更新带来的静默风险。\n\n#### 3. 百万级上下文（1M Context）的实战化与管理瓶颈\n大模型上下文窗口已正式跨入百万级门槛（如 AnyRouter 1M、Claude 1M 预期），但随之而来的是严重的 **Context 膨胀与成本失控**。情报显示，开发者开始转向 `pi-dcp` 或 `opencode-dcp` 等动态上下文修剪（Dynamic Context Pruning）插件，试图在保持长文本关联的同时降低 Token 消耗。在处理复杂游戏逻辑或庞大工程文档时，如何高效“剪枝”已成为比模型规模更重要的技术课题。\n\n#### 4. AI 驱动的 UI/UX 范式转移：从代码生成到视觉意图对齐\n**Claude Design** 的出现展示了 AI 在 UI 布局上的进化：它不再仅仅是根据描述写代码，而是通过截图、现有代码与交互式问卷，实现对开发者“美学意图”的捕捉。这种从“像素级指令”向“设计意图对齐”的转变，将极大降低游戏工具链（如编辑器插件、后台管理面板）的开发门槛，使非美术背景的后端开发者也能快速产出高水准的交互界面。\n\n#### 5. 基础设施波动：API 代理与支付风控收紧\n近期 **OpenAI Plus** 针对反代行为的封号预警，以及 **OpenRouter**、**Windsurf** 等平台支付风控的升级，预示着 AI 基础设施的“灰色地带”正在缩小。对于依赖海外 API 驱动游戏内 AI 逻辑的团队，寻找稳定的支付通道（如虚拟信用卡、加密货币）或转向更具弹性的混合架构（如 DeepSeek 中枢协同多模型）已成为规避业务中断的必选项。"
+  },
+  "items": [
+    {
+      "title": "Claude Design",
+      "link": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+      "source": "HN | anthropic.com",
+      "time": "2026-04-17T23:04:09",
+      "content": "Related: https:&#x2F;&#x2F;x.com&#x2F;flomerboy&#x2F;status&#x2F;2045162321589252458 (https:&#x2F;&#x2F;xcancel.com&#x2F;flomerboy&#x2F;status&#x2F;2045162321589252458)",
+      "comments": []
+    },
+    {
+      "title": "Show HN: I made a calculator that works over disjoint sets of intervals",
+      "link": "https://victorpoughon.github.io/interval-calculator/",
+      "source": "HN | victorpoughon.github.io",
+      "time": "2026-04-18T09:15:43",
+      "content": "I&#x27;ve been studying interval arithmetic for the past few weeks and it&#x27;s a really interesting field because while there is a ton of super interesting research published over the past decades, it has never really gotten the recognition that it deserves, IMO.One reason for this is that standard interval arithmetic has really poor handling of division by intervals containing zero. If you compute 1 &#x2F; [-1, 2] in regular interval arithmetic, you get either [-∞, +∞], or you have to say that the operation is undefined. Both solutions are virtually useless. The real answer of course is [-∞, -1] U [0.5, +∞]: i.e. a union of two disjoint intervals.This is useful because you can confidently exclude a non empty set of the real numbers ([-1, 0.5]) from the set of possible values that you can get by dividing 1 by a number between -1 and 2.But this definition of interval division yields a value that is not an interval. This is a problem if you want to define a closed arithmetic system, where you can build and evaluate arbitrary expression over interval values.(This behavior extends to any non continuous function like tan() for example, which is implemented in my project - not without difficulties!)Well the obvious solution is to define your arithmetic over disjoint unions of intervals. This is the subject of a 2017 paper called &quot;Interval Unions&quot; by by Schichl, H., Domes, F., Montanher, T. and Kofler, K..This open-source project I made implements interval union arithmetic in TypeScript in the form of a simple interactive calculator, so you can try it out for yourself! The underlying TypeScript library is dependency free and implements interval union arithmetic over IEEE 754 double precision floats (JS native number type) with outward rounding. This guarantees accuracy of interval results in the presence of rounding issue inherent to floating point.",
+      "comments": []
+    },
+    {
+      "title": "Towards trust in Emacs",
+      "link": "https://eshelyaron.com/posts/2026-04-15-towards-trust-in-emacs.html",
+      "source": "HN | eshelyaron.com",
+      "time": "2026-04-15T21:49:15",
+      "content": "",
+      "comments": []
+    },
+    {
+      "title": "Measuring Claude 4.7's tokenizer costs",
+      "link": "https://www.claudecodecamp.com/p/i-measured-claude-4-7-s-new-tokenizer-here-s-what-it-costs-you",
+      "source": "HN | claudecodecamp.com",
+      "time": "2026-04-17T23:29:36",
+      "content": "",
+      "comments": []
+    },
+    {
+      "title": "All 12 moonwalkers had \"lunar hay fever\" from dust smelling like gunpowder (2018)",
+      "link": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/The_toxic_side_of_the_Moon",
+      "source": "HN | esa.int",
+      "time": "2026-04-18T02:17:01",
+      "content": "",
+      "comments": []
+    },
+    {
+      "title": "Spending 3 months coding by hand",
+      "link": "https://miguelconner.substack.com/p/im-coding-by-hand",
+      "source": "HN | miguelconner.substack.com",
+      "time": "2026-04-18T00:19:53",
+      "content": "",
+      "comments": []
+    },
+    {
+      "title": "A simplified model of Fil-C",
+      "link": "https://www.corsix.org/content/simplified-model-of-fil-c",
+      "source": "HN | corsix.org",
+      "time": "2026-04-18T05:38:20",
+      "content": "",
+      "comments": []
+    },
+    {
+      "title": "Are the costs of AI agents also rising exponentially? (2025)",
+      "link": "https://www.tobyord.com/writing/hourly-costs-for-ai-agents",
+      "source": "HN | tobyord.com",
+      "time": "2026-04-15T21:47:58",
+      "content": "",
+      "comments": []
+    },
+    {
+      "title": "Isaac Asimov: The Last Question (1956)",
+      "link": "https://hex.ooo/library/last_question.html",
+      "source": "HN | hex.ooo",
+      "time": "2026-04-17T20:01:19",
+      "content": "",
+      "comments": []
+    },
+    {
+      "title": "Show HN: Smol machines – subsecond coldstart, portable virtual machines",
+      "link": "https://github.com/smol-machines/smolvm",
+      "source": "HN | github.com",
+      "time": "2026-04-18T01:18:58",
+      "content": "",
+      "comments": []
+    },
+    {
+      "title": "Slop Cop",
+      "link": "https://awnist.com/slop-cop",
+      "source": "HN | awnist.com",
+      "time": "2026-04-17T23:15:24",
+      "content": "",
+      "comments": []
+    },
+    {
+      "title": "Show HN: PanicLock – Close your MacBook lid disable TouchID –> password unlock",
+      "link": "https://github.com/paniclock/paniclock/",
+      "source": "HN | github.com",
+      "time": "2026-04-18T00:38:44",
+      "content": "I wrote this after the case of a Washington Post reporter, Hannah Natanson, was compelled to unlock her computer with her fingerprint. This resulted in access to her Desktop Signal on her computer, revealing sources and their conversations.https:&#x2F;&#x2F;www.yahoo.com&#x2F;news&#x2F;articles&#x2F;washington-post-raid-pro...Edit: I&#x27;ve a lot more details about the legality and precedence on the apps landing page https:&#x2F;&#x2F;paniclock.github.io&#x2F;",
+      "comments": []
+    },
+    {
+      "title": "Hyperscalers have already outspent most famous US megaprojects",
+      "link": "https://twitter.com/finmoorhouse/status/2044933442236776794",
+      "source": "HN | twitter.com",
+      "time": "2026-04-18T00:23:22",
+      "content": "",
+      "comments": []
+    },
+    {
+      "title": "\"cat readme.txt\" is not safe if you use iTerm2",
+      "link": "https://blog.calif.io/p/mad-bugs-even-cat-readmetxt-is-not",
+      "source": "HN | blog.calif.io",
+      "time": "2026-04-18T02:43:32",
+      "content": "",
+      "comments": []
+    },
+    {
+      "title": "Landmark ancient-genome study shows surprise acceleration of human evolution",
+      "link": "https://www.nature.com/articles/d41586-026-01204-5",
+      "source": "HN | nature.com",
+      "time": "2026-04-18T06:30:28",
+      "content": "Related: Ancient DNA reveals pervasive directional selection across West Eurasia [pdf] - https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=47791282 (64 comments)https:&#x2F;&#x2F;x.com&#x2F;doctorveera&#x2F;status&#x2F;2044679999450664967 (https:&#x2F;&#x2F;xcancel.com&#x2F;doctorveera&#x2F;status&#x2F;2044679999450664967)",
+      "comments": []
+    },
+    {
+      "title": "Brunost: The Nynorsk Programming Language",
+      "link": "https://lindbakk.com/blog/introducing-brunost",
+      "source": "HN | lindbakk.com",
+      "time": "2026-04-14T02:49:55",
+      "content": "",
+      "comments": []
+    },
+    {
+      "title": "NASA Force",
+      "link": "https://nasaforce.gov/",
+      "source": "HN | nasaforce.gov",
+      "time": "2026-04-17T23:47:41",
+      "content": "",
+      "comments": []
+    },
+    {
+      "title": "Casus Belli Engineering",
+      "link": "https://marcosmagueta.com/blog/casus-belli-engineering/",
+      "source": "HN | marcosmagueta.com",
+      "time": "2026-04-18T09:14:02",
+      "content": "",
+      "comments": []
+    },
+    {
+      "title": "Middle schooler finds coin from Troy in Berlin",
+      "link": "https://www.thehistoryblog.com/archives/75848",
+      "source": "HN | thehistoryblog.com",
+      "time": "2026-04-17T22:41:49",
+      "content": "",
+      "comments": []
+    },
+    {
+      "title": "Making Wax Sealed Letters at Scale",
+      "link": "https://waxletter.com/",
+      "source": "HN | waxletter.com",
+      "time": "2026-04-15T22:14:31",
+      "content": "",
+      "comments": []
+    },
+    {
+      "title": "OpenAI给我发邮件了，其它佬有收到吗？",
+      "link": "https://linux.do/t/topic/1993862",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 05:57:58 +0000",
+      "content": "RT我CPA里面的四个Plus账号有三个都收到了，是不是不能反代了，他说下一步就要封号了佬友们快去看看 奥特曼要干嘛！！！\n            1 个帖子 - 1 位参与者\n            阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "openrouter账单地址",
+      "link": "https://linux.do/t/topic/1993861",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 05:57:51 +0000",
+      "content": "我的openrouter最近突然用不了了，是支付地址的问题，我之前是写了一个中国大陆的地址  今天改成了一个中国台湾的地址+邮编但还是没解决，gemini说是因为我用的是中国大陆办理的银联卡（支付方式的问题） 想问问各位佬友openrouter使用的是什么支付方式（gemini让我使用虚拟信用卡或者加密货币充值（虚拟货币））\n\n\n\n            1 个帖子 - 1 位参与者\n            阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "cpa 和 sub2api，测速对比",
+      "link": "https://linux.do/t/topic/1993856",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 05:56:43 +0000",
+      "content": "4.15号左右开始，发现CPA反代超级慢\n账号都是Team + Plus\n为什么速度差距这么大？\n测速图片如下\n\n\n            1 个帖子 - 1 位参与者\n            阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "LobeHub的移动端问题",
+      "link": "https://linux.do/t/topic/1993846",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 05:54:18 +0000",
+      "content": "LobeHub的ios app是不是还不支持连接私有化部署？\n            2 个帖子 - 2 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "Goalonez",
+          "text": "LobeHub的ios app是不是还不支持连接私有化部署？\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "Android Termux安装最新版Claude Code的两种方案",
+      "link": "https://linux.do/t/topic/1993843",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 05:53:38 +0000",
+      "content": "我发现最新Claude code已无法直接在Android termux用npm安装来直接使用，会有报错，肯定是Termux环境的兼容问题，毕竟不是标准的Linux。如何解决：\n1.非proot方案（推荐）\n#!/data/data/com.termux/files/usr/bin/bash\nset -euo pipefail\n\nreadonly SCRIPT_NAME=\"$(basename \"$0\")\"\nreadonly PREFIX_DIR=\"${PREFIX:-/data/data/com.termux/files/usr}\"\nreadonly STATE_DIR=\"${CLAUDE_CODE_HOME:-$HOME/.claude-code-termux}\"\nreadonly NODE_DIR=\"$STATE_DIR/node\"\nreadonly WRAPPER_BIN_DIR=\"$STATE_DIR/bin\"\nreadonly PATCH_DIR=\"$STATE_DIR/patches\"\nreadonly GLOBAL_PREFIX_DIR=\"$STATE_DIR/npm-global\"\nreadonly GLOBAL_BIN_DIR=\"$GLOBAL_PREFIX_DIR/bin\"\nreadonly NPM_CACHE_DIR=\"$STATE_DIR/npm-cache\"\nreadonly TMP_ROOT_DIR=\"${TMPDIR:-$PREFIX_DIR/tmp}\"\nreadonly GLIBC_LDSO=\"$PREFIX_DIR/glibc/lib/ld-linux-aarch64.so.1\"\nreadonly GLIBC_RUNNER_BIN=\"$PREFIX_DIR/bin/grun\"\nreadonly GLIBC_MARKER=\"$STATE_DIR/.glibc-arch\"\nreadonly HOST_CLAUDE_PATH=\"$PREFIX_DIR/bin/claude\"\nreadonly BACKUP_DIR=\"$STATE_DIR/backups\"\nreadonly CLAUDE_PACKAGE_NAME=\"@anthropic-ai/claude-code\"\nreadonly CLAUDE_PACKAGE_VERSION=\"${CLAUDE_CODE_VERSION:-latest}\"\nreadonly NODE_VERSION=\"${CLAUDE_CODE_NODE_VERSION:-22.22.0}\"\nreadonly NODE_TARBALL=\"node-v${NODE_VERSION}-linux-arm64.tar.xz\"\nreadonly NODE_URL=\"https://nodejs.org/dist/v${NODE_VERSION}/${NODE_TARBALL}\"\nreadonly COMPAT_PATCH_PATH=\"$PATCH_DIR/claude-glibc-compat.js\"\nreadonly CLAUDE_EXE_PATH=\"$GLOBAL_PREFIX_DIR/lib/node_modules/@anthropic-ai/claude-code/bin/claude.exe\"\nreadonly HOST_WRAPPER_MARKER=\"# claude-code-termux-nonproot-wrapper\"\n\nreadonly C_BOLD_BLUE=\"\\033[1;34m\"\nreadonly C_BOLD_GREEN=\"\\033[1;32m\"\nreadonly C_BOLD_YELLOW=\"\\033[1;33m\"\nreadonly C_BOLD_RED=\"\\033[1;31m\"\nreadonly C_RESET=\"\\033[0m\"\n\ninfo() {\n    printf '%b[INFO]%b %s\\n' \"$C_BOLD_BLUE\" \"$C_RESET\" \"$*\"\n}\n\nsuccess() {\n    printf '%b[ OK ]%b %s\\n' \"$C_BOLD_GREEN\" \"$C_RESET\" \"$*\"\n}\n\nwarn() {\n    printf '%b[WARN]%b %s\\n' \"$C_BOLD_YELLOW\" \"$C_RESET\" \"$*\" &gt;&amp;2\n}\n\ndie() {\n    printf '%b[ERR ]%b %s\\n' \"$C_BOLD_RED\" \"$C_RESET\" \"$*\" &gt;&amp;2\n    exit 1\n}\n\nusage() {\n    cat &lt;&lt;EOF\nUsage:\n  ",
+      "comments": []
+    },
+    {
+      "title": "pi-agent有没有什么类似opencode-dcp的用来管理context插件",
+      "link": "https://linux.do/t/topic/1993835",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 05:52:29 +0000",
+      "content": "虽然目前有一个 zenobi-us/pi-dcp，但是已经两个月没更新了。\n之前用opencode的时候感觉 Opencode-DCP/opencode-dynamic-context-pruning很好用，可以不声不响地把context 保持在一个很低的水平。\n换到pi-agent后，context动不动就飙升到40-50%。试了一下 mksglu/context-mode和 MasuRii/pi-rtk-optimizer，效果都不明显。用pi-agent的佬们，有没有什么好的管理办法？\n            1 个帖子 - 1 位参与者\n            阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "windsurf卡",
+      "link": "https://linux.do/t/topic/1993828",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 05:51:51 +0000",
+      "content": "有没有windsurf卡头推荐推荐 可付费购买 有的老板可以私信我\n            1 个帖子 - 1 位参与者\n            阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "求助geminicli使用目录有.env问题",
+      "link": "https://linux.do/t/topic/1993820",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 05:50:43 +0000",
+      "content": "今天用 ccs 配置了geminicli，但是运行的时候发现一个问题，一旦根目录有.env这种环境变量的文件，他就跟卡死了一样，半天不回答。但是把.env文件删掉就可以正常使用，这个要怎么弄呢，捣鼓了半天，一直以为是我的配置问题，geminicli来回卸载安装，搞了半天 \n\n\n            1 个帖子 - 1 位参与者\n            阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "AnyRouter 1M上下文问题解决",
+      "link": "https://linux.do/t/topic/1993818",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 05:50:32 +0000",
+      "content": "一个月没用AnyRouter了，今天cursor月付到期又用回了AnyRouter。然后看到了\n。\n随后来到了AnyRouter里，发现了公告：\n\n但是很明显，定价里面并没有那个模型写上了1m。\n解决方案：给你的每个模型后面手动加上一个[1m]（雾\n又是水帖的一天。。。\n            2 个帖子 - 2 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "Hakuri",
+          "text": "一个月没用AnyRouter了，今天cursor月付到期又用回了AnyRouter。然后看到了\n。\n随后来到了AnyRouter里，发现了公告：\n\n但是很明显，定价里面并没有那个模型写上了1m。\n解决方案：给你的每个模型后面手动加上一个[1m]（雾\n又是水帖的一天。。。\n          阅读完整"
+        }
+      ]
+    },
+    {
+      "title": "GKD 规则分享",
+      "link": "https://linux.do/t/topic/1993812",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 05:49:33 +0000",
+      "content": "本人重度B站使用者,之前刷竖屏视频的时候被各种AI短剧视频,某果短剧困扰了很久,刷两条来一条,和牛皮癣一样,关键是刷到了有时还不自觉的看下去 越看越推 ,之前的应对方法为改用白色版本B站,可惜很久没更新了,有很多BUG,分享有问题,还容易闪退,后面还是没用下去;\n最近发现 GKD  v1.12.0-beta.1 之后的版本更新支持了滑动操作\n这应对B站的竖屏模式下的广告视频非常不错\n效果\n\n针对各类推广视频直接上滑跳过\n\n使用方法\n\n订阅 → 本地订阅 → 应用规则 → 哔哩哔哩 → 右下角+号 → 放入规则即可\n\n{\n  key: 17,\n  name: '功能类-自动跳过推广/漫剧/预约/小火箭',\n  desc: '竖屏播放时检测到各种推广标识自动上滑跳过该视频',\n  rules: [\n    {\n      key: 0,\n      name: '检测并跳过：创作推广',\n      fastQuery: true,\n      actionCd: 1500, \n      activityIds: [\n        'com.bilibili.video.story.StoryVideoActivity',\n        'com.bilibili.video.story.StoryTransparentActivity'\n      ],\n      matches: '[vid=\"story_title\"][text*=\"创作推广\"][visibleToUser=true]',\n      action: 'swipe',\n      swipeArg: {\n        start: { x: 'screenWidth * 0.5', y: 'screenHeight * 0.8' },\n        end: { x: 'screenWidth * 0.5', y: 'screenHeight * 0.2' },\n        duration: 300\n      }\n    },\n    {\n      key: 1,\n      name: '检测并跳过：漫剧',\n      fastQuery: true,\n      actionCd: 1500, \n      activityIds: [\n        'com.bilibili.video.story.StoryVideoActivity',\n        'com.bilibili.video.story.StoryTransparentActivity'\n      ],\n      matches: '[vid=\"entry_type\"][text=\"漫剧\"][visibleToUser=true]', \n      action: 'swipe',\n      swipeArg: {\n        start: { x: 'screenWidth * 0.5', y: 'screenHeight * 0.8' },\n        end: { x: 'screenWidth * 0.5', y: 'screenHeight * 0.2' },\n        duration: 300\n      }\n    },\n    {\n      key: 2,\n      name: '检测并跳过：即刻预约',\n      fastQuery: true,\n      actionCd: 1500, \n      activityIds: [\n        'com.bilibili.video.story.StoryVideoActivity',\n        'com.bilibili.video.story.StoryTransparentActivity'\n      ],\n      matches: '[vid=\"charge_widget_end_button\"][text=\"即刻预约\"][visibleToUser=true]', \n      action: 'swipe',\n      swipeArg: {\n        start: { x: 'screenWidth * 0.5', y: 'screenHeight * 0.8' },\n        end: { x: 'screenWidth * 0.5', y: 'screenHeight * 0.2' },\n        duration: 300\n      }\n    },\n    {\n      key: 3,\n      name: '检测并跳过：小火箭推广(ImageSpan占位)',\n      fastQuery: ",
+      "comments": []
+    },
+    {
+      "title": "CPA 管理账号的油猴插件，删除401不可用账号",
+      "link": "https://linux.do/t/topic/1993799",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 05:48:18 +0000",
+      "content": "站内有很多脚本清理401的，但每次都要找到文件然后打开终端运行脚本，感觉有点麻烦。可能适合服务器定时调用，但我是本地开发不太想在本机弄定时任务。就根据站内的方法改写了个油猴插件，安装之后在该页面会出现账号统计，以及清理工具。\n一直在纠结是否要加禁用的功能，因为很多脚本都有禁用额度耗尽的，而且禁用了之后没有恢复开启，额度刷新也不会开启，手动开启也很慢。现在的号不如之前容易弄，能等到额度刷新也不想把号废了，而且现在古法插件注册的号存活率还蛮高的。\n关于账号耗尽账号是否要禁用可以查看该issue，cpa内置已经考虑了额度耗尽调过移除队列和恢复之后重回队列的逻辑。因此禁用额度耗尽的账号属于负优化，所以我增加了一个一键启用的功能，帮大家把被禁用的账号全部启用。\n  \n\n      github.com/router-for-me/CLIProxyAPI\n  \n\n  \n    \n  \n\t  \n  \n\n  \n    \n      codex认证文件，在额度用完是否需要关闭？\n    \n\n    \n      \n        已打开 01:36AM - 08 Apr 26 UTC\n      \n\n        \n          已关闭 05:41PM - 12 Apr 26 UTC\n        \n\n      \n        \n          \n          aicloud-cpu\n        \n      \n    \n\n    \n    \n  \n\n\n  \n    开源作者们，你们好！\n\ncodex认证文件，在额度用完是否需要关闭？\n\n如果不关闭，轮询会不会跳过这个额度已经用完的认证文件？\n如果关闭了，系统自动刷新toke…n的时候会不会跳过不刷新？\n  \n\n  \n\n  \n    \n    \n  \n\n  \n\n\n脚本内容太长没办法直接贴进来，大家自行下载吧。\nclear_401.user.js.7z (16.6 KB)\n            1 个帖子 - 1 位参与者\n            阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "智谱老套餐到期开通续费也不续费吗？",
+      "link": "https://linux.do/t/topic/1993775",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 05:43:59 +0000",
+      "content": "您好！我理解您的情况了。根据最新政策：\n关于老套餐自动续费问题：\n很抱歉地通知您，老套餐续订窗口期已经过了，相关服务已经下线了。\n即使您之前开通了自动续费，由于老套餐续订服务已下线，系统无法再进行自动续费操作。\n这不是升了个寂寞\n            1 个帖子 - 1 位参与者\n            阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "现在大家反重力 还能用什么？",
+      "link": "https://linux.do/t/topic/1993761",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 05:41:20 +0000",
+      "content": "为啥开了梯子tun虚拟网卡还是获取不到模型呢？\n            2 个帖子 - 2 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "gxs",
+          "text": "为啥开了梯子tun虚拟网卡还是获取不到模型呢？\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "Claude Design 效果很棒啊，附上我用它设计的一些 App 应用布局",
+      "link": "https://linux.do/t/topic/1993758",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 05:41:11 +0000",
+      "content": "今早看到 Claude Design 发布了，正好准备用 Claude Code 开发一个 App 给我自己看论文用，奈何 Claude Code 自己设计的页面实在是没眼看。。。然后用 Claude Design 把页面截图+页面的代码发给它进行设计。\n这是原始 Claude code 给我的页面：\n\nemm，我虽然不懂设计，没有具体的美学训练，但是一眼看下来就不好看，然后丢给Claude Design，他会出一个类似问卷的东西，有几个问题让我选（没截图这个页面的设计，所以放了一个其他页面的问题交互）：\n\n它会给我好几个风格的备选：\n\n\n当然，也可以修改，我让他融合 A+C 在统一成卡片式的设计，最后又给了一个方案 D：\n\n我很喜欢方案D，Claude Design 是分别给出了每个方案的代码的，我再把这些东西丢到 Claude Code 里就帮我实现的很好了\n\n下面都是 Claude Design 跑出来，然后我用 Claude Code 实现后的运行截图：\n\n额度跑的飞起，可能和我使用方式有关。。。跑一个页面，每周的 Claude Design 限制从 44% 涨到56%了\n当然，页面布局对于专业人员来说肯定还能做的更好，但是对于我个人来说，已经相当相当满意了\n            1 个帖子 - 1 位参与者\n            阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "minimax套餐疑问，以及双开疑问",
+      "link": "https://linux.do/t/topic/1993735",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 05:32:52 +0000",
+      "content": "我这边之前订阅了minimax的29的套餐，想升级49那个套餐，发现升级后就会限制周用量，我想问一下两件事情，第一是像我这种之前订阅的升级后会不会限制周订阅，\n第二是我这边最近打算试一下多模型协同工作，目前是打算接入deepseek作为中枢协同，再买一个kimi或者GLM的codingplan互相监督任务完成情况。所以想问一下kimi和minimax的区别，如果kimi比minimax强一些的话我就订阅kimi了，如果不强的话我就去闲鱼看看能不能搞一个glm的订阅\n            4 个帖子 - 4 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "moxiyan",
+          "text": "minimax之前还可以，现在就别开了，工作日也是一直超限用不了。\n          阅读完整话题"
+        },
+        {
+          "author": "Ken",
+          "text": "minimax毕竟参数量比较小，体验不会特别好。kimi综合能力好，代码水平体感一般。而且用量挺少的，coding的话性价比很低\n          阅读完整话题"
+        },
+        {
+          "author": "赵公明",
+          "text": "我这边之前订阅了minimax的29的套餐，想升级49那个套餐，发现升级后就会限制周用量，我想问一下两件事情，第一是像我这种之前订阅的升级后会不会限制周订阅，\n第二是我这边最近打算试一下多模型协同工作，目前是打算接入deepseek作为中枢协同，再买一个kimi或者GLM的codingplan互相监"
+        }
+      ]
+    },
+    {
+      "title": "更深程度讲解一下Chatgpt的订阅恢复机制",
+      "link": "https://linux.do/t/topic/1993725",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 05:30:37 +0000",
+      "content": "去年，有个人找到我问我能不能做一个出库的系统\n就是 GPT 的会员凭证出给用户 可以不上号，也就是现在的https://chatgpt.com/api/auth/session 来开通会员\n我大概的看了一下 能做\n后面做出来了 测试阶段发现\n凭据是通过恢复订阅 openai通过RevenueCAT 来管理 ios 订阅的\n\n在我测试的过程中发现但凡凭据只要被发送过一次 那么就会绑定给该用户 无法再发送给其他人\n所以这个单凭据开通很多个号在之前是不成立的 ，可能现在接口改了？我也不知道\n这个技术也过时了 现在很多 CDK 充值 GPT 的   当时只有几家  我是其一 但是我只是技术提供  拿点工资\n\n凭据在 ios 是一串base 编码的数据 挺长的\n带一点当初我写的系统日志吧\n\n也是落幕了 自从尼区价格改了  就倒闭了\n            2 个帖子 - 2 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "helloergou",
+          "text": "去年，有个人找到我问我能不能做一个出库的系统\n就是 GPT 的会员凭证出给用户 可以不上号，也就是现在的https://chatgpt.com/api/auth/session 来开通会员\n我大概的看了一下 能做\n后面做出来了 测试阶段发现\n凭据是通过恢复订阅 openai通过RevenueCAT "
+        }
+      ]
+    },
+    {
+      "title": "有没有在2026BwA杭州Gemma的佬友",
+      "link": "https://linux.do/t/topic/1993716",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 05:27:54 +0000",
+      "content": "小菜菜来凑热闹了 \n            1 个帖子 - 1 位参与者\n            阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "Linuxdo 已经是我现在唯一ai知识获取渠道了.",
+      "link": "https://linux.do/t/topic/1993709",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 05:27:10 +0000",
+      "content": "各种B站公众号吹牛逼引流的多.真正的干货没多少啊.\n各位佬都是通过什么渠道获取最新消息的?\n            15 个帖子 - 14 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "soo",
+          "text": "学AI，上L站！是准没错的，中文论坛地位无可撼动 \n          阅读完整话题"
+        },
+        {
+          "author": "Kerry Meka",
+          "text": "X，Reddit英文社区，L站的AI评测可以当个参考\n          阅读完整话题"
+        },
+        {
+          "author": "幻熊",
+          "text": "b站有几个up还可以，橘鸦Juya，infiniti灵感港，kate人不错。这几个都是我常看的\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "求解惑~小白请教佬们相关技术问题",
+      "link": "https://linux.do/t/topic/1993702",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 05:25:15 +0000",
+      "content": "先说一下自从我加入了论坛的确学习到了很多以前没有接触到的技术，也有看到佬们有发帖说现在论坛讨论技术的少了反而都在分享AI、公益站以及抽奖相关内容。自我感觉现在在AI疯狂迭代更新的时代这也算比较正常的，但是我也更想有更多大佬们的技术分享，从而填充自己。回想以前看L站主要是看搞怪三七的佬们的经典发言，但是现在佬们应该是本着不学习就等于退步原则都在努力学习，现在的搞怪三七的搞怪内容也没有以前的多了。\n随着现在codex基本上已经死了，现在也不会侵犯谁的利益等，所有想抱着不懂就问的学习态度想就以下内容请佬们帮忙解惑，万分感谢 \n\n\n佬们经常说的反代，是不是可以理解为我用国内的网络想去访问哪些不支持国内的模型就需要类似转发服务。比如我买一个国外的云服务器然后利用CPA这样的形式进行访问\n\n\n我看很多佬都在自己建中转站，那我比较好奇的是，佬们是在本地电脑上进行注册GPT然后CPA生成的JSON上传到服务器上还是直接在服务上进行注册\n\n\n佬们在搞注册机注册的时候是不是会有一个代理池然后从里面拿ip进行注册\n\n\n如果说我的服务器是美国的那么我还用去挂代理换ip吗。是不是可以直接用云服务的ip\n\n\n还有一点疑问就是佬们的云服务应该都是用的linux的系统，那么要怎么装代理软件操作什么的。\n\n\n文采不好写的可能没有什么逻辑也是想到什么说什么，原本在没写的时候有很多疑问现在写这写这就想不起来了，恳求大佬帮忙解惑讨论\n            1 个帖子 - 1 位参与者\n            阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "我的any复活啦！芜湖开蹬！！",
+      "link": "https://linux.do/t/topic/1993701",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 05:25:05 +0000",
+      "content": "3 个帖子 - 2 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "X-Clone",
+          "text": "佬是怎么做到的，可以分享下么，确实有点难\n          阅读完整话题"
+        },
+        {
+          "author": "Aln",
+          "text": "阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "科技爱好者周刊（第 393 期）：脑腐状态",
+      "link": "http://www.ruanyifeng.com/blog/2026/04/weekly-issue-393.html",
+      "source": "阮一峰的网志",
+      "time": "Fri, 17 Apr 2026 07:20:16 +0800",
+      "content": "湖南益阳的和平签证主题博物馆，纪念二战时期何凤山博士救助犹太人。外立面的层层钢板象征签证文件，狭窄而棱角分明的入口给人一种压抑的感觉，进入后的空间逐渐走向释放和光明。（via）\n\n脑腐状态\n\n最近学到一个新词\"脑腐\"（brain rot）。\n\n\n\n它就是字面意思。有些人看上去是正常的，但是大脑已经变异了，有些部分腐烂了。\n\n根据介绍文章，\"脑腐\"的症状就是思考能力下降，难以长时间集中注意力，进行深入的推理和反思。\n\n一遇到比较难、需要反复思考的问题，你就会烦躁，不仅是心理烦躁，还会生理烦躁，全身不安，不愿意多想，就希望赶快了结。\n\n你有没有这个症状？如果有，就有\"脑腐\"的危险了。我感觉，我的大脑就有一点。遇到复杂的软件概念和算法，以前会仔细研究，直到搞懂为止，现在更可能看一眼就跳过去，不懂就不懂了，知道名字就可以了。\n\n\"脑腐\"的主要原因是，网络平台上面那些夸张的\"标题党\"文章和短视频。它们的目标是吸引流量，在最短时间内引发阅读者/观看者的兴趣，感到满足。当你长期观看这些内容以后，大脑就被密集刺激，思维兴奋状态的维持时间越来越短，丧失了长时间深入思考的能力。\n\n这就是为什么一个人看惯短视频以后，就离不开内容压缩了。一篇几千字的文章，他也会要求大模型生成总结；一部90分钟的电影，他也宁愿看几分钟的电影解说。\n\n一旦\"脑腐\"了，难以长时间集中注意力进行思考，也就难以学习和处理高难度问题了。现在看上去，没有好的解决办法，因为现代人的时间越来越琐碎，内容碎片化是大趋势。\n\n应对之策也许就是反过来，将学习和思考拆解成一系列短问题。比如，以后的学习不再是一厚本教材，而是几十个的系列短视频，每个用两三分钟解释一个知识点。只有这个时间长度，学生的思维才能保持专注。\n\n权重有没有版权？\n\n国产大模型一般是开源的，但是最近有所改变。\n\n有的大模型闭源发布；有的只开源小参数版本，不开源大参数版本；有的不允许商用，除非得到许可。我就不点名了。\n\n\n\n\"黑客新闻\"的一个读者，针对开源大模型修改许可证这件事，提出质疑：开源大模型可能无权设置许可证。\n\n他的意思是，现在的开源大模型主要开源的是权重文件，以及配套的运行代码。所谓\"权重文件\"就是一个巨大的矩阵，表示各个 Token 在生成结果中出现的可能性。\n\n权重是大模型的核心，而它来自于对海量语料的计算。这就是说，权重不过是计算结果，他认为，计算结果是没有版权的。\n\n比如说，你写了一个程序，实现了一种更高效的根号2的算法。那么，这个程序是有版权的，但是计算结果根号2（1.414）是没有版权的。因为计算结果不过是机械过程的产物，不涉及人类创造力。\n\n按照这种说法，权重根本没有版权，当然也就谈不上设置或修改许可证了。\n\n我不是版权专家，不能确定这种说法对不对，但是听上去有道理。大家可以自己去问问大模型\"计算结果有没有版权？\"，看看大模型怎么回答。\n\n\n\n科技动态\n\n1、摄像头耳机\n\n华盛顿大学的研究团队，开发出世界首个带有微型摄像头的无线耳机。\n\n\n\n上图中，耳机底部的小凸起就是微型摄像头。\n\n它的最大用途就是跟 AI 互动。你可以直接问：\"我手里的英文杂志的封面标题是什么意思\"，耳机就会把摄像头图像，通过蓝牙发到手机，手机的大模型就会回答。\n\n由于带宽限制，它只能拍摄低分辨率的黑白图像。长远来看，如果不需要显示模块，这种摄像头耳机要比 AI 眼镜更适合穿戴使用，因为很多人不喜欢长时间戴眼镜。\n\n2、排行榜的 AI 歌手\n\n最近，有人向苹果音乐商店 iTunes 上传了艾迪·道尔顿（Eddie Dalton）的歌曲。\n\n这个歌手实际上并不存在，形象、声音、视频都是 AI 生成的，但是上传者没有披露。\n\n\n\n结果，这些 AI 歌曲大受欢迎。iTunes 单曲榜前100名中，他居然占据了11席，有两首歌进入了前10名。\n\n他的专辑在 iTunes 上也排名第三。\n\n以前，有人说 AI 和机器人承担日常工作以后，人类可以从事艺术创作，比如唱歌、跳舞、画画、写作、拍视频......现在看上去，AI 也会跟人类争夺艺术工作。\n\n3、经济舱座椅\n\n长途飞行的经济舱座椅，非常不舒服，美联航想出了一种改进办法。\n\n如果是一家三口，可以将座椅的坐垫卸下，从而一家躺在地上睡觉。\n\n\n\n航空公司会提供枕头和毛毯，甚至还有床垫。\n\n如果是单人旅客，你就需要同时购买三个相邻座位，好在这样还是比头等舱便宜。\n\n\n\n我觉得，中国高铁可以考虑这种做法，某些没有卧铺的长途线路允许拆卸几排座位，让乘客躺在地上休息。\n\n文章\n\n1、Claude Code 的源码真相（英文）\n\n\n\n前不久，Claude Code 源码泄漏，人们仔细研究以后，发现这些源码全部是 AI 生成的，质量不高。一个函数就长达3,167行，包含486个判断分支和12层嵌套，入",
+      "comments": []
+    },
+    {
+      "title": "科技爱好者周刊（第 392 期）：axios 投毒与好莱坞式骗术",
+      "link": "http://www.ruanyifeng.com/blog/2026/04/weekly-issue-392.html",
+      "source": "阮一峰的网志",
+      "time": "Fri, 10 Apr 2026 07:17:13 +0800",
+      "content": "今年就将启用的腾讯总部园区，俗称\"企鹅岛\"，里面不仅包括办公楼，还有多幢公寓楼。（via）\n\naxios 投毒与好莱坞式骗术\n\n上周，著名软件库 axios 被投毒了。黑客拿到了发布令牌，直接发了一个新版本，里面加入了木马。\n\n\n\n软件投毒不是新鲜事，新鲜的是发布令牌怎么泄漏的。背后的故事简直是好莱坞电影，根本防不胜防。\n\naxios 属于使用最广泛的 JS 软件库之一，每周下载量接近1亿次，所以这次投毒的感染面很大。\n\n\n\n而且，木马的恶性程度很高。根据官方的清除说明，如果不幸中毒，机器上所有的密钥、令牌和凭证都要作废。这个木马会扫描所有目录，收集密钥，然后发出去。\n\n大家要知道，像 axios 这种超级流行的软件库，每个环节都有完整防护，每一行代码都被严格审查。这次攻击完全是一场精心策划的社会工程，把这些防护都攻破了。\n\n攻击目标选定首席维护者 Jason Saayman。据本人透露，事件过程是这样的。\n\n\n  他们根据我的情况量身定制了这一流程，具体做法如下：\n\n\n他们冒充某公司的创始人联系我，不仅克隆了该公司创始人的外貌，还克隆了该公司本身。\n他们随后邀请我加入一个真实的 Slack 工作区。这个工作区使用了该公司的品牌标识，名称也十分可信。Slack 的工作区设计得非常精巧，他们设有专门的频道来分享 LinkedIn 上的帖子。我猜这些 LinkedIn 帖子最终会发布到该公司的真实账号上，整体效果非常逼真。他们甚至还创建了一些我推测是该公司团队成员以及其他一些开源软件维护者的虚假账号。\n他们安排了一次与我的会面，目的是进行沟通。会议是在微软 Teams 上进行的。参会人员似乎是一群人。\n会议指出我系统上的某些东西过时了。我以为是和 Teams 有关，就安装了缺失的组件，结果发现是远程木马（RAT）。\n一切都安排得井井有条，看起来很正规，而且做事方式也很专业。\n\n\n\n可以看到，这个攻击是有剧本的，每一步都经过了策划，充分准备和排练，完全为你度身定制，就等你落入圈套。\n\n行骗者非常耐心，投入了巨大的前期成本。首先，假冒某公司的创始人联系你，为了提升可信度，还做了假的公司网站；然后，邀请你加入他们的 Slack 工作区，里面有各种讨论、项目文档、宣传物料，看上去就像真的一样；最绝的是，他们还让你在 Teams 软件上参加公司的视频会议，一群骗子亲自露面，陪你一起开会。\n\n会议开始后不久，主持人突然说：\"奇怪，你的系统怎么跟我们不一样，是不是微软的插件过时了，我发你一个最新版。\"你就这样收到了传过来的安装包，看到别的与会者都在等你，你也就没有多想，直接双击执行了。哦喔，就这样中招了，发布令牌一秒钟就泄漏了。\n\n作假到这种程度，让人叹服。\n\n这让我联想到不久前看到的一条印度新闻，作假程度有过之而无不及，也是如同好莱坞电影。\n\n去年圣诞节，一位印度新德里的77岁老太太，收到了\"警察局\"的 Whatsapp 视频电话。视频右下角居然还有手语翻译。\n\n\n\n警察跟她说，银行发现她的账户有洗钱记录，必须对她进行调查，如果不配合，账户资金将被没收，通知她远程出席法院的调查听证会。\n\n媒体后来披露了\"警察局\"的布景照片，大家看看多么逼真。\n\n\n\n\n\n\n\n前三张照片是印度警察局，最后一张是巴基斯坦警察局，它们在一栋楼里，房间紧邻着。要知道这两个国家在现实中是对立的，但是不妨碍骗子两边都骗。\n\n再回到案子本身，几天后，老太太参加了线上听证会，在一个法院里举行，由\"法官\"亲自主持。他查看了资金记录，听取了\"警察\"的证词，向老太太询问了一些问题。\n\n最后，\"法官\"告诉老太太，当局需要核实她的所有资产是否合法。她必须每天都跟警察局连线，回答问题，直到查清为止。\n\n下面就是这个案件最精彩的部分，一连16天，老太太每天开着摄像头连线，大家看看骗子演到了什么程度。\n\n\n  在这16天里，老太太渐渐喜欢上了在假警局轮班的警官们。她开始称他们为自己的孩子们。而他们也反过来称她为\"母亲\"。\n\n晚上，她和最年轻的军官一起阅读印度教宗教经典，这位军官请她把她觉得特别感人的段落发给他。\n\n\"他们就像家人一样，\"老太太回忆说。\"他们说，'女士，我们想尽快把事情解决。我们日夜为您工作。'\"\n\n\n天哪，骗子从早到晚演了16天，跟老太太促膝长谈，一起读经典，请教人生问题，直到深夜。这要是拍成电影，该有多动人。\n\n老太太没有丝毫疑心，心甘情愿卖掉了自己的投资，累计九次向假警察局的账户总共转出了160万美元。\n\n第二天，她再跟\"警察局的孩子们\"连线，就连不上了。\n\n从上面两个案例，大家可以看到，现在的互联网骗局可以演到什么程度，完全是精准投放的\"剧本杀\"，成功率极高。要是再加上 AI 的加持，几乎不可能分辨真假、。\n\n网站开发有一条规则：客户端的每一个请求都不可信任，必须假定是",
+      "comments": []
+    },
+    {
+      "title": "科技爱好者周刊（第 391 期）：AI 的贫富分化",
+      "link": "http://www.ruanyifeng.com/blog/2026/04/weekly-issue-391.html",
+      "source": "阮一峰的网志",
+      "time": "Fri, 03 Apr 2026 08:08:02 +0800",
+      "content": "上海某餐厅的墙壁装饰。（via monana3838@Threads）\n\nAI 的贫富分化\n\n我越来越觉得，AI 跟其他技术不一样，不仅带来技术变革，还会带来社会变革。\n\n简单说，AI 会带来贫富分化。\n\n其他技术实际上会消灭贫富分化，实现\"消费者平等\"，即穷人和富人消费的东西是一样的。\n\n比如，大家喝一样的可口可乐，用一样的苹果手机，开一样的特斯拉。甚至互联网也是如此，世界首富马斯克和你用一样的网站、一样的手机 App。\n\n但是，AI 模型不是这样。在大模型面前，穷人和富人是不平等的。\n\n在未来，普通人肯定用不起顶级的大模型。其实，现在就是如此了，最贵的 AI 编程套餐是 Claude Code 的 Max 套餐，月费200美元，很多人已经用不起了。\n\nOpenAI 曾经设想过月费2万美元的套餐，提供最顶级、无限量的大模型服务。\n\n\n\n要是真的推出，只有富豪才用得起。\n\n这反映了一个简单的事实：费用越贵，模型效果越好。因为模型的效果与算力相关，更多的算力、更大的上下文、更多的参数，都需要钱。\n\n这跟工业品完全相反。工业品有规模效应，产量越高，单位成本越低。一旦大规模生产，价格就会越来越便宜。\n\n但是，大模型不存在规模效应，模型的大规模生产需要更多的服务器，这并不会让单位成本降低，反而可能因为扩建机房，改造电路和水路，而变得更贵。\n\n未来社会大概是这样的：富人和穷人用不同的模型。最顶级模型的服务----规划、咨询、生成内容、自动化......----需要支付高昂的使用费，而普通人就使用免费模型，效果当然也很普通。\n\n不过，我也看到马斯克最近说，未来还有另一种可能。\n\n\n\n他的意思是，算力本质上是能源转化的一种形式。人类最终会实现廉价能源的大量供应（空间太阳能？），所以算力将变得足够便宜，所有人都将用最好的模型。\n\n可能吗？我不知道，感觉还是前一种情况更现实。\n\n模型能力的一种衡量方法\n\n怎么衡量大模型的能力？\n\n现在的方法是使用一个测试集，去计算大模型的分数。它的缺点是，只能用于横向比较，很难衡量进步速度。\n\n最近，一篇论文提出了一种新的衡量方法。\n\n科学家首先计算，人类完成某一项任务需要多少时间。比如，计算 4 + 5 + 7，人类需要2秒，而计算 37 * 52 * 19，可能需要1分钟。\n\n然后，测试大模型能否以50%的成功率完成这项任务。\n\n研究发现，GPT-2 以50%成功率能够完成的任务，时间范围是两秒；Claude 3.7 Sonnet 是50分钟；O3 接近两小时；Opus 4.6 约为12小时。\n\n也就是说，人类需要12小时才能完成的任务，Opus 4.6 的成功概率是50%。\n\n\n\n结果就是上图，可以发现，大模型的进化速度在对数坐标下是一根直线。\n\n每7个月，大模型能够以50%成功率完成的任务，时间范围扩大一倍。按照这个趋势，大模型将在2027年至2031年间，以50%的成功率完成人类专家需要一个月才能完成的任务。\n\n如果这篇论文正确，就意味着年底发布的模型，将比年初强一倍。\n\n科技动态\n\n1、用户协议的彩蛋\n\n软件服务的用户协议，又长又难懂，很少有用户阅读，但是里面有很多重要内容。\n\n一家美国通信运营商，为了表示自己很重视用户权益，鼓励大家阅读《用户协议》，并偷偷在里面加入了一个彩蛋。\n\n\n\n上图高亮的句子写道：\"如果你读到这句话，请发邮件到我们的信箱，赢取免费的瑞士旅游。\"\n\n上线二周后，才有人发邮件，询问这事是否真实。由于只有一个人来信，所以她就免费去瑞士了。\n\n从这件事可以看出，即使有彩蛋，也没人阅读《用户协议》。我现在的做法是让大模型帮忙，询问\"这份协议有哪些对用户不利的地方\"，很快就得到了答案。\n\n2、触摸屏指甲油\n\n广泛使用的电容式触摸屏，有一个问题，就是戴手套使用会失灵。\n\n原因是它要求触摸物（比如手指）必须导电，这样屏幕才会产生电场扰动，从而确定触摸的位置。\n\n\n\n解决方法也很简单，就是在手套指尖涂一层指甲油，指甲油里面的金属碎屑可以导电。\n\n美国的一名化学系本科生，在学习化妆品化学时，发明了一种改进型的透明指甲油，专门用于戴手套使用触摸屏。\n\n这种指甲油是透明的，涂在手套上看不见，也可以涂在裸甲上，当作抛光剂。\n\n3、Copilot 广告\n\nCopilot 是 GitHub 推出的 AI 助手，上周有用户发现，它会自动插入广告。\n\n\n\n上图是 Copilot 自动提交的一个 Pull Request，它在提交说明的结尾（红框处）加入了一个广告，介绍应用程序 Raycast。\n\n在 GitHub 搜索一下，就会发现已经有超过11,400个 PR 都包含了相同的广告词。\n\n经过用户抗议，GitHub 暂止停止了这个功能。但这是一个危险的信号，表示 GitHub 想利用用户增加收入。\n\n文章\n",
+      "comments": []
+    },
+    {
+      "title": "科技爱好者周刊（第 390 期）：没有语料，大模型就是智障",
+      "link": "http://www.ruanyifeng.com/blog/2026/03/weekly-issue-390.html",
+      "source": "阮一峰的网志",
+      "time": "Fri, 27 Mar 2026 05:49:12 +0800",
+      "content": "山东日照某住宅小区的彩色风雨连廊，入口处树林还设了咖啡馆。（via）\n\n没有语料，大模型就是智障\n\n如果现在做一个问卷调查，问大家\"你觉得大模型是否具有智能？\"\n\n我相信，大多数人会是肯定的回答。\n\n哪怕现在只是 AI 的初级阶段，大模型已经能够替代很多的人类智力劳动，确实非常神奇。\n\n但是，我们不要忘记真实情况，大模型不是魔法，更不是具有自主智能的\"硅基智能体\"，而是基于统计规律的语言模型，它的一切行为都基于数学计算。\n\n最好的证据就是，如果让它解决没有训练过的题目，也就是不存在统计规律的话，它根本解不出来。\n\n这就是我今天想分享的一个实验。\n\n\n\n两位国外的研究者找了五个主流的大模型：GPT-5.2、O4-mini、Gemini 3 Pro、Qwen3-235B、Kimi K2。\n\n他们让大模型使用五种小众的编程语言----Brainfuck、Befunge-98、Whitespace、Unlambda 和 Shakespeare----来编程解决各种问题。\n\n这些小众语言的共同特征是，网上很少有它们的资料，因此不能用来训练大模型。大家猜猜看，结果怎么样？\n\n实验结果用一句话总结，就是大模型的表现一塌糊涂。\n\n这五个大模型的平均答题正确率仅为3.8%，即100道题可以答对3.8道。相比之下，它们处理 Python 问题的正确率可以达到90%。\n\n更尴尬的是，仅有的那几道答对的题目，都是入门级。更难的级别（初级、中级、高级），所有五个大模型的正确率都为0。\n\n这个实验充分说明了，大模型的表现（智能程度）首先由训练材料决定：训练的语料越多，表现越好，比如 Python 的语料遍地都是，大模型因此极其擅长解决 Python 问题；训练的语料越少，大模型表现就越差，简直跟智障一样，没什么用处。\n\n那么，一个让人好奇的问题就来了：如果某种冷门语言没有语料，但有一本很详尽的《使用手册》，我们让大模型学习这本手册，它是否就能学会这种冷门语言编程呢？\n\nMAI-Image-2\n\n本周，微软公司发布了自家的图像生成模型 MAI-Image-2。\n\n这个模型生成的图像质量非常高，有评论认为，目前仅次于谷歌的 nano-banana-2。\n\n微软开放了网站 MAI Playground（下图），现在可以免费生成图片。\n\n\n\n我试用后，图像质感确实很好，非常逼真。比如，一只狗在海里骑自行车。\n\n\n\n但是，它的使用限制很多：（1）有争议的、可能冒犯的图片，都会拒绝生成；（2）每天的免费额度是15张，每次生成的间隔时间是30秒；（3）它只能生成长宽比 1:1 的图片，其他分辨率都不支持；（4）不提供图像编辑和加工，只能用来\"文生图\"。\n\n如果你需要通过文本生成高质量图片，可以试试它。\n\n科技动态\n\n1、可玩的封面\n\n红牛公司推出了一本纸质的游戏杂志《GamePop》。\n\n\n\n它的封面有一个可以玩的\"俄罗斯方块\"，是世界首本封面可以玩游戏的书。\n\n\n\n\n\n奥秘就是封面里面，嵌入了一块非常薄的柔性电路板。\n\n\n\n这块板配备了180个 RGB LED 灯、7个电容式触摸按钮、一颗32位 ARM 芯片。\n\n\n\n它还包含一块可充电电池，可以通过 Type C 充电。\n\n\n\n可惜的是，这个封面是限量版，不公开出售。它得到了俄罗斯方块公司的官方授权，全球仅发行150套，每套均有独立编号。\n\n2、收费的真人客服\n\n企业都不喜欢提供真人的电话客服，因为成本很高，更希望改成机器应答的电话客服。\n\n惠普公司想出了一个点子，将用户往机器客服赶。\n\n\n\n用户打惠普的客服电话，会听到一段语音提示，要你访问官网自己去寻找答案。如果你坚持要真人客服，就要在线等待15分钟。\n\n如果中途挂了电话，再打就需要重新等待15分钟。系统还会分别在第5、第10和第13分钟提醒你，可以访问网站或发邮件联系。\n\n虽然这种做法很可恶，但未来可能成为常态：免费就只有 AI 客服或机器人客服，额外付费才有真人客服。\n\n3、飞盘的玩法\n\n怎样扔飞盘，才能又快又远？\n\n一个美国的物理学家，找了几十个学生进行实验，使用不同手势和角度扔出飞盘。他测量了飞行速度和扭矩，把结果写成了论文。\n\n\n\n他发现，将拇指放置在距飞盘外缘约3厘米的位置，可以获得平均转速和初始速度的最佳结果。\n\n\n\n他还发现，转速与初始速度存在线性相关，转速越高，初始速度也越高。\n\n所以，下次玩飞盘的时候，你要放对拇指的位置，然后用足力气，反手甩出，就可以取得最佳结果。\n\n文章\n\n1、MkDocs 的缓慢崩溃（英文）\n\n\n\nMkDocs 是著名的文档网站生成工具，但是主要贡献者之间有激烈矛盾，互相对抗，导致这个项目四分五裂。本文就梳理这件事。\n\n2、大模型预测咖啡散热（英文）\n\n\n\n作者让各种大模型给出咖啡散热时间的公式，然后测量了实际的散热时间",
+      "comments": []
+    },
+    {
+      "title": "套壳中国大模型撑起500亿美元估值？扒一扒 Cursor 的\"套壳\"疑云",
+      "link": "http://www.ruanyifeng.com/blog/2026/03/kimi-cursor.html",
+      "source": "阮一峰的网志",
+      "time": "Sat, 21 Mar 2026 18:19:11 +0800",
+      "content": "1、\n\n本周末，有一条最热闹的 AI 新闻，震动了太平洋两岸，连马斯克都关注了。\n昨天，AI 编程工具 Cursor 推出了\"自己的\"模型 Composer 2。\n\n\n\n上图是官网截图，现在点进去还写着\"自有模型\"。\n\n自从2024年10月，Composer 1 发布以来，外界就一直怀疑，它是套壳的中国模型，因为行为很类似，但苦于找不到证据。\n\n现在 Composer 2 来了，很多人就开始研究，它的背后到底是什么模型，真的是 Cursor 自家的吗？\n\nCursor 为了防止破解，做了很多限制，但是百密一疏。国外推友 @fynnso 发现，有一个地方在上一个版本是禁止的，但是这个版本却可以执行。\n\n首先，你自己架设一台服务器，充当 AI 模型的调用接口，有没有模型无所谓，只要能收到客户端请求就行。\n\n然后，你在本地的 Cursor 里面，设置使用的模型为 Composer 2，模型网址就是你刚架设的服务器。这样一来，Cursor 就会向你的服务器发出请求，从而可以看到它到底在请求什么模型。\n\n真相就暴露了，它请求的模型 ID 居然是 kimi-k2p5-rl-0317-s515-fast（下图）。\n\n\n\n2、\n\n这位国外推友就把上面的截图，发布到网上。这下炸锅了，明眼人都看出来，这是铁证，Composer 2 实际上是套壳的 Kimi K2.5。\n\n\n\n可笑的是，事情一爆发，Cursor 第一时间就把漏洞堵上，现在已经没法复现这个请求（下图）。\n\n\n\n但是为时已晚，网上传遍了，就连马斯克也发推：\"它就是 Kimi K2.5\"。\n\n\n\n这下好了，变成了公开的秘密，再也无法掩盖了。\n\n3、\n\n大家的关注点，很快就转移到 Cursor 是否侵权。因为 Kimi K2.5 虽然是开源模型，但是采用的是修改的 MIT 许可证（下图）。\n\n\n\n许可证这样说：你可以任意使用这个模型，唯一的条件是如果你的商业产品月活用户超过1亿，或者月收入超过2000万美元，你必须在用户界面的醒目位置披露，你使用了 Kimi K2.5。\n\nCursor 最新披露的年化收入是20亿美元，相当于月收入1.67亿美元，显然满足上面的条件。但是，它隐藏了使用 K2.5 的事实。\n\n就在大家认定 Cursor 侵权的时候，他们的一个负责人终于坐不住了，出来说话了。\n\n\n\n他承认确实使用 Kimi K2.5，但是没有侵权，他们的许可证来自合作伙伴 Fireworks AI。\n\n稍后，Kimi 官方也发推了。\n\n\n\nKimi 官方确认，Cursor 是从 Fireworks AI 得到了授权。后者是一家硅谷的华人 AI 公司，从事 AI 模型的微调和强化学习，它从 Kimi 得到授权对模型进行再训练，然后又转授权给了 Cursor。\n\n4、\n\n事情到这里就基本清楚了，Cursor 并没有违反 Kimi 的授权条款，因此不存在侵权。\n\n既然如此，为什么它拼命掩盖这个事实，大大方方承认，提供 Kimi K2.5 的修改版模型，很难吗？\n\n我猜测，原因跟 Cursor 不断膨胀的估值有关。\n\n彭博社本月报道，Cursor 正在进行下一轮融资，估值达到500亿美元。\n\n\n\n大家知道吗，它以前的估值是多少？\n\n2023年10月，Cursor 成立时的估值是5000万美元；2024年8月的 A 轮融资，估值上升到4亿美元；12月的 B 轮融资，估值快速上升到26美元；2025年11月的最新一轮融资，估值已经到了293亿美元。\n\n可以看到，每过几个月，估值就会翻倍。这种火箭式的上升速度，需要有业绩支持。但它本身只是一个 VS Code 的修改版，使用的都是开源技术。\n\n为了支撑越来越高的估值，它有动机把自己从 AI 工具，包装成具有模型研发能力的大模型公司。\n\n我认为，这才是它不愿意披露使用了 Kimi K2.5 的主要原因。\n\n5、\n\n纵观整个事件，Cursor 无疑是输家，Kimi 则是这次的赢家，免费得到一大波高价值的曝光。\n\nCursor 发布 Composer 2 时，披露了性能和成本比较。\n\nComposer 2 的性能低于 GPT-5.4，但高于 Opus 4.6。\n\n\n\n但是，它的生成速度比 GPT-5.4 和 Opus 4.6 都快，成本也是最低的。\n\n\n\n既然 Composer 2 就是微调的 Kimi K2.5，那么直接使用 Kimi，也能得到同样的效果。\n\n6、\n\n以前，国外总是有人指责，中国公司窃取外国技术。但是，这个事件证明了，中国公司也有技术输出。那些国外的明星公司，背地也在偷偷摸摸使用中国技术。\n\n联想到上周，Kimi 的创始人杨植麟收到黄仁勋的邀请，在 Nvidia GTC 大会演讲，是唯一的中国大模型公司代表。\n\n\n\n他在台上宣讲，Kimi 团队刚",
+      "comments": []
+    },
+    {
+      "title": "科技爱好者周刊（第 389 期）：未来如何招聘程序员",
+      "link": "http://www.ruanyifeng.com/blog/2026/03/weekly-issue-389.html",
+      "source": "阮一峰的网志",
+      "time": "Fri, 20 Mar 2026 07:59:16 +0800",
+      "content": "唐山河头老街景区的轨道车\"大唐云车\"。（via）\n\n未来如何招聘程序员\n\n前些天，讨论区有一个帖子，提出一个问题。\n\n如果未来的代码都是 AI 写的，那么我们怎么招聘程序员呢？\n\n\n\n程序员负责代码，但代码是 AI 写的，不是程序员写的，那么应该怎么面试他呢？\n\n你仔细想想，这个问题比预想的难多了。\n\n首先，考察他的代码能力不重要（代码不是他写的），更重要的是考察他会不会 AI。只要善于使用 AI，能够产出合格的代码，对公司来说就是合格的人选。\n\n但是，什么样的面试问题，能够考察出一个人是否掌握 AI？下面是我想出的一些问题：\n\n\n请将一个复杂的项目需求，转化成提示词，要求是清晰、逻辑性强、切中要害。\n描述一个你认为需要使用 Skill 和 MCP 的场景，并阐述它们的工作原理和构建方法。\n如何将一个大项目分解，设计出一个多 Agent 协同工作的机制。\n......\n\n\n这些问题能识别出 AI 编程高手吗？我完全没有把握。\n\n其次，除了 AI，还要考察什么呢？ 这也很不好想。\n\n我应该还会问一些架构问题，你可以不写代码，但要懂怎么组织代码，架构出一个系统。但我也不确定这是必需的，因为 AI 生成的大型系统迟早变成一个黑箱，可能对于架构知识的要求也不是很高。\n\n另外，我还要看看他以前的项目，如果以前他用 AI 做过类似的东西，那么应该问题不大。但这也不可靠，且不说完全类似的项目非常少，就看 AI 进化速度这么快，两年前的经验早不适用了吧。\n\n总之我发现，很难确定什么面试问题是一定有效的，能够可信地筛选出合格的应聘者。AI 颠覆了软件开发，也连带颠覆了程序员面试。大家有好的面试问题吗？\n\n有一点是确定的，面试各种编程细节意义不大了，因为你不需要记住语法细节了，直接问大模型就行。\n\n科技动态\n\n1、访达小子\n\n苹果公司最近发布了 Macbook Neo，有人注意到，官方的 Tiktok 宣传海报里面出现了一个全新的吉祥物（下图）。\n\n\n\n上面海报的左上角有一个玩偶，以前没见过。\n\n这个玩偶明显来自 Mac 电脑的访达工具（Finder），所以被称为\"访达小子\"（Lil Finder Guy）。\n\n\n\n几天后，苹果公司又在一场直播里面，使用了这个形象。\n\n\n\n人们纷纷猜测，这到底是偶然的行为，还是苹果公司真的会推出它作为吉祥物？\n\n热心的网友让 AI 绘制了\"访达小子\"的完整形象。\n\n\n\n\n\n看上去很可爱，就跟 Labubu 似的，有可能大受欢迎。\n\n2、红外线编码\n\n英国科学家发明了一种新的通信方式，通过热辐射二极管，将数字信号以热量形式传递。\n\n\n\n肉眼看不见这种信号（因为它是红外线），也检测不到无线电波，但是它的热量以编码方式散发，在红外线热成像仪上能识别（上图）。\n\n因此，这种方法接收信号需要热成像仪，再传入电脑的解码器。这可能对某些工业和军事场景很有用。\n\n3、机柜种植\n\n家里有多余的服务器机柜，怎么利用起来？\n\n\n\n一个国外程序员想到机柜里面有电源，拉线和搁板都很方便，可以用来水培种植。\n\n\n\n他买了一些 LED 灯带，用来模拟日照，每一层还安装了一个泵，用来自动进排水。\n\n\n\n如果你想在家里种一些暖房植物，或者需要长时间光照的植物，服务器机柜确实是一个很好的方案。\n\n\n\n文章\n\n1、我放弃了 Elasticsearch，转而使用 Meil​​isearch（英文）\n\n\n\nMeil​​isearch 是一种开源的搜索软件，作者介绍怎么用它替代 Elasticsearch。\n\n2、2016 年，我做过一次 AI 写代码创业（中文）\n\n\n\n作者徐宥（Eric Xu）回忆他在2016年的 AI 创业，当时他想训练一个大模型，需要25万美元，但是找不到投资人。（@gengxiuli 投稿）\n\n3、信息过载时代，我的漏斗式阅读工作流（中文）\n\n\n\n每天有太多东西值得看，作者介绍他的信息处理工作流，通过 AI 过滤出值得读的内容。（@shawnxie94 投稿）\n\n4、编译器的前端与后端（英文）\n\n\n\n一篇科普文章，介绍编译器（比如 LLVM）的前端和后端的概念。\n\n5、CSS 的 lh 单位（英文）\n\n\n\nCSS 有一个字体大小属性lh，表示行高。\n\n6、寻觅杜鹃花之王（中文）\n\n\n\n大树杜鹃是最高大的杜鹃，是一颗会开花的大树（上图），1919年由英国人在云南发现。\n\n后来，这个英国人死在云南，就无人知道哪里有这种杜鹃了，直到1982年才重新在高黎贡山找到。本文讲述这种植物的故事。\n\n工具\n\n1、APTUI\n\n\n\n一个 Linux 的终端应用，用于充当 Debian/Ubuntu 安装管理器，管理 APT 软件包。\n\n2、my.WordPress.net\n\n\n\n如果你想尝试 WordPress，但没有服务器，可以使用官方新推出的这",
+      "comments": []
+    },
+    {
+      "title": "你好，我是一名「火腿」",
+      "link": "https://sspai.com/post/87807",
+      "source": "少数派",
+      "time": "Sat, 18 Apr 2026 10:33:57 +0800",
+      "content": "入门业余无线电，圆梦童年时的梦想。查看全文",
+      "comments": []
+    },
+    {
+      "title": "本周看什么 | 最近值得一看的 9 部作品",
+      "link": "https://sspai.com/post/108760",
+      "source": "少数派",
+      "time": "Fri, 17 Apr 2026 17:50:57 +0800",
+      "content": "📅本周新预告《哥斯拉-0.0》首支预告4月15日，电影《哥斯拉-0.0》发布了首支预告，将于11月3日在日本上映、11月6日在北美上映。山崎贵回归担任导演、编剧和特效总监，神木隆之介、滨边美波回归出演 ...查看全文",
+      "comments": []
+    },
+    {
+      "title": "TDS REVIEW｜三星 Galaxy Buds4 Pro 降噪真无线耳机体验",
+      "link": "https://sspai.com/post/108741",
+      "source": "少数派",
+      "time": "Fri, 17 Apr 2026 16:22:42 +0800",
+      "content": "三星的 TWS 目前最大的问题（或者在三星的视角看来也可以是「护城河」）仍然在于比较局限的编码支持——你很难把它推荐给三星生态以外的用户。查看全文",
+      "comments": []
+    },
+    {
+      "title": "来一杯不翻车的自信：手冲咖啡入门指北",
+      "link": "https://sspai.com/post/108547",
+      "source": "少数派",
+      "time": "Fri, 17 Apr 2026 11:29:29 +0800",
+      "content": "只要选对豆子、控制好手冲时的变量，一杯好咖啡也很简单。查看全文",
+      "comments": []
+    },
+    {
+      "title": "派早报：Canva AI 2.0 发布、Anthropic 发布 Claude Opus 4.7 模型等",
+      "link": "https://sspai.com/post/108742",
+      "source": "少数派",
+      "time": "Fri, 17 Apr 2026 09:04:59 +0800",
+      "content": "OpenAI 升级 Codex 新增多项实用功能，大疆发布 Osmo Pocket 4 云台相机等。查看全文",
+      "comments": []
+    },
+    {
+      "title": "城市漫步指南：在沿海宜居小城，过一段不赶时间的日子",
+      "link": "https://sspai.com/post/108070",
+      "source": "少数派",
+      "time": "Thu, 16 Apr 2026 17:15:42 +0800",
+      "content": "前言工作的疲惫和生活中琐事积压，让我产生了换个环境去旅居的念头，最近在积极的考察一些比较宜居的城市。四月初趁着出差的机会来到了福建和广西，边应付公司的事物边考察当地的宜居城市。我先去了厦门，之后从南宁 ...查看全文",
+      "comments": []
+    },
+    {
+      "title": "众测 | 让通勤路上的你「重装简行」：邀你一同体验 tomtoc T77 双肩包",
+      "link": "https://sspai.com/post/108694",
+      "source": "少数派",
+      "time": "Thu, 16 Apr 2026 15:30:00 +0800",
+      "content": "当代城市工作者的出行场景正变得越来越复合。人们希望在一个背包里装下工作所需的电脑与数码设备，同时塞入下班健身的衣物，甚至直接背着它开启一趟两三天的短途差旅。但要在同一个背包上同时实现「出色的设备保护」 ...查看全文",
+      "comments": []
+    },
+    {
+      "title": "从画质玄学到改机热潮：浅谈拍立得的前世今生",
+      "link": "https://sspai.com/post/108630",
+      "source": "少数派",
+      "time": "Thu, 16 Apr 2026 15:00:00 +0800",
+      "content": "这份坚守，无关情怀的浪漫，而在于技术的胜利。查看全文",
+      "comments": []
+    },
+    {
+      "title": "译文｜Tahoe 的图标令人难评",
+      "link": "https://sspai.com/post/105394",
+      "source": "少数派",
+      "time": "Thu, 16 Apr 2026 11:26:02 +0800",
+      "content": "Apple 成功地在一个操作系统版本中集齐了图标设计中的常见错误。查看全文",
+      "comments": []
+    },
+    {
+      "title": "派早报：Keychron 推出轻量化鼠标 G3、微软推出新模型等",
+      "link": "https://sspai.com/post/108692",
+      "source": "少数派",
+      "time": "Thu, 16 Apr 2026 08:42:56 +0800",
+      "content": "OpenAI 推出网络安全专用模型 GPT-5.4-Cyber、索尼宣布将调整 Bravia 电视的功能等。查看全文",
+      "comments": []
+    },
+    {
+      "title": "The Unix executable as a Smalltalk method (2025) [video]",
+      "link": "https://www.youtube.com/watch?v=sZjPQ7vtLNA",
+      "source": "HN | youtube.com",
+      "time": "2026-04-16T23:09:07",
+      "content": "",
+      "comments": []
+    },
+    {
+      "title": "美团100-50，60-30外卖卷",
+      "link": "https://linux.do/t/topic/1993698",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 05:24:11 +0000",
+      "content": "打开美团，然后点击外卖，点最下面的半价外卖，必得40-20，今天好像放水比较大，\n\n            3 个帖子 - 2 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "yaoshen",
+          "text": "之前都是领到60-30和40-20，或者只领到40-20，今天第一次领到100-50\n          阅读完整话题"
+        },
+        {
+          "author": "yaoshen",
+          "text": "打开美团，然后点击外卖，点最下面的半价外卖，必得40-20，今天好像放水比较大，\n\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "自制的AI推理能力排行榜(主观)",
+      "link": "https://linux.do/t/topic/1993686",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 05:22:32 +0000",
+      "content": "主观测试，仅供参考:\nClaude测试样例非常少，可能不太准确。\n\n\nPrompt演示:\n\n            6 个帖子 - 4 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "AlexD",
+          "text": "不太像做题能力，感觉更像是正规的数理和推理能力（“正规”指不是那种脑筋急转弯，感觉脑筋急转弯之类题目是真有点无聊，有时候人类都未必反应过来）。gemini 和 GPT（不降智） 的数理能力的确很强；claude 似乎没点上这方面技能点。感觉各有千秋\n          阅读完整话题"
+        },
+        {
+          "author": "HanHua",
+          "text": "是的。佬说的很中肯。Claude编程能力非常强，所以很多佬友都喜欢Claude Max 20x. 但做题能力真的是依托.\n          阅读完整话题"
+        },
+        {
+          "author": "Cynthia L. Roe",
+          "text": "终于看到客观的评价了，每次看到某些人把claude吹成神真绷不住了，实际就是纯纯文科生，opus 4.6数学能力连5.4 mini都不如\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "(any) opus4.7 目前可用，但是 web 能力无法正常使用",
+      "link": "https://linux.do/t/topic/1993662",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 05:17:11 +0000",
+      "content": "坏消息：两个工具同时故障：\n\n后台 Agent：连续 500 panic（服务端问题）\nWebSearch：返回\"1m 上下文已经全量可用，请启用 1m 上下文后重试\"——需要你在界面里启用 1M context 才能走通\n\n是否有佬遇到过类似问题，恳请交流分享\n            3 个帖子 - 3 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "do",
+          "text": "额度快没有了.怎搞额度了.哈哈.4.7强…头大…\n          阅读完整话题"
+        },
+        {
+          "author": "HavenLiew",
+          "text": "我刚试了下,any 的 websearch 可以用的\n          阅读完整话题"
+        },
+        {
+          "author": "Climber",
+          "text": "坏消息：两个工具同时故障：\n\n后台 Agent：连续 500 panic（服务端问题）\nWebSearch：返回\"1m 上下文已经全量可用，请启用 1m 上下文后重试\"——需要你在界面里启用 1M context 才能走通\n\n是否有佬遇到过类似问题，恳请交流分享\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "【求助】非数学专业跨考纯数学研究生，除了数分和高代，还需要学习哪些课程？",
+      "link": "https://linux.do/t/topic/1993654",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 05:16:09 +0000",
+      "content": "我是一名计算机专业的学生，因为高中开始就一直对数学很感兴趣，可惜没有考上数学专业，现在有跨考纯数学研究生的想法，想问问各位佬友需要学习哪些课程\n            4 个帖子 - 3 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "wjyis",
+          "text": "如果你是基于兴趣而不是就业,那么个人比较推荐基础数学/运筹学/统计学,现在计算数学/应用数学很多实际上都是人工智能专业了,可能和你想的不太一样,这点也需要注意.\n          阅读完整话题"
+        },
+        {
+          "author": "wjyis",
+          "text": "数分和高代是必考的,然后结合你考的学校看一下复试的科目\n一般来说,复变,实变+抽象代数都是比较常见的范围,根据你考的具体科目,可能会加上运筹学,测度论等,以学校官网的招生大纲为准.\n          阅读完整话题"
+        },
+        {
+          "author": "CiAn",
+          "text": "我是一名计算机专业的学生，因为高中开始就一直对数学很感兴趣，可惜没有考上数学专业，现在有跨考纯数学研究生的想法，想问问各位佬友需要学习哪些课程\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "免费送个一年的域名",
+      "link": "https://linux.do/t/topic/1993652",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 05:15:47 +0000",
+      "content": "去年10月在  https://www.spaceship.com 买了域名，cttaizai.com\n免费送了，需要私，可换绑登录邮箱\n            6 个帖子 - 5 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "cttaizai",
+          "text": "送出去了，@ lianghao155 ，看到的第一条信息\n          阅读完整话题"
+        },
+        {
+          "author": "uerlysder",
+          "text": "参与一下，刚好需要域名，不知道能否转备案\n          阅读完整话题"
+        },
+        {
+          "author": "HGN",
+          "text": "不知道咋用，留给有需要的兄弟们吧 \n一般这种做什么好呀\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "droid更新后好像无法使用了，有大佬解决吗？",
+      "link": "https://linux.do/t/topic/1993641",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 05:13:02 +0000",
+      "content": "Failed to create session.Is the daemon running?\n\n            3 个帖子 - 2 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "doke",
+          "text": "看下droid是不是在运行，关键看后台，\n          阅读完整话题"
+        },
+        {
+          "author": "dage1819",
+          "text": "Failed to create session.Is the daemon running?\n\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "新写了个炒股网站供各位大佬批判",
+      "link": "https://linux.do/t/topic/1993638",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 05:10:55 +0000",
+      "content": "本帖使用社区公益推广，符合推广要求。我申明并遵循社区要求的以下内容：\n\n我的项目是免费使用的，无收费（变相收费、赞助）部分： 是\n我的帖子已经打上 公益推广 标签： 是\n我的项目属于个人项目，与公司或商业机构无关： 是\n我的项目不存在 QQ、TG 等群组引流： 是\n我的项目不存在非运营必要的网站引流： 是\n我的项目不存在为他人推广、AFF： 是\n我的项目无关联的商业项目： 是\n我的站点存在登录，并已接入 LINUX DO Connect： 否\n我帖子内的项目介绍，AI 生成、润色内容部分已截图发出： 是\n以上选择我承诺是永久有效的，接受社区和佬友监督： 是\n\n以下为项目介绍正文内容，AI 生成、润色内容已使用截图方式发出\n网站：https://astock-main.onrender.com/\n上面是网站，用render写的。请各位大佬轻点用。。。追高圣器，能直接把查询到的数据发给ai分析\n项目简介\n基于Streamlit开发的股票分析系统，集成了多种股票数据查询和分析功能。 系统支持API和数据库双数据源，提供实时股票数据查询、K线图绘制、龙虎榜查询、 同花顺热榜等功能。\n主要功能\n\n股票查询与K线图: 支持通过股票代码或名称查询，自动生成K线图\n龙虎榜查询: 查询股票是否在龙虎榜及获取详细数据\n同花顺热榜: 获取实时热门股票榜单，支持数据筛选\n数据库管理: 测试数据库连接和更新股票数据\n\n            4 个帖子 - 3 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "Ah_Jie",
+          "text": "前排，我来了 佬网页打不开加载不出来了。\n          阅读完整话题"
+        },
+        {
+          "author": "Niko_Niko",
+          "text": "有佬友有个回复不？回复下使用的体验或者有什么功能建议\n          阅读完整话题"
+        },
+        {
+          "author": "Niko_Niko",
+          "text": "本帖使用社区公益推广，符合推广要求。我申明并遵循社区要求的以下内容：\n\n我的项目是免费使用的，无收费（变相收费、赞助）部分： 是\n我的帖子已经打上 公益推广 标签： 是\n我的项目属于个人项目，与公司或商业机构无关： 是\n我的项目不存在 QQ、TG 等群组引流： 是\n我的项目不存在非运营必要的网站引流"
+        }
+      ]
+    },
+    {
+      "title": "kimi code plan不刷新了？",
+      "link": "https://linux.do/t/topic/1993637",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 05:10:51 +0000",
+      "content": "昨晚大概晚上十点钟用完的5小时额度，但是怎么现在（第二天13点）额度都没有刷新\n\n            7 个帖子 - 2 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "nanbloom001",
+          "text": "哦哦我懂了，这个是用了百分之0，不是还剩0% \n          阅读完整话题"
+        },
+        {
+          "author": "nanbloom001",
+          "text": "不好意思，我好像没有听懂你的问题，请问你的5个小时额度值得是什么\n\n          阅读完整话题"
+        },
+        {
+          "author": "vovovovovov",
+          "text": "刚刚又重置了一下时间，但是5小时额度还是没有刷新 \n\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "vps机佬们，最后的抉择，求推荐DMIT还是搬瓦工",
+      "link": "https://linux.do/t/topic/1993636",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 05:10:42 +0000",
+      "content": "中转进入决赛圈的是 ： DMIT :LAX.AN5.Pro.STARTER\n\n和 搬瓦工的 DC6\n\n求佬给点意见，主要是用ai的接口和做代理。 还有就是选东京和洛杉矶，佬们怎么看？\n            15 个帖子 - 10 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "Eric12",
+          "text": "这。。。\n一个是40/月，一个是30/月。\n价格就差好多啊\n          阅读完整话题"
+        },
+        {
+          "author": "别再熬夜伤身体",
+          "text": "瓦工正价也没什么性价比.真要性价比还是 rn…还是看自己业务场景\n          阅读完整话题"
+        },
+        {
+          "author": "tinghua1",
+          "text": "你如果只是中转那选DMIT。肯定是价低的好点。这两个在评价上都属于很好的了。哦不对，看错了瓦工是三个月啊。那还是瓦工吧。不过之前好像看到瓦工ip段被整个送中了（不确定）？\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "NIST gives up enriching most CVEs",
+      "link": "https://risky.biz/risky-bulletin-nist-gives-up-enriching-most-cves/",
+      "source": "HN | risky.biz",
+      "time": "2026-04-17T23:09:14",
+      "content": "",
+      "comments": []
+    },
+    {
+      "title": "Introducing: ShaderPad",
+      "link": "https://rileyjshaw.com/blog/introducing-shaderpad/",
+      "source": "HN | rileyjshaw.com",
+      "time": "2026-04-16T00:59:08",
+      "content": "",
+      "comments": []
+    },
+    {
+      "title": "有懂家电的吗",
+      "link": "https://linux.do/t/topic/1993577",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 04:55:18 +0000",
+      "content": "我想要买台洗衣机，预算0-1500，于是我到b站上找推荐，一搜一片京东联盟推广链接迎面而来 \n            2 个帖子 - 2 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "atom_A",
+          "text": "我想要买台洗衣机，预算0-1500，于是我到b站上找推荐，一搜一片京东联盟推广链接迎面而来 \n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "AI时代当知识平权和技术平权撞上就业替代，读书和工作该何去何从？",
+      "link": "https://linux.do/t/topic/1993574",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 04:54:47 +0000",
+      "content": "随着AI深度融入日常生活，我发现大家已经越来越离不开它了——绝大多数人每天都在使用AI。AI的出现，正在推动一种前所未有的“知识平权”和“技术平权”，仿佛专业技能的门槛在迅速降低，个人竞争力似乎也面临着重新的定义。这不禁让我思考：在这样的趋势下，我们读书求学的意义究竟是什么？未来的路又该往哪里走？\n与此同时，随着AI能力不断进化，它是否会全面替代人工？这不仅是普通人的焦虑，更是企业界一直在反复探讨的课题。我个人的感觉比较悲观，或者说比较直接：未来，AI大概率会在很多领域取代人类。如果大量工作岗位真的被AI接替，人类又该去做什么？或者说，人类还有必要工作吗？会不会有一天，我们完全依靠AI来生产劳动，让AGI机器人替我们干活、替我们赚钱，而我们只需要坐享其成？\n顺着这个逻辑想下去，未来的结算方式可能都会变。到那时候，我们还需要货币或者数字货币吗？会不会所有价值交换都通过算力“Token”来进行结算？\n想听听大家的看法。\n            1 个帖子 - 1 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "mark",
+          "text": "随着AI深度融入日常生活，我发现大家已经越来越离不开它了——绝大多数人每天都在使用AI。AI的出现，正在推动一种前所未有的“知识平权”和“技术平权”，仿佛专业技能的门槛在迅速降低，个人竞争力似乎也面临着重新的定义。这不禁让我思考：在这样的趋势下，我们读书求学的意义究竟是什么？未来的路又该往哪里走？\n"
+        }
+      ]
+    },
+    {
+      "title": "小米手机国内怎么掉队了？",
+      "link": "https://linux.do/t/topic/1993544",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 04:48:52 +0000",
+      "content": "第五了\n\n            7 个帖子 - 7 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "agi_is_coming",
+          "text": "小米17还是不错的，7000的电池（超长续航），质感不错，合适的屏幕大小，现在能解bl挺香的。\n我平时都不咋用iPhone了，把17当主力在用了\n          阅读完整话题"
+        },
+        {
+          "author": "Obsidian",
+          "text": "我是K70 PRO,新澎拜系统真的难用,之前MIUI多年的细节优化各种小功能比较完美了,澎拜重新开发后你可以理解为和MIUI没有关系了,等同于重新开发.\n遇到一个bug在小米社区反馈了一年,直到现在也没修复.\n而且现在解锁BL的社区答题已经取消了,目前没有官方解锁bl的途径了.\n          "
+        },
+        {
+          "author": "qgming",
+          "text": "因为内存的原因，小米的出货主力机型被控货了（redminote,redmi数字这些机型），现在主力是turbo和k\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "为了抛弃 vscode，我做了一个终端里的 vscode，功能够用",
+      "link": "https://linux.do/t/topic/1993534",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 04:48:03 +0000",
+      "content": "AI Coding 时代，vscode 的职责基本只剩下了：\n\n文件预览\n全局搜索\ngit 管理和 diff 查看\n\n但为了这些功能专门去开启一个 vscode 实在有点不值，于是我就整了个终端版的集成了这些功能的 TUI 来取代 vscode 的作用，占用小，速度快，并发跑 Coding Agent 更友好。\n\n  \n      \n\n      blushyes.github.io\n  \n\n  \n    \n\nReef — the minimal dev terminal for the AI coding era\n\n  AI writes the code. You review it. Reef does only the second half. A keyboard-first terminal workbench: file tree, read-only preview, git diff.\n\n\n  \n\n  \n    \n    \n  \n\n  \n\n\n            2 个帖子 - 2 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "Blushyes",
+          "text": "AI Coding 时代，vscode 的职责基本只剩下了：\n\n文件预览\n全局搜索\ngit 管理和 diff 查看\n\n但为了这些功能专门去开启一个 vscode 实在有点不值，于是我就整了个终端版的集成了这些功能的 TUI 来取代 vscode 的作用，占用小，速度快，并发跑 Coding Agen"
+        }
+      ]
+    },
+    {
+      "title": "直接手机iOS订阅的claude pro，会被封吗？",
+      "link": "https://linux.do/t/topic/1993532",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 04:47:50 +0000",
+      "content": "礼品卡支付， Google关联登录的老号，啥设置都没做，就挂了个自己的代理。\n\n\n            6 个帖子 - 5 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "xiaocaicai",
+          "text": "我支付宝买的礼品卡，也不搞什么2api，就自己客户端用，自己的独享代理，IP也不跳，试试看能活多久。\n          阅读完整话题"
+        },
+        {
+          "author": "mjjss",
+          "text": "会吧。哪种都可以封 不然大家也不会反应A\\封号了\n          阅读完整话题"
+        },
+        {
+          "author": "small",
+          "text": "先恭喜佬友订阅成功。\n封号是有可能的。环境保护一定要做好。可以搜一搜帖子。有专门讲的\n比如这个 给各位佬友们分享一下claude防封经验（前两天刚封一个号）\nhttps://linux.do/t/topic/1939199\n很多。自己搜一下\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "咋解决用不了connect",
+      "link": "https://linux.do/t/topic/1993523",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 04:46:32 +0000",
+      "content": "删过cookie了\n            4 个帖子 - 3 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "真的是你啊",
+          "text": "刷新一下，或者crrl+f5或者把语言改成英文默认\n          阅读完整话题"
+        },
+        {
+          "author": "IO",
+          "text": "看看广告拦截插件吧，我记得有个广告拦截插件会影响\n          阅读完整话题"
+        },
+        {
+          "author": "388天的茶叶",
+          "text": "删过cookie了\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "现在还有什么gpt-5.4的公益站吗",
+      "link": "https://linux.do/t/topic/1993519",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 04:46:08 +0000",
+      "content": "现在还有什么gpt-5.4的公益站吗，天才程序员陨落了\n            2 个帖子 - 2 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "rootwhois",
+          "text": "现在还有什么gpt-5.4的公益站吗，天才程序员陨落了\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "求推荐不容易升糖的咸口小零食",
+      "link": "https://linux.do/t/topic/1993516",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 04:45:57 +0000",
+      "content": "带了动态血糖仪后发现自己餐一血糖容易爆炸，于是也开始了饮食焦虑\n吃水果特别容易炸，面包蛋糕那些就更别提了\n但是因为工作烦躁的时候，又很想吃点什么缓解一下\n求佬们分享下下～\n            5 个帖子 - 5 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "Luck",
+          "text": "酒鬼花生，卤牛腱，豆皮，鹌鹑蛋，无糖的粗粮饼干 \n          阅读完整话题"
+        },
+        {
+          "author": "这是好事儿啊",
+          "text": "调味的都含糖，咸的增加盐摄入会血压高\n还是吃黄瓜吧\n\n          阅读完整话题"
+        },
+        {
+          "author": "Anna1",
+          "text": "能不能换成辣的缓解下？我个人感觉辣的也能缓解下工作焦虑。\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "为什么会遇到这种同事呢？是我的问题还是别人的问题？?",
+      "link": "https://linux.do/t/topic/1993514",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 04:45:39 +0000",
+      "content": "佬们，帮我分析一下，已经怀疑人生了。\n起因是：项目急，我和他申请了加班，我来公司了，他在家里。\n他是我们的后端开发，最近x总让他临时担任了ITBP。\n我把项目都往jk上发上去，然后发生了以下的事情。\n\n\n我不知道这句让ai分析到底哪里戳中他了。\n我应该以后和他怎么相处呢？\n            5 个帖子 - 5 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "𝓵𝓮𝔃𝓲𝓼𝓱𝓮𝓷",
+          "text": "这种同事\n就应该打语音打视频\n打字效果不好\n          阅读完整话题"
+        },
+        {
+          "author": "幻熊",
+          "text": "如果你不提起他在家没来，说明你不在意，单既然你提了，说明你心里还是有气的，所以不好判断你第一句让他自己让ai分析是不是带了拒绝沟通的感觉。\n可以设想一下，如果他在公司的话你会怎么跟他说，然后退一步想想如果是因为疫情你们都被隔离在家又会怎么说。总之扔一句你让ai去分析的话，只比不回复好一点点\n    "
+        },
+        {
+          "author": "齐天小圣",
+          "text": "突然联想到一个问题，如果是社区的快问快答帖佬会让帖主去问AI吗\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "当你在自己开发的软件中，管理上百个会话，上百万文字",
+      "link": "https://linux.do/t/topic/1993506",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 04:43:46 +0000",
+      "content": "当你在自己开发的软件中，用画布管理上百个会话，上百万文字。软件完全开源，完全为了自己使用特化有多爽 \n每一个卡片都是传统的一个对话窗口，只能说太爽了\n\n\n            7 个帖子 - 3 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "MyGo!!!!!",
+          "text": "如果我是高中生可太好了  真的希望自己是年轻的人呢\n          阅读完整话题"
+        },
+        {
+          "author": "MyGo!!!!!",
+          "text": "背景是 AI 生成图，每一个背景都完全特化的。。。。采取的日本简约小人风格提示词\n          阅读完整话题"
+        },
+        {
+          "author": "MyGo!!!!!",
+          "text": "画布LLM 管理软件，类似思维导图，用着几个月了\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "为什么会遇到这种同事呢？是我的问题还是别人的问题？",
+      "link": "https://linux.do/t/topic/1993478",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 04:40:42 +0000",
+      "content": "（话题已被作者删除）\n            1 个帖子 - 1 位参与者\n            阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "申请通过之后账户确认的链接有效期是多久呀",
+      "link": "https://linux.do/t/topic/1993453",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 04:36:11 +0000",
+      "content": "我发邀请之后朋友申请通过了，4.11发来的邮件，结果在垃圾箱里她今天上邮箱看了一下点击链接说失效了，或者说账户可能已经激活，但是登录不上，这种情况是只能重新申请了嘛\n            6 个帖子 - 3 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "真的是你啊",
+          "text": "邀请码的有效期只有一天，没了就是没了，需要及时激活\n          阅读完整话题"
+        },
+        {
+          "author": "真的是你啊",
+          "text": "那就是没了，再去找一个邀请链接吧，我之前邀我同学也是在垃圾箱，过了一天才发现\n          阅读完整话题"
+        },
+        {
+          "author": "lancerys",
+          "text": "邮箱里有账户的激活链接，不是那个邀请链接\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "为什么浏览话题量天天在掉？",
+      "link": "https://linux.do/t/topic/1993450",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 04:35:12 +0000",
+      "content": "为什么浏览话题量天天在掉？每天刷很多帖子还是在掉，这是咋了？是因为我都是按ctrl新窗口打开的？\n            15 个帖子 - 9 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "大帅哥",
+          "text": "多开tab现在不给过了，不知道是bug还是特性\n          阅读完整话题"
+        },
+        {
+          "author": "tigerZ",
+          "text": "关键是帖子看了不少的呀，就是话题浏览量嘎嘎掉\n          阅读完整话题"
+        },
+        {
+          "author": "tigerZ",
+          "text": "太机智了佬，我三级很久了，倒是没有掉级别，佬你要常来呀\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "数字公民身份证可以过 Claude KYC 吗？",
+      "link": "https://linux.do/t/topic/1993439",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 04:32:39 +0000",
+      "content": "目前可以申请的数字公民项目：\n\n爱沙尼亚 e-Residency\n立陶宛 e-Residency\n帕劳数字居留（RNS）\n\n哪些可以过 Claude KYC，还有其他推荐的吗？\n            7 个帖子 - 3 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "利陆都2253",
+          "text": "现在来看，比较好弄的就是尼日利亚 NIN、帕劳数字身份证、菲律宾税卡、印尼驾照，其他国家的数字居民身份证还挺贵的\n          阅读完整话题"
+        },
+        {
+          "author": "想成为88vip",
+          "text": "要求里是不接受的，但是我不清楚实体的数字身份证是什么情况，这里好像没有区分是不是实体\n这个还是得有人试了才能知道行不行\n          阅读完整话题"
+        },
+        {
+          "author": "Misasasaka",
+          "text": "手持数字身份证be like:\n\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "2api+注册机这条路还走得通么",
+      "link": "https://linux.do/t/topic/1993431",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 04:30:15 +0000",
+      "content": "不想围绕GC模型玩了，我想体验一下高智商模型+harness能达到什么效果\n            2 个帖子 - 2 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "coldingcode",
+          "text": "不想围绕GC模型玩了，我想体验一下高智商模型+harness能达到什么效果\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "毁了 全都毁了",
+      "link": "https://linux.do/t/topic/1993426",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 04:29:49 +0000",
+      "content": "从Any牌路由器 SubAgent 和 Haiku 模型无法正常调用的解决办法继续讨论：\n叼毛 \n就在今天 114 版本将npm包中的cli.js 之于node 的兼容运行部分 制品\n全面更换成了 bun版 且学codex 把每个平台的制品都拆成了单独的分包\n原本的 cli.js 的包现在改为了 包装脚本 cli-wrapper.cjs 用于拉取对应平台的 bun版二进制\n其安装脚本\n\n可以看到 基本是毁了\n解包还出来 cli.js 也可以 但其目前的动作其实表明了\nnpm包的真废弃 不过也没有一步到位 因为最开始就是用bun构建但是兼容了node的\n所以114目前解出来的 仍然可以 node来跑 只不过不确定后续动作 （等会整个仓库来分发新node版）\n如果某日开始 cch的机制更进一步的 完全强硬实施（禁用的的环境变量移除掉） 或者 源码中直接将兼容node这部份包裹代码给移除\n那时就是真正的废弃之时了 你让我强行用npm包我也不敢用了 （怕封号）\n            21 个帖子 - 19 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "small",
+          "text": "能不能冒充下老外，去github 发请愿帖。喷一喷A\\。换回npm。。\n          阅读完整话题"
+        },
+        {
+          "author": "Cimix",
+          "text": "那将是我完全放弃 cc 的日子\n感觉之前的泄密事件加速了 npm 的废弃进度\n          阅读完整话题"
+        },
+        {
+          "author": "small",
+          "text": "所以我又切回 npm版的。。真的比bun好用。真不知道 A\\脑袋里怎么想的。\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "成功升级2级了",
+      "link": "https://linux.do/t/topic/1993420",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 04:27:49 +0000",
+      "content": "好高兴，继续冲3级\n            3 个帖子 - 3 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "wqr2018",
+          "text": "恭喜恭喜，我还差一点点，马上也可以升级了 \n          阅读完整话题"
+        },
+        {
+          "author": "388天的茶叶",
+          "text": "好高兴，继续冲3级\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "rikkahub客户端effort怎么设置为max级别？还是说无法设置",
+      "link": "https://linux.do/t/topic/1993418",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 04:27:41 +0000",
+      "content": "如题，刚把max订阅反代出来，打算在rikkahub中使用看看，发现好像没法设置effort，是不是只能默认使用CC中的Medium effort ？有没有办法设置呢？佬友们有没有懂的 \n            9 个帖子 - 4 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "ayt407123",
+          "text": "佬可否细嗦一下需要加哪些js参数吗  万分感谢\n          阅读完整话题"
+        },
+        {
+          "author": "ayt407123",
+          "text": "如果没法设置的话，那只能老实在CC中用了 \n          阅读完整话题"
+        },
+        {
+          "author": "ishadows",
+          "text": "只能通过自定义body里手动设置相关的json参数\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "Google ai pro4个月试用*10抽奖",
+      "link": "https://linux.do/t/topic/1993415",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 04:26:21 +0000",
+      "content": "抽奖主题：谷歌 Google AI Pro 4 个月邀请链接\n注意下只有新用户（有1个月试用）才能用，同时需要绑卡\n 奖品详情：\n邀请链接*10，\n 活动时间：\n开始时间：2026年4月18日12：30\n截止时间：2026年4月19日22：30\n 参与方式：\n在本贴下回复\"XXXXXXX\"即可参与。\n 抽奖规则：\n每位用户仅允许参与一次。\n将使用 LINUX DO 抽奖工具在所有回复中随机抽取中奖者。\n 注意事项：\n本活动将在活动截止时间后关闭回帖，以确保公正性。\n中奖者将在活动结束后在本帖公布，并通过论坛站内信由发起人通知领奖方式。\n所有规则及抽奖结果由 论坛管理团队最终解释。\n 发起人承诺：\n作为本次抽奖的发起人 承诺本话题的抽奖活动严格遵守 LINUX DO 社区抽奖规则。因违反上述规定引发的公平性争议或其他问题，均由我独立承担相应的道德与法律责任。\n\n期待您的积极参与，祝您好运！如有任何疑问，欢迎随时联系或 论坛管理团队。\n            14 个帖子 - 14 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "cg",
+          "text": "参与一下，这次不中我就当系统把我拉黑了\n          阅读完整话题"
+        },
+        {
+          "author": "lenlen",
+          "text": "来了来了，抽我抽我，gemini号被风控了，求求了中一次吧，用于科研和实验，感谢大佬，祝身体健康，万事如意！\n          阅读完整话题"
+        },
+        {
+          "author": "KcNcozz",
+          "text": "抽一下试试，没用过Google的AI，感谢佬友!要回复XXXXXXX吗?\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "GPT image 2夯爆了",
+      "link": "https://linux.do/t/topic/1993397",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 04:22:30 +0000",
+      "content": "今早战绩\n\n\n\n提示词：创建超写实专业摄影​​，采用柔光效果。图里是北京市海淀区小学三年级下学期物理期末考试试卷，纸质版，使用中国常见的试卷形式，略微有褶皱，题目排版工整，其中题目是量子物理等新兴高等物理试题\n\n\n\n\n提示词：创建超写实专业摄影​​，采用柔光效果。生成一张马斯克抖音直播带货的截图，星舰火箭只要19.9\n\n\n经验就是疯狂试，时间长并且出二选一就是中灰度了\n            32 个帖子 - 23 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "l0dyv",
+          "text": "我去这试卷是生成的?? 这和真的有什么区别\n          阅读完整话题"
+        },
+        {
+          "author": "落尘",
+          "text": "怎么说呢，已经是可以直接出图的类型了()\n但对于多约束生成还是……\n(抽了不少次，剩下少的更多)\n原图:\n\n效果图:\n\n没有歪头，路灯透视也有点奇怪，也不是咖啡，伦勃朗光……这个不做评价\n提示词\n摄影语言:\n1:图片构成\n三分法构图，标准镜头，锐度较为柔和，中等景深，焦点在主体(小女孩)\n2:光影\n"
+        },
+        {
+          "author": "kaed",
+          "text": "可惜的是没法生成太色的图，什么时候开源的也能有这效果就好了\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "Generating a color spectrum for an image",
+      "link": "https://amandahinton.com/blog/generating-a-color-spectrum-for-an-image",
+      "source": "HN | amandahinton.com",
+      "time": "2026-04-16T02:20:03",
+      "content": "",
+      "comments": []
+    },
+    {
+      "title": "I built a 3D printing business and ran it for 8 months",
+      "link": "https://www.wespiser.com/posts/2026-04-12-3D-Printing-Biz.html",
+      "source": "HN | wespiser.com",
+      "time": "2026-04-15T21:59:07",
+      "content": "",
+      "comments": []
+    },
+    {
+      "title": "Arc Prize Foundation (YC W26) Is Hiring a Platform Engineer for ARC-AGI-4",
+      "link": "https://www.ycombinator.com/companies/arc-prize-foundation/jobs/AKZRZDN-platform-engineer-benchmark-lead",
+      "source": "HN | ycombinator.com",
+      "time": "2026-04-18T05:00:08",
+      "content": "",
+      "comments": []
+    },
+    {
+      "title": "Ban the sale of precise geolocation",
+      "link": "https://www.lawfaremedia.org/article/it-is-time-to-ban-the-sale-of-precise-geolocation",
+      "source": "HN | lawfaremedia.org",
+      "time": "2026-04-17T22:25:46",
+      "content": "",
+      "comments": []
+    },
+    {
+      "title": "这300刀目前可以怎么用？能在龙虾上用吗",
+      "link": "https://linux.do/t/topic/1993267",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 03:56:13 +0000",
+      "content": "1 个帖子 - 1 位参与者\n            阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "求助，在vscode中使用codex插件 gb2312编码乱码",
+      "link": "https://linux.do/t/topic/1993242",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 03:52:38 +0000",
+      "content": "，\n\n佬们，我现在写的程序是单片机程序使用编码是gb2312编码，我用的是vscode的插件codex，但是这个gb2312编码老是乱码，每次ai总是检测到乱码然后再把乱码改好，怎样优雅的使用2312编码不乱码啊！！！\n            1 个帖子 - 1 位参与者\n            阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "请各位大师帮忙看看opencode总是报错到底是谁的锅？？",
+      "link": "https://linux.do/t/topic/1993238",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 03:51:58 +0000",
+      "content": "先说说使用环境：自己的单个GPT PRO账号------CPA转接（这里主要是为了统一代理，不用每个机器装一个代理）------Axonhub（因为还有其他模型，一起管理）------opencode+OMO\n在两台开发机上都发现同样的问题（不同的OC版本，一个1.3.17，一个1.4.8）：经常出现如图所示的报错，尤其感觉是写入长文本或者一条回复比较长报错概率会更大，非常影响开发。请各位大师帮忙看看！\n\n我逐步审视：\nCPA错误日志如下：\n=== REQUEST INFO ===\nVersion: beta-ce53a53\nURL: /v1/responses\nMethod: POST\nTimestamp: 2026-04-18T11:46:22.257929644+08:00\n\n=== HEADERS ===\nUser-Agent: opencode/1.4.8 ai-sdk/provider-utils/4.0.23 runtime/bun/1.3.11\nContent-Length: 1186285\nContent-Type: application/json\nAccept-Encoding: gzip\nCache-Control: no-cache\nConnection: keep-alive\nAccept: text/event-stream\nAuthorization: Bearer rp-k...8KoR\nX-Session-Affinity: ses_275d9*******（这里我隐藏一下）\n\n=== REQUEST BODY ===\n\n\n=== API RESPONSE ===\nTimestamp: 2026-04-18T11:46:27.34462658+08:00\n{\"error\":{\"message\":\"Post \\\"https://chatgpt.com/backend-api/codex/responses\\\": EOF\",\"type\":\"server_error\",\"code\":\"internal_server_error\"}}\n\n=== RESPONSE ===\nStatus: 500\nContent-Type: application/json\nAccess-Control-Allow-Origin: *\nAccess-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, OPTIONS\nAccess-Control-Allow-Headers: *\n\n{\"error\":{\"message\":\"Post \\\"https://chatgpt.com/backend-api/codex/responses\\\": EOF\",\"type\":\"server_error\",\"code\":\"internal_server_error\"}}\n\nAxonhub报错如下：\nPost \"https://chatgpt.com/backend-api/codex/responses\": EOF\n\nOC显示报错文本如下：\nType validation failed: Value: {\"error\":{\"code\":\"internal_server_error\",\"message\":\"unexpected EOF\",\"type\":\"\"}}.\nError message: [\n  {\n    \"code\": \"invalid_union\",\n    \"errors\": [\n      [\n        {\n          \"code\": \"invalid_value\",\n          \"values\": [\n            \"response.output_text.delta\"\n          ],\n          \"path\": [\n            \"type\"\n          ],\n          \"message\": \"Invalid input: expected \\\"response.output_text.delta\\\"\"\n        },\n        {\n          \"expected\": \"string\",\n          \"code\": \"invalid_type\",\n          \"path\": [\n            \"item_id\"\n          ],\n          \"message\": \"Invalid input: expected string, received undefined\"\n        },\n        {\n         ",
+      "comments": []
+    },
+    {
+      "title": "升三级倒计时咯",
+      "link": "https://linux.do/t/topic/1993236",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 03:51:38 +0000",
+      "content": "终于啊终于，在我工作时间的不屑努力(摸鱼)下，明天就可以三级咯，即将迎来人生第一次三级，很是高兴啊\n不过，新人还不了解三级以后有啥变化，据说三级和一二级差距很大，有没有懂的佬给科普下啊 \n            1 个帖子 - 1 位参与者\n            阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "现在有多少人在盯着XCHAT发布，立马就整上几万个号的佬^-^",
+      "link": "https://linux.do/t/topic/1993234",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 03:51:32 +0000",
+      "content": "感觉这玩意未来价值也很高啊，可能会替代小飞机之类的多个软件，屯号就是屯钱吧，这个账号应该也是后面越来越难弄吧\n            2 个帖子 - 2 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "云天明",
+          "text": "感觉这玩意未来价值也很高啊，可能会替代小飞机之类的多个软件，屯号就是屯钱吧，这个账号应该也是后面越来越难弄吧\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "佬们有没有觉得 codex免费号额度变少了",
+      "link": "https://linux.do/t/topic/1993233",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 03:51:29 +0000",
+      "content": "之前手搓的时候，感觉还是非常耐用的，这几天问几个问题就好几个账号没额度了\n            4 个帖子 - 3 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "Crown👑",
+          "text": "都已经一周了，现在free的额度只有2刀，运气不好的可能才0.1刀\n          阅读完整话题"
+        },
+        {
+          "author": "chwl66",
+          "text": "你这是后知后觉啊，额度变少都好几天了！！\n          阅读完整话题"
+        },
+        {
+          "author": "peterjay",
+          "text": "之前手搓的时候，感觉还是非常耐用的，这几天问几个问题就好几个账号没额度了\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "消息称 DeepSeek 正寻求首轮外部融资，估值超百亿美元",
+      "link": "https://linux.do/t/topic/1993229",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 03:50:16 +0000",
+      "content": "消息称 DeepSeek 正寻求首轮外部融资，估值超百亿美元 - IT之家\n            3 个帖子 - 2 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "雨辰",
+          "text": "发晚了，有人已经发过了，哈哈哈哈，不过有一说一感觉大家还是对DeepSeek有很大期望的，毕竟它能打下来其他模型的价格\n          阅读完整话题"
+        },
+        {
+          "author": "𝓵𝓮𝔃𝓲𝓼𝓱𝓮𝓷",
+          "text": "消息称 DeepSeek 正寻求首轮外部融资，估值超百亿美元 - IT之家\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "英伟达上线glm5.1",
+      "link": "https://linux.do/t/topic/1993223",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 03:49:40 +0000",
+      "content": "闲来无事整理一下newapi，发现老黄上5.1了\n\n速度还不慢，快蹬！！\n\n            6 个帖子 - 4 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "鸿岳",
+          "text": "z-ai/glm-5.1佬你试试这个标识符\n\n          阅读完整话题"
+        },
+        {
+          "author": "covet9574",
+          "text": "我咋没看到 我读出来的模型没有5.1\n=\n          阅读完整话题"
+        },
+        {
+          "author": "鸿岳",
+          "text": "刚上线还没人蹬，快的很现在，首字不到一秒 早点享受，一会就pvp了\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "claude 公益key 4.18 更新",
+      "link": "https://linux.do/t/topic/1993213",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 03:47:04 +0000",
+      "content": "主贴https://linux.do/t/topic/1972106\n由于昨天触碰上游的限制，导致8条线路请求过多而限流\n现在已建号池，来规避\n上下文，现在已经完全搞不清楚了，这个上下文没办法做到测试，，那家公司跟抽风的一样，我也搞不清楚，一会儿长一会儿短的上下文\n今天可能开放承压测试，\n关于昨天\n请大家理智发言，不要在评论区引起争端，本身以公益性质为准，(你总不可能要求别人这个要求别人那个吧)\n致谢\n感谢有三位佬友，修改的方案\n            10 个帖子 - 10 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "kimchou",
+          "text": "期待佬的回归，用了很多次佬的claude，又快又稳！\n          阅读完整话题"
+        },
+        {
+          "author": "bailaoda",
+          "text": "期待大佬回归，等着佬的消息，谢谢佬的付出\n          阅读完整话题"
+        },
+        {
+          "author": "cloud123",
+          "text": "前排支持，期待佬回归，昨天没注意html吞掉字符，今天希望可以解密成功 \n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "【求助】美区 google play store 找不到 claude",
+      "link": "https://linux.do/t/topic/1993185",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 03:41:53 +0000",
+      "content": "佬们，最近想通过 google pay 渠道走 claude 订阅。但是在 google play store 找不到 claude 应用，我已经切换到美区了，为什么会这样呢？（google 账号也是美区的）\n\n\n\n            1 个帖子 - 1 位参与者\n            阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "OpenAI开始启动封禁代充Plus了（FakeNews)",
+      "link": "https://linux.do/t/topic/1993181",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 03:41:27 +0000",
+      "content": "9 个帖子 - 8 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "ASI",
+          "text": "这个我在汉奸帖里已经发过了，大家都说是假图，ps的图\n          阅读完整话题"
+        },
+        {
+          "author": "梦伟",
+          "text": "假信息，移动到深海把，别浪费别人时间又点进来 \n          阅读完整话题"
+        },
+        {
+          "author": "cvbnt",
+          "text": "发前建议核实一下，亏我浪费了一分钟扒了推文发现没有\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "[求助] vscode的codex插件突然少了很多功能",
+      "link": "https://linux.do/t/topic/1993171",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 03:39:46 +0000",
+      "content": "昨天我使用codex login登录了官方账号之后，codex插件突然少了很多功能。具体表现为\n\n文字全部变成了英文\n“/” 命令不会弹出任何提示，之前输入“/”会出现skills、mcp、status等内容\n\n\n尝试过卸载重装插件、切换别的供应商，均无法解决。\n            2 个帖子 - 2 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "viayu",
+          "text": "昨天我使用codex login登录了官方账号之后，codex插件突然少了很多功能。具体表现为\n\n文字全部变成了英文\n“/” 命令不会弹出任何提示，之前输入“/”会出现skills、mcp、statu"
+        }
+      ]
+    },
+    {
+      "title": "在Mac上有什么好用的生物解锁工具么？",
+      "link": "https://linux.do/t/topic/1993164",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 03:38:31 +0000",
+      "content": "各位大佬们，请问一下除了官方妙控键盘，有其他好用的Mac上生物识别解锁的工具么？可以识别touchid或者faceid，省的每次都要输入密码 \n            8 个帖子 - 5 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "给你好果汁吃",
+          "text": "是这样的，全家桶是从iphone开始的。\n          阅读完整话题"
+        },
+        {
+          "author": "威士忌爱好者",
+          "text": "有没有其他的可替代方案，便宜一点的，实在是不想花太多钱\n          阅读完整话题"
+        },
+        {
+          "author": "kuss0（虚弱的吧唧）",
+          "text": "不对劲儿啊，我咋没发现有这么个功能呢？os26？\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "公益站登录不进去出现这个怎么回事",
+      "link": "https://linux.do/t/topic/1993153",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 03:37:04 +0000",
+      "content": "有没有一样的小伙伴或者大佬\n\n            1 个帖子 - 1 位参与者\n            阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "兄弟们，你们开通Claude code是怎么支付的？",
+      "link": "https://linux.do/t/topic/1993125",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 03:32:09 +0000",
+      "content": "兄弟们，你们开通Claude code是怎么支付的？用国内信用卡是不是容易被秒封？\n            10 个帖子 - 8 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "唯独你没懂",
+          "text": "虚拟卡直接付，问题不大，想封你怎么都封，不想封怎么都不封哈哈哈\n          阅读完整话题"
+        },
+        {
+          "author": "lx2005",
+          "text": "哪里来的输入地址？Google Play开通不需要输入账单地址的。\n          阅读完整话题"
+        },
+        {
+          "author": "Abellleo",
+          "text": "但是网页不是要输入地址么？这个怎么处理？\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "原来tokon自由也就自由了一两个月",
+      "link": "https://linux.do/t/topic/1993108",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 03:30:15 +0000",
+      "content": "现在各种受限，羊毛党也顶不住了公益站也没有了，龙虾也要饿死了。之前小米蹬了10亿tokon。现在plus动不动限流\n准备去找机器人多整个plus以免封掉了\n            8 个帖子 - 6 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "晴空万里",
+          "text": "ollama倒是有免费的gpt-oss:120b，不过用过公益站的可能会觉得没那么聪明\n          阅读完整话题"
+        },
+        {
+          "author": "hisen",
+          "text": "道高一尺，魔高一丈，佬友，薅羊毛的方法会不断更新，肯定一直会有。\n          阅读完整话题"
+        },
+        {
+          "author": "酷饭",
+          "text": "指点路子gpt是120b那个吗？求指点一下路子\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "any大善人来战一下",
+      "link": "https://linux.do/t/topic/1993098",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 03:28:41 +0000",
+      "content": "输的叫我一声靓仔，赢得叫我一声叼毛\n            22 个帖子 - 12 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "YsainLin",
+          "text": "昨晚蹬到4点半才用了45刀  佬你是真厉害\n          阅读完整话题"
+        },
+        {
+          "author": "admin",
+          "text": "你是用软件自动签到的吗，看着工具不错啊。\n          阅读完整话题"
+        },
+        {
+          "author": "zeus",
+          "text": "也就这样了\n\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "求助腾讯云首尔没法访问GPT",
+      "link": "https://linux.do/t/topic/1993077",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 03:25:23 +0000",
+      "content": "cpa里导入json一刷新就是\nToken refresh attempt 2 failed: token refresh failed with status 403: {“error”:{“code”:“unsupported_country_region_territory”,“message”:“Country, region, or territory not supported”,“param”:null,“type”:“request_forbidden”}}\n求教佬友们怎么解决\n            1 个帖子 - 1 位参与者\n            阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "搭了个sub2api发现一直崩，有推荐云服务器吗",
+      "link": "https://linux.do/t/topic/1993062",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 03:23:55 +0000",
+      "content": "这是我24年当时买的99套餐的服务器。打算弄个sub2api一直崩。所以打算重新购买一个服务器。有大佬推荐一下吗。2h2g真没法用。最好是海外的【不然还要处理网络上的问题，所以懒得在原有上加配了，想直接重新买】\n            10 个帖子 - 10 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "john180",
+          "text": "单纯从硬件配置角度来说不应该有问题吧，我自己实在一个1c1g的服务器上部署的，我自用基本都没什么负载。\n你用docker部署的话看看他默认的部署参数，他的默认配置模板是适配比较大内存设备的，你可丢给A"
+        },
+        {
+          "author": "蛋",
+          "text": "我自用的dedirock的灵车小鸡，1C2G，跑的CPA还挺稳的，你要买高配的可以看看三哥的hostdzire，最近lax补货了，64​ 4C6G 三年，不过CPU跑分可能有点低。。\n        "
+        },
+        {
+          "author": "Dew",
+          "text": "我的1h1g的小鸡都装了七八个反代了。。。不过是我自己用\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "现在GCP没有赠金了吗",
+      "link": "https://linux.do/t/topic/1993056",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 03:23:05 +0000",
+      "content": "我昨天买了个新的google ai pro的号，一直折腾ai studio里绑定billing不成功。\n今天试了一下自己的老号，结果一把头成功…突然激动了但是定睛一看，赠金0\n这是啥情况，没有300赠金了吗\n\n            11 个帖子 - 4 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "LawrenceY",
+          "text": "噢，还真是在这里，在cloud里能看到，我以为是在ai studio里显示，谢谢佬\n\n          阅读完整话题"
+        },
+        {
+          "author": "Dew",
+          "text": "我去官网看了一下，显示还是有的，你看下你是不是没找对地方或者号以前开过\n          阅读完整话题"
+        },
+        {
+          "author": "NPC",
+          "text": "可以去 cloud.google.com\n\n\n有赠金这里都会显示\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "又搓了一个ai表格编辑器的小玩意",
+      "link": "https://linux.do/t/topic/1993054",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 03:22:59 +0000",
+      "content": "最近在思考要不要先部署好发出来给佬友们先用用，可以自定义api，同时不支持工具调用的模型也可以使用工具\n\n            4 个帖子 - 1 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "Kio",
+          "text": "（帖子已被作者删除）\n          阅读完整话题"
+        },
+        {
+          "author": "Kio",
+          "text": "目前还在完善当中，但是功能基本都可以用了\n          阅读完整话题"
+        },
+        {
+          "author": "Kio",
+          "text": "最近在思考要不要先部署好发出来给佬友们先用用，可以自定义api，同时不支持工具调用的模型也可以使用工具\n\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "any大善人是又关门了吗",
+      "link": "https://linux.do/t/topic/1993050",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 03:22:23 +0000",
+      "content": "昨晚蹬了两个小时，今早起来就一直429了\n            7 个帖子 - 6 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "lhj5426",
+          "text": "我用 Antigravity  也没反应 也不报错 也不说话 就好像 在冷暴力我一样\n          阅读完整话题"
+        },
+        {
+          "author": "jy666",
+          "text": "没有吧，今天上午写了一上午代码，新开了session，可能会话过期了，如果几分钟不用就得重新开会话\n\n          阅读完整话题"
+        },
+        {
+          "author": "果灯",
+          "text": "一时间没找到any的注册链接了，佬可以分享下吗，我也想试试\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "GPT新画图模型可爱风格笔记提示词+内容直观展示提示词",
+      "link": "https://linux.do/t/topic/1993032",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 03:19:54 +0000",
+      "content": "起因\nGPT在灰度的画图模型非常非常强，我觉得也非常好用，然后为什么会有这篇帖子呢？\n是这位佬友发了一张笔记图，我震惊了，这效果也太好了！于是我就找佬友要了提示词\n\n\n\nGPT-IMAGE-2 生成海报以假乱真\n\n\n看来大香蕉应该还落后一截了\ngpt你出息了\n\n\n\n\n\n\nGPT-IMAGE-2 生成海报以假乱真\n\n\n对于函数的概念，我们用机器（一个输入一个输出）来解释。少文字，多对比和图画，形象，PPT比例，chiikawa风格\n\n错了，应该是这个哈：\n\n卡通 chiikawa风格 讲解什么是诱导公式\n\n然后我微微修改了二次编辑就那样了\n\n\n然后我就想到，之前大香蕉有类似的提示词，在我们站内也是疯狂被引用被询问的：\n\n  \n    \n    \n    \n      大香蕉 （ Banana Pro） 是真的顶，教你把文章变成卡通信息图 \n  \n\n开发调优\n    \n  \n  \n    发现了一个非常好玩的生图提示词，此提示词可以把文章变成卡通信息图，中文和各个元素理解的是真牛逼 \n\n例图： \n [generated_image_e5729982-05b9-45e1-91c2-bf190d1bfe40] \n [generated_image_fcc95357-2767-44fd-9673-adaa32f10e4f] \n\n把文章变成卡通信息图的提示词： \n[System / Pro…\n  \n\n\n我就想，那么按佬友的风格，让Claude去帮忙改一下提示词，做成一个模版化的提示词？\n然后就有了以下图片\n\n\n\nIntel Arc Alchemist XPU 运行 Qwen 3.5 / Qwen 3.6 / Gemma 4 并支持MoE （系列之三，教你如何自己写算子）\n\n\n\n\n\n\n\nIntel Arc Alchemist XPU 运行 Qwen 3.5 / Qwen 3.6 / Gemma 4 并支持MoE （系列之三，教你如何自己写算子）\n\n\n\n\n\n\n\n采用各种手段阻碍监管执法，拼多多被罚没合计 15.2 亿元\n\n\n 所以这是灰产杯打击完了？拼多多为什么杯罚这么多！\n（来自GPT灰度画图模型出图）\n\n\n\n\n\nGPT-IMAGE-2 生成海报以假乱真\n\n\n你看我搓出来了什么？这个真的太强了哇，我调整调整提示词，抽成一个通用的看看？\n\n\n画图提示词.zip (14.9 KB)\n怎么用？\n\n\n为什么有两个版本？为什么要发压缩包？\n首先我让Claude改的第一版的时候，你用它的时候你会发现，它是把完整的内容笔记化道图片里了～\n然后我就让它改了第二版，做成直观信息提炼版本～\n所以根据自己的需求去使用哈～\n发压缩包是因为站内有规定，AIGC生成的内容不允许直接发出，一般要求截图发出，这里考虑到各位佬友不大好复制提示词，所以直接用压缩包咯！\n最后\n哦对了，这个提示词肯定可以简化的，我太懒了，就不折腾了，交给下一个佬友优化发帖吧～\n周末了～\n祝各位佬玩的愉快～\n今天我们这大太阳，真是：\n\n@shawny\n@LC-CFG\n@DaisyDiao\n@一下这三位佬友，因为它们找我要提示词来着，其他可能还有佬友我忘了，就随缘刷到我帖子吧～\n            6 个帖子 - 6 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "lab",
+          "text": "感谢佬友分享，感觉这回GPT画图太强了，等待谷歌加强香蕉\n          阅读完整话题"
+        },
+        {
+          "author": "CrazyDuck",
+          "text": "感谢大佬提示词，最近可能有类似提示词需求\n          阅读完整话题"
+        },
+        {
+          "author": "clark1028",
+          "text": "感谢分享思路，只是我的GPT还是在乱码阶段\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "分享 cc、cx cli 停住提效插件",
+      "link": "https://linux.do/t/topic/1993030",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 03:19:51 +0000",
+      "content": "如果你经常在终端里使用编程助手（比如 cc、cx），有时会不确定模型是不是卡住了 偶然发现了个项目，—— 这个项目可以帮你解决这个问题，【CodeIsland — Your AI agents live in the notch 】\n\n之前用 但是不支持 cx\n\n觉得好用的佬友，帮帖子点个赞吧   感谢\n            2 个帖子 - 2 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "xigua019",
+          "text": "如果你经常在终端里使用编程助手（比如 cc、cx），有时会不确定模型是不是卡住了 偶然发现了个项目，—— 这个项目可以帮你解决这个问题，【CodeIsland — Your AI agents liv"
+        }
+      ]
+    },
+    {
+      "title": "被“被动收入”神话吞噬的一代",
+      "link": "https://linux.do/t/topic/1993027",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 03:18:59 +0000",
+      "content": "去年我曾和一位自称在“创业”的年轻人喝咖啡，他经营的业务是代发货玉石滚轮。他在Alibaba上以1.20美元的价格进货，再通过Shopify网站以29.99美元卖出。他甚至从未用过这东西，也不太清楚它的具体功效，只是因为在YouTube上听人说这是“趋势”，利润惊人。他用网上的库存照片建了个网站，每天投入50美元跑Facebook广告。当客户询问物流信息时，他就从Google文档里复制粘贴一段话作为回复。\n在2015年到2022年之间，“被动收入”从一个乏味的财务词汇变成了一种救赎叙事。那段日子的狂热就像一种信仰，而所谓的“升天之日”，就是当你的被动收入超过每月开支、可以永远辞职的那一天。但现实是，真正赚到钱的人通常是那些售卖“如何获取被动收入”课程的人。这变成了一个在特拉华州注册公司并疯狂投放Facebook广告的莫比乌斯环。\n这种营销话术告诉人们：出卖时间换取金钱的是傻瓜，聪明人应该构建“系统”。无论是写电子书、开代发货商店还是做联盟营销网站，重点不在于你建造了什么，而在于它的结构。人们追求的是一台在睡觉时也能产生现金的机器。一旦拥有了这台机器，你就能重获自由，去海滩上坐着。但有趣的是，在海滩上坐三个小时你就会感到无聊透顶。\n这种将“被动性”作为唯一优化目标的经营哲学，几乎注定会产生垃圾。当你追求不干活就能赚钱时，你就不会再去关注客户真正想要什么。因为“在乎”是主动的，是需要投入时间和精力的。在2019年到2021年间，Shopify上的商家从100万激增到170万，但其中约90%的店铺在第一年就倒闭了。\n我们开始被无数没人真正经营的业务淹没。那些运费昂贵、客服只会复读模版的代发货商店，还有那些给义乌生产的压蒜器贴上各种激进品牌名的所谓“品牌”。甚至还有成千上万的联盟营销博客，里面塞满了从未见过实物的作者写的评论。这在技术上虽然算商业，却没为世界创造一分钱的价值。\n这种趋势彻底破坏了互联网的内容质量。如果你近五年在Google上搜索“最好的某某产品”，你会看到一堆雷同的清单。写这些文章的人并不关心你是否买到了好产品，他们只关心你有没有点开那个能产生佣金的Amazon链接。这种激励机制让诚实的评论变得毫无意义。一个诚实的建议可能是“大多数100美元以下的搅拌机都差不多”，但这赚不到钱，所以没人写。取而代之的是铺天盖地的软文。\n我见过许多聪明的年轻人，本可以在二十多岁时建立真正的技能或事业，却把精力浪费在一个接一个的被动收入骗局中。他们先做半年代发货，失败了转投AmazonFBA，再失败了就去卖代发货课程。他们离真正的经济价值越来越远。创造价值的无聊真相是：找到一个真实的问题，为真实的人解决它，并用心坚持下去。这需要很多年，而且绝对不是被动的。\n我曾见过有人咨询是否该开展遛狗业务，结果得到的建议是“遛狗不可扩展，你应该建个遛狗平台”。事实上，那个人喜欢狗也喜欢走路，他完全可以在一周内开始盈利。但“被动收入脑”让他觉得做简单的实业很天真，而开发一个从未涉足过的技术平台才叫聪明。结果往往是烧光积蓄，只留下一个没有用户的网页。\n到了2020年，这个圈子到处都是租着兰博基尼拍YouTube封面的骗子。这种模式越来越像一种社会化的多层传销，产品就是“不用工作”的梦想。\n现在，那些靠算法堆砌的垃圾博客正被人工智能生成的内容血洗。当初那群追求自动化的人，正在被更廉价、更快速的软件取代。Facebook的广告成本飙升也带走了代发货的红利。但我注意到，越来越多人开始讨论“用心的”生意。那些做家具的、开管道维修公司的、写自己真正会用的软件的人，他们的存在不是为了给自己创造被动收入，而是为了提供服务。这种模式远比坐在海滩上发呆更靠谱。\n本文为翻译，原文链接：The \"Passive Income\" trap ate a generation of entrepreneurs\n            1 个帖子 - 1 位参与者\n            阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "macbook pro m1pro 16+512建议升级到macos26吗",
+      "link": "https://linux.do/t/topic/1993017",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 03:18:35 +0000",
+      "content": "1 个帖子 - 1 位参与者\n            阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "「开源」Hermes + Spice，为Hermes注入有更强的感知能力，proactiveve能力",
+      "link": "https://linux.do/t/topic/1993012",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 03:17:25 +0000",
+      "content": "跟大家分享下最近几天最新的研究成果，我们把Spice和Hermes做了一个组合，给Hermes注入了Spice的感知能力，state model，决策能力及决策演化，Hermes的agent能力自进化和Spice的决策能力自进化能让他们的组合完美发挥各自的优势。\n经过这次的实验我们也更加坚信我们的方向，在这个agent全面爆发的时代，我们需要的不止是“手”，而是能三思而后行的“脑”。\n我先替各位彦祖亦菲测试两天，呼声够高我就加速开源出来让大家一起来使用。如果各位感兴趣的话不妨给我们Spice的GitHub点个star​，我们很需要大家的支持，欢迎大家尝试Spice，期待宝贵意见！\n\n            3 个帖子 - 2 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "Happy",
+          "text": "不放个github地址吗佬？想看看Readme文件了解下\n          阅读完整话题"
+        },
+        {
+          "author": "Dongyu Jia",
+          "text": "跟大家分享下最近几天最新的研究成果，我们把Spice和Hermes做了一个组合，给Hermes注入了Spice的感知能力，state model，决策能力及决策演化，Hermes的agent能力自进化"
+        }
+      ]
+    },
+    {
+      "title": "any如何接到newapi用",
+      "link": "https://linux.do/t/topic/1993003",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 03:15:52 +0000",
+      "content": "any如何接到newapi用呢佬友们 自用模式的\n            8 个帖子 - 8 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "Roundish",
+          "text": "any 不建议接入newapi, 他限制在 cc 里用\n          阅读完整话题"
+        },
+        {
+          "author": "chwl66",
+          "text": "我接入newapi 号没了！不要去尝试接入了！\n          阅读完整话题"
+        },
+        {
+          "author": "velve",
+          "text": "好像没有什么要求吧，直接添加渠道就能用，只是不能测试\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "鱼鱼好像还没有泡过温泉说是……",
+      "link": "https://linux.do/t/topic/1992977",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 03:12:15 +0000",
+      "content": "还好不是wmc(\n\n忽然想起来鱼鱼长这么大，还没跑过温泉呢…\n\n我靠，是刀子\n\n\n\n\n\n\n\n\n\n鱼鱼居然连平均值都没有吗\n\n\n\n\n\n\n\n\n\n\n\n            4 个帖子 - 3 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "Bob",
+          "text": "哇！这些图片摆放是站内的新组件吗？！我觉得这样的图片布局好很多\n          阅读完整话题"
+        },
+        {
+          "author": "MIKUSCAT",
+          "text": "泡温泉还是很舒服的，感觉整个人都被包裹住了一样，很温暖，就是得肺活量强一些\n（我的kei图图呢\n          阅读完整话题"
+        },
+        {
+          "author": "🥒",
+          "text": "还好不是wmc(\n\n忽然想起来鱼鱼长这么大，还没跑过温泉呢…\n\n我靠，是刀子\n\n\n\n\n\n\n\n\n\n鱼鱼居然连平均值都没有吗\n\n\n\n\n\n\n\n\n\n\n\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "Claude配置求求求",
+      "link": "https://linux.do/t/topic/1992647",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 02:26:51 +0000",
+      "content": "球大佬告知一个claude的setting配置，感觉配置是很久之前的\n            1 个帖子 - 1 位参与者\n            阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "Google AI 帮你查库存，比价格",
+      "link": "https://linux.do/t/topic/1992615",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 02:22:42 +0000",
+      "content": "Google – 17 Apr 26\n  \n\n  \n    \n\n7 ways to travel smarter this summer, with help from Google\n\n  The latest tools from Google can help you plan trips, find a great deal and explore your next destination.\n\n\n  \n\n  \n    \n    \n  \n\n  \n\n\n\n[!quote]+\n\n\n您已经可以追踪城市级别的酒店价格，从今天开始，您也可以追踪单个酒店的价格了。要在桌面上开始使用，请前往 \"搜索 \"并按名称查找特定酒店，然后点击新的价格跟踪切换按钮。在手机上，你可以在搜索后的 \"价格 \"选项卡下找到价格跟踪选项。无论哪种方式，如果您选择的日期内房价发生重大变化，您都会收到电子邮件提醒，这样您就可以抓住降价的机会，抢到超值优惠。\n\n\n品尝当地美食总是度假的一大亮点，但要在合适的餐厅找到一张桌子却可能是一项艰巨的挑战。有了人工智能模式和 \"问问地图 \"的代理功能，您就可以专注于美食了。您只需描述自己的需求和偏好，比如下周六在一家有古巴菜和现场音乐的餐厅预订五人桌。\n\n\n想到了旅行中需要的东西，但没有时间在网上订购？谷歌可以代您致电当地商店，查看谁有您要找的特定物品，包括相关优惠。去年 11 月，这一工具直接在搜索功能上推出，未来几周将在美国的人工智能模式上推出。\n\n\n\n\n  \n      \n\n      TechCrunch – 17 Apr 26\n  \n\n  \n    \n\nGoogle's AI Mode can now help you find products in stock nearby | TechCrunch\n\n  Although you can already track hotel prices at the city level, the new update lets you do so for a specific hotel that you're interested in.\n\n  \n    Est. reading time: 2 minutes\n  \n\n  \n\n  \n    \n    \n  \n\n  \n\n\nhttps://9to5google.com/2026/04/17/google-individual-hotel-price-tracking/\n            1 个帖子 - 1 位参与者\n            阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "GLM的coding plan抢不到只能买国外版的",
+      "link": "https://linux.do/t/topic/1992588",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 02:18:43 +0000",
+      "content": "本来想买国内GLM的coding plan的  但完全抢不到，还好公司报销，买了Z.AI的 不用抢，虽然贵点，但可以报销，话说 佬友们，如果买来自己用的话某鱼的拼车靠谱吗 \n            5 个帖子 - 5 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "linlang781",
+          "text": "已经准备取消订阅  为啥还有抢的  额度少  难用  速度慢 各种问题\n          阅读完整话题"
+        },
+        {
+          "author": "UikDMYY",
+          "text": "站内有佬提供了抢购脚本，可以试试。很多佬都用脚本抢到啦。\n主要是现在智谱算力跟不上，GLM5.1日常性不可用。\n          阅读完整话题"
+        },
+        {
+          "author": "YANG323",
+          "text": "我也想问这个问题，平时只用来cherry里面对话改论文什么的，用量算了下都远小于国内codingplan最低套餐，有没有佬传授一下咸鱼拼车如何鉴别靠谱不靠谱，在站里也没看到有拼的。。\n        "
+        }
+      ]
+    },
+    {
+      "title": "论坛首页感觉都是 AI 编程相关",
+      "link": "https://linux.do/t/topic/1992570",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 02:16:22 +0000",
+      "content": "喜欢每天打开论坛首页看看。但是打开论坛，看各个帖子，感觉大部分都是 AI 工具相关的，有点无聊啊！有没有其它的什么有趣的帖子！\n            6 个帖子 - 6 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "ricerug",
+          "text": "有很多板块，找自己感兴趣的板块\n虫洞里面的人类之光，学术类\n或者别的感兴趣的\n          阅读完整话题"
+        },
+        {
+          "author": "困的睡不着",
+          "text": "多逛逛呗。喜欢的帖子不一定天天都有的，多逛逛总能看到感兴趣的帖子\n          阅读完整话题"
+        },
+        {
+          "author": "ychell",
+          "text": "AI社区，AI相关很正常啊，这才是正常的L站啊\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "荣耀恶意广告SDK",
+      "link": "https://linux.do/t/topic/1992547",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 02:13:26 +0000",
+      "content": "荣耀恶意广告SDK，有没有佬有经验的，上不了架，愁人\n            1 个帖子 - 1 位参与者\n            阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "DeepSeek正首次寻求外部融资",
+      "link": "https://linux.do/t/topic/1992536",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 02:11:42 +0000",
+      "content": "DeepSeek 正首次寻求外部融资，目标至少募集 3 亿美元，估值超 100 亿美元。消息来源是 The Information，援引四位知情人士。\n怎么说呢，感觉就是被迫的。DeepSeek 之前最核心的竞争优势之一恰恰是不融资 —— 零外部融资意味着无商业化压力，是全球唯一一家可以不计成本、只为 AGI 目标狂奔的顶级实验室。一旦拿了外部资本，VC 的预期、商业化 KPI、股权结构的约束就全来了。\n但是不融资也有代价，仅 V4 多次延期，过去 15 个月大版本更新放缓，就可见 ds 已从行业领跑者阶梯上往下掉了。光靠幻方量化输血肯定是玩不下去的。\n真心希望 V4 能再拿到 SOTA，不仅仅是开源的 SOTA，而是 LLM 的 SOTA！\n            4 个帖子 - 3 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "阿钖",
+          "text": "牢梁手底下的将被挖走好多人，幻方估计也输不动血啊\n          阅读完整话题"
+        },
+        {
+          "author": "x1a02",
+          "text": "哎，不是说不差钱嘛。不知道这次ds能不能给大家惊喜\n          阅读完整话题"
+        },
+        {
+          "author": "阿钖",
+          "text": "DeepSeek 正首次寻求外部融资，目标至少募集 3 亿美元，估值超 100 亿美元。消息来源是 The Information，援引四位知情人士。\n怎么说呢，感觉就是被迫的。DeepSeek 之前"
+        }
+      ]
+    },
+    {
+      "title": "Claude 回答偶尔混杂韩语是什么情况",
+      "link": "https://linux.do/t/topic/1992522",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 02:10:23 +0000",
+      "content": "Claude pro 订阅，英国代理，连接官方API，模型Sonnet 4.6，提问使用中英文混合或者纯英文，回答偶尔混杂韩语，已经遇到三四次了\n\n            7 个帖子 - 5 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "lc",
+          "text": "没有明确说明需要中文回答，上下文使用 claude-sonnet-4-6 · 120k/200k tokens (60%)\n          阅读完整话题"
+        },
+        {
+          "author": "lc",
+          "text": "问题是纯技术问题，nodejs 使用 pkg 打包二进制的相关问题\n          阅读完整话题"
+        },
+        {
+          "author": "money",
+          "text": "是训练语料被污染了么？ 还是？我这里没遇到过，会不会是他把你的问题解析成了韩语问题了\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "claude code上下文问题",
+      "link": "https://linux.do/t/topic/1992514",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 02:08:38 +0000",
+      "content": "小弟最近刚使用claude code进行开发，但发现单纯发一个halo就会占据15%的上下文，这是正常现象吗？ 安装了ecc插件、但我通过/context查看，发现skill部分也就11k，大头是Messages部分，我该从哪些地方排查自己到底发送了哪些Messages呢？\n            5 个帖子 - 3 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "YYxiaoma",
+          "text": "可以再尝试一次试试，我新起了一个对话，输入hi，message只占了1.7K\n          阅读完整话题"
+        },
+        {
+          "author": "拿拿的铁",
+          "text": "context详情中mcp这样看起来没怎么占用？ \n\n          阅读完整话题"
+        },
+        {
+          "author": "YYxiaoma",
+          "text": "可以看看你MCP，MCP在对话时会全部加载，建议转成skill\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "Ai继续这样发展，未来会是怎样的🤔",
+      "link": "https://linux.do/t/topic/1992498",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 02:06:22 +0000",
+      "content": "现在ai的能力都在变强。\n那么不会产生幻觉，推理不会出错，有无限上下文窗口的ai，是否就是现在这条路的终点了？\n但这还是工具吧？\n真的有可能出现有“意识”的ai吗？\n            5 个帖子 - 5 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "拱北",
+          "text": "前者感觉只是我们认知中的终点，工具再强，也只是工具。\n\"意识\"是主观的，你如何去断定它拥有\"意识\"呢？\n如果ai真的拥有\"意识\"那感觉ai就不再是 AI 技术了，而是全新的智慧生命。\n        "
+        },
+        {
+          "author": "jb yu",
+          "text": "宇宙好像就是一个量变到质变的过程，物质可能是从真空中的负能量产生的，意识会不会从AI中涌现？感觉有可能。但是灵魂是什么谁也不知道。\n          阅读完整话题"
+        },
+        {
+          "author": "kk1",
+          "text": "看科技树怎么突破了，近两百年都是技术爆炸。\n一百年前飞机都还不会起飞，现在卫星都一大群了；\n几十年前的大砖头晶体管计算机，到现在的超高算力集群以及指数增长的算力。\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "最近书荒了，佬友们关于AI的书有值得推荐阅读的吗？",
+      "link": "https://linux.do/t/topic/1992494",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 02:06:09 +0000",
+      "content": "已看过这些，国内外都欢迎推荐：\ndeepseek原理与项目实践\n知识图谱\n巨浪\n生成式人工智能\n生成式AI\nMCP 开发\n计算\nAI Agent\n扣子 agent\nPython\nPrompt engineering for generative ai\n            1 个帖子 - 1 位参与者\n            阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "DeepSeek计划进行首轮融资，估值超 100 亿美元",
+      "link": "https://linux.do/t/topic/1992487",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 02:05:41 +0000",
+      "content": "因为高昂的研发投入和竞争对手对核心技术人员的挖角，deepseek计划募集至少3亿美元用于缓解各方面压力。\n个人看法：deepseek想融资肯定是随便融的，融资的核心原因之一就是避免核心人员被竞争对手的天价薪资挖角，毕竟字节能拿出一亿级别年包的筹码\n\n信息源：\nhttps://www.theinformation.com/articles/chinas-deepseek-raising-money-first-time-10-billion-plus-valuation\n\n\n            7 个帖子 - 5 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "翎",
+          "text": "腾讯到现在也没能拿出能打的语言模型，可能会积极参与投资。阿里在大模型领域一向是广泛投资。\n至于字节，可能更倾向于挖人\n          阅读完整话题"
+        },
+        {
+          "author": "翎",
+          "text": "deepseek只在24年短暂的进行过一段融资尝试，但是梁给出的条件（有限度的盈利，高度投入研发等）让很多投资人无法接受，从这之后梁再也没有任何融资动作，即便R1发布爆火之后，很多头部资本想要约见梁，"
+        },
+        {
+          "author": "雨辰",
+          "text": "腾讯、阿里还有字节应该多少都会投点来共享成果吧。还是希望国内ai尽快发展，追赶老外。最好让我早点用上便宜的国模。\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "在小红薯写了篇低价gpt渠道要没了，没想到一晚上有1w人浏览",
+      "link": "https://linux.do/t/topic/1992483",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 02:05:26 +0000",
+      "content": "我大概凌晨1点半的时候冲浪，根据我看到的内容，整合理解写了篇软文，没想到爆了，一晚上有1w人浏览。\n随便配的linuxdo截图，对截图也做了头像打码\n\n            6 个帖子 - 3 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "xiao-gy",
+          "text": "意思是不能截图有等级限制的帖子发到站外，会被拿下的\n          阅读完整话题"
+        },
+        {
+          "author": "樱满集",
+          "text": "设置成无等级可以吗佬，这样符合要求吗，还是说一张截图都不能吗\n          阅读完整话题"
+        },
+        {
+          "author": "多玩幻灵qwq",
+          "text": "等级贴是不能截图的！\n佬赶紧做相关清理吧\n\n\n\n 多玩幻灵qwq:\n\n刚刚看了眼你的帖子，我还以为是昨晚上吵得厉害的那个等级贴，那没事了\n\n\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "中奖了，结果睡过了，求佬安慰 ... ...",
+      "link": "https://linux.do/t/topic/1992473",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 02:04:17 +0000",
+      "content": "第一次从千万佬友中脱颖而出，结果睡着了 … … 谁能懂我这种痛    \n\n            5 个帖子 - 4 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "shuishi123",
+          "text": "从来没中过啊，羡慕运气好的人，继续抽吧，下次别睡了\n          阅读完整话题"
+        },
+        {
+          "author": "辣彼得",
+          "text": "前几天也中了一个Gemini的，正常的话，应该是单独拉一个群组之类的，但是楼主也没人联系我。 ，感觉L站中奖率还是很高的，再早还抽中过一个PT站的邀请码，都没领。\n          阅读完整话题"
+        },
+        {
+          "author": "帮开心",
+          "text": "下次别再睡觉了，等结果出来再去睡觉，这样就不会错过了 \n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "Claude desktop buddy : 在 开发板上 养一只小 Claude",
+      "link": "https://linux.do/t/topic/1992463",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 02:03:18 +0000",
+      "content": "github.com\n  \n\n  \n    \n  \n\n  GitHub - anthropics/claude-desktop-buddy: Reference and an example for the Bluetooth API for...\n\n    Reference and an example for the Bluetooth API for makers in Claude Cowork &amp; Claude Code Desktop\n\n\n  \n\n  \n    \n    \n  \n\n  \n\n\n\n[!quote]+\n适用于 macOS 和 Windows 的 Claude 可通过 BLE 将 Claude Cowork 和 Claude Code 与创客设备连接起来。 通过 BLE 将 Claude Cowork 和 Clude Code 与制造商的设备连接起来，这样开发人员和制造商就能构建硬件，以 显示权限提示、最近消息和其他交互。我们 围绕 Claude 的创客社区的创造力给我们留下了深刻印象。 提供一个轻量级、选择性的应用程序接口是我们的一种方式，它能让我们更容易地构建 提供一个轻量级、可选择的应用程序接口是我们的一种方式，可以让用户更轻松地构建与 Claude 集成的有趣的小硬件设备。\n例如，我们在 ESP32 上制作了一个桌面宠物，它依靠许可 批准和与克劳德的互动。没事的时候它会睡觉、 在会话开始时唤醒，在等待审批提示时会明显不耐烦。 在等待批准提示时，它会表现出明显的不耐烦，并让你在设备上直接批准或拒绝。\n\n\n            3 个帖子 - 2 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "chnos",
+          "text": "好棒，我最近也在想这个事，不过只能自己玩，没办法商用，除非改成其他模型，然后接入各种智能家电啥的。\n          阅读完整话题"
+        },
+        {
+          "author": "🐟",
+          "text": "github.com\n  \n\n  \n    \n  \n\n  GitHub - anthropics/claude-desktop-buddy: Reference and an example for "
+        }
+      ]
+    },
+    {
+      "title": "求问如何视频声音/音频提取文字",
+      "link": "https://linux.do/t/topic/1992438",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 02:00:58 +0000",
+      "content": "RT 佬友有没有什么好办法？\n比如从b站下载一个视频的音频，然后怎么提取成文字稿\n            5 个帖子 - 4 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "辣彼得",
+          "text": "最早飞书那个小工具就可以，后来是每个月免费多少分钟了。\n          阅读完整话题"
+        },
+        {
+          "author": "mrHu",
+          "text": "找个音频转文字的软件就可以了，ruanjian。\n          阅读完整话题"
+        },
+        {
+          "author": "neteroster",
+          "text": "关键词：asr，stt\n那方案太多了，本地的话有 whisper，qwen asr，微软的 vibevoice asr，在线的付费 API 有 soniox 之类的\n，各大云厂比如 azure 阿里云"
+        }
+      ]
+    },
+    {
+      "title": "cpa怎么开启1M上下文？",
+      "link": "https://linux.do/t/topic/1992430",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 01:59:58 +0000",
+      "content": "试了一下any善人的4.7，提示要开1M上下文\n            7 个帖子 - 5 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "喵帕丝",
+          "text": "好像昨天有佬友说4.6被下掉了，只能用4.7了？我没有测试，我昨天只用了4.7。\n          阅读完整话题"
+        },
+        {
+          "author": "Taus",
+          "text": "vscode终端启动cc也是一样的命令。\n          阅读完整话题"
+        },
+        {
+          "author": "于",
+          "text": "可不可以在vscode配置哇 我也是这个问题\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "哈雷佬的codex rebuild提示环境中的codex版本过旧如何解决",
+      "link": "https://linux.do/t/topic/1992420",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 01:56:26 +0000",
+      "content": "3 个帖子 - 3 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "Linus Torvalds",
+          "text": "自己拼一下github前缀吧，/Haleclipse/CodexDesktop-Rebuild/issues/37\n\n          阅读完整话题"
+        },
+        {
+          "author": "VIAOTO",
+          "text": "阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "有虚拟电话卡,与虚拟银行卡的渠道,求渠道",
+      "link": "https://linux.do/t/topic/1992418",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 01:55:53 +0000",
+      "content": "有虚拟电话卡,与虚拟银行卡的渠道,求渠道\n            2 个帖子 - 2 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "swoole",
+          "text": "有虚拟电话卡,与虚拟银行卡的渠道,求渠道\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "这是哪个佬友开的店么",
+      "link": "https://linux.do/t/topic/1992413",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 01:54:45 +0000",
+      "content": "rt\n感性的人，看到感兴趣的，在意的，会第一时间起反应。\n所以这是哪位佬友家开的？有暗号吗\n\n            4 个帖子 - 4 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "koboling",
+          "text": "这里是应该有张图还是什么吗，为啥我什么都没看到 \n          阅读完整话题"
+        },
+        {
+          "author": "布丁牌布偶",
+          "text": "说明了佬友已经把L站的精神深入学习到了骨髓\n          阅读完整话题"
+        },
+        {
+          "author": "Michael J",
+          "text": "rt\n感性的人，看到感兴趣的，在意的，会第一时间起反应。\n所以这是哪位佬友家开的？有暗号吗\n\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "现在买32g内存的m1 max算49入国军吗",
+      "link": "https://linux.do/t/topic/1992411",
+      "source": "Linux.do",
+      "time": "Sat, 18 Apr 2026 01:54:39 +0000",
+      "content": "在用的是m2 8+256 13寸mbp\n每天都被swap暴击\n\n实在不能忍了，在zz搞了个m1 max\n14寸 8k\n佬们觉得还能占多少年\n            21 个帖子 - 10 位参与者\n            阅读完整话题",
+      "comments": [
+        {
+          "author": "xiaoqiaotq",
+          "text": "22年 1.6w购入，32g有点不够，仅供参考\n          阅读完整话题"
+        },
+        {
+          "author": "wewewct",
+          "text": "公司混乱我没办法\n日常IM就有飞书 钉钉\n更别说微信和企微这两个内存大户\n手动摊手.jpg\n          阅读完整话题"
+        },
+        {
+          "author": "ghost",
+          "text": "电子产品买新不买旧这是我的原则，所以我会买比较新一点的\n          阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "具透 Plus：Windows 预览体验计划新变化；Linux 系统的「年龄验证」闹剧",
+      "link": "https://sspai.com/prime/story/inside-release-notes-260415",
+      "source": "少数派",
+      "time": "Wed, 15 Apr 2026 18:03:42 +0800",
+      "content": "Windows预览体验计划的新变化@广陵止息：我们在4月13日的早报中详细介绍了Windows预览体验计划的新变化，总体来看是好事，所以这里就不再赘述了。在本期具透Plus中我想聊聊Windows、m ...查看全文本文为会员文章，出自《单篇文章》，订阅后可阅读全文。",
+      "comments": []
+    }
+  ]
+}

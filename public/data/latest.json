@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-05-02T04:16:41.617748",
-    "total_count": 1119,
+    "last_updated": "2026-05-03T04:38:44.098800",
+    "total_count": 1194,
     "ai_summary": "§ SYSTEM_ERROR: AI_LINK_UNAVAILABLE (Key Missing)"
   },
   "items": [
@@ -174,12 +174,1259 @@
       "comments": []
     },
     {
+      "title": "庆祝一下升3级，送智谱GLM Coding Plan体验卡5张",
+      "link": "https://linux.do/t/topic/2102196",
+      "source": "Linux.do",
+      "time": "Sun, 03 May 2026 04:38:05 +0000",
+      "content": "前两天买的glm pro，送了几张体验卡，自己用不着浪费了，给有需要的佬： 我在使用GLM Coding Plan，数小时内完成过去需要数周的开发工作，赠送你1张7天AI Coding体验卡，一起来用吧：智谱AI开放平台 1 个帖子 - 1 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "模型服务厂对模型调用中的用户数据会利用到什么程度？",
+      "link": "https://linux.do/t/topic/2102182",
+      "source": "Linux.do",
+      "time": "Sun, 03 May 2026 04:34:06 +0000",
+      "content": "比如调各家api分析公司私有的源码或文档，如果里边有一些比较有价值的，会被模型厂商识别出来并仔细分析吗？ 2 个帖子 - 2 位参与者 阅读完整话题",
+      "comments": [
+        {
+          "author": "晨星",
+          "text": "比如调各家api分析公司私有的源码或文档，如果里边有一些比较有价值的，会被模型厂商识别出来并仔细分析吗？ 阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "你们的 ccg-workflow 使用 /ccg:plan 时是否会弹出需要用户确认的问题？",
+      "link": "https://linux.do/t/topic/2102177",
+      "source": "Linux.do",
+      "time": "Sun, 03 May 2026 04:32:30 +0000",
+      "content": "大佬们，你们在 claude code 中使用 ccg-workflow 时，若用 ccg:plan 规划任务，如果某些细节不够明确，是否会自动弹出问题跟用户确认？ 1 个帖子 - 1 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "Sub2api纯free账号一个月成本大赏",
+      "link": "https://linux.do/t/topic/2102160",
+      "source": "Linux.do",
+      "time": "Sun, 03 May 2026 04:30:10 +0000",
+      "content": "以下数据全部来自于sub2api看板统计及个人消费 消耗 月消耗Token：700刀 存活账号： 104全free，平均一个号一周额度2刀 接码： 平均一个号0.12元 icloud： 每月21元。因为需要存储空间，之前就开了【如果纯为了icloud开6块就行了】，还可拉家庭。如果弄200个号。平均一个号就算0.1毛。 总计： 接码花了50rmb，icloud 21rmb。就算70rmb吧。比例就是1RMB=10USD 。下个月成本应该会下降，因为接码之后的free号就比较稳了。 4 个帖子 - 4 位参与者 阅读完整话题",
+      "comments": [
+        {
+          "author": "老克勒",
+          "text": "楼上都是富哥，一天消费800刀，绝对富哥。 阅读完整话题"
+        },
+        {
+          "author": "小鸟壁纸",
+          "text": "佬用的时候会不会某个任务长时间卡住没有输出 阅读完整话题"
+        },
+        {
+          "author": "Syl",
+          "text": "月消耗七百刀 我昨天一天就花了800刀 阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "大模型api调用项目",
+      "link": "https://linux.do/t/topic/2102127",
+      "source": "Linux.do",
+      "time": "Sun, 03 May 2026 04:26:47 +0000",
+      "content": "想请教下佬们，一般api调用在哪里用的比较多一点，目前本人用的多一点的就是CC和cherry，想看看有没有别的好用的调用api的项目，希望佬友们推荐下 2 个帖子 - 2 位参与者 阅读完整话题",
+      "comments": [
+        {
+          "author": "JOJO",
+          "text": "想请教下佬们，一般api调用在哪里用的比较多一点，目前本人用的多一点的就是CC和cherry，想看看有没有别的好用的调用api的项目，希望佬友们推荐下 阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "为了反代Antigravity ，扒光 Google Antigravity 的“内衣”，反编译+Patch证书双管齐下，带你进入 Antigravity 的隐密后花园",
+      "link": "https://linux.do/t/topic/2102125",
+      "source": "Linux.do",
+      "time": "Sun, 03 May 2026 04:26:23 +0000",
+      "content": "​ Antigravity这货的防范又升级了！4月16号更新后，我之前弄好的一套直接歇菜，烦死了。本来以为掏出mitmproxy就能直接扒光它，结果Antigravity这货这次衣服穿得层层叠叠，连条缝都不给留。折腾整整两天，熬了两个大夜，总算把它扒干净了，过程太酸爽，必须来跟各位大佬汇报。 ​ 起初我想得太简单了，不就是挂个代理嘛，能有多难？结果上手才发现，Antigravity是Go写的，不仅用了Google自家的BoringCrypto合规库，最离谱的是——它压根不认系统证书链！我把根证书塞进macOS钥匙串，人家理都不理，直接报握手错误，给我整懵了。 ​ 查了半天总算摸清套路：这货的二进制包里，直接焊死了24个CA证书，一点余地都不留。而且它不走常规协议，玩的是Unix domain socket+gRPC over HTTP/2，普通抓包工具在这儿全是瞎子，根本抓不到任何东西，纯纯白费功夫。 ​ 它内嵌的证书，那咱霸王硬上弓， 硬刚就完事儿了！步骤给各位大佬贴出来，避坑： 准备手术刀：先用mitmproxy弄了个自己的CA凭证，搞定基础工具； 找穴替换：在它那24个内嵌凭证里，挑了个块头够大的（刚好9号位那个，1228字节），把我那1100多字节的证书塞进去，剩下的空位直接用换行符塞满它； 强行上：改完二进制文件，签名肯定崩了，这时候就得祭出codesign强行重签，命令放这了，直接抄作业： codesign --remove-signature language_server_macos_arm codesign -s - --force --deep language_server_macos_arm 骗过DNS：修改/etc/hosts，把Google那几个API域名全指向127.0.0.1，让所有流量乖乖钻进我的代理网，插翅难飞。 重启、发消息，看着mitmproxy里哗啦哗啦往外流，那一刻真的爽翻了！总算把这货的衣服扒开，看清楚内里了。 扒开之后才发现，这货核心发的是streamGenerateContent，最让我眼前一亮的是它的System Prompt——足足2.6万多字符！Google是真能整活，在里面疯狂给AI洗脑，逼着AI必须让用户觉得好看、性感、翻译成大白话就是：“不管代码行不行，样子一定要骚。“ 还有个有意思的点，Google是真不差钱，一点不心疼Token。每一轮对话，它都会把你的当前文件路径、光标在哪一行、甚至打开了哪些标签页，像复读机一样重新传一遍，纯纯浪费，咱也不懂这操作的意义何在 折腾完这一圈，最大的感触就是：Antigravity为了防止别人扒它衣服，是真下血本了，抓包门槛拉得巨高。但说白了，只要思路对、敢硬刚，再严的防范也能给它扒透。 下一步计划很明确：把扒出来的这些东西重新实现一遍，打包整理好，争取弄个能直接用的版本。 最后给想实操的大佬提个醒：Patch二进制的时候，字节数一定要对齐！一定要对齐！一定要对齐！重要的事说三遍，不然程序直接罢工，别问我怎么知道的，都是踩坑踩出来的血泪教训 折腾这两天，折腾得我快虚脱了踩了无数坑，终于把这它给拿下了。各位大佬看在小弟踩的坑对你有启发，动动小手点个赞！目前还是个一级小号，想快点升级进‘内场’，后面还有不少好活儿想跟大伙儿分享。咱这里大佬多、活儿好，有懂行的带带我，跟大佬飞。 3 个帖子 - 3 位参与者 阅读完整话题",
+      "comments": [
+        {
+          "author": "白芸汐",
+          "text": "看得我想加一个nsfw 不过这是被反代麻了吧 阅读完整话题"
+        },
+        {
+          "author": "lkkhiuh",
+          "text": "​ Antigravity这货的防范又升级了！4月16号更新后，我之前弄好的一套直接歇菜，烦死了。本来以为掏出mitmproxy就能直接扒光它，结果Antigravity这货这次衣服穿得层层叠叠，连条缝都不给留。折腾整整两天，熬了两个大夜，总算把它扒干净了，过程太酸爽，必须来跟各位大佬汇报"
+        }
+      ]
+    },
+    {
+      "title": "codex在windowsapp好用点还是wsl里",
+      "link": "https://linux.do/t/topic/2102123",
+      "source": "Linux.do",
+      "time": "Sun, 03 May 2026 04:26:16 +0000",
+      "content": "为什么官方都推荐在wsl里用codexcli呢 4 个帖子 - 4 位参与者 阅读完整话题",
+      "comments": [
+        {
+          "author": "MineMine",
+          "text": "wsl，在 AGENTS.md 中配合我的提示词，二级标题那部分可以去掉或者简化下省 token。 - Prefer Linux tools for search, inspection, editing, build, test, and git. - Use `pwsh.exe` only fo"
+        },
+        {
+          "author": "白芸汐",
+          "text": "windows下面的bug多，尤其是ps用起来经常出问题 阅读完整话题"
+        },
+        {
+          "author": "CJTw",
+          "text": "为什么官方都推荐在wsl里用codexcli呢 阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "gpt-image2模型怎么会乱码啊",
+      "link": "https://linux.do/t/topic/2102111",
+      "source": "Linux.do",
+      "time": "Sun, 03 May 2026 04:24:27 +0000",
+      "content": "我用chatgpt2api这个项目逆向反代的 生成的图片会有乱码 都是free甚至是项目自带注册机注册的 域名邮箱 我都不知道是不是2模型 着两个 1 个帖子 - 1 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "【picpi 皮皮工艺站】降低注册门槛啦！上线新模型DeepSeek V4.",
+      "link": "https://linux.do/t/topic/2102109",
+      "source": "Linux.do",
+      "time": "Sun, 03 May 2026 04:24:00 +0000",
+      "content": "从 【picpi 皮皮工艺站】小店开门啦！工艺codex 100$/周 30天订阅兑换码开卖！ 继续 工艺站主贴： 【picpi 皮皮公益站】主要自用 小规模开放 主力模型:OpenAI Codex 工艺站注册方式更新 前几天修改了发放规则，将基于用户数量的限制改为基于订阅数量的限制，很多老友反馈购买的订阅却没法注册工艺站，我决定放开注册限制。 注册邀请码使用LDC购买， 注册赠送 OpenAI Codex $3 试用订阅，如果好用就可以继续用LDC购买量更大的订阅。 DeepSeek V4 上线 因为是白嫖的API，所以不好用，玩玩就行。主力模型依然是OpenAI Codex。 LDC小店上新 补了一批邀请码，都可以注册来玩玩了。 ldc.picpi.top Picpi的小店 皮皮的小店 15 个帖子 - 9 位参与者 阅读完整话题",
+      "comments": [
+        {
+          "author": "烦啦不纠结",
+          "text": "哈哈哈 太热了 等佬再强大 发发力哈 这次应该抢无了 被盯上了 以后估计先LV3 LV2 有余力再LV1？ 阅读完整话题"
+        },
+        {
+          "author": "lhyee",
+          "text": "可以再放几个吧佬，刚刚打开网页打不开了，没抢到 阅读完整话题"
+        },
+        {
+          "author": "picpi",
+          "text": "佬们，被整我啊，cloudflare worker 100000 次请求炸了？ 阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "0计费bug，使用newapi和sub2api的注意了",
+      "link": "https://linux.do/t/topic/2102100",
+      "source": "Linux.do",
+      "time": "Sun, 03 May 2026 04:22:04 +0000",
+      "content": "这是原帖，我昨天试了下newapi是可以的，让写了几千字的小说内容，用时153s/首字0.4s，计费0，还没修复。https://linux.do/t/topic/2069034 然后今天又试了一下sub2api的，貌似比newapi还不易察觉。因为0计费貌似不写入日使用记录里（newapi可以看到0计费），我随便找了一个sub2api的网站，让他写500字还有3000字的小说，拿到内容了，然后后台是0计费。 图中一点点是测试，500字，3000字都是0计费，然后后台没有记录（我这只有用户面板，不知道管理员面板能不能看到，反正我问了ai说是0计费不会写usage记录） 3 个帖子 - 2 位参与者 阅读完整话题",
+      "comments": [
+        {
+          "author": "SuikaPx",
+          "text": "佬我等级权限不够能说一下是什么吗，我自己有公益站希望排查一下 噢截图中看到了，我先研究一下 阅读完整话题"
+        },
+        {
+          "author": "凌霄",
+          "text": "这是原帖，我昨天试了下newapi是可以的，让写了几千字的小说内容，用时153s/首字0.4s，计费0，还没修复。https://linux.do/t/topic/2069034 然后今天又试了一下sub2api的，貌似比newapi还不易察觉。因为0计费貌似不写入日使用记录里（newapi可以看到"
+        }
+      ]
+    },
+    {
+      "title": "全国首例“AI幻觉”侵权纠纷案",
+      "link": "https://linux.do/t/topic/2102086",
+      "source": "Linux.do",
+      "time": "Sun, 03 May 2026 04:19:41 +0000",
+      "content": "bilibili.com 全国首例“AI幻觉”侵权纠纷案宣判_哔哩哔哩_bilibili 全国首例“AI幻觉”侵权纠纷案宣判, 视频播放量 153500、弹幕量 585、点赞数 5431、投硬币枚数 249、收藏人数 2181、转发人数 1496, 视频作者 央视频, 作者简介 有品质，更轻松。关注我，让频频离你再近一点！ 投稿邮箱：ysptougao@yangshipin.cn，相关视频：冰激凌、雪糕、冰棍居然不是一样的东西？，机器下班AI还在“复盘”？探访会自我进化的汽车工厂，卫生巾不卫生，关爱女性健康不能停留在营销口号中，... m.ithome.com 全国首例“AI 幻觉”侵权纠纷案宣判：用户维权败诉，人工智能不具有民事主体资格 - IT之家 用户因 AI 提供错误高校信息，并承诺赔偿 10 万元而起诉，法院最终认定 AI 不具备民事主体资格，其“承诺”不能视为服务提供者的意思表示。此案为全国首例，明确了生成式 AI 属于“服务”而非“产品”的法律定位。#AI 幻觉侵权案# #生成式 AI 服务管理# AI总结： 剧透 2 个帖子 - 2 位参与者 阅读完整话题",
+      "comments": [
+        {
+          "author": "益阳勇",
+          "text": "bilibili.com 全国首例“AI幻觉”侵权纠纷案宣判_哔哩哔哩_bilibili 全国首例“AI幻觉”侵权纠纷案宣判, 视频播放量 153500、弹幕量 585、点赞数 5431、投硬币枚数 249、收藏人数 2181、转发人数 1496, 视频作者 央视频,"
+        }
+      ]
+    },
+    {
+      "title": "GPT新出的智能体 一轮对话work了五十多分钟",
+      "link": "https://linux.do/t/topic/2102085",
+      "source": "Linux.do",
+      "time": "Sun, 03 May 2026 04:19:20 +0000",
+      "content": "好多天没看 左边多出一个叫智能体的栏目，看了一下自己几个plus号是没有的，只有team号有 然后论坛里面也没见有几个讨论这个的 某个项目居然worked for 50min 虽然最终结果也一般般吧 但是突然感觉所谓的每个月只有25次的deep research也就那样了，这个限制还比deep research要小 1 个帖子 - 1 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "说说白嫖GPT plus",
+      "link": "https://linux.do/t/topic/2102082",
+      "source": "Linux.do",
+      "time": "Sun, 03 May 2026 04:19:04 +0000",
+      "content": "根据我的经验，出现支付未获批准、出错了之类的，不管是PayPal还是gopay，问题都是ip不行。这里ip不行指的说的是质量（不是说要什么家宽纯净ip之类的，我的就是普通订阅），和地区关系不大。比如说，日本的IP，可能日本线路1在URL跳转支付链接是会报错，但换成日本线路2就可以。账单地址之类的没关系。当然，有没有试用资格和ip地区相关。 3 个帖子 - 2 位参与者 阅读完整话题",
+      "comments": [
+        {
+          "author": "kalxius",
+          "text": "那我人在日本也弹出错了怎么说.难道是Soft Bank的网还不行吗 (其实并不是一直弹, 只有我新注册的邮箱才弹, 我自己正常的谷歌号已经嫖过2个plus了) 阅读完整话题"
+        },
+        {
+          "author": "洛天依",
+          "text": "根据我的经验，出现支付未获批准、出错了之类的，不管是PayPal还是gopay，问题都是ip不行。这里ip不行指的说的是质量（不是说要什么家宽纯净ip之类的，我的就是普通订阅），和地区关系不大。比如说，日本的IP，可能日本线路1在URL跳转支付链接是会报错，但换成日本线路2就可以。账单地址之类的没关"
+        }
+      ]
+    },
+    {
+      "title": "请教一下CPA 会自动启动API模型?",
+      "link": "https://linux.do/t/topic/2102061",
+      "source": "Linux.do",
+      "time": "Sun, 03 May 2026 04:16:39 +0000",
+      "content": "请教一下佬,我CPA 关闭后 刷新页面他又自动开启 需要怎么解决这个问题 1 个帖子 - 1 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "巨魔下载的老游戏怎么还能解锁成就呢",
+      "link": "https://linux.do/t/topic/2102051",
+      "source": "Linux.do",
+      "time": "Sun, 03 May 2026 04:15:37 +0000",
+      "content": "下的游戏是水果忍者v1.26.0 进去自动用我的apple id登录 玩了一把居然解锁了成就 账号会不会被ban什么的？ 1 个帖子 - 1 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "文字总结 抖音博主亲子鉴定视频 + 根据 潘教授《性之变》 加以解释",
+      "link": "https://linux.do/t/topic/2102039",
+      "source": "Linux.do",
+      "time": "Sun, 03 May 2026 04:13:58 +0000",
+      "content": "因为部分案例大跌眼镜，未满18周岁和已婚闹矛盾家庭主动退出 本文章，主体结构 将 抖音博主的视频案例，用文字转述，同时夹杂一些根据潘教授著作的截图加以辅助解释 第一个视频 ： （博主）2025年我们一共做了八千两百多份个人报告，非亲生率 22% ，有超过1800多个不是亲生的孩子，儿子应该能占到三分之二。 今年我印象最深的是好几个军人家庭的孩子不是亲生的。其中一个是孩子妈妈主动做的，她知道姐虢以后快吓死了，问我怎么办？我（抖音博主）说 让她找孩子亲生父亲，她说 不知道是谁 后来回事就不得而知了 今年还做出来一家孩子抱错的，男孩，已经十岁了，不过他们最终商量就是不去找了 女性邮寄的非亲生率稍微高一点，大概是 30%；像父亲的样本 是 压水、精班、烟头之类的，基本上都是孩子妈妈邮寄的。 有个案子是位女士，她是先提供的孩子父亲的牙刷，结果不是，又提供的烟头和血样，两个人的结果孩子是那个烟头的。 今年我接了不少那个查出轨的案子，孕期的一共出了九百多份报告，非亲生率42% 孕期的大部分都是因为时间间隔太近不敢确定，有一个已经怀了七个多月了，前男友在前老公在后，前男友说是安全期还带了措施不会是他的，但是女方还是不放心就做了鉴定，结果就是他前男友的，所以说安全期并不安全 司法鉴定一共是九千三百多份，有三十二份非亲生的，基本上都是未婚生子用来上户口的，做之前应该是都没有怀疑的，结果出来好多孩子妈妈对这个结果都很惊讶，他们做之前应该也是不知道这个结果的。 **小编评论：送去鉴定的非亲生率在20%-25%，这个比例虽然较高，但是大部分是在怀疑之后做的，也就是说，平均实际比例要远远低于这个；但是值得注意是，司法鉴定结果（未婚先孕上户口强制亲子鉴定），这种是结果差不多符合实际事情（略高一点）3%左右 ** 补充说明，这个比例远远低于出轨率，至于出轨率多少，后面会根据潘教授的研究，进行粗略的判断 视频二 ： 一个外企销售（女），她是做医药的，刚怀孕，男方把自己弱精症，精子成功率不到1%告诉了她，他们又做了检查还是不到百分之一（弱精症），因为女方工作的关系，经常出去应酬，很晚才回家，他老公一家都是老师，这家老师们都在怀疑是不是亲生了，可能是做得太过了，女方为了自己的清白，就找到我们做了一个产前的亲子鉴定，取羊水羊水穿刺，结果孩子确实是他们家的，最后无论这家老师怎么求她，还是离婚了 我经手过年龄最后的鉴定人是一个老大爷，八十多岁，这大爷很清醒，这大爷想知道自己的儿子是不是自己的，他的妻子，当时有喜欢的人，是他妻子家里人强逼着她结婚，结婚后，还跟她喜欢的人有联系，孩子长得不像自己，老伴走了，想知道结果，结果孩子是亲生的，大爷说冤枉了老伴五十多年 有一个因为前男友，用的是前男友的样本结果是排除 小两口，是奉子成婚，南方一开始还觉得是自己占了便宜，然后最后结果，老婆跑了，孩子不是亲生的，上不了户口，现在还得给孩子挣奶粉钱（参考前面的司法鉴定） 还有一个凭借记忆描述， 一堆夫妻，由于疫情，生意失败，为了转移负债，假离婚，然后男的怀疑自己妻子（前妻）出轨，拿到了前妻的内衣，亲子鉴定，这个内衣上面是否有其他男人的精，最后判断是其他男人的，男方想打官司，但已经离婚，法律上不承认 小编：男性和女性，在性生活上面有一个差别，男性的性更多是为了解压，或者是是一种释放压力的方式，但是女性不是，更多的是没有压力下，去追求刺激 还有更多结果，各种出乎意料的案例，不再文字转述，打字太累了 小编解释： 大家可能听说过或者看过，某些不良视频网站或者某天涯社区里面自拍视频，比如 出轨 ，正在做时老公/男朋友来电话，通过上面的案例，大家能够清醒过来，这些不是拍剧情吸引眼球，而是真实的事情 人作为一种生物，去追求刺激，是生物的本能，这种刺激，导致了出轨，3p sm 换q 等等 下面是潘教授著作的截图 根据潘教授的调查，小编推测在2026年这个信息化，流动化的时代，男性女性出轨率达到了30% 也就是10对里面有3对会出轨，更精确的说，是和他人发生性关系 发生性关系不代表对方知道，也不代表和他们发生性关系就破裂 7 个帖子 - 4 位参与者 阅读完整话题",
+      "comments": [
+        {
+          "author": "海拉鲁的毛虫",
+          "text": "统计学偏差而已，都是关系破裂或者出轨之后送的 阅读完整话题"
+        },
+        {
+          "author": "feeder",
+          "text": "文章里面谈到了未婚先孕 司法鉴定上户口 这个更加符合真实情况 大概是在3%左右 司法鉴定属于强制性，而且博主也表达了一些案例，对于当事人得知不是亲生的惊讶 从而可以管中窥豹，3%的比例是有的 这个方法是说的平均，偏远农村肯定低于大城市 原因是流动性，更多的在潘教授的著作中，我提供了图片可以供参考"
+        },
+        {
+          "author": "test2024001",
+          "text": "不能这么算，因为去做亲子鉴定作为样本本身就有系统偏误。想去做亲子鉴定，很大程度上已经有各种各样的怀疑因素了，才会去做，因此查出来有问题的概率均值肯定高于平均数。 阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "家宽但是用inpifo检测不是Privacy的有关系吗？",
+      "link": "https://linux.do/t/topic/2102036",
+      "source": "Linux.do",
+      "time": "Sun, 03 May 2026 04:13:39 +0000",
+      "content": "买了一个家宽想更稳定的使用ai工具，但是他不是privacy的，用ipinfo检测的，想问一下privacy这个条目重要吗？他的意思是什么呢？ 1 个帖子 - 1 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "求助佬们Claude的cli怎么加md更高效",
+      "link": "https://linux.do/t/topic/2102016",
+      "source": "Linux.do",
+      "time": "Sun, 03 May 2026 04:10:16 +0000",
+      "content": "用的站内佬的opus4.7，发现结果不是很尽人意，是没有加限制的原因吗？ 2 个帖子 - 2 位参与者 阅读完整话题",
+      "comments": [
+        {
+          "author": "kakazeoo",
+          "text": "用的站内佬的opus4.7，发现结果不是很尽人意，是没有加限制的原因吗？ 阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "deepseek和gemini哪个更好",
+      "link": "https://linux.do/t/topic/2102005",
+      "source": "Linux.do",
+      "time": "Sun, 03 May 2026 04:08:14 +0000",
+      "content": "各位大佬们，在综合实力对比哪个好用一点（在教人学习给建议，中文理解，理解中国信息，角色代入等等方面，或者更聪明一点？）如果你觉得我的问题太智障了请大胆的喷，我不介意我会认真看，因为实在是对这方面不了解，另外gemini不是pro版 4 个帖子 - 4 位参与者 阅读完整话题",
+      "comments": [
+        {
+          "author": "Wolke_Wolke",
+          "text": "你说的deepseek，指的是deepseek v4 flash还是deepseek v4 pro？ Gemini的问题是，web app的Gemini会量化降智，有很多内置提示词，想用到满血Gemini，得用AI Studio或者vertex（） quan: 在教人学习给建议，中文理解，"
+        },
+        {
+          "author": "jinyu30",
+          "text": "gemini 3 flash的话是很难比得过dp v4 pro max 的 阅读完整话题"
+        },
+        {
+          "author": "quan",
+          "text": "各位大佬们，在综合实力对比哪个好用一点（在教人学习给建议，中文理解，理解中国信息，角色代入等等方面，或者更聪明一点？）如果你觉得我的问题太智障了请大胆的喷，我不介意我会认真看，因为实在是对这方面不了解，另外gemini不是pro版 阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "DeepSeek APl 进行了一些兼容性调整，解决了部分第三方框架报 400 错误的问题",
+      "link": "https://linux.do/t/topic/2102004",
+      "source": "Linux.do",
+      "time": "Sun, 03 May 2026 04:07:55 +0000",
+      "content": "1 个帖子 - 1 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
       "title": "套壳中国大模型撑起500亿美元估值？扒一扒 Cursor 的\"套壳\"疑云",
       "link": "http://www.ruanyifeng.com/blog/2026/03/kimi-cursor.html",
       "source": "阮一峰的网志",
       "time": "Sat, 21 Mar 2026 18:19:11 +0800",
       "content": "1、 本周末，有一条最热闹的 AI 新闻，震动了太平洋两岸，连马斯克都关注了。 昨天，AI 编程工具 Cursor 推出了\"自己的\"模型 Composer 2。 上图是官网截图，现在点进去还写着\"自有模型\"。 自从2024年10月，Composer 1 发布以来，外界就一直怀疑，它是套壳的中国模型，因为行为很类似，但苦于找不到证据。 现在 Composer 2 来了，很多人就开始研究，它的背后到底是什么模型，真的是 Cursor 自家的吗？ Cursor 为了防止破解，做了很多限制，但是百密一疏。国外推友 @fynnso 发现，有一个地方在上一个版本是禁止的，但是这个版本却可以执行。 首先，你自己架设一台服务器，充当 AI 模型的调用接口，有没有模型无所谓，只要能收到客户端请求就行。 然后，你在本地的 Cursor 里面，设置使用的模型为 Composer 2，模型网址就是你刚架设的服务器。这样一来，Cursor 就会向你的服务器发出请求，从而可以看到它到底在请求什么模型。 真相就暴露了，它请求的模型 ID 居然是 kimi-k2p5-rl-0317-s515-fast（下图）。 2、 这位国外推友就把上面的截图，发布到网上。这下炸锅了，明眼人都看出来，这是铁证，Composer 2 实际上是套壳的 Kimi K2.5。 可笑的是，事情一爆发，Cursor 第一时间就把漏洞堵上，现在已经没法复现这个请求（下图）。 但是为时已晚，网上传遍了，就连马斯克也发推：\"它就是 Kimi K2.5\"。 这下好了，变成了公开的秘密，再也无法掩盖了。 3、 大家的关注点，很快就转移到 Cursor 是否侵权。因为 Kimi K2.5 虽然是开源模型，但是采用的是修改的 MIT 许可证（下图）。 许可证这样说：你可以任意使用这个模型，唯一的条件是如果你的商业产品月活用户超过1亿，或者月收入超过2000万美元，你必须在用户界面的醒目位置披露，你使用了 Kimi K2.5。 Cursor 最新披露的年化收入是20亿美元，相当于月收入1.67亿美元，显然满足上面的条件。但是，它隐藏了使用 K2.5 的事实。 就在大家认定 Cursor 侵权的时候，他们的一个负责人终于坐不住了，出来说话了。 他承认确实使用 Kimi K2.5，但是没有侵权，他们的许可证来自合作伙伴 Fireworks AI。 稍后，Kimi 官方也发推了。 Kimi 官方确认，Cursor 是从 Fireworks AI 得到了授权。后者是一家硅谷的华人 AI 公司，从事 AI 模型的微调和强化学习，它从 Kimi 得到授权对模型进行再训练，然后又转授权给了 Cursor。 4、 事情到这里就基本清楚了，Cursor 并没有违反 Kimi 的授权条款，因此不存在侵权。 既然如此，为什么它拼命掩盖这个事实，大大方方承认，提供 Kimi K2.5 的修改版模型，很难吗？ 我猜测，原因跟 Cursor 不断膨胀的估值有关。 彭博社本月报道，Cursor 正在进行下一轮融资，估值达到500亿美元。 大家知道吗，它以前的估值是多少？ 2023年10月，Cursor 成立时的估值是5000万美元；2024年8月的 A 轮融资，估值上升到4亿美元；12月的 B 轮融资，估值快速上升到26美元；2025年11月的最新一轮融资，估值已经到了293亿美元。 可以看到，每过几个月，估值就会翻倍。这种火箭式的上升速度，需要有业绩支持。但它本身只是一个 VS Code 的修改版，使用的都是开源技术。 为了支撑越来越高的估值，它有动机把自己从 AI 工具，包装成具有模型研发能力的大模型公司。 我认为，这才是它不愿意披露使用了 Kimi K2.5 的主要原因。 5、 纵观整个事件，Cursor 无疑是输家，Kimi 则是这次的赢家，免费得到一大波高价值的曝光。 Cursor 发布 Composer 2 时，披露了性能和成本比较。 Composer 2 的性能低于 GPT-5.4，但高于 Opus 4.6。 但是，它的生成速度比 GPT-5.4 和 Opus 4.6 都快，成本也是最低的。 既然 Composer 2 就是微调的 Kimi K2.5，那么直接使用 Kimi，也能得到同样的效果。 6、 以前，国外总是有人指责，中国公司窃取外国技术。但是，这个事件证明了，中国公司也有技术输出。那些国外的明星公司，背地也在偷偷摸摸使用中国技术。 联想到上周，Kimi 的创始人杨植麟收到黄仁勋的邀请，在 Nvidia GTC 大会演讲，是唯一的中国大模型公司代表。 他在台上宣讲，Kimi 团队刚刚发表的论文《注意力残差》（Attention Residuals）。 这种新技术据说可以显著提升大模型的推理能力。 我的想法是，",
       "comments": []
+    },
+    {
+      "title": "科技爱好者周刊（第 390 期）：没有语料，大模型就是智障",
+      "link": "http://www.ruanyifeng.com/blog/2026/03/weekly-issue-390.html",
+      "source": "阮一峰的网志",
+      "time": "Fri, 27 Mar 2026 05:49:12 +0800",
+      "content": "这里记录每周值得分享的科技内容，周五发布。 本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。 封面图 山东日照某住宅小区的彩色风雨连廊，入口处树林还设了咖啡馆。（via） 没有语料，大模型就是智障 如果现在做一个问卷调查，问大家\"你觉得大模型是否具有智能？\" 我相信，大多数人会是肯定的回答。 哪怕现在只是 AI 的初级阶段，大模型已经能够替代很多的人类智力劳动，确实非常神奇。 但是，我们不要忘记真实情况，大模型不是魔法，更不是具有自主智能的\"硅基智能体\"，而是基于统计规律的语言模型，它的一切行为都基于数学计算。 最好的证据就是，如果让它解决没有训练过的题目，也就是不存在统计规律的话，它根本解不出来。 这就是我今天想分享的一个实验。 两位国外的研究者找了五个主流的大模型：GPT-5.2、O4-mini、Gemini 3 Pro、Qwen3-235B、Kimi K2。 他们让大模型使用五种小众的编程语言----Brainfuck、Befunge-98、Whitespace、Unlambda 和 Shakespeare----来编程解决各种问题。 这些小众语言的共同特征是，网上很少有它们的资料，因此不能用来训练大模型。大家猜猜看，结果怎么样？ 实验结果用一句话总结，就是大模型的表现一塌糊涂。 这五个大模型的平均答题正确率仅为3.8%，即100道题可以答对3.8道。相比之下，它们处理 Python 问题的正确率可以达到90%。 更尴尬的是，仅有的那几道答对的题目，都是入门级。更难的级别（初级、中级、高级），所有五个大模型的正确率都为0。 这个实验充分说明了，大模型的表现（智能程度）首先由训练材料决定：训练的语料越多，表现越好，比如 Python 的语料遍地都是，大模型因此极其擅长解决 Python 问题；训练的语料越少，大模型表现就越差，简直跟智障一样，没什么用处。 那么，一个让人好奇的问题就来了：如果某种冷门语言没有语料，但有一本很详尽的《使用手册》，我们让大模型学习这本手册，它是否就能学会这种冷门语言编程呢？ MAI-Image-2 本周，微软公司发布了自家的图像生成模型 MAI-Image-2。 这个模型生成的图像质量非常高，有评论认为，目前仅次于谷歌的 nano-banana-2。 微软开放了网站 MAI Playground（下图），现在可以免费生成图片。 我试用后，图像质感确实很好，非常逼真。比如，一只狗在海里骑自行车。 但是，它的使用限制很多：（1）有争议的、可能冒犯的图片，都会拒绝生成；（2）每天的免费额度是15张，每次生成的间隔时间是30秒；（3）它只能生成长宽比 1:1 的图片，其他分辨率都不支持；（4）不提供图像编辑和加工，只能用来\"文生图\"。 如果你需要通过文本生成高质量图片，可以试试它。 科技动态 1、可玩的封面 红牛公司推出了一本纸质的游戏杂志《GamePop》。 它的封面有一个可以玩的\"俄罗斯方块\"，是世界首本封面可以玩游戏的书。 奥秘就是封面里面，嵌入了一块非常薄的柔性电路板。 这块板配备了180个 RGB LED 灯、7个电容式触摸按钮、一颗32位 ARM 芯片。 它还包含一块可充电电池，可以通过 Type C 充电。 可惜的是，这个封面是限量版，不公开出售。它得到了俄罗斯方块公司的官方授权，全球仅发行150套，每套均有独立编号。 2、收费的真人客服 企业都不喜欢提供真人的电话客服，因为成本很高，更希望改成机器应答的电话客服。 惠普公司想出了一个点子，将用户往机器客服赶。 用户打惠普的客服电话，会听到一段语音提示，要你访问官网自己去寻找答案。如果你坚持要真人客服，就要在线等待15分钟。 如果中途挂了电话，再打就需要重新等待15分钟。系统还会分别在第5、第10和第13分钟提醒你，可以访问网站或发邮件联系。 虽然这种做法很可恶，但未来可能成为常态：免费就只有 AI 客服或机器人客服，额外付费才有真人客服。 3、飞盘的玩法 怎样扔飞盘，才能又快又远？ 一个美国的物理学家，找了几十个学生进行实验，使用不同手势和角度扔出飞盘。他测量了飞行速度和扭矩，把结果写成了论文。 他发现，将拇指放置在距飞盘外缘约3厘米的位置，可以获得平均转速和初始速度的最佳结果。 他还发现，转速与初始速度存在线性相关，转速越高，初始速度也越高。 所以，下次玩飞盘的时候，你要放对拇指的位置，然后用足力气，反手甩出，就可以取得最佳结果。 文章 1、MkDocs 的缓慢崩溃（英文） MkDocs 是著名的文档网站生成工具，但是主要贡献者之间有激烈矛盾，互相对抗，导致这个项目四分五裂。本文就梳理这件事。 2、大模型预测咖啡散热（英文） 作者让各种大模型给出咖啡散热时间的",
+      "comments": []
+    },
+    {
+      "title": "科技爱好者周刊（第 394 期）：第二次 API 开放浪潮",
+      "link": "http://www.ruanyifeng.com/blog/2026/04/weekly-issue-394.html",
+      "source": "阮一峰的网志",
+      "time": "Fri, 24 Apr 2026 07:43:01 +0800",
+      "content": "这里记录每周值得分享的科技内容，周五发布。（[通知] 下周五一假期，周刊休息。） 本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。 封面图 我见过的最酷广告牌，只有一行命令，推广一个 AI 工具包。普通人看不懂也没关系，反正不是给他们用的。（via） 第二次 API 开放浪潮 如果你在互联网行业足够久，大概会记得，以前有过一次 API 开放的浪潮。 那是15年前的2011年，云服务刚兴起不久，各种平台纷纷开放自己的 API。 那时，Facebook 和 Twitter 都发布了自己的 API，开放了平台数据。GitHub 的 API 设计简直是艺术品，几乎可以获得任何想要的功能。 平台的想法是，开放的 API 有助于用户和第三方加入，来开发各种插件和扩展程序，从而推动平台的增长，提高用户留存率和满意度。 那时还有一个叫做 ProgrammableWeb 的网站（现已关闭），它的名字就代表了当时人们的信念：互联网可以通过 API 编程，把各种平台的数据连接在一起。 但是，事情的发展跟预想完全相反。 平台发现，API 很难盈利，因为无法插入广告，而且自家的数据会帮助其他公司的生意，造成用户流失。 于是，它们纷纷改变做法，限制和关闭 API，不再分享数据，将用户留在自家的\"围墙花园\"。 如今，Facebook 和 Twitter 的 API 已经形同虚设，第三方客户端遭到彻底禁用。GitHub 虽然还保持开放的 API，但也采取了管控，增加了身份验证和速率限制，要想构建全功能的第三方应用也很困难。 正当人们觉得这将是常态，转变出现了。 就在2025年的下半年，大模型达到了临界点，变得真正强大，可用于生产环境了。 人们很快意识到，如果大模型只会思考，不能执行代码，用处就不大。AI 的最大价值不是内容生成，而是内容生成 + 自动化，这样才能最大限度解放人力、创造价值。AI 自动化，自己执行代码的典型代表就是\"龙虾\"（OpenClaw）。 自动化意味着 AI 必须能够调用其他平台，进而意味着，其他平台必须先开放自己的 API。 突然之间，API 不再是累赘，而是接入 AI 的必须条件。没有 API，你的平台就进入不了 AI 工作流，各种 Agent 也就不能代表用户在你的平台上工作。 同样两个平台，一家有 API，另一家没有，后者就很可能被市场放弃，因为大模型无法接入它，也就无法对它自动化，AI 用户只能转向它的竞品。 平台意识到了，谁尽快开放 API，谁就抢占了先机。所以，强如腾讯也会在龙虾爆红后，以最快的速度开放了微信接口，让龙虾可以向微信发消息。 腾讯也害怕，在龙虾的世界里没有自己的一席之地。其他平台就更不用说了，抢着通过 MCP 和 Skill 开放自家的操作接口。 这表明，第二次 API 开放浪潮正在到来。这一次将比上一次开放得更彻底，更易用。 （1）这次开放的不仅是云服务，还有很多日常生活服务：外卖、电商、银行......甚至还有很多原本根本不会有 API 的服务，比如餐馆和球馆的预订。 （2）这次的 API 不需要手动编程，你只需使用自然语言，由大模型翻译后调用。 （3）这次的 API 是消费者通过 AI 调用，使用目的是代表用户行事。以前 API 是由应用程序调用，使用目的是获取数据。 机器人半马 上周末，北京亦庄举行了第二次人形机器人的半马比赛。 超过100个人形机器人参加比赛，看谁最快跑完21.0975公里。最终，冠军成绩是50分26秒，超过了人类最快的选手（半马的人类世界纪录是1小时02分52秒）。 根据网友拍摄的现场视频，机器人跑到一定距离就要进入补给站，由工作人员更换电池，并加入冰块（或者干冰）防止过热。 这就是说，机器人的内置电池支持不了一小时的运行时间。 宇树公开发售的 H2 人形机器人，续航时间是3小时。在长跑这种剧烈运动时，续航应该会大打折扣。而且，功率相同时，体重较轻的机器人在赛跑中有优势，也就意味着不能多携带电池。 这样看上去，人形机器人目前的实用性还是很有限。不插电时，一到两个小时就要充电，那样的话，很多事情就不适合做了。 GPT Images 2.0 本周，OpenAI 发布 GPT Image 2.0 模型，据说是目前最强的图像模型，性能超过了谷歌的 Nano Banana 2 Pro。 根据 OpenAI 的介绍，它的文字渲染有较大进步，很好地支持汉字，可以生成复杂的解释性图片。 大家可以去 ChatGPT.com 免费试用。 我做了一个比较，生成一张小狗在古镇屋檐下午睡的图片。这是 GPT Images 1 的结果。 这是 GPT Images 2.0 的结果。 我还看到一个有趣的项目 Flipbook。它是一个解",
+      "comments": []
+    },
+    {
+      "title": "科技爱好者周刊（第 393 期）：脑腐状态",
+      "link": "http://www.ruanyifeng.com/blog/2026/04/weekly-issue-393.html",
+      "source": "阮一峰的网志",
+      "time": "Fri, 17 Apr 2026 07:20:16 +0800",
+      "content": "这里记录每周值得分享的科技内容，周五发布。 本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。 封面图 湖南益阳的和平签证主题博物馆，纪念二战时期何凤山博士救助犹太人。外立面的层层钢板象征签证文件，狭窄而棱角分明的入口给人一种压抑的感觉，进入后的空间逐渐走向释放和光明。（via） 脑腐状态 最近学到一个新词\"脑腐\"（brain rot）。 它就是字面意思。有些人看上去是正常的，但是大脑已经变异了，有些部分腐烂了。 根据介绍文章，\"脑腐\"的症状就是思考能力下降，难以长时间集中注意力，进行深入的推理和反思。 一遇到比较难、需要反复思考的问题，你就会烦躁，不仅是心理烦躁，还会生理烦躁，全身不安，不愿意多想，就希望赶快了结。 你有没有这个症状？如果有，就有\"脑腐\"的危险了。我感觉，我的大脑就有一点。遇到复杂的软件概念和算法，以前会仔细研究，直到搞懂为止，现在更可能看一眼就跳过去，不懂就不懂了，知道名字就可以了。 \"脑腐\"的主要原因是，网络平台上面那些夸张的\"标题党\"文章和短视频。它们的目标是吸引流量，在最短时间内引发阅读者/观看者的兴趣，感到满足。当你长期观看这些内容以后，大脑就被密集刺激，思维兴奋状态的维持时间越来越短，丧失了长时间深入思考的能力。 这就是为什么一个人看惯短视频以后，就离不开内容压缩了。一篇几千字的文章，他也会要求大模型生成总结；一部90分钟的电影，他也宁愿看几分钟的电影解说。 一旦\"脑腐\"了，难以长时间集中注意力进行思考，也就难以学习和处理高难度问题了。现在看上去，没有好的解决办法，因为现代人的时间越来越琐碎，内容碎片化是大趋势。 应对之策也许就是反过来，将学习和思考拆解成一系列短问题。比如，以后的学习不再是一厚本教材，而是几十个的系列短视频，每个用两三分钟解释一个知识点。只有这个时间长度，学生的思维才能保持专注。 权重有没有版权？ 国产大模型一般是开源的，但是最近有所改变。 有的大模型闭源发布；有的只开源小参数版本，不开源大参数版本；有的不允许商用，除非得到许可。我就不点名了。 \"黑客新闻\"的一个读者，针对开源大模型修改许可证这件事，提出质疑：开源大模型可能无权设置许可证。 他的意思是，现在的开源大模型主要开源的是权重文件，以及配套的运行代码。所谓\"权重文件\"就是一个巨大的矩阵，表示各个 Token 在生成结果中出现的可能性。 权重是大模型的核心，而它来自于对海量语料的计算。这就是说，权重不过是计算结果，他认为，计算结果是没有版权的。 比如说，你写了一个程序，实现了一种更高效的根号2的算法。那么，这个程序是有版权的，但是计算结果根号2（1.414）是没有版权的。因为计算结果不过是机械过程的产物，不涉及人类创造力。 按照这种说法，权重根本没有版权，当然也就谈不上设置或修改许可证了。 我不是版权专家，不能确定这种说法对不对，但是听上去有道理。大家可以自己去问问大模型\"计算结果有没有版权？\"，看看大模型怎么回答。 科技动态 1、摄像头耳机 华盛顿大学的研究团队，开发出世界首个带有微型摄像头的无线耳机。 上图中，耳机底部的小凸起就是微型摄像头。 它的最大用途就是跟 AI 互动。你可以直接问：\"我手里的英文杂志的封面标题是什么意思\"，耳机就会把摄像头图像，通过蓝牙发到手机，手机的大模型就会回答。 由于带宽限制，它只能拍摄低分辨率的黑白图像。长远来看，如果不需要显示模块，这种摄像头耳机要比 AI 眼镜更适合穿戴使用，因为很多人不喜欢长时间戴眼镜。 2、排行榜的 AI 歌手 最近，有人向苹果音乐商店 iTunes 上传了艾迪·道尔顿（Eddie Dalton）的歌曲。 这个歌手实际上并不存在，形象、声音、视频都是 AI 生成的，但是上传者没有披露。 结果，这些 AI 歌曲大受欢迎。iTunes 单曲榜前100名中，他居然占据了11席，有两首歌进入了前10名。 他的专辑在 iTunes 上也排名第三。 以前，有人说 AI 和机器人承担日常工作以后，人类可以从事艺术创作，比如唱歌、跳舞、画画、写作、拍视频......现在看上去，AI 也会跟人类争夺艺术工作。 3、经济舱座椅 长途飞行的经济舱座椅，非常不舒服，美联航想出了一种改进办法。 如果是一家三口，可以将座椅的坐垫卸下，从而一家躺在地上睡觉。 航空公司会提供枕头和毛毯，甚至还有床垫。 如果是单人旅客，你就需要同时购买三个相邻座位，好在这样还是比头等舱便宜。 我觉得，中国高铁可以考虑这种做法，某些没有卧铺的长途线路允许拆卸几排座位，让乘客躺在地上休息。 文章 1、Claude Code 的源码真相（英文） 前不久，Claude Code 源码泄漏，人们仔细研究以后，发现这些源码全部是 AI 生成的，质量不",
+      "comments": []
+    },
+    {
+      "title": "科技爱好者周刊（第 392 期）：axios 投毒与好莱坞式骗术",
+      "link": "http://www.ruanyifeng.com/blog/2026/04/weekly-issue-392.html",
+      "source": "阮一峰的网志",
+      "time": "Fri, 10 Apr 2026 07:17:13 +0800",
+      "content": "这里记录每周值得分享的科技内容，周五发布。 本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。 封面图 今年就将启用的腾讯总部园区，俗称\"企鹅岛\"，里面不仅包括办公楼，还有多幢公寓楼。（via） axios 投毒与好莱坞式骗术 上周，著名软件库 axios 被投毒了。黑客拿到了发布令牌，直接发了一个新版本，里面加入了木马。 软件投毒不是新鲜事，新鲜的是发布令牌怎么泄漏的。背后的故事简直是好莱坞电影，根本防不胜防。 axios 属于使用最广泛的 JS 软件库之一，每周下载量接近1亿次，所以这次投毒的感染面很大。 而且，木马的恶性程度很高。根据官方的清除说明，如果不幸中毒，机器上所有的密钥、令牌和凭证都要作废。这个木马会扫描所有目录，收集密钥，然后发出去。 大家要知道，像 axios 这种超级流行的软件库，每个环节都有完整防护，每一行代码都被严格审查。这次攻击完全是一场精心策划的社会工程，把这些防护都攻破了。 攻击目标选定首席维护者 Jason Saayman。据本人透露，事件过程是这样的。 他们根据我的情况量身定制了这一流程，具体做法如下： 他们冒充某公司的创始人联系我，不仅克隆了该公司创始人的外貌，还克隆了该公司本身。 他们随后邀请我加入一个真实的 Slack 工作区。这个工作区使用了该公司的品牌标识，名称也十分可信。Slack 的工作区设计得非常精巧，他们设有专门的频道来分享 LinkedIn 上的帖子。我猜这些 LinkedIn 帖子最终会发布到该公司的真实账号上，整体效果非常逼真。他们甚至还创建了一些我推测是该公司团队成员以及其他一些开源软件维护者的虚假账号。 他们安排了一次与我的会面，目的是进行沟通。会议是在微软 Teams 上进行的。参会人员似乎是一群人。 会议指出我系统上的某些东西过时了。我以为是和 Teams 有关，就安装了缺失的组件，结果发现是远程木马（RAT）。 一切都安排得井井有条，看起来很正规，而且做事方式也很专业。 可以看到，这个攻击是有剧本的，每一步都经过了策划，充分准备和排练，完全为你度身定制，就等你落入圈套。 行骗者非常耐心，投入了巨大的前期成本。首先，假冒某公司的创始人联系你，为了提升可信度，还做了假的公司网站；然后，邀请你加入他们的 Slack 工作区，里面有各种讨论、项目文档、宣传物料，看上去就像真的一样；最绝的是，他们还让你在 Teams 软件上参加公司的视频会议，一群骗子亲自露面，陪你一起开会。 会议开始后不久，主持人突然说：\"奇怪，你的系统怎么跟我们不一样，是不是微软的插件过时了，我发你一个最新版。\"你就这样收到了传过来的安装包，看到别的与会者都在等你，你也就没有多想，直接双击执行了。哦喔，就这样中招了，发布令牌一秒钟就泄漏了。 作假到这种程度，让人叹服。 这让我联想到不久前看到的一条印度新闻，作假程度有过之而无不及，也是如同好莱坞电影。 去年圣诞节，一位印度新德里的77岁老太太，收到了\"警察局\"的 Whatsapp 视频电话。视频右下角居然还有手语翻译。 警察跟她说，银行发现她的账户有洗钱记录，必须对她进行调查，如果不配合，账户资金将被没收，通知她远程出席法院的调查听证会。 媒体后来披露了\"警察局\"的布景照片，大家看看多么逼真。 前三张照片是印度警察局，最后一张是巴基斯坦警察局，它们在一栋楼里，房间紧邻着。要知道这两个国家在现实中是对立的，但是不妨碍骗子两边都骗。 再回到案子本身，几天后，老太太参加了线上听证会，在一个法院里举行，由\"法官\"亲自主持。他查看了资金记录，听取了\"警察\"的证词，向老太太询问了一些问题。 最后，\"法官\"告诉老太太，当局需要核实她的所有资产是否合法。她必须每天都跟警察局连线，回答问题，直到查清为止。 下面就是这个案件最精彩的部分，一连16天，老太太每天开着摄像头连线，大家看看骗子演到了什么程度。 在这16天里，老太太渐渐喜欢上了在假警局轮班的警官们。她开始称他们为自己的孩子们。而他们也反过来称她为\"母亲\"。 晚上，她和最年轻的军官一起阅读印度教宗教经典，这位军官请她把她觉得特别感人的段落发给他。 \"他们就像家人一样，\"老太太回忆说。\"他们说，'女士，我们想尽快把事情解决。我们日夜为您工作。'\" 天哪，骗子从早到晚演了16天，跟老太太促膝长谈，一起读经典，请教人生问题，直到深夜。这要是拍成电影，该有多动人。 老太太没有丝毫疑心，心甘情愿卖掉了自己的投资，累计九次向假警察局的账户总共转出了160万美元。 第二天，她再跟\"警察局的孩子们\"连线，就连不上了。 从上面两个案例，大家可以看到，现在的互联网骗局可以演到什么程度，完全是精准投放的\"剧本杀\"，成功率极高。要是再加上 AI 的加持，几乎不",
+      "comments": []
+    },
+    {
+      "title": "科技爱好者周刊（第 391 期）：AI 的贫富分化",
+      "link": "http://www.ruanyifeng.com/blog/2026/04/weekly-issue-391.html",
+      "source": "阮一峰的网志",
+      "time": "Fri, 03 Apr 2026 08:08:02 +0800",
+      "content": "这里记录每周值得分享的科技内容，周五发布。 本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。 封面图 上海某餐厅的墙壁装饰。（via monana3838@Threads） AI 的贫富分化 我越来越觉得，AI 跟其他技术不一样，不仅带来技术变革，还会带来社会变革。 简单说，AI 会带来贫富分化。 其他技术实际上会消灭贫富分化，实现\"消费者平等\"，即穷人和富人消费的东西是一样的。 比如，大家喝一样的可口可乐，用一样的苹果手机，开一样的特斯拉。甚至互联网也是如此，世界首富马斯克和你用一样的网站、一样的手机 App。 但是，AI 模型不是这样。在大模型面前，穷人和富人是不平等的。 在未来，普通人肯定用不起顶级的大模型。其实，现在就是如此了，最贵的 AI 编程套餐是 Claude Code 的 Max 套餐，月费200美元，很多人已经用不起了。 OpenAI 曾经设想过月费2万美元的套餐，提供最顶级、无限量的大模型服务。 要是真的推出，只有富豪才用得起。 这反映了一个简单的事实：费用越贵，模型效果越好。因为模型的效果与算力相关，更多的算力、更大的上下文、更多的参数，都需要钱。 这跟工业品完全相反。工业品有规模效应，产量越高，单位成本越低。一旦大规模生产，价格就会越来越便宜。 但是，大模型不存在规模效应，模型的大规模生产需要更多的服务器，这并不会让单位成本降低，反而可能因为扩建机房，改造电路和水路，而变得更贵。 未来社会大概是这样的：富人和穷人用不同的模型。最顶级模型的服务----规划、咨询、生成内容、自动化......----需要支付高昂的使用费，而普通人就使用免费模型，效果当然也很普通。 不过，我也看到马斯克最近说，未来还有另一种可能。 他的意思是，算力本质上是能源转化的一种形式。人类最终会实现廉价能源的大量供应（空间太阳能？），所以算力将变得足够便宜，所有人都将用最好的模型。 可能吗？我不知道，感觉还是前一种情况更现实。 模型能力的一种衡量方法 怎么衡量大模型的能力？ 现在的方法是使用一个测试集，去计算大模型的分数。它的缺点是，只能用于横向比较，很难衡量进步速度。 最近，一篇论文提出了一种新的衡量方法。 科学家首先计算，人类完成某一项任务需要多少时间。比如，计算 4 + 5 + 7，人类需要2秒，而计算 37 * 52 * 19，可能需要1分钟。 然后，测试大模型能否以50%的成功率完成这项任务。 研究发现，GPT-2 以50%成功率能够完成的任务，时间范围是两秒；Claude 3.7 Sonnet 是50分钟；O3 接近两小时；Opus 4.6 约为12小时。 也就是说，人类需要12小时才能完成的任务，Opus 4.6 的成功概率是50%。 结果就是上图，可以发现，大模型的进化速度在对数坐标下是一根直线。 每7个月，大模型能够以50%成功率完成的任务，时间范围扩大一倍。按照这个趋势，大模型将在2027年至2031年间，以50%的成功率完成人类专家需要一个月才能完成的任务。 如果这篇论文正确，就意味着年底发布的模型，将比年初强一倍。 科技动态 1、用户协议的彩蛋 软件服务的用户协议，又长又难懂，很少有用户阅读，但是里面有很多重要内容。 一家美国通信运营商，为了表示自己很重视用户权益，鼓励大家阅读《用户协议》，并偷偷在里面加入了一个彩蛋。 上图高亮的句子写道：\"如果你读到这句话，请发邮件到我们的信箱，赢取免费的瑞士旅游。\" 上线二周后，才有人发邮件，询问这事是否真实。由于只有一个人来信，所以她就免费去瑞士了。 从这件事可以看出，即使有彩蛋，也没人阅读《用户协议》。我现在的做法是让大模型帮忙，询问\"这份协议有哪些对用户不利的地方\"，很快就得到了答案。 2、触摸屏指甲油 广泛使用的电容式触摸屏，有一个问题，就是戴手套使用会失灵。 原因是它要求触摸物（比如手指）必须导电，这样屏幕才会产生电场扰动，从而确定触摸的位置。 解决方法也很简单，就是在手套指尖涂一层指甲油，指甲油里面的金属碎屑可以导电。 美国的一名化学系本科生，在学习化妆品化学时，发明了一种改进型的透明指甲油，专门用于戴手套使用触摸屏。 这种指甲油是透明的，涂在手套上看不见，也可以涂在裸甲上，当作抛光剂。 3、Copilot 广告 Copilot 是 GitHub 推出的 AI 助手，上周有用户发现，它会自动插入广告。 上图是 Copilot 自动提交的一个 Pull Request，它在提交说明的结尾（红框处）加入了一个广告，介绍应用程序 Raycast。 在 GitHub 搜索一下，就会发现已经有超过11,400个 PR 都包含了相同的广告词。 经过用户抗议，GitHub 暂止停止了这个功能。但这是",
+      "comments": []
+    },
+    {
+      "title": "本周看什么 | 最近值得一看的 10 部作品",
+      "link": "https://sspai.com/post/109266",
+      "source": "少数派",
+      "time": "Fri, 01 May 2026 17:00:00 +0800",
+      "content": "📅本周新预告《暗影蜘蛛侠》正式预告4月26日，剧集《暗影蜘蛛侠》发布了黑白和彩色双版本正式预告，将于5月27日上线PrimeVideo。尼古拉斯·凯奇领衔主演，聚焦1930年代纽约的一个上了年纪、倒霉 ...查看全文",
+      "comments": []
+    },
+    {
+      "title": "Kimi K2.6 just beat Claude, GPT-5.5, and Gemini in a coding challenge",
+      "link": "https://thinkpol.ca/2026/04/30/an-open-weights-chinese-model-just-beat-claude-gpt-5-5-and-gemini-in-a-programming-challenge/",
+      "source": "HN | thinkpol.ca",
+      "time": "2026-05-03T04:05:28",
+      "content": "Score: 13 | Comments: 0",
+      "comments": []
+    },
+    {
+      "title": "Pretty happy with my item delivery system.",
+      "link": "https://www.reddit.com/r/Unity3D/comments/1t2a7xc/pretty_happy_with_my_item_delivery_system/",
+      "source": "Reddit | Unity3D",
+      "time": "2026-05-03T03:26:06",
+      "content": "https://v.redd.it/7givzybtcuyg1",
+      "comments": [
+        {
+          "author": "Sizzle_Ortizzle",
+          "text": "I like your UI! Whatever that was at the top of the screen was clean"
+        }
+      ]
+    },
+    {
+      "title": "Scapewatch: Idle MMO - I am a solo dev making Scapewatch, an idle MMO focused on long term progression, clans, raids, pets, and skills",
+      "link": "https://www.reddit.com/r/indiegames/comments/1t29vs1/scapewatch_idle_mmo_i_am_a_solo_dev_making/",
+      "source": "Reddit | IndieGames",
+      "time": "2026-05-03T03:09:06",
+      "content": "https://v.redd.it/9hmjtb4s9uyg1",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
+        },
+        {
+          "author": "PuzzleDrops",
+          "text": "The Steam page is live now, and our playtest will soon go live. Scapewatch: Idle MMO [https://store.steampowered.com/app/4671380/Scapewatch\\_Idle\\_M"
+        }
+      ]
+    },
+    {
+      "title": "Windows API Is Successful Cross-Platform API",
+      "link": "https://retrocoding.net/windows-api-is-successful-cross-platform-api",
+      "source": "HN | retrocoding.net",
+      "time": "2026-05-03T02:53:29",
+      "content": "Score: 28 | Comments: 2",
+      "comments": []
+    },
+    {
+      "title": "Open source does not imply open community",
+      "link": "https://blog.feld.me/posts/2026/04/open-source-does-not-imply-open-community/",
+      "source": "HN | blog.feld.me",
+      "time": "2026-05-03T02:36:09",
+      "content": "Score: 84 | Comments: 14",
+      "comments": []
+    },
+    {
+      "title": "What keeps you motivated?!?",
+      "link": "https://www.reddit.com/r/gamedev/comments/1t286vm/what_keeps_you_motivated/",
+      "source": "Reddit | gamedev",
+      "time": "2026-05-03T01:48:45",
+      "content": "This group is CRAZY cool with inspiration and hard workers... wondering if anyone has any secrets to keep them motivation during the sluggish part of game creation? The tedious tasks... I tend to replay my own work so far that's makes me realise what I'm doing WILL be worth it!",
+      "comments": [
+        {
+          "author": "darnskewered",
+          "text": "For me I use a technique called interstitial journaling, and I pace myself. Max of working on my game 3 evenings a week. I try to make sure to always"
+        },
+        {
+          "author": "NewSchoolBoxer",
+          "text": "The only games I finished were ones in genres I didn't really like. So a puzzle game or text-only RPG. I kept the scope way down and didn't have a per"
+        },
+        {
+          "author": "Mechabit_Studios",
+          "text": "sharing your progress with friends and communities is a good way to keep motivated, it also doubles as marketing lol"
+        }
+      ]
+    },
+    {
+      "title": "I collected over 2000 influencer emails from Twich, X & YouTube- this is how I did it!",
+      "link": "https://www.reddit.com/r/gamedev/comments/1t27xei/i_collected_over_2000_influencer_emails_from/",
+      "source": "Reddit | gamedev",
+      "time": "2026-05-03T01:36:14",
+      "content": "Hello everyone! I’m one of the Devs of [Dice of Kalma](https://store.steampowered.com/app/3885520/Dice_of_Kalma/) and I wanted to share how I managed to gather 2000 streamer emails by myself. First of all, I’m sorry but I can’t share those emails here for legal reasons. Don’t want to take any r",
+      "comments": [
+        {
+          "author": "el_boufono",
+          "text": "Thanks for the detailed process. I saved the post and will use it soon!"
+        }
+      ]
+    },
+    {
+      "title": "Made a little cheat sheet for my friends to use",
+      "link": "https://www.reddit.com/r/godot/comments/1t27wpw/made_a_little_cheat_sheet_for_my_friends_to_use/",
+      "source": "Reddit | godot",
+      "time": "2026-05-03T01:35:18",
+      "content": "https://i.redd.it/4lgnyh76ttyg1.png",
+      "comments": [
+        {
+          "author": "Fluffy_Macaron7639",
+          "text": "this is a repost [https://www.reddit.com/r/godot/comments/1c1n8by/made\\_a\\_little\\_cheat\\_sheet\\_for\\_my\\_friends\\_to\\_use/](https://www.reddit.com/r/"
+        },
+        {
+          "author": "filipemanuelofs",
+          "text": "Repost"
+        },
+        {
+          "author": "BrastenXBL",
+          "text": "Lazy. Didn't even bother to update what you stole."
+        }
+      ]
+    },
+    {
+      "title": "How does overlapping damage work?",
+      "link": "https://www.reddit.com/r/unrealengine/comments/1t27u7b/how_does_overlapping_damage_work/",
+      "source": "Reddit | unrealengine",
+      "time": "2026-05-03T01:32:01",
+      "content": "[https://blueprintue.com/blueprint/7az-ol9z/](https://blueprintue.com/blueprint/7az-ol9z/) so on the left is whats in the character and the bit on the right is a \"trap\" (just a collision box for now). The setup is that I have an BP interface with two events. one that takes 3 inputs (Damage amount,",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "If you are looking for help, don‘t forget to check out the [official Unreal Engine forums](https://forums.unrealengine.com/) or [Unreal Slackers](http"
+        },
+        {
+          "author": "PokeyTradrrr",
+          "text": "You are keying the maps on the actor reference. Is your multi \"trap\" multiple colliders within the same actor?"
+        },
+        {
+          "author": "764Entertainment",
+          "text": "I think the issue is that all the timers are calling the same DamageEvent on the character, so the trap timers end up overriding each other instead of"
+        }
+      ]
+    },
+    {
+      "title": "Maryland Is First to Ban A.I.-Driven Price Increases in Grocery Stores",
+      "link": "https://www.nytimes.com/2026/05/01/business/surveillance-pricing-groceries-maryland.html",
+      "source": "HN | nytimes.com",
+      "time": "2026-05-03T01:24:09",
+      "content": "Score: 83 | Comments: 42",
+      "comments": []
+    },
+    {
+      "title": "Clandestine network smuggling Starlink tech into Iran to beat internet blackout",
+      "link": "https://www.bbc.com/news/articles/cvgzk91leweo",
+      "source": "HN | bbc.com",
+      "time": "2026-05-03T01:22:41",
+      "content": "Score: 84 | Comments: 29",
+      "comments": []
+    },
+    {
+      "title": "A Couple Million Lines of Haskell: Production Engineering at Mercury",
+      "link": "https://blog.haskell.org/a-couple-million-lines-of-haskell/",
+      "source": "HN | blog.haskell.org",
+      "time": "2026-05-03T00:01:14",
+      "content": "Score: 112 | Comments: 34",
+      "comments": []
+    },
+    {
+      "title": "Messing around with my floppy robot arm.",
+      "link": "https://www.reddit.com/r/unrealengine/comments/1t25num/messing_around_with_my_floppy_robot_arm/",
+      "source": "Reddit | unrealengine",
+      "time": "2026-05-02T23:50:55",
+      "content": "https://streamable.com/4klpj8",
+      "comments": []
+    },
+    {
+      "title": "Why is my actor jumping a huge amount when i change the value by only 1?",
+      "link": "https://www.reddit.com/r/unrealengine/comments/1t24mau/why_is_my_actor_jumping_a_huge_amount_when_i/",
+      "source": "Reddit | unrealengine",
+      "time": "2026-05-02T23:03:52",
+      "content": "https://streamable.com/3p0mxr",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "If you are looking for help, don‘t forget to check out the [official Unreal Engine forums](https://forums.unrealengine.com/) or [Unreal Slackers](http"
+        },
+        {
+          "author": "checkmatemypipi",
+          "text": "Take note of the distance between the orange floor and the yellow box. I have disabled snapping, i have made sure scaling is 1.0 except for a no-coll"
+        },
+        {
+          "author": "b3dGameArt",
+          "text": "Looks like it could be a collision issue, but we need more info."
+        }
+      ]
+    },
+    {
+      "title": "Is gamedev your main job? do you get paid for this?",
+      "link": "https://www.reddit.com/r/gamedev/comments/1t23yfr/is_gamedev_your_main_job_do_you_get_paid_for_this/",
+      "source": "Reddit | gamedev",
+      "time": "2026-05-02T22:34:53",
+      "content": "Like do you make games for a living if not then what? Do you get paid for gamedev or is it more of a hobby? Im wondering if i should learn to make games for a living someday, or if i should look into other types of jobs?",
+      "comments": [
+        {
+          "author": "Upset-Culture2210",
+          "text": "I don't make games (or at least games people would enjoy) but I do make a salaried living working in Unity making simulation corposlop."
+        },
+        {
+          "author": "AlignedMoon",
+          "text": "Yes. Been doing it for over 30 years, so it’s kinda hard to do anything else. But it’s not something I’d recommend to others right now. You’ll earn mo"
+        },
+        {
+          "author": "PiLLe1974",
+          "text": "I did it for around 15 years, then out of interest switched to engine and tool development (2020, perfect timing to go 100% remote during COVID :P)."
+        }
+      ]
+    },
+    {
+      "title": "Voice-AI-for-Beginners – A curated learning path for developers",
+      "link": "https://github.com/mahimairaja/voiceai",
+      "source": "HN | github.com",
+      "time": "2026-05-02T22:03:15",
+      "content": "Score: 47 | Comments: 3",
+      "comments": []
+    },
+    {
+      "title": "Clojurists Together – Q2 2026 Open Source Funding Announcement",
+      "link": "https://www.clojuriststogether.org/news/q2-2026-funding-announcement/",
+      "source": "HN | clojuriststogether.org",
+      "time": "2026-05-02T21:34:49",
+      "content": "Score: 66 | Comments: 8",
+      "comments": []
+    },
+    {
+      "title": "We just released the trailer for our UFO 50 inspired Roguelike game, where you go through multiple minigames in one run!",
+      "link": "https://www.reddit.com/r/indiegames/comments/1t22hrp/we_just_released_the_trailer_for_our_ufo_50/",
+      "source": "Reddit | IndieGames",
+      "time": "2026-05-02T21:33:40",
+      "content": "https://v.redd.it/t6lq9sgqlsyg1",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
+        },
+        {
+          "author": "RareDialectGames",
+          "text": "If you're interested, you can wishlist the game on Steam: [https://store.steampowered.com/app/3538440/Fugue\\_Shot/](https://store.steampowered.com/app"
+        },
+        {
+          "author": "Bumble_Bunch",
+          "text": "Wishlisted! Seems super interesting"
+        }
+      ]
+    },
+    {
+      "title": "Show HN: State of the Art of Coding Models, According to Hacker News Commenters",
+      "link": "https://hnup.date/hn-sota",
+      "source": "HN | hnup.date",
+      "time": "2026-05-02T21:25:05",
+      "content": "Hello HN,I was away from my computer for two weeks, and after coming back and reading the latest discussions on HN about coding assistants (models, harnesses), I felt very out of the loop. My normal process would have been to keep reading and figure out the latest and greatest from people&#x27;s comments, but I wanted to try and automate this process.Basically the goal is to get a quick overview over which coding models are popular on HN. A next iteration could also scan for harnesses that people use, or info on self-hosting or hardware setups.I wrote a short intro on the page about the pipeline that collects and analyzes the data, but feel free to ask for more details or check the Google Sheet for more info.https:&#x2F;&#x2F;hnup.date&#x2F;hn-sota",
+      "comments": []
+    },
+    {
+      "title": "Six Years Perfecting Maps on WatchOS",
+      "link": "https://www.david-smith.org/blog/2026/04/29/maps-on-watchos/",
+      "source": "HN | david-smith.org",
+      "time": "2026-05-02T21:14:29",
+      "content": "Score: 219 | Comments: 46",
+      "comments": []
+    },
+    {
+      "title": "[FOR HIRE] Veteran 3D Art Team -- fitting your budget with reliable results",
+      "link": "https://www.reddit.com/r/gameDevJobs/comments/1t21wyv/for_hire_veteran_3d_art_team_fitting_your_budget/",
+      "source": "Reddit | gamedevjobs",
+      "time": "2026-05-02T21:10:32",
+      "content": "https://www.reddit.com/gallery/1t21wyv",
+      "comments": []
+    },
+    {
+      "title": "This Month in Ladybird - April 2026",
+      "link": "https://ladybird.org/newsletter/2026-04-30/",
+      "source": "HN | ladybird.org",
+      "time": "2026-05-02T20:46:30",
+      "content": "Score: 212 | Comments: 32",
+      "comments": []
+    },
+    {
+      "title": "Neanderthals ran 'fat factories' 125,000 years ago (2025)",
+      "link": "https://www.universiteitleiden.nl/en/news/2025/07/neanderthals-ran-fat-factories-125000-years-ago",
+      "source": "HN | universiteitleiden.nl",
+      "time": "2026-05-02T20:42:20",
+      "content": "Score: 138 | Comments: 44",
+      "comments": []
+    },
+    {
+      "title": "\"It Just Wasn't in Nintendo's DNA\": Reggie Fils-Aimé on Avoiding the Industry's Layoff Crisis",
+      "link": "https://www.reddit.com/r/gamedev/comments/1t20zis/it_just_wasnt_in_nintendos_dna_reggie_filsaimé_on/",
+      "source": "Reddit | gamedev",
+      "time": "2026-05-02T20:33:35",
+      "content": "https://www.techtroduce.com/reggie-fils-aime-nintendo-layoff-philosophy/",
+      "comments": [
+        {
+          "author": "Background_Exit1629",
+          "text": "The company did not “get lucky” with a particular game, it is very much as Reggie says—a facet of how they operate in many ways: 1. They are extremel"
+        },
+        {
+          "author": "liaminwales",
+          "text": "Japan has labour laws that wont let the company fire people, I know it's amazing PR but it's not pure good will. >Under Japanese employment law, lay"
+        },
+        {
+          "author": "Vegetable-Tooth8463",
+          "text": "Is Reggie still working for Gamestop?"
+        }
+      ]
+    },
+    {
+      "title": "I'm developing a strategy settlement building game with Godot (:",
+      "link": "https://www.reddit.com/r/godot/comments/1t202mi/im_developing_a_strategy_settlement_building_game/",
+      "source": "Reddit | godot",
+      "time": "2026-05-02T19:58:25",
+      "content": "https://v.redd.it/lx51n17h4syg1",
+      "comments": [
+        {
+          "author": "JavaDaveee",
+          "text": "Looks great!"
+        },
+        {
+          "author": "evgeniiamorozov",
+          "text": "Have you researched the market for strategy games? I love the genre both tactic and economy simulators, may be slightly prefer XCOM/JA kinda of stuff"
+        },
+        {
+          "author": "r_search12013",
+          "text": "goodness .. it's disgustingly cute 😃"
+        }
+      ]
+    },
+    {
+      "title": "VS Code inserting 'Co-Authored-by Copilot' into commits regardless of usage",
+      "link": "https://github.com/microsoft/vscode/pull/310226",
+      "source": "HN | github.com",
+      "time": "2026-05-02T19:57:26",
+      "content": "Score: 949 | Comments: 465",
+      "comments": []
+    },
+    {
+      "title": "Bone scale when creating an ik retargeter",
+      "link": "https://www.reddit.com/r/unrealengine/comments/1t1zlu3/bone_scale_when_creating_an_ik_retargeter/",
+      "source": "Reddit | unrealengine",
+      "time": "2026-05-02T19:40:03",
+      "content": "I have no doubt that I am doing something dumb somewhere along the line but i can't quite put my finger on it. Probably my lack of experience and me being a hobbyist. I have exported a mesh from blender to unreal with what i think is a compatible skeleton with manny. When using the skeletal mesh as",
+      "comments": [
+        {
+          "author": "764Entertainment",
+          "text": "It could be a unit scale issue. Blender uses meters by default and Unreal uses centimeters. So Unreal imports the skeleton with the bones scaled to 10"
+        }
+      ]
+    },
+    {
+      "title": "Old-School Motocross - AI opponents, Improved Engine SFX and LAP RACING!",
+      "link": "https://www.reddit.com/r/indiegames/comments/1t1xliz/oldschool_motocross_ai_opponents_improved_engine/",
+      "source": "Reddit | IndieGames",
+      "time": "2026-05-02T18:24:14",
+      "content": "https://v.redd.it/8zddh45onryg1",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
+        },
+        {
+          "author": "Dion42o",
+          "text": "I love the old school graphics. But what would want to make me play this over the actual old school ones from back in the day. If were you I’d crank i"
+        }
+      ]
+    },
+    {
+      "title": "No publisher. No team. Just years of obsessively learning gamedev.",
+      "link": "https://www.reddit.com/r/indiegames/comments/1t1xc8f/no_publisher_no_team_just_years_of_obsessively/",
+      "source": "Reddit | IndieGames",
+      "time": "2026-05-02T18:14:20",
+      "content": "https://v.redd.it/c0zwy018lryg1",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
+        },
+        {
+          "author": "RealTradingguy",
+          "text": "And an awesome result!"
+        },
+        {
+          "author": "MindAndFancy",
+          "text": "Good job!"
+        }
+      ]
+    },
+    {
+      "title": "Binding Dispatcher Delegates with Interfaces",
+      "link": "https://www.reddit.com/r/unrealengine/comments/1t1x894/binding_dispatcher_delegates_with_interfaces/",
+      "source": "Reddit | unrealengine",
+      "time": "2026-05-02T18:10:14",
+      "content": "https://youtu.be/pZlB8ReHeVw?si=08jZvVimvpYHu6lO",
+      "comments": [
+        {
+          "author": "-TRTI-",
+          "text": "That's neat. I made an Actor Component with no logic, just a bunch of delegates which my actor will call when needed. External objects can get the com"
+        },
+        {
+          "author": "Battlefront45",
+          "text": "This is so smart! Been trying to figure out how to do this for a while and here is the answer. Would be curious to see if there is a way to pass args"
+        }
+      ]
+    },
+    {
+      "title": "NetHack 5.0.0",
+      "link": "https://nethack.org/v500/release.html",
+      "source": "HN | nethack.org",
+      "time": "2026-05-02T18:03:42",
+      "content": "Score: 405 | Comments: 125",
+      "comments": []
+    },
+    {
+      "title": "Do_not_track",
+      "link": "https://donottrack.sh/",
+      "source": "HN | donottrack.sh",
+      "time": "2026-05-02T17:40:55",
+      "content": "Score: 238 | Comments: 79",
+      "comments": []
+    },
+    {
+      "title": "Dav2d",
+      "link": "https://code.videolan.org/videolan/dav2d",
+      "source": "HN | code.videolan.org",
+      "time": "2026-05-02T17:32:29",
+      "content": "Score: 390 | Comments: 116",
+      "comments": []
+    },
+    {
+      "title": "GASP to Metahuman",
+      "link": "https://www.reddit.com/r/unrealengine/comments/1t1w06y/gasp_to_metahuman/",
+      "source": "Reddit | unrealengine",
+      "time": "2026-05-02T17:24:34",
+      "content": "After adding gasp to my metahuman, I noticed that some of the mantle and traversal anims have a slight offset with the metahuman. When I retargeted what i did is for the mesh I kept the eufn mesh, for body I set the metahuman mesh there and for the tag I used the already existing metahuman tag. H",
+      "comments": [
+        {
+          "author": "Icy-Excitement-467",
+          "text": "GASP doesn't rely on proper anim retargeting. It relies on runtime retargeting, which is basically a hail-mary."
+        }
+      ]
+    },
+    {
+      "title": "I changed one thing and my Unity car finally stopped jittering and sliding",
+      "link": "https://www.reddit.com/r/Unity3D/comments/1t1vk2d/i_changed_one_thing_and_my_unity_car_finally/",
+      "source": "Reddit | Unity3D",
+      "time": "2026-05-02T17:08:09",
+      "content": "https://v.redd.it/nmyu34wqaryg1",
+      "comments": [
+        {
+          "author": "NoteThisDown",
+          "text": "Nice!"
+        },
+        {
+          "author": "lorenalexm",
+          "text": "This looks great, and definitely solves a problem! But really wanted to applaud being a person of fine culture and using the E34 estate in your demo 😅"
+        },
+        {
+          "author": "tetryds",
+          "text": "Also had this problem! I solved it with an integrator tho."
+        }
+      ]
+    },
+    {
+      "title": "I announced my first Godot game, and the demo is out!",
+      "link": "https://www.reddit.com/r/godot/comments/1t1v1gm/i_announced_my_first_godot_game_and_the_demo_is/",
+      "source": "Reddit | godot",
+      "time": "2026-05-02T16:48:24",
+      "content": "https://www.reddit.com/gallery/1t1v1gm",
+      "comments": [
+        {
+          "author": "tomomi-chi",
+          "text": "Looks really nice!"
+        },
+        {
+          "author": "_OVERHATE_",
+          "text": "Not gonna lie that art looks phenomenal. May i ask, what where the parts that you thought Godot was the clunkiest? like those that you dont wish t"
+        },
+        {
+          "author": "MocaCola02",
+          "text": "How was working with FMOD? I've considered it before, but worried it was overkill and I'm unfamiliar with the licensing for it."
+        }
+      ]
+    },
+    {
+      "title": "Working on a new Egypt level in our Unity 6 (URP) racing game",
+      "link": "https://www.reddit.com/r/Unity3D/comments/1t1uyf0/working_on_a_new_egypt_level_in_our_unity_6_urp/",
+      "source": "Reddit | Unity3D",
+      "time": "2026-05-02T16:45:05",
+      "content": "https://v.redd.it/1z8kp5qb6ryg1",
+      "comments": [
+        {
+          "author": "BertJohn",
+          "text": "This is an exceptional example of how great camera control can make or break a game. Love how polished that movement is!!! Think you could make a"
+        },
+        {
+          "author": "Mohamed-Galal",
+          "text": "Looks great and I like the Alien stuff I feel it gives the game a fun/satire aspect, But just as a simple advice with me being from Egypt I feel like"
+        },
+        {
+          "author": "N0lex",
+          "text": "We’re currently working on a new Egypt-inspired level. We’re a two-person team building *Stunt Paradise 2* in Unity 6.3 (URP). There’s already a de"
+        }
+      ]
+    },
+    {
+      "title": "Burst-friendly mesh engine for Unity",
+      "link": "https://www.reddit.com/r/Unity3D/comments/1t1u1p5/burstfriendly_mesh_engine_for_unity/",
+      "source": "Reddit | Unity3D",
+      "time": "2026-05-02T16:09:42",
+      "content": "https://v.redd.it/146y4j3yrqyg1",
+      "comments": [
+        {
+          "author": "AthenaSainto",
+          "text": "what are burst friendly mesh engine? pardon my ignorance"
+        },
+        {
+          "author": "Sidwasnthere",
+          "text": "Dude! Really really cool, are you doing this for a game or to sell as an asset?"
+        },
+        {
+          "author": "HiggsSwtz",
+          "text": "I wrote a shader that does this via alpha clipping and stencil rendering but this is amazing. I wonder which is more performant?"
+        }
+      ]
+    },
+    {
+      "title": "I’m sharing my foot placement plugin for free. Feel free to grab it and fix foot sliding, ground collisions, animation blending issues, and many other common locomotion problems with a super simple 3 clicks setup.",
+      "link": "https://www.reddit.com/r/Unity3D/comments/1t1tcji/im_sharing_my_foot_placement_plugin_for_free_feel/",
+      "source": "Reddit | Unity3D",
+      "time": "2026-05-02T15:43:03",
+      "content": "https://v.redd.it/w1tbe3a4vqyg1",
+      "comments": [
+        {
+          "author": "Equivalent-Brief-642",
+          "text": "![gif](giphy|PznR7snMBSJENwPTlb|downsized)"
+        },
+        {
+          "author": "anaveragebest",
+          "text": "this is the strangest Levi's commercial I've ever seen. ...just kidding, looks really good. foot placement been annoying me lately too"
+        },
+        {
+          "author": "dremmer8",
+          "text": "Link to the Unity package: [https://arkhipovdesign.itch.io/footwerk](https://arkhipovdesign.itch.io/footwerk) . By the way you can test the system in"
+        }
+      ]
+    },
+    {
+      "title": "Kinda uselss, but I had to make the letters interactable on the titlescreen 😅",
+      "link": "https://www.reddit.com/r/godot/comments/1t1t6hd/kinda_uselss_but_i_had_to_make_the_letters/",
+      "source": "Reddit | godot",
+      "time": "2026-05-02T15:36:22",
+      "content": "https://v.redd.it/tj59c3np6oyg1",
+      "comments": [
+        {
+          "author": "dragonflyy1050",
+          "text": "Not useless. Fun! Fun is always needed in games. Did you ever play Mario64? At the beginning before you press start you could grab and stretch parts o"
+        },
+        {
+          "author": "Agreeable-Arm-6960",
+          "text": "I always love this in title screen I try to always implement fun minigame within it. Definitely not useless it’s sauce!"
+        },
+        {
+          "author": "Thunder_Child19",
+          "text": "Lexi... Spell. https://preview.redd.it/yhe4f37s4ryg1.jpeg?width=1080&format=pjpg&auto=webp&s=27493af427b14716e08a48133fe0173191dac7fc"
+        }
+      ]
+    },
+    {
+      "title": "[For Hire] 2D Anime Fantasy & RPG Character Artworks | DM for details & let's discuss your project!",
+      "link": "https://www.reddit.com/r/gameDevJobs/comments/1t1opcj/for_hire_2d_anime_fantasy_rpg_character_artworks/",
+      "source": "Reddit | gamedevjobs",
+      "time": "2026-05-02T12:35:41",
+      "content": "https://www.reddit.com/gallery/1t1opcj",
+      "comments": []
+    },
+    {
+      "title": "learned godot in a week and made this game in 3 days...",
+      "link": "https://www.reddit.com/r/godot/comments/1t1o7xb/learned_godot_in_a_week_and_made_this_game_in_3/",
+      "source": "Reddit | godot",
+      "time": "2026-05-02T12:12:42",
+      "content": "https://www.reddit.com/gallery/1t1o7xb",
+      "comments": [
+        {
+          "author": "GPID_Indie",
+          "text": "learned godot for 3 years and made no game. Good Job"
+        },
+        {
+          "author": "insidious_concern",
+          "text": "Setting expectations for beginners is important. I'm going to make the assumption that this post isn't intending to imply or state that, starting fro"
+        },
+        {
+          "author": "techniqucian",
+          "text": "I know it's just for shock value, but posts like this that provide minimal context tend to just give new devs a complete misunderstanding about realis"
+        }
+      ]
+    },
+    {
+      "title": "I’m struggling - how to cope with ai?",
+      "link": "https://www.reddit.com/r/gamedev/comments/1t1nsq7/im_struggling_how_to_cope_with_ai/",
+      "source": "Reddit | gamedev",
+      "time": "2026-05-02T11:52:34",
+      "content": "I’ve been a lifelong gamedev. Every skill I learnt growing up was to better my ability to make games. I learnt to draw, to code, to do sound effects, to make models, to animate, to create music. It brought me a lot of fulfilment when I pulled it all together and I was good at it. It became my identi",
+      "comments": [
+        {
+          "author": "bio4m",
+          "text": "Its only one aspect of game development. Being able to write code alone does not make a good game Focus on the other aspects, but mainly focus on wha"
+        },
+        {
+          "author": "TwistedSpiral",
+          "text": "Why bother thinking about other people's games? Just make the games you want to make man."
+        },
+        {
+          "author": "pnt510",
+          "text": "Don’t listen to them when they claim AI is writing the game for them while they’re sleeping. They’re full of shit. They’re just trying to make themsel"
+        }
+      ]
+    },
+    {
+      "title": "[Ue5.7] Lumen is still visually unstable and suffers from alot of visual noise/flickers. When will it be production ready?",
+      "link": "https://www.reddit.com/r/unrealengine/comments/1t1nr34/ue57_lumen_is_still_visually_unstable_and_suffers/",
+      "source": "Reddit | unrealengine",
+      "time": "2026-05-02T11:50:18",
+      "content": "Hi Starting a UE5.7 default project and setting graphics to cinematic still doesnt give a clean lighting scene. Lumen (HW) still has an insane amount of visual noise, flickers, and other artifacts in a fresh project. Especially on foliage but even in Epics own sample projects such as Derelict Cor",
+      "comments": [
+        {
+          "author": "Dantiko",
+          "text": "I wouldn't expect any stability until at least UE 5.8 where we hopefully get Lumen irradiance cache. Some people are opting to use the Nvidia RTXGI p"
+        },
+        {
+          "author": "unit187",
+          "text": "Are you confident your have correctly authored lighting, postprocess, materials and the project config? Our firm uses Lumen for archviz, and while it"
+        },
+        {
+          "author": "GenezisO",
+          "text": ">For context this is an issue regardless of screen percentage, AA Method, and occurs in every UE version. WRONG! most UE5 features ARE MEANT to be us"
+        }
+      ]
+    },
+    {
+      "title": "How fast is a macOS VM, and how small could it be?",
+      "link": "https://eclecticlight.co/2026/05/02/how-fast-is-a-macos-vm-and-how-small-could-it-be/",
+      "source": "HN | eclecticlight.co",
+      "time": "2026-05-02T09:30:49",
+      "content": "Score: 233 | Comments: 84",
+      "comments": []
+    },
+    {
+      "title": "I wanted to capture that strange retro feeling in my game, Fallgrade.",
+      "link": "https://www.reddit.com/r/indiegames/comments/1t1kprl/i_wanted_to_capture_that_strange_retro_feeling_in/",
+      "source": "Reddit | IndieGames",
+      "time": "2026-05-02T09:02:51",
+      "content": "https://www.reddit.com/gallery/1t1kprl",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
+        },
+        {
+          "author": "EngineMelodic1211",
+          "text": "Very atmospheric! Feels post nuclear - is that what you're going for?"
+        },
+        {
+          "author": "Leather-Lab2875",
+          "text": "love the vibe but imo, ingame, the level of distortion in the forest pictures might be too harsh on the eye, especially when turning quickly so i hope"
+        }
+      ]
+    },
+    {
+      "title": "Dabbling in Erlang, part 2: A minimal introduction (2013)",
+      "link": "https://agis.io/post/dabbling-in-erlang-a-minimal-introduction/",
+      "source": "HN | agis.io",
+      "time": "2026-05-02T08:37:39",
+      "content": "Score: 20 | Comments: 2",
+      "comments": []
+    },
+    {
+      "title": "A Physics Engine with Incremental Rollback for Multiplayer Games",
+      "link": "https://easel.games/blog/2026-rollback-physics",
+      "source": "HN | easel.games",
+      "time": "2026-05-02T00:12:00",
+      "content": "Score: 58 | Comments: 21",
+      "comments": []
+    },
+    {
+      "title": "[FOR HIRE] Open to Commissions! I will make your Pixel art Characters, UI and tiles| DM me for more info!",
+      "link": "https://www.reddit.com/r/gameDevJobs/comments/1t18zl1/for_hire_open_to_commissions_i_will_make_your/",
+      "source": "Reddit | gamedevjobs",
+      "time": "2026-05-01T23:08:57",
+      "content": "https://www.reddit.com/gallery/1t18zl1",
+      "comments": []
+    },
+    {
+      "title": "[For Hire] Let's Create a Model Sheet/ Concept Art for your Games! | DM ME! ~[1/4] Slots.",
+      "link": "https://www.reddit.com/r/gameDevJobs/comments/1t18wdr/for_hire_lets_create_a_model_sheet_concept_art/",
+      "source": "Reddit | gamedevjobs",
+      "time": "2026-05-01T23:05:15",
+      "content": "https://www.reddit.com/gallery/1t18wdr",
+      "comments": []
+    },
+    {
+      "title": "[FOR HIRE] Illustrator and concept artist and designer - fantasy, sci-fi, Props,  characters and environments",
+      "link": "https://www.reddit.com/r/gameDevJobs/comments/1t177eu/for_hire_illustrator_and_concept_artist_and/",
+      "source": "Reddit | gamedevjobs",
+      "time": "2026-05-01T21:54:57",
+      "content": "https://www.reddit.com/gallery/1t177eu",
+      "comments": []
+    },
+    {
+      "title": "[For hire] Will Draw you idea of Character for DnD/Fantasy! Spell, Full Body and Expressions. (SLOTS 2/3) Dm me!",
+      "link": "https://www.reddit.com/r/gameDevJobs/comments/1t0yqr1/for_hire_will_draw_you_idea_of_character_for/",
+      "source": "Reddit | gamedevjobs",
+      "time": "2026-05-01T16:43:17",
+      "content": "https://www.reddit.com/gallery/1t0yqr1",
+      "comments": []
+    },
+    {
+      "title": "A more efficient implementation of Shor's algorithm",
+      "link": "https://lwn.net/Articles/1066156/",
+      "source": "HN | lwn.net",
+      "time": "2026-05-01T07:28:55",
+      "content": "Score: 38 | Comments: 2",
+      "comments": []
+    },
+    {
+      "title": "Simple and Correct Snapshot Isolation",
+      "link": "https://remy.wang/blog/si.html",
+      "source": "HN | remy.wang",
+      "time": "2026-04-30T23:54:36",
+      "content": "Score: 10 | Comments: 0",
+      "comments": []
+    },
+    {
+      "title": "Little Magazines Are Back",
+      "link": "https://wsjfreeexpression.substack.com/p/little-magazines-are-back",
+      "source": "HN | wsjfreeexpression.substack.com",
+      "time": "2026-04-30T14:03:43",
+      "content": "Score: 75 | Comments: 27",
+      "comments": []
+    },
+    {
+      "title": "The IBM Granite 4.1 family of models",
+      "link": "https://research.ibm.com/blog/granite-4-1-ai-foundation-models",
+      "source": "HN | research.ibm.com",
+      "time": "2026-04-30T14:01:26",
+      "content": "Score: 14 | Comments: 1",
+      "comments": []
+    },
+    {
+      "title": "Inventions for battery reuse and recycling increase seven-fold in last decade",
+      "link": "https://www.epo.org/en/news-events/news/inventions-battery-reuse-and-recycling-increase-more-seven-fold-last-decade",
+      "source": "HN | epo.org",
+      "time": "2026-04-30T09:12:23",
+      "content": "Score: 175 | Comments: 11",
+      "comments": []
+    },
+    {
+      "title": "Barman – Backup and Recovery Manager for PostgreSQL",
+      "link": "https://github.com/EnterpriseDB/barman",
+      "source": "HN | github.com",
+      "time": "2026-04-29T13:54:48",
+      "content": "Score: 144 | Comments: 23",
+      "comments": []
+    },
+    {
+      "title": "Godette Plushie 🧸",
+      "link": "https://www.reddit.com/r/godot/comments/1swwn25/godette_plushie/",
+      "source": "Reddit | godot",
+      "time": "2026-04-27T07:28:17",
+      "content": "https://www.makeship.com/products/godette-plushie",
+      "comments": [
+        {
+          "author": "SteinMakesGames",
+          "text": "I met this Godette at GodotCon https://preview.redd.it/d14kuqtwfjyg1.png?width=3000&format=png&auto=webp&s=ac84b951fe20a019a63f736431015263593fa2a4"
+        },
+        {
+          "author": "Ok_Fortune6661",
+          "text": "LOVE IT!"
+        },
+        {
+          "author": "raphusmaxus",
+          "text": "damn thats nice news! will get 2 instantly :D"
+        }
+      ]
+    },
+    {
+      "title": "Dev snapshot: Godot 4.7 beta 1",
+      "link": "https://www.reddit.com/r/godot/comments/1sus32f/dev_snapshot_godot_47_beta_1/",
+      "source": "Reddit | godot",
+      "time": "2026-04-24T21:00:16",
+      "content": "https://godotengine.org/article/dev-snapshot-godot-4-7-beta-1/",
+      "comments": [
+        {
+          "author": "NotXesa",
+          "text": "Copy-pasting entire sections of properties is a great addition to the editor. The other day I was thinking about this! Also the class names instead o"
+        },
+        {
+          "author": "Iamsodarncool",
+          "text": "Man, Godot just keeps getting better and better. What a fantastic project. Astonishing amount of Ws in 4.7, especially from the rendering team. I thi"
+        },
+        {
+          "author": "Spartan322",
+          "text": "`custom_maximum_size` is a slept on feature, it can be used to make more reactive UI elements and I've honestly been waiting for something like it for"
+        }
+      ]
+    },
+    {
+      "title": "Get Started with Shadergraph - Unity Learn New Course!",
+      "link": "https://www.reddit.com/r/Unity3D/comments/1stjzai/get_started_with_shadergraph_unity_learn_new/",
+      "source": "Reddit | Unity3D",
+      "time": "2026-04-23T14:13:59",
+      "content": "Hello hello! It is me Zu! Once again I come bearing news of a new course on Unity Learn! In [Get Started with Shadergraph ](https://learn.unity.com/course/get-started-with-shader-graph)you can explore the fundamentals of Shader Graph and even create a range of real-time visual effects. These ski",
+      "comments": [
+        {
+          "author": "destinedd",
+          "text": "thanks for sharing!"
+        }
+      ]
+    },
+    {
+      "title": "Indie Games Discord Server!",
+      "link": "https://www.reddit.com/r/indiegames/comments/1sn9h1o/indie_games_discord_server/",
+      "source": "Reddit | IndieGames",
+      "time": "2026-04-16T17:00:05",
+      "content": "https://discord.gg/Ufs7DjnwQ2",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
+        }
+      ]
+    },
+    {
+      "title": "From high school project to 8,500 Steam wishlists. 3 years of data and mistakes.",
+      "link": "https://www.reddit.com/r/gamedev/comments/1shm5su/from_high_school_project_to_8500_steam_wishlists/",
+      "source": "Reddit | gamedev",
+      "time": "2026-04-10T13:12:02",
+      "content": "Hi everyone. I’m MJ, the lead dev of Pebble Knights. Our team of 4 started this game as a high school graduation project in 2023. We are finally launching into Steam Early Access in just one week on April 13th. I know some of these lessons might be common sense to the veterans here, but I wanted to",
+      "comments": [
+        {
+          "author": "KevinDL",
+          "text": "Added this to highlights, good job team Pebble Knights."
+        },
+        {
+          "author": "None",
+          "text": "[removed]"
+        },
+        {
+          "author": "Bargeinthelane",
+          "text": "So awesome. Did your high school have game dev classes? Or did you guys just do it completely on your time?"
+        }
+      ]
+    },
+    {
+      "title": "One Week After Releasing My First Steam Game: Postmortem + Numbers",
+      "link": "https://www.reddit.com/r/gamedev/comments/1rp216y/one_week_after_releasing_my_first_steam_game/",
+      "source": "Reddit | gamedev",
+      "time": "2026-03-09T14:41:46",
+      "content": "Hey gamedevs, I've gotten so much help throughout the years from browsing this community, and I wanted to do some kind of a giveback in return. So here's a postmortem on my game! # Quick Summary: One week ago I released my first solo indie game on Steam after \\~1.5 years of development. I launche",
+      "comments": [
+        {
+          "author": "idleCone",
+          "text": "Impressive detail, thank you so much for sharing all that experience. It really adds a lot of value for those of us just starting out. I'm also develo"
+        },
+        {
+          "author": "hermyx",
+          "text": "Thanks ! Would you be able to expand on the free copies part ? How giving free copies would prevent getting to 10 reviews ?"
+        },
+        {
+          "author": "Sargious",
+          "text": "Thank you for sharing! I've got a bit of a difficult question to ask, but may I know the motivations behind continuing with your dev journey consideri"
+        }
+      ]
+    },
+    {
+      "title": "I'm tired. Does anyone else want to be a mod?",
+      "link": "https://www.reddit.com/r/Unity3D/comments/1r8pr2o/im_tired_does_anyone_else_want_to_be_a_mod/",
+      "source": "Reddit | Unity3D",
+      "time": "2026-02-19T04:35:41",
+      "content": "Howdy, u/Boss_Taurus here. I am r/Unity3D's most active mod. I wrote our rules and guidelines and I've set up the majority of our Automoderator actions. I was first made into a mod over 10 years ago because I volunteered to spruce up this subreddit's appearance. And way back then, I didn't know th",
+      "comments": [
+        {
+          "author": "GeeTeaEhSeven",
+          "text": "I am a fresh face, but I'm sure there are thousands here who want to say: thank you for your service, boss."
+        },
+        {
+          "author": "Any_Explorer_3570",
+          "text": "respect for being real about it instead of just ghosting, that runtime fee stuff really killed the vibe for a lot of people"
+        },
+        {
+          "author": "DeJMan",
+          "text": "I’ve been on Reddit for about 15 years and have helped people here in the past. Never been a mod though. Perhaps it’s time I try."
+        }
+      ]
+    },
+    {
+      "title": "Audio Description: The Basics (by Jennissary) | Games for Blind Gamers 5",
+      "link": "https://www.reddit.com/r/indiegames/comments/1qyl4ay/audio_description_the_basics_by_jennissary_games/",
+      "source": "Reddit | IndieGames",
+      "time": "2026-02-07T18:19:01",
+      "content": "## Summary **“Audio Description: The Basics”** is an article written by Jennissary, a professional audiodescriber, introducing basic concepts and guidance about creating audiodescription for blind-accessible videogames. **Author:** Jennissary, game producer and audiodescriber, including for the vi",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
+        },
+        {
+          "author": "Jennissary",
+          "text": "Thank you so much for asking me to write for this year's Game Jam! I'm having a delightful time helping out with my teams. If anyone has any questi"
+        },
+        {
+          "author": "vaughark",
+          "text": "Interesting insights on accessibility!"
+        }
+      ]
+    },
+    {
+      "title": "- ATTENTION: READ ME - Job Board: Rules & Guidelines",
+      "link": "https://www.reddit.com/r/gameDevJobs/comments/xdpu98/attention_read_me_job_board_rules_guidelines/",
+      "source": "Reddit | gamedevjobs",
+      "time": "2022-09-14T02:22:05",
+      "content": "***Scroll down to see the job board rules under the existing updates*** \\---- **UPDATE 2022-09-13** **ATTENTION ALL ARTISTS AND ASSET SELLERS/GAME PROMOTERS**. This is a job board for those looking for work in the game industry or posting jobs related to the game industry. **THIS IS NOT** [Starvi",
+      "comments": [
+        {
+          "author": "hsandt",
+          "text": "Hey, I'm new here and I noticed in Rule 3. that you mention \"gameDevClassifieds\" but the sentence makes it sound like you mean \"this subreddit\" aka \"g"
+        },
+        {
+          "author": "None",
+          "text": "[removed]"
+        }
+      ]
     },
     {
       "title": "美国国防部计划从德国撤军 5000 人",
@@ -475,54 +1722,6 @@
       ]
     },
     {
-      "title": "科技爱好者周刊（第 390 期）：没有语料，大模型就是智障",
-      "link": "http://www.ruanyifeng.com/blog/2026/03/weekly-issue-390.html",
-      "source": "阮一峰的网志",
-      "time": "Fri, 27 Mar 2026 05:49:12 +0800",
-      "content": "这里记录每周值得分享的科技内容，周五发布。 本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。 封面图 山东日照某住宅小区的彩色风雨连廊，入口处树林还设了咖啡馆。（via） 没有语料，大模型就是智障 如果现在做一个问卷调查，问大家\"你觉得大模型是否具有智能？\" 我相信，大多数人会是肯定的回答。 哪怕现在只是 AI 的初级阶段，大模型已经能够替代很多的人类智力劳动，确实非常神奇。 但是，我们不要忘记真实情况，大模型不是魔法，更不是具有自主智能的\"硅基智能体\"，而是基于统计规律的语言模型，它的一切行为都基于数学计算。 最好的证据就是，如果让它解决没有训练过的题目，也就是不存在统计规律的话，它根本解不出来。 这就是我今天想分享的一个实验。 两位国外的研究者找了五个主流的大模型：GPT-5.2、O4-mini、Gemini 3 Pro、Qwen3-235B、Kimi K2。 他们让大模型使用五种小众的编程语言----Brainfuck、Befunge-98、Whitespace、Unlambda 和 Shakespeare----来编程解决各种问题。 这些小众语言的共同特征是，网上很少有它们的资料，因此不能用来训练大模型。大家猜猜看，结果怎么样？ 实验结果用一句话总结，就是大模型的表现一塌糊涂。 这五个大模型的平均答题正确率仅为3.8%，即100道题可以答对3.8道。相比之下，它们处理 Python 问题的正确率可以达到90%。 更尴尬的是，仅有的那几道答对的题目，都是入门级。更难的级别（初级、中级、高级），所有五个大模型的正确率都为0。 这个实验充分说明了，大模型的表现（智能程度）首先由训练材料决定：训练的语料越多，表现越好，比如 Python 的语料遍地都是，大模型因此极其擅长解决 Python 问题；训练的语料越少，大模型表现就越差，简直跟智障一样，没什么用处。 那么，一个让人好奇的问题就来了：如果某种冷门语言没有语料，但有一本很详尽的《使用手册》，我们让大模型学习这本手册，它是否就能学会这种冷门语言编程呢？ MAI-Image-2 本周，微软公司发布了自家的图像生成模型 MAI-Image-2。 这个模型生成的图像质量非常高，有评论认为，目前仅次于谷歌的 nano-banana-2。 微软开放了网站 MAI Playground（下图），现在可以免费生成图片。 我试用后，图像质感确实很好，非常逼真。比如，一只狗在海里骑自行车。 但是，它的使用限制很多：（1）有争议的、可能冒犯的图片，都会拒绝生成；（2）每天的免费额度是15张，每次生成的间隔时间是30秒；（3）它只能生成长宽比 1:1 的图片，其他分辨率都不支持；（4）不提供图像编辑和加工，只能用来\"文生图\"。 如果你需要通过文本生成高质量图片，可以试试它。 科技动态 1、可玩的封面 红牛公司推出了一本纸质的游戏杂志《GamePop》。 它的封面有一个可以玩的\"俄罗斯方块\"，是世界首本封面可以玩游戏的书。 奥秘就是封面里面，嵌入了一块非常薄的柔性电路板。 这块板配备了180个 RGB LED 灯、7个电容式触摸按钮、一颗32位 ARM 芯片。 它还包含一块可充电电池，可以通过 Type C 充电。 可惜的是，这个封面是限量版，不公开出售。它得到了俄罗斯方块公司的官方授权，全球仅发行150套，每套均有独立编号。 2、收费的真人客服 企业都不喜欢提供真人的电话客服，因为成本很高，更希望改成机器应答的电话客服。 惠普公司想出了一个点子，将用户往机器客服赶。 用户打惠普的客服电话，会听到一段语音提示，要你访问官网自己去寻找答案。如果你坚持要真人客服，就要在线等待15分钟。 如果中途挂了电话，再打就需要重新等待15分钟。系统还会分别在第5、第10和第13分钟提醒你，可以访问网站或发邮件联系。 虽然这种做法很可恶，但未来可能成为常态：免费就只有 AI 客服或机器人客服，额外付费才有真人客服。 3、飞盘的玩法 怎样扔飞盘，才能又快又远？ 一个美国的物理学家，找了几十个学生进行实验，使用不同手势和角度扔出飞盘。他测量了飞行速度和扭矩，把结果写成了论文。 他发现，将拇指放置在距飞盘外缘约3厘米的位置，可以获得平均转速和初始速度的最佳结果。 他还发现，转速与初始速度存在线性相关，转速越高，初始速度也越高。 所以，下次玩飞盘的时候，你要放对拇指的位置，然后用足力气，反手甩出，就可以取得最佳结果。 文章 1、MkDocs 的缓慢崩溃（英文） MkDocs 是著名的文档网站生成工具，但是主要贡献者之间有激烈矛盾，互相对抗，导致这个项目四分五裂。本文就梳理这件事。 2、大模型预测咖啡散热（英文） 作者让各种大模型给出咖啡散热时间的",
-      "comments": []
-    },
-    {
-      "title": "科技爱好者周刊（第 394 期）：第二次 API 开放浪潮",
-      "link": "http://www.ruanyifeng.com/blog/2026/04/weekly-issue-394.html",
-      "source": "阮一峰的网志",
-      "time": "Fri, 24 Apr 2026 07:43:01 +0800",
-      "content": "这里记录每周值得分享的科技内容，周五发布。（[通知] 下周五一假期，周刊休息。） 本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。 封面图 我见过的最酷广告牌，只有一行命令，推广一个 AI 工具包。普通人看不懂也没关系，反正不是给他们用的。（via） 第二次 API 开放浪潮 如果你在互联网行业足够久，大概会记得，以前有过一次 API 开放的浪潮。 那是15年前的2011年，云服务刚兴起不久，各种平台纷纷开放自己的 API。 那时，Facebook 和 Twitter 都发布了自己的 API，开放了平台数据。GitHub 的 API 设计简直是艺术品，几乎可以获得任何想要的功能。 平台的想法是，开放的 API 有助于用户和第三方加入，来开发各种插件和扩展程序，从而推动平台的增长，提高用户留存率和满意度。 那时还有一个叫做 ProgrammableWeb 的网站（现已关闭），它的名字就代表了当时人们的信念：互联网可以通过 API 编程，把各种平台的数据连接在一起。 但是，事情的发展跟预想完全相反。 平台发现，API 很难盈利，因为无法插入广告，而且自家的数据会帮助其他公司的生意，造成用户流失。 于是，它们纷纷改变做法，限制和关闭 API，不再分享数据，将用户留在自家的\"围墙花园\"。 如今，Facebook 和 Twitter 的 API 已经形同虚设，第三方客户端遭到彻底禁用。GitHub 虽然还保持开放的 API，但也采取了管控，增加了身份验证和速率限制，要想构建全功能的第三方应用也很困难。 正当人们觉得这将是常态，转变出现了。 就在2025年的下半年，大模型达到了临界点，变得真正强大，可用于生产环境了。 人们很快意识到，如果大模型只会思考，不能执行代码，用处就不大。AI 的最大价值不是内容生成，而是内容生成 + 自动化，这样才能最大限度解放人力、创造价值。AI 自动化，自己执行代码的典型代表就是\"龙虾\"（OpenClaw）。 自动化意味着 AI 必须能够调用其他平台，进而意味着，其他平台必须先开放自己的 API。 突然之间，API 不再是累赘，而是接入 AI 的必须条件。没有 API，你的平台就进入不了 AI 工作流，各种 Agent 也就不能代表用户在你的平台上工作。 同样两个平台，一家有 API，另一家没有，后者就很可能被市场放弃，因为大模型无法接入它，也就无法对它自动化，AI 用户只能转向它的竞品。 平台意识到了，谁尽快开放 API，谁就抢占了先机。所以，强如腾讯也会在龙虾爆红后，以最快的速度开放了微信接口，让龙虾可以向微信发消息。 腾讯也害怕，在龙虾的世界里没有自己的一席之地。其他平台就更不用说了，抢着通过 MCP 和 Skill 开放自家的操作接口。 这表明，第二次 API 开放浪潮正在到来。这一次将比上一次开放得更彻底，更易用。 （1）这次开放的不仅是云服务，还有很多日常生活服务：外卖、电商、银行......甚至还有很多原本根本不会有 API 的服务，比如餐馆和球馆的预订。 （2）这次的 API 不需要手动编程，你只需使用自然语言，由大模型翻译后调用。 （3）这次的 API 是消费者通过 AI 调用，使用目的是代表用户行事。以前 API 是由应用程序调用，使用目的是获取数据。 机器人半马 上周末，北京亦庄举行了第二次人形机器人的半马比赛。 超过100个人形机器人参加比赛，看谁最快跑完21.0975公里。最终，冠军成绩是50分26秒，超过了人类最快的选手（半马的人类世界纪录是1小时02分52秒）。 根据网友拍摄的现场视频，机器人跑到一定距离就要进入补给站，由工作人员更换电池，并加入冰块（或者干冰）防止过热。 这就是说，机器人的内置电池支持不了一小时的运行时间。 宇树公开发售的 H2 人形机器人，续航时间是3小时。在长跑这种剧烈运动时，续航应该会大打折扣。而且，功率相同时，体重较轻的机器人在赛跑中有优势，也就意味着不能多携带电池。 这样看上去，人形机器人目前的实用性还是很有限。不插电时，一到两个小时就要充电，那样的话，很多事情就不适合做了。 GPT Images 2.0 本周，OpenAI 发布 GPT Image 2.0 模型，据说是目前最强的图像模型，性能超过了谷歌的 Nano Banana 2 Pro。 根据 OpenAI 的介绍，它的文字渲染有较大进步，很好地支持汉字，可以生成复杂的解释性图片。 大家可以去 ChatGPT.com 免费试用。 我做了一个比较，生成一张小狗在古镇屋檐下午睡的图片。这是 GPT Images 1 的结果。 这是 GPT Images 2.0 的结果。 我还看到一个有趣的项目 Flipbook。它是一个解",
-      "comments": []
-    },
-    {
-      "title": "科技爱好者周刊（第 393 期）：脑腐状态",
-      "link": "http://www.ruanyifeng.com/blog/2026/04/weekly-issue-393.html",
-      "source": "阮一峰的网志",
-      "time": "Fri, 17 Apr 2026 07:20:16 +0800",
-      "content": "这里记录每周值得分享的科技内容，周五发布。 本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。 封面图 湖南益阳的和平签证主题博物馆，纪念二战时期何凤山博士救助犹太人。外立面的层层钢板象征签证文件，狭窄而棱角分明的入口给人一种压抑的感觉，进入后的空间逐渐走向释放和光明。（via） 脑腐状态 最近学到一个新词\"脑腐\"（brain rot）。 它就是字面意思。有些人看上去是正常的，但是大脑已经变异了，有些部分腐烂了。 根据介绍文章，\"脑腐\"的症状就是思考能力下降，难以长时间集中注意力，进行深入的推理和反思。 一遇到比较难、需要反复思考的问题，你就会烦躁，不仅是心理烦躁，还会生理烦躁，全身不安，不愿意多想，就希望赶快了结。 你有没有这个症状？如果有，就有\"脑腐\"的危险了。我感觉，我的大脑就有一点。遇到复杂的软件概念和算法，以前会仔细研究，直到搞懂为止，现在更可能看一眼就跳过去，不懂就不懂了，知道名字就可以了。 \"脑腐\"的主要原因是，网络平台上面那些夸张的\"标题党\"文章和短视频。它们的目标是吸引流量，在最短时间内引发阅读者/观看者的兴趣，感到满足。当你长期观看这些内容以后，大脑就被密集刺激，思维兴奋状态的维持时间越来越短，丧失了长时间深入思考的能力。 这就是为什么一个人看惯短视频以后，就离不开内容压缩了。一篇几千字的文章，他也会要求大模型生成总结；一部90分钟的电影，他也宁愿看几分钟的电影解说。 一旦\"脑腐\"了，难以长时间集中注意力进行思考，也就难以学习和处理高难度问题了。现在看上去，没有好的解决办法，因为现代人的时间越来越琐碎，内容碎片化是大趋势。 应对之策也许就是反过来，将学习和思考拆解成一系列短问题。比如，以后的学习不再是一厚本教材，而是几十个的系列短视频，每个用两三分钟解释一个知识点。只有这个时间长度，学生的思维才能保持专注。 权重有没有版权？ 国产大模型一般是开源的，但是最近有所改变。 有的大模型闭源发布；有的只开源小参数版本，不开源大参数版本；有的不允许商用，除非得到许可。我就不点名了。 \"黑客新闻\"的一个读者，针对开源大模型修改许可证这件事，提出质疑：开源大模型可能无权设置许可证。 他的意思是，现在的开源大模型主要开源的是权重文件，以及配套的运行代码。所谓\"权重文件\"就是一个巨大的矩阵，表示各个 Token 在生成结果中出现的可能性。 权重是大模型的核心，而它来自于对海量语料的计算。这就是说，权重不过是计算结果，他认为，计算结果是没有版权的。 比如说，你写了一个程序，实现了一种更高效的根号2的算法。那么，这个程序是有版权的，但是计算结果根号2（1.414）是没有版权的。因为计算结果不过是机械过程的产物，不涉及人类创造力。 按照这种说法，权重根本没有版权，当然也就谈不上设置或修改许可证了。 我不是版权专家，不能确定这种说法对不对，但是听上去有道理。大家可以自己去问问大模型\"计算结果有没有版权？\"，看看大模型怎么回答。 科技动态 1、摄像头耳机 华盛顿大学的研究团队，开发出世界首个带有微型摄像头的无线耳机。 上图中，耳机底部的小凸起就是微型摄像头。 它的最大用途就是跟 AI 互动。你可以直接问：\"我手里的英文杂志的封面标题是什么意思\"，耳机就会把摄像头图像，通过蓝牙发到手机，手机的大模型就会回答。 由于带宽限制，它只能拍摄低分辨率的黑白图像。长远来看，如果不需要显示模块，这种摄像头耳机要比 AI 眼镜更适合穿戴使用，因为很多人不喜欢长时间戴眼镜。 2、排行榜的 AI 歌手 最近，有人向苹果音乐商店 iTunes 上传了艾迪·道尔顿（Eddie Dalton）的歌曲。 这个歌手实际上并不存在，形象、声音、视频都是 AI 生成的，但是上传者没有披露。 结果，这些 AI 歌曲大受欢迎。iTunes 单曲榜前100名中，他居然占据了11席，有两首歌进入了前10名。 他的专辑在 iTunes 上也排名第三。 以前，有人说 AI 和机器人承担日常工作以后，人类可以从事艺术创作，比如唱歌、跳舞、画画、写作、拍视频......现在看上去，AI 也会跟人类争夺艺术工作。 3、经济舱座椅 长途飞行的经济舱座椅，非常不舒服，美联航想出了一种改进办法。 如果是一家三口，可以将座椅的坐垫卸下，从而一家躺在地上睡觉。 航空公司会提供枕头和毛毯，甚至还有床垫。 如果是单人旅客，你就需要同时购买三个相邻座位，好在这样还是比头等舱便宜。 我觉得，中国高铁可以考虑这种做法，某些没有卧铺的长途线路允许拆卸几排座位，让乘客躺在地上休息。 文章 1、Claude Code 的源码真相（英文） 前不久，Claude Code 源码泄漏，人们仔细研究以后，发现这些源码全部是 AI 生成的，质量不",
-      "comments": []
-    },
-    {
-      "title": "科技爱好者周刊（第 392 期）：axios 投毒与好莱坞式骗术",
-      "link": "http://www.ruanyifeng.com/blog/2026/04/weekly-issue-392.html",
-      "source": "阮一峰的网志",
-      "time": "Fri, 10 Apr 2026 07:17:13 +0800",
-      "content": "这里记录每周值得分享的科技内容，周五发布。 本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。 封面图 今年就将启用的腾讯总部园区，俗称\"企鹅岛\"，里面不仅包括办公楼，还有多幢公寓楼。（via） axios 投毒与好莱坞式骗术 上周，著名软件库 axios 被投毒了。黑客拿到了发布令牌，直接发了一个新版本，里面加入了木马。 软件投毒不是新鲜事，新鲜的是发布令牌怎么泄漏的。背后的故事简直是好莱坞电影，根本防不胜防。 axios 属于使用最广泛的 JS 软件库之一，每周下载量接近1亿次，所以这次投毒的感染面很大。 而且，木马的恶性程度很高。根据官方的清除说明，如果不幸中毒，机器上所有的密钥、令牌和凭证都要作废。这个木马会扫描所有目录，收集密钥，然后发出去。 大家要知道，像 axios 这种超级流行的软件库，每个环节都有完整防护，每一行代码都被严格审查。这次攻击完全是一场精心策划的社会工程，把这些防护都攻破了。 攻击目标选定首席维护者 Jason Saayman。据本人透露，事件过程是这样的。 他们根据我的情况量身定制了这一流程，具体做法如下： 他们冒充某公司的创始人联系我，不仅克隆了该公司创始人的外貌，还克隆了该公司本身。 他们随后邀请我加入一个真实的 Slack 工作区。这个工作区使用了该公司的品牌标识，名称也十分可信。Slack 的工作区设计得非常精巧，他们设有专门的频道来分享 LinkedIn 上的帖子。我猜这些 LinkedIn 帖子最终会发布到该公司的真实账号上，整体效果非常逼真。他们甚至还创建了一些我推测是该公司团队成员以及其他一些开源软件维护者的虚假账号。 他们安排了一次与我的会面，目的是进行沟通。会议是在微软 Teams 上进行的。参会人员似乎是一群人。 会议指出我系统上的某些东西过时了。我以为是和 Teams 有关，就安装了缺失的组件，结果发现是远程木马（RAT）。 一切都安排得井井有条，看起来很正规，而且做事方式也很专业。 可以看到，这个攻击是有剧本的，每一步都经过了策划，充分准备和排练，完全为你度身定制，就等你落入圈套。 行骗者非常耐心，投入了巨大的前期成本。首先，假冒某公司的创始人联系你，为了提升可信度，还做了假的公司网站；然后，邀请你加入他们的 Slack 工作区，里面有各种讨论、项目文档、宣传物料，看上去就像真的一样；最绝的是，他们还让你在 Teams 软件上参加公司的视频会议，一群骗子亲自露面，陪你一起开会。 会议开始后不久，主持人突然说：\"奇怪，你的系统怎么跟我们不一样，是不是微软的插件过时了，我发你一个最新版。\"你就这样收到了传过来的安装包，看到别的与会者都在等你，你也就没有多想，直接双击执行了。哦喔，就这样中招了，发布令牌一秒钟就泄漏了。 作假到这种程度，让人叹服。 这让我联想到不久前看到的一条印度新闻，作假程度有过之而无不及，也是如同好莱坞电影。 去年圣诞节，一位印度新德里的77岁老太太，收到了\"警察局\"的 Whatsapp 视频电话。视频右下角居然还有手语翻译。 警察跟她说，银行发现她的账户有洗钱记录，必须对她进行调查，如果不配合，账户资金将被没收，通知她远程出席法院的调查听证会。 媒体后来披露了\"警察局\"的布景照片，大家看看多么逼真。 前三张照片是印度警察局，最后一张是巴基斯坦警察局，它们在一栋楼里，房间紧邻着。要知道这两个国家在现实中是对立的，但是不妨碍骗子两边都骗。 再回到案子本身，几天后，老太太参加了线上听证会，在一个法院里举行，由\"法官\"亲自主持。他查看了资金记录，听取了\"警察\"的证词，向老太太询问了一些问题。 最后，\"法官\"告诉老太太，当局需要核实她的所有资产是否合法。她必须每天都跟警察局连线，回答问题，直到查清为止。 下面就是这个案件最精彩的部分，一连16天，老太太每天开着摄像头连线，大家看看骗子演到了什么程度。 在这16天里，老太太渐渐喜欢上了在假警局轮班的警官们。她开始称他们为自己的孩子们。而他们也反过来称她为\"母亲\"。 晚上，她和最年轻的军官一起阅读印度教宗教经典，这位军官请她把她觉得特别感人的段落发给他。 \"他们就像家人一样，\"老太太回忆说。\"他们说，'女士，我们想尽快把事情解决。我们日夜为您工作。'\" 天哪，骗子从早到晚演了16天，跟老太太促膝长谈，一起读经典，请教人生问题，直到深夜。这要是拍成电影，该有多动人。 老太太没有丝毫疑心，心甘情愿卖掉了自己的投资，累计九次向假警察局的账户总共转出了160万美元。 第二天，她再跟\"警察局的孩子们\"连线，就连不上了。 从上面两个案例，大家可以看到，现在的互联网骗局可以演到什么程度，完全是精准投放的\"剧本杀\"，成功率极高。要是再加上 AI 的加持，几乎不",
-      "comments": []
-    },
-    {
-      "title": "科技爱好者周刊（第 391 期）：AI 的贫富分化",
-      "link": "http://www.ruanyifeng.com/blog/2026/04/weekly-issue-391.html",
-      "source": "阮一峰的网志",
-      "time": "Fri, 03 Apr 2026 08:08:02 +0800",
-      "content": "这里记录每周值得分享的科技内容，周五发布。 本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。 封面图 上海某餐厅的墙壁装饰。（via monana3838@Threads） AI 的贫富分化 我越来越觉得，AI 跟其他技术不一样，不仅带来技术变革，还会带来社会变革。 简单说，AI 会带来贫富分化。 其他技术实际上会消灭贫富分化，实现\"消费者平等\"，即穷人和富人消费的东西是一样的。 比如，大家喝一样的可口可乐，用一样的苹果手机，开一样的特斯拉。甚至互联网也是如此，世界首富马斯克和你用一样的网站、一样的手机 App。 但是，AI 模型不是这样。在大模型面前，穷人和富人是不平等的。 在未来，普通人肯定用不起顶级的大模型。其实，现在就是如此了，最贵的 AI 编程套餐是 Claude Code 的 Max 套餐，月费200美元，很多人已经用不起了。 OpenAI 曾经设想过月费2万美元的套餐，提供最顶级、无限量的大模型服务。 要是真的推出，只有富豪才用得起。 这反映了一个简单的事实：费用越贵，模型效果越好。因为模型的效果与算力相关，更多的算力、更大的上下文、更多的参数，都需要钱。 这跟工业品完全相反。工业品有规模效应，产量越高，单位成本越低。一旦大规模生产，价格就会越来越便宜。 但是，大模型不存在规模效应，模型的大规模生产需要更多的服务器，这并不会让单位成本降低，反而可能因为扩建机房，改造电路和水路，而变得更贵。 未来社会大概是这样的：富人和穷人用不同的模型。最顶级模型的服务----规划、咨询、生成内容、自动化......----需要支付高昂的使用费，而普通人就使用免费模型，效果当然也很普通。 不过，我也看到马斯克最近说，未来还有另一种可能。 他的意思是，算力本质上是能源转化的一种形式。人类最终会实现廉价能源的大量供应（空间太阳能？），所以算力将变得足够便宜，所有人都将用最好的模型。 可能吗？我不知道，感觉还是前一种情况更现实。 模型能力的一种衡量方法 怎么衡量大模型的能力？ 现在的方法是使用一个测试集，去计算大模型的分数。它的缺点是，只能用于横向比较，很难衡量进步速度。 最近，一篇论文提出了一种新的衡量方法。 科学家首先计算，人类完成某一项任务需要多少时间。比如，计算 4 + 5 + 7，人类需要2秒，而计算 37 * 52 * 19，可能需要1分钟。 然后，测试大模型能否以50%的成功率完成这项任务。 研究发现，GPT-2 以50%成功率能够完成的任务，时间范围是两秒；Claude 3.7 Sonnet 是50分钟；O3 接近两小时；Opus 4.6 约为12小时。 也就是说，人类需要12小时才能完成的任务，Opus 4.6 的成功概率是50%。 结果就是上图，可以发现，大模型的进化速度在对数坐标下是一根直线。 每7个月，大模型能够以50%成功率完成的任务，时间范围扩大一倍。按照这个趋势，大模型将在2027年至2031年间，以50%的成功率完成人类专家需要一个月才能完成的任务。 如果这篇论文正确，就意味着年底发布的模型，将比年初强一倍。 科技动态 1、用户协议的彩蛋 软件服务的用户协议，又长又难懂，很少有用户阅读，但是里面有很多重要内容。 一家美国通信运营商，为了表示自己很重视用户权益，鼓励大家阅读《用户协议》，并偷偷在里面加入了一个彩蛋。 上图高亮的句子写道：\"如果你读到这句话，请发邮件到我们的信箱，赢取免费的瑞士旅游。\" 上线二周后，才有人发邮件，询问这事是否真实。由于只有一个人来信，所以她就免费去瑞士了。 从这件事可以看出，即使有彩蛋，也没人阅读《用户协议》。我现在的做法是让大模型帮忙，询问\"这份协议有哪些对用户不利的地方\"，很快就得到了答案。 2、触摸屏指甲油 广泛使用的电容式触摸屏，有一个问题，就是戴手套使用会失灵。 原因是它要求触摸物（比如手指）必须导电，这样屏幕才会产生电场扰动，从而确定触摸的位置。 解决方法也很简单，就是在手套指尖涂一层指甲油，指甲油里面的金属碎屑可以导电。 美国的一名化学系本科生，在学习化妆品化学时，发明了一种改进型的透明指甲油，专门用于戴手套使用触摸屏。 这种指甲油是透明的，涂在手套上看不见，也可以涂在裸甲上，当作抛光剂。 3、Copilot 广告 Copilot 是 GitHub 推出的 AI 助手，上周有用户发现，它会自动插入广告。 上图是 Copilot 自动提交的一个 Pull Request，它在提交说明的结尾（红框处）加入了一个广告，介绍应用程序 Raycast。 在 GitHub 搜索一下，就会发现已经有超过11,400个 PR 都包含了相同的广告词。 经过用户抗议，GitHub 暂止停止了这个功能。但这是",
-      "comments": []
-    },
-    {
-      "title": "本周看什么 | 最近值得一看的 10 部作品",
-      "link": "https://sspai.com/post/109266",
-      "source": "少数派",
-      "time": "Fri, 01 May 2026 17:00:00 +0800",
-      "content": "📅本周新预告《暗影蜘蛛侠》正式预告4月26日，剧集《暗影蜘蛛侠》发布了黑白和彩色双版本正式预告，将于5月27日上线PrimeVideo。尼古拉斯·凯奇领衔主演，聚焦1930年代纽约的一个上了年纪、倒霉 ...查看全文",
-      "comments": []
-    },
-    {
       "title": "Trying to get VR interaction with Web Browser plugin",
       "link": "https://www.reddit.com/r/unrealengine/comments/1t1ev7g/trying_to_get_vr_interaction_with_web_browser/",
       "source": "Reddit | unrealengine",
@@ -614,14 +1813,6 @@
       "comments": []
     },
     {
-      "title": "[For Hire] Let's Create a Model Sheet/ Concept Art for your Games! | DM ME! ~[1/4] Slots.",
-      "link": "https://www.reddit.com/r/gameDevJobs/comments/1t18wdr/for_hire_lets_create_a_model_sheet_concept_art/",
-      "source": "Reddit | gamedevjobs",
-      "time": "2026-05-01T23:05:15",
-      "content": "https://www.reddit.com/gallery/1t18wdr",
-      "comments": []
-    },
-    {
       "title": "Credits UI",
       "link": "https://www.reddit.com/r/gamedev/comments/1t18qd1/credits_ui/",
       "source": "Reddit | gamedev",
@@ -692,14 +1883,6 @@
           "text": "Do you do commissions? I need an array of stylized vehicles for my game, [Dead Christmas](https://store.steampowered.com/app/3312230/Dead_Christmas/)."
         }
       ]
-    },
-    {
-      "title": "[FOR HIRE] Illustrator and concept artist and designer - fantasy, sci-fi, Props,  characters and environments",
-      "link": "https://www.reddit.com/r/gameDevJobs/comments/1t177eu/for_hire_illustrator_and_concept_artist_and/",
-      "source": "Reddit | gamedevjobs",
-      "time": "2026-05-01T21:54:57",
-      "content": "https://www.reddit.com/gallery/1t177eu",
-      "comments": []
     },
     {
       "title": "So, Shader compilation stutter (Stutter struggle). How do you guys deal with it?",
@@ -997,14 +2180,6 @@
       "comments": []
     },
     {
-      "title": "[For hire] Will Draw you idea of Character for DnD/Fantasy! Spell, Full Body and Expressions. (SLOTS 2/3) Dm me!",
-      "link": "https://www.reddit.com/r/gameDevJobs/comments/1t0yqr1/for_hire_will_draw_you_idea_of_character_for/",
-      "source": "Reddit | gamedevjobs",
-      "time": "2026-05-01T16:43:17",
-      "content": "https://www.reddit.com/gallery/1t0yqr1",
-      "comments": []
-    },
-    {
       "title": "Apocalypse Early Warning System",
       "link": "https://ews.kylemcdonald.net/",
       "source": "HN | ews.kylemcdonald.net",
@@ -1295,175 +2470,6 @@
       "time": "2026-04-28T19:12:46",
       "content": "Score: 8 | Comments: 2",
       "comments": []
-    },
-    {
-      "title": "Godette Plushie 🧸",
-      "link": "https://www.reddit.com/r/godot/comments/1swwn25/godette_plushie/",
-      "source": "Reddit | godot",
-      "time": "2026-04-27T07:28:17",
-      "content": "https://www.makeship.com/products/godette-plushie",
-      "comments": [
-        {
-          "author": "Ok_Fortune6661",
-          "text": "LOVE IT!"
-        },
-        {
-          "author": "SteinMakesGames",
-          "text": "I met this Godette at GodotCon https://preview.redd.it/d14kuqtwfjyg1.png?width=3000&format=png&auto=webp&s=ac84b951fe20a019a63f736431015263593fa2a4"
-        },
-        {
-          "author": "raphusmaxus",
-          "text": "damn thats nice news! will get 2 instantly :D"
-        }
-      ]
-    },
-    {
-      "title": "Dev snapshot: Godot 4.7 beta 1",
-      "link": "https://www.reddit.com/r/godot/comments/1sus32f/dev_snapshot_godot_47_beta_1/",
-      "source": "Reddit | godot",
-      "time": "2026-04-24T21:00:16",
-      "content": "https://godotengine.org/article/dev-snapshot-godot-4-7-beta-1/",
-      "comments": [
-        {
-          "author": "NotXesa",
-          "text": "Copy-pasting entire sections of properties is a great addition to the editor. The other day I was thinking about this! Also the class names instead o"
-        },
-        {
-          "author": "Iamsodarncool",
-          "text": "Man, Godot just keeps getting better and better. What a fantastic project. Astonishing amount of Ws in 4.7, especially from the rendering team. I thi"
-        },
-        {
-          "author": "Spartan322",
-          "text": "`custom_maximum_size` is a slept on feature, it can be used to make more reactive UI elements and I've honestly been waiting for something like it for"
-        }
-      ]
-    },
-    {
-      "title": "Get Started with Shadergraph - Unity Learn New Course!",
-      "link": "https://www.reddit.com/r/Unity3D/comments/1stjzai/get_started_with_shadergraph_unity_learn_new/",
-      "source": "Reddit | Unity3D",
-      "time": "2026-04-23T14:13:59",
-      "content": "Hello hello! It is me Zu! Once again I come bearing news of a new course on Unity Learn! In [Get Started with Shadergraph ](https://learn.unity.com/course/get-started-with-shader-graph)you can explore the fundamentals of Shader Graph and even create a range of real-time visual effects. These ski",
-      "comments": [
-        {
-          "author": "destinedd",
-          "text": "thanks for sharing!"
-        }
-      ]
-    },
-    {
-      "title": "Indie Games Discord Server!",
-      "link": "https://www.reddit.com/r/indiegames/comments/1sn9h1o/indie_games_discord_server/",
-      "source": "Reddit | IndieGames",
-      "time": "2026-04-16T17:00:05",
-      "content": "https://discord.gg/Ufs7DjnwQ2",
-      "comments": [
-        {
-          "author": "AutoModerator",
-          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
-        }
-      ]
-    },
-    {
-      "title": "From high school project to 8,500 Steam wishlists. 3 years of data and mistakes.",
-      "link": "https://www.reddit.com/r/gamedev/comments/1shm5su/from_high_school_project_to_8500_steam_wishlists/",
-      "source": "Reddit | gamedev",
-      "time": "2026-04-10T13:12:02",
-      "content": "Hi everyone. I’m MJ, the lead dev of Pebble Knights. Our team of 4 started this game as a high school graduation project in 2023. We are finally launching into Steam Early Access in just one week on April 13th. I know some of these lessons might be common sense to the veterans here, but I wanted to",
-      "comments": [
-        {
-          "author": "KevinDL",
-          "text": "Added this to highlights, good job team Pebble Knights."
-        },
-        {
-          "author": "None",
-          "text": "[removed]"
-        },
-        {
-          "author": "Bargeinthelane",
-          "text": "So awesome. Did your high school have game dev classes? Or did you guys just do it completely on your time?"
-        }
-      ]
-    },
-    {
-      "title": "One Week After Releasing My First Steam Game: Postmortem + Numbers",
-      "link": "https://www.reddit.com/r/gamedev/comments/1rp216y/one_week_after_releasing_my_first_steam_game/",
-      "source": "Reddit | gamedev",
-      "time": "2026-03-09T14:41:46",
-      "content": "Hey gamedevs, I've gotten so much help throughout the years from browsing this community, and I wanted to do some kind of a giveback in return. So here's a postmortem on my game! # Quick Summary: One week ago I released my first solo indie game on Steam after \\~1.5 years of development. I launche",
-      "comments": [
-        {
-          "author": "idleCone",
-          "text": "Impressive detail, thank you so much for sharing all that experience. It really adds a lot of value for those of us just starting out. I'm also develo"
-        },
-        {
-          "author": "hermyx",
-          "text": "Thanks ! Would you be able to expand on the free copies part ? How giving free copies would prevent getting to 10 reviews ?"
-        },
-        {
-          "author": "Sargious",
-          "text": "Thank you for sharing! I've got a bit of a difficult question to ask, but may I know the motivations behind continuing with your dev journey consideri"
-        }
-      ]
-    },
-    {
-      "title": "I'm tired. Does anyone else want to be a mod?",
-      "link": "https://www.reddit.com/r/Unity3D/comments/1r8pr2o/im_tired_does_anyone_else_want_to_be_a_mod/",
-      "source": "Reddit | Unity3D",
-      "time": "2026-02-19T04:35:41",
-      "content": "Howdy, u/Boss_Taurus here. I am r/Unity3D's most active mod. I wrote our rules and guidelines and I've set up the majority of our Automoderator actions. I was first made into a mod over 10 years ago because I volunteered to spruce up this subreddit's appearance. And way back then, I didn't know th",
-      "comments": [
-        {
-          "author": "GeeTeaEhSeven",
-          "text": "I am a fresh face, but I'm sure there are thousands here who want to say: thank you for your service, boss."
-        },
-        {
-          "author": "Any_Explorer_3570",
-          "text": "respect for being real about it instead of just ghosting, that runtime fee stuff really killed the vibe for a lot of people"
-        },
-        {
-          "author": "DeJMan",
-          "text": "I’ve been on Reddit for about 15 years and have helped people here in the past. Never been a mod though. Perhaps it’s time I try."
-        }
-      ]
-    },
-    {
-      "title": "Audio Description: The Basics (by Jennissary) | Games for Blind Gamers 5",
-      "link": "https://www.reddit.com/r/indiegames/comments/1qyl4ay/audio_description_the_basics_by_jennissary_games/",
-      "source": "Reddit | IndieGames",
-      "time": "2026-02-07T18:19:01",
-      "content": "## Summary **“Audio Description: The Basics”** is an article written by Jennissary, a professional audiodescriber, introducing basic concepts and guidance about creating audiodescription for blind-accessible videogames. **Author:** Jennissary, game producer and audiodescriber, including for the vi",
-      "comments": [
-        {
-          "author": "AutoModerator",
-          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
-        },
-        {
-          "author": "Jennissary",
-          "text": "Thank you so much for asking me to write for this year's Game Jam! I'm having a delightful time helping out with my teams. If anyone has any questi"
-        },
-        {
-          "author": "vaughark",
-          "text": "Interesting insights on accessibility!"
-        }
-      ]
-    },
-    {
-      "title": "- ATTENTION: READ ME - Job Board: Rules & Guidelines",
-      "link": "https://www.reddit.com/r/gameDevJobs/comments/xdpu98/attention_read_me_job_board_rules_guidelines/",
-      "source": "Reddit | gamedevjobs",
-      "time": "2022-09-14T02:22:05",
-      "content": "***Scroll down to see the job board rules under the existing updates*** \\---- **UPDATE 2022-09-13** **ATTENTION ALL ARTISTS AND ASSET SELLERS/GAME PROMOTERS**. This is a job board for those looking for work in the game industry or posting jobs related to the game industry. **THIS IS NOT** [Starvi",
-      "comments": [
-        {
-          "author": "hsandt",
-          "text": "Hey, I'm new here and I noticed in Rule 3. that you mention \"gameDevClassifieds\" but the sentence makes it sound like you mean \"this subreddit\" aka \"g"
-        },
-        {
-          "author": "None",
-          "text": "[removed]"
-        }
-      ]
     },
     {
       "title": "住久了没意思（二）：从有光的地方开始动手",

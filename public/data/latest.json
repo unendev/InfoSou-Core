@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-06-13T05:18:03.271424",
-    "total_count": 5115,
+    "last_updated": "2026-06-14T05:28:13.425746",
+    "total_count": 5198,
     "ai_summary": "§ SYSTEM_ERROR: AI_LINK_UNAVAILABLE (Key Missing)"
   },
   "items": [
@@ -70,11 +70,227 @@
       "comments": []
     },
     {
-      "title": "苹果新增的「围绝经期」提醒，你该比 watchOS 27 多了解一点",
-      "link": "https://sspai.com/post/75419",
+      "title": "TDS REVIEW｜韶音 OpenDots 2 / Air 耳夹式开放真无线耳机体验",
+      "link": "https://sspai.com/post/110761",
       "source": "少数派",
-      "time": "Thu, 11 Jun 2026 11:41:47 +0800",
-      "content": "当它突然出现在生命里时，你就知道了该如何面对；当它出现在身边人身上，你也知道该如何帮助她们步入这个全新的人生阶段。查看全文",
+      "time": "Sun, 14 Jun 2026 11:00:00 +0800",
+      "content": "一代上的好几处优势这次依然保持得不错。查看全文",
+      "comments": []
+    },
+    {
+      "title": "这是哪的问题？使用codex app一段时间后win10拖动窗口有巨大延迟",
+      "link": "https://linux.do/t/topic/2399070",
+      "source": "Linux.do",
+      "time": "Sun, 14 Jun 2026 05:24:17 +0000",
+      "content": "使用codex app一段时间后win10拖动窗口有巨大延迟，比如任务管理器从A点拖到B点，鼠标拖动后窗口有动画慢慢慢慢等好久才过去。重启桌面窗口管理器进程以后延迟没了，再用会就又有了，这到底是哪的问题？ 2 个帖子 - 2 位参与者 阅读完整话题",
+      "comments": [
+        {
+          "author": "sccloudxyz",
+          "text": "使用codex app一段时间后win10拖动窗口有巨大延迟，比如任务管理器从A点拖到B点，鼠标拖动后窗口有动画慢慢慢慢等好久才过去。重启桌面窗口管理器进程以后延迟没了，再用会就又有了，这到底是哪的问题？ 阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "Neverless 需要审核多久",
+      "link": "https://linux.do/t/topic/2399061",
+      "source": "Linux.do",
+      "time": "Sun, 14 Jun 2026 05:21:38 +0000",
+      "content": "这是在审核吗？有佬友知道不。需要多久，已经十几个小时了。 3 个帖子 - 3 位参与者 阅读完整话题",
+      "comments": [
+        {
+          "author": "Coker",
+          "text": "我记得我是很快就开了，几乎没怎么等 阅读完整话题"
+        },
+        {
+          "author": "NeurIPS",
+          "text": "这是在审核吗？有佬友知道不。需要多久，已经十几个小时了。 阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "君的公益站无法配置到cladue 桌面端了吗",
+      "link": "https://linux.do/t/topic/2399050",
+      "source": "Linux.do",
+      "time": "Sun, 14 Jun 2026 05:18:15 +0000",
+      "content": "之前使用很正常，现在提示不允许配置桌面端了 4 个帖子 - 3 位参与者 阅读完整话题",
+      "comments": [
+        {
+          "author": "欧拉线",
+          "text": "不行吧 只能cli 而且现在只有claude模型 阅读完整话题"
+        },
+        {
+          "author": "Inkpixel",
+          "text": "目前应该是只能在claude code和codex里用了 「君の公益」限制调用客户端以及一些其他的说明 阅读完整话题"
+        },
+        {
+          "author": "edawrz",
+          "text": "之前使用很正常，现在提示不允许配置桌面端了 阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "Zcode好难用",
+      "link": "https://linux.do/t/topic/2399045",
+      "source": "Linux.do",
+      "time": "Sun, 14 Jun 2026 05:16:11 +0000",
+      "content": "不知道为什么每次一到思考就卡死，只能打字让他继续才好，但一到思考或者编辑文件又卡死，是我设置不对吗，别的佬有这情况吗 3 个帖子 - 2 位参与者 阅读完整话题",
+      "comments": [
+        {
+          "author": "项太傅",
+          "text": "没开，设置里有代理配置项。你找找 阅读完整话题"
+        },
+        {
+          "author": "lanmao",
+          "text": "请问佬你有开tun模式吗，，，。 阅读完整话题"
+        },
+        {
+          "author": "项太傅",
+          "text": "没发现，我是挂代理用的。你试试。 阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "voxi优惠码7个（没了）",
+      "link": "https://linux.do/t/topic/2399041",
+      "source": "Linux.do",
+      "time": "Sun, 14 Jun 2026 05:15:37 +0000",
+      "content": "cdk.linux.do LINUX DO CDK Linux Do 社区 CDK 快速分享平台 - 让分享变得更简单 没人了，下面是兑换页 https://www.awin1.com/cread.php?awinmid=10951&amp;awinaffid=714647&amp;clickref=student--35145--3bb8db2d&amp;ued=https%3A%2F%2Fwww.voxi.co.uk%2Facquisition%2Fcheckout%3Fclicktimestamp%3D20260614045408%26signedtoken%3D3bb8db2d%26signature%3D88904582086ce1d347be0f960e824823 https://www.awin1.com/cread.php?awinmid=10951&amp;awinaffid=714647&amp;clickref=student--284086--085cde40&amp;ued=https%3A%2F%2Fwww.voxi.co.uk%2Facquisition%2Fcheckout%3Fclicktimestamp%3D20260614043611%26signedtoken%3D085cde40%26signature%3D37b3a81b1f87e59a6bdc044ae7cf50eb https://www.awin1.com/cread.php?awinmid=10951&amp;awinaffid=714647&amp;clickref=student--284087--34ea2e37&amp;ued=https%3A%2F%2Fwww.voxi.co.uk%2Facquisition%2Fcheckout%3Fclicktimestamp%3D20260614043955%26signedtoken%3D34ea2e37%26signature%3D3e2003afafd99540012fbc7cc2819062 https://www.awin1.com/cread.php?awinmid=10951&amp;awinaffid=714647&amp;clickref=student--284088--291e6638&amp;ued=https%3A%2F%2Fwww.voxi.co.uk%2Facquisition%2Fcheckout%3Fclicktimestamp%3D20260614044209%26signedtoken%3D291e6638%26signature%3D80db4e96dd81fa1aba6608c5620f3a11 https://www.awin1.com/cread.php?awinmid=10951&amp;awinaffid=714647&amp;clickref=student--35145--16fdafa7&amp;ued=https%3A%2F%2Fwww.voxi.co.uk%2Facquisition%2Fcheckout%3Fclicktimestamp%3D20260614044347%26signedtoken%3D16fdafa7%26signature%3D21af4b0fff0a02f5e0cde230780cebea 7 个帖子 - 4 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "有没有什么0月费的国内电话卡",
+      "link": "https://linux.do/t/topic/2399037",
+      "source": "Linux.do",
+      "time": "Sun, 14 Jun 2026 05:14:02 +0000",
+      "content": "黑龙江 想弄张副卡 用不着流量什么的 有个自己名的电话卡就行 要长期使用 佬们有没有什么好思路 实在不行如果能稳定提供网易云黑胶会员或者b站大会员 价格抵得上也行 我记得之前在ns看过个帖子 是卖套餐附带的权益实现的 现在还能不能弄了 16 个帖子 - 10 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "[经佬友证实已为谣传]openai加风控了,中转站还会存在吗",
+      "link": "https://linux.do/t/topic/2399030",
+      "source": "Linux.do",
+      "time": "Sun, 14 Jun 2026 05:12:38 +0000",
+      "content": "6.13号openai发了新风控策略.除了设备指纹和IP,还添加了多账户使用行为的分析等多负面因子,中转站还会存在吗 12 个帖子 - 12 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "智谱发布最新旗舰模型 GLM-5.2, 附5张体验卡。",
+      "link": "https://linux.do/t/topic/2399026",
+      "source": "Linux.do",
+      "time": "Sun, 14 Jun 2026 05:11:18 +0000",
+      "content": "GLM-5.2 相比 5.1，官方和已公开信息里最明确的提升方向是：更强的编程能力、更可用的超长上下文、更稳的长程任务表现，以及更深的推理强度选项。 附一张对比表格： 维度 GLM-5.1 GLM-5.2 旗舰定位 最新旗舰，长程任务显著提升。 新旗舰，官方称其为迄今最强开源模型。 上下文 200K。 1M 可用上下文。x+1 长程任务 可持续自主工作长达 8 小时。 延续并强调 long-horizon tasks 继续领先。ifeng+1 编程能力 对齐 Claude Opus 4.6，面向 Agentic Coding 优化。 更强 coding 能力，复杂工程任务建议用更高思考强度。x+1 推理控制 支持 thinking 模式。 明确有 High / Max 两档思考强度。 附 5 张体验卡：智谱AI开放平台 7 个帖子 - 5 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "codex 正常订阅再次显示二次验证",
+      "link": "https://linux.do/t/topic/2399021",
+      "source": "Linux.do",
+      "time": "Sun, 14 Jun 2026 05:10:08 +0000",
+      "content": "难道是又来了？开始又显示这个了… 土区的 ios 订阅，自己订阅快两年了，前阵子出现过，但是后面好像奥特曼又取消了，现在又来了么？有没有佬友遇到相同的问题的？ 19 个帖子 - 8 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "ChatGPT macbook桌面端登录问题",
+      "link": "https://linux.do/t/topic/2399018",
+      "source": "Linux.do",
+      "time": "Sun, 14 Jun 2026 05:09:01 +0000",
+      "content": "ChatGPT macbook桌面端登录总是报错，有谁知道怎么解决么 3 个帖子 - 2 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "现在的机器都这么贵了吗？",
+      "link": "https://linux.do/t/topic/2399010",
+      "source": "Linux.do",
+      "time": "Sun, 14 Jun 2026 05:07:27 +0000",
+      "content": "还想买个试试，高中生（坏菜了，我才想起来我毕业了）还是玩不起啊 7 个帖子 - 6 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "[纯水] 理性讨论｜国内外大模型扩图换背景能力的对比",
+      "link": "https://linux.do/t/topic/2399001",
+      "source": "Linux.do",
+      "time": "Sun, 14 Jun 2026 05:05:20 +0000",
+      "content": "因为拍coser是我的小小爱好，有了像素蛋糕和大模型之后，这行也卷到起飞 原皮稍微好看点的coser都会期待你免费帮她出大合成的cos正片 遂想到水一篇现在各个大模型一句话扩图换背景能力的对比，佬们评价下更喜欢谁的图，谁的一句话扩图更可用 提示词：“我上传的参考图1，是原神角色芙宁娜的二创同人图，将背景替换为水池与瀑布，并合理扩图至相机原图4:3比例，人物主体芙宁娜身后下方有一块岩石，超高清8k，收藏级画质，典藏级品质，绝对的艺术品“ 参考图： seedream： qwen： banana： gpt-image2: 个人感觉，在不抽卡一遍出 + 一句话不吟唱魔法的前提下 风格保持gpt做的最好，但出现截肢情况扣大分 场景扩图banana做的最好，但它的原图像素最低，2k图实际只有1k的分辨率 国产这边说到原图像素qwen遥遥领先（下载的原图大约有18mp，20M，不仅可以用于换背景扩图，也可以直接给coser修脸修身材了），但风格保持直接跑偏 seedream评价为拉完了，色彩风格跑偏，人物主体和底部石头的透视关系不对 2 个帖子 - 2 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "特朗普！你干了什么！没有肥波5大人，你如何抵挡glm，deepseek双尊！",
+      "link": "https://linux.do/t/topic/2398960",
+      "source": "Linux.do",
+      "time": "Sun, 14 Jun 2026 04:55:26 +0000",
+      "content": "特朗普淡笑一声，很简单，我成尊不就是了！ 说完，他的气息终于不再掩饰，显露而出，中转站战争部特供绿色渠道fable5！ 一瞬间，机房再次一寂。 只听他高声吟道： 忍辱吞声岁月长， 卧薪尝胆志昂扬。 一朝风起龙蛇动， 万里山河掌上量。 从今以后，他就彻底从一位棋子成为一名棋手，堂堂正正地布局艾美莉卡，执宰北约了。 人族的历史，AI们的历史，都不得不记载他的名字。 至此，他和前四十四位先贤并肩，宛若大日，光照千古。 7 个帖子 - 7 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "每天打八段锦，身边人都说我变了。",
+      "link": "https://linux.do/t/topic/2398953",
+      "source": "Linux.do",
+      "time": "Sun, 14 Jun 2026 04:54:46 +0000",
+      "content": "最近每天打八段锦，媳妇说我每天看起来春光满面，朋友说我走路都带风，感觉身体很轻盈，就连我自己都觉得身体充满了力量，之前的我每天通宵熬夜，要么是工作一整夜，要么是打王者一整夜，结果白天睡一整天，睡醒起来无精打采的，每天浑浑噩噩，我烟瘾还大，每天3包烟，这样的日子不知道持续了多久，某一天我的腰痛的不能弯，我去一查才知道，腰肌劳损，可能是长期久坐导致的。持续一周都没好，最后找一个老郎中给我扎了针，才减轻不少，后来我意识到自己的健康问题，主动扔掉烟灰缸和打火机，至今一根没抽，每天早上4点半起床，开始骑行锻炼身体，10公里。然后就是做八段锦，三十多分钟。第一天我锻炼完以后，手拿手机手抖的厉害，腿一打弯立马就要跪在地上了。但是，我坚持了下来，后边越来越顺，直到最近周围人开始点评我，我才发现，我没白练，后边我也不知道咋写了，反正就是感觉也讲完了，我这蹩脚的文字功底有点差。反正就是希望佬友们注重健康，也锻炼起来，我感觉是好处多多。希望佬友们都健健康康的，多发点财。结束。 19 个帖子 - 13 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "医生说长期禁欲生殖系统真的会老",
+      "link": "https://linux.do/t/topic/2398941",
+      "source": "Linux.do",
+      "time": "Sun, 14 Jun 2026 04:52:15 +0000",
+      "content": "嗨起来，兄弟萌 就撸，就撸 最后爽的是自己 ，(我说的是撸铁 那这样说的话，戒色吧的那些老哥们不是亏大了? 12 个帖子 - 12 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "求 API 站推荐",
+      "link": "https://linux.do/t/topic/2398939",
+      "source": "Linux.do",
+      "time": "Sun, 14 Jun 2026 04:52:14 +0000",
+      "content": "本来是说想用评价站找一找 API 站的 rate.linux.do LinuxDo商家评价平台 LinuxDo商家评价平台 发现现在没几个人知道（）（） 有没有便宜的 claude 站 aws-q 渠道就行（） 本来是说用 PackyAPI 但是一次只能充 50 对于我这种零花钱少的学生等于用不起（） 3 个帖子 - 3 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "现在就业到底有多差",
+      "link": "https://linux.do/t/topic/2398925",
+      "source": "Linux.do",
+      "time": "Sun, 14 Jun 2026 04:47:45 +0000",
+      "content": "我在网上看到大厂的出来降薪到1万都找不到工作，送外卖的竟然增加到1500万，有这么可怕吗？ 不是说AI将会创建新工作岗位的吗，在哪呢 29 个帖子 - 20 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "今天又用ai解决一个大难题，爽啊",
+      "link": "https://linux.do/t/topic/2398919",
+      "source": "Linux.do",
+      "time": "Sun, 14 Jun 2026 04:46:09 +0000",
+      "content": "我的一加手机由于在某鱼买的二手碎后盖手机，到手后没插卡测试之后就收货了（我的习惯是没问题就早点确认收货）。哪知道，插上sim卡后也能正常使用，谁知过了1天左右突然没信号了，瞎折腾拆装sim卡、换位置、重启啊等各种能想到的法子都没信号。这下子我可慌了神了，刚刚确认收货了，我知道某鱼一旦收货的话，维权只能看卖家的良心了。修呗！拿到手机维修店花了200多元，在15天后拿到手机开始爽用了…操了，好景不长，爽用了2个月，又开始，断断续续出问题，表现为早上一起来，打开手机没信号，这个时候，我开关飞行模式之后，又马上的连上。突然，有一天，怎么折腾都没信号了。又拿到维修店，手机店老板打开后盖，他说啥也没操作就好了。他告知我或者就是继续用，或者就是放在他那里继续慢慢排查，看哪里的问题。我看这阵仗，还得了？妈的，查出新问题，不是又得给钱？修手机的费用加起来又够买一个二手手机了，只能果断拿回家，继续用。操了！拿到家，不甘心，又重新启动了一下，又没信号。我突发奇想，维修老板拆了就能好。我也试一试。趁着胶都没干，就把后盖果断又拆开。拿掉盖板，没想到真的有了信号。这下拆了装，装了拆，折腾了半天时间。实在没招了，只能拿出我的grok-4.3和gemini-2.5-pro，免费咨询来一个。2个AI都提到天线的问题。我豁然开朗，反正后盖打开了，天线不是摆在面前吗？试一试，又怎么的？我就把靠近边框那条白线移了一点位置，别让盖板压上那根白色的馈线。这一试，居然试出东西来了，解决了。果然是盖板盖上的时候压上那条白色馈线了，手机本来就是摔过或者压过的手机，中框都有点变形了，多半是把那根馈线伤到了，但没有彻底断掉，不然会一点信号都没有。解决了…我直呼牛逼！牛逼大发了！所以现在心情非常爽。这是继上次键盘脚撑解决之后的又一个爽点。抑制不住内心的激动，特来与佬友们分享喜悦的心情，祝大家用好 AI，用对 AI，让 AI 让你爽！ 4 个帖子 - 3 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "上线了一款image2生图/编辑工具，支持2K/4K，搭配CPA食用，白嫖的team号猛猛蹬起来",
+      "link": "https://linux.do/t/topic/2398917",
+      "source": "Linux.do",
+      "time": "Sun, 14 Jun 2026 04:45:27 +0000",
+      "content": "包含生图、编辑两种模式，支持2K/4K出图，4K图大概10MB左右，支持批量请求、并发控制。 所有数据本地缓存，通过发送跨域请求调上游接口，搭配CPA等代理中转食用，有些中转站不支持跨域可以使用Cloudflare Workers或者本地搭个反代，具体脚本随便找个AI就写了。 可选三种生图入口，对应三个生图按钮： /v1/images/generations，/v1/responses，/v1/chat/completions 另外加了个“保持原始 Prompt”的功能，作用不大聊胜于无，危险提示词还是会被改掉甚至失败，佬们有好使的破限提示词可以交流下。 CPA Image CPA Image | OpenAI 图像生成与编辑控制台 CPA Image 是一个 OpenAI 兼容的图像生成与编辑控制台，支持 2K/4K 高清尺寸、批量请求、并发控制和本地缓存安全策略。 1 个帖子 - 1 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "林夕佬的公益站这两天一直503，是我自己账户问题，还是佬的渠道不稳？",
+      "link": "https://linux.do/t/topic/2398911",
+      "source": "Linux.do",
+      "time": "Sun, 14 Jun 2026 04:43:50 +0000",
+      "content": "如题，找不到林夕佬的帖子了，也不知道有什么其他的联系方式能确认一下不 1 个帖子 - 1 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "Vol.265. 618（不）买买买",
+      "link": "https://www.gcores.com/radios/215890",
+      "source": "Gaming | 机核网",
+      "time": "Sun, 14 Jun 2026 01:11:36 +0800",
+      "content": "一年一度的618到了，量力而行，拒绝消费陷阱！OP:《穷鬼气球》&amp;《欠揍气球》",
+      "comments": []
+    },
+    {
+      "title": "夏日重现，核周报 6.13",
+      "link": "https://www.gcores.com/radios/215403",
+      "source": "Gaming | 机核网",
+      "time": "Sat, 13 Jun 2026 23:00:00 +0800",
+      "content": "本期时间轴制作：佟和夏日游戏节2026宣布大量新作和游戏新内容；Xbox 6月游戏展示会宣布大量登陆Xbox和XGP的新作和游戏内容；任天堂6月直面会宣布大量NS2游戏新作和新内容；PC Gaming Show 2026发布会公布大量PC游戏新作和新内容；未来游戏展发布会公布大量游戏新作和新内容等。",
       "comments": []
     },
     {
@@ -86,176 +302,27 @@
       "comments": []
     },
     {
+      "title": "新闻评论：《魔女3》配音演员怒喷厂商/《寂静岭》新作即将公布？",
+      "link": "https://www.gcores.com/radios/215872",
+      "source": "Gaming | 机核网",
+      "time": "Sat, 13 Jun 2026 11:49:23 +0800",
+      "content": "-《猎天使魔女3》配音演员怒喷厂商，真正的配音演员如何看待此事？-《寂静岭》新作即将公布？真的会是游戏新作吗？走神大师 | 生于游戏，助你走神的生活播客。目前常驻主持为：一位游戏编辑（但已经换工作）一位配音演员（但配谁谁去世）另一位游戏编辑（但不确定常驻）……祝你天天开心，即使不走神也开心！",
+      "comments": []
+    },
+    {
+      "title": "【大师玩什么】2023年2月游戏推荐丨017",
+      "link": "https://www.gcores.com/radios/215871",
+      "source": "Gaming | 机核网",
+      "time": "Sat, 13 Jun 2026 10:43:37 +0800",
+      "content": "【大师玩什么】2023年2月游戏推荐丨017 OP：Hogwarts Legacy - Overture to the Unwritten ED：OCTOPATH TRAVELER 2 - MAIN THEME 又有新栏目！在【大师玩什么】栏目中，我们会盘点、介绍当月走神大师们想玩、打算玩的游戏，因此不出意外的话这会是个月更节目！它既是对我们自己即将游玩内容的预习，也是与各位朋友分享我们自己的游戏喜好。其中可能有大家听过的，也可能有大家没听过的，也欢迎各位分享本月自己打算玩的游戏~ 本月清单： 2.10 - 霍格沃茨之遗 2.14 - Wanted: Dead 2.14 - 白之旅 2.17 - 狂野之心 2.21 - 原子之心 2.22 - 如龙：维新 极 2.23 - 英雄连3 2.23 - 少女魔净 2.23 - 森林之子 2.24 - 坎巴拉太空计划2 欢迎各位在评论区与我们互动，...",
+      "comments": []
+    },
+    {
       "title": "具透 | 除了 AI，iOS 27 首个开发者测试版中你不能错过的新功能",
       "link": "https://sspai.com/post/110973",
       "source": "少数派",
       "time": "Sat, 13 Jun 2026 10:37:12 +0800",
       "content": "少数派在体验了新版系统之后，帮你整理了 iOS 27 中值得关注的新功能和新特性，希望帮你能了解新版系统的方方面面。查看全文",
-      "comments": []
-    },
-    {
-      "title": "chatgpt pro/plus 与中转站",
-      "link": "https://linux.do/t/topic/2392611",
-      "source": "Linux.do",
-      "time": "Sat, 13 Jun 2026 05:15:51 +0000",
-      "content": "在L站看到好多佬在发plus 20x拼车，当前我用的是中转站的pro，感觉价格上也还行，能接受，一天下来也就十几块二十块，所以想问问各位佬，为什么会选择自己拼车开plus呢？毕竟这种方案还需要自己建服务器走反代，还可能被封，而中转站的话就不需要担心这种风险了啊 1 个帖子 - 1 位参与者 阅读完整话题",
-      "comments": [
-        {
-          "author": "徐霞客",
-          "text": "在L站看到好多佬在发plus 20x拼车，当前我用的是中转站的pro，感觉价格上也还行，能接受，一天下来也就十几块二十块，所以想问问各位佬，为什么会选择自己拼车开plus呢？毕竟这种方案还需要自己建服务器走反代，还可能被封，而中转站的话就不需要担心这种风险了啊 阅读完整话题"
-        }
-      ]
-    },
-    {
-      "title": "发现控制浏览器还是这个genericagent好用啊，",
-      "link": "https://linux.do/t/topic/2392610",
-      "source": "Linux.do",
-      "time": "Sat, 13 Jun 2026 05:15:49 +0000",
-      "content": "闲着没事儿自动注册点账号，workbuddy hermes codex hanako marvis genericagent分别测试了这几个， ga处理的速最快，最方便，马维斯也能搞，但是比较慢。其他几个都差强人意，要不然搞不定各种问题，codex加gpt5.5也是很慢，而且各种问题搞不定，盛名之下其实难负 ，或者说术业有专攻？ 1 个帖子 - 1 位参与者 阅读完整话题",
-      "comments": []
-    },
-    {
-      "title": "谁知道我在干嘛",
-      "link": "https://linux.do/t/topic/2392608",
-      "source": "Linux.do",
-      "time": "Sat, 13 Jun 2026 05:15:44 +0000",
-      "content": "1 个帖子 - 1 位参与者 阅读完整话题",
-      "comments": []
-    },
-    {
-      "title": "y7000p已过保如何续保",
-      "link": "https://linux.do/t/topic/2392607",
-      "source": "Linux.do",
-      "time": "Sat, 13 Jun 2026 05:15:12 +0000",
-      "content": "请问一下佬友们，本人机器是拯救者y7000p，已经过保，还有什么解决方案可以续保嘛 1 个帖子 - 1 位参与者 阅读完整话题",
-      "comments": []
-    },
-    {
-      "title": "MiniMax M3 会有更大参数量版本",
-      "link": "https://linux.do/t/topic/2392600",
-      "source": "Linux.do",
-      "time": "Sat, 13 Jun 2026 05:13:46 +0000",
-      "content": "根据 M3 负责人阿岛与 MiniMax X 官方账号，M3 系列应该存在一个大参数量版本，对应之前“~500B，~1T”的传言 https://x.com/MiniMax_AI/status/2065583301440806960 https://x.com/SkylerMiao7/status/2065438597055127841 2 个帖子 - 2 位参与者 阅读完整话题",
-      "comments": []
-    },
-    {
-      "title": "好事儿从来轮不到我:sob:",
-      "link": "https://linux.do/t/topic/2392597",
-      "source": "Linux.do",
-      "time": "Sat, 13 Jun 2026 05:13:36 +0000",
-      "content": "昨天看到几个佬友发帖都领到了 2 个帖子 - 2 位参与者 阅读完整话题",
-      "comments": []
-    },
-    {
-      "title": "凡人修仙传新一季剧情怎么样",
-      "link": "https://linux.do/t/topic/2392586",
-      "source": "Linux.do",
-      "time": "Sat, 13 Jun 2026 05:12:10 +0000",
-      "content": "在这里聊聊凡人修仙传新一季的剧情，大家可以敞开的讨论 2 个帖子 - 2 位参与者 阅读完整话题",
-      "comments": []
-    },
-    {
-      "title": "这个意思是说 GPT 5.5 也要被美国政府禁用吗",
-      "link": "https://linux.do/t/topic/2392575",
-      "source": "Linux.do",
-      "time": "Sat, 13 Jun 2026 05:09:33 +0000",
-      "content": "这意思是不是 claude 天天AI 安全，zg威胁论，挖坑把自己埋了，也要拉GPT一起下水。这家公司真的没有一点底线。 2 个帖子 - 2 位参与者 阅读完整话题",
-      "comments": []
-    },
-    {
-      "title": "新人，为什么我今天LDC没有增加",
-      "link": "https://linux.do/t/topic/2392571",
-      "source": "Linux.do",
-      "time": "Sat, 13 Jun 2026 05:09:19 +0000",
-      "content": "刚注册的号，今天是第二天登录，手机登录的。记录里面只看到昨天的50，今天的怎么没有呢 2 个帖子 - 2 位参与者 阅读完整话题",
-      "comments": []
-    },
-    {
-      "title": "【请教】Codex二次接码的号码是一个吗？第一次和第二次必须是一个吗？",
-      "link": "https://linux.do/t/topic/2392566",
-      "source": "Linux.do",
-      "time": "Sat, 13 Jun 2026 05:09:00 +0000",
-      "content": "rt，请大佬解答下。目前免费的codex login要接码，我后面准备长期订阅使用，想知道找临时接码的可以不，后面二次接码是不是要第一次接码的号码？ 4 个帖子 - 4 位参与者 阅读完整话题",
-      "comments": []
-    },
-    {
-      "title": "Digtal Ocean 的 GitHub 学生优惠无了？",
-      "link": "https://linux.do/t/topic/2392547",
-      "source": "Linux.do",
-      "time": "Sat, 13 Jun 2026 05:04:31 +0000",
-      "content": "上个月刚刚开通了 GitHub 学生包，这个月就收到了 DigitalOcean 的邮件，反馈学生优惠取得的积分将在下个月底过期。 才撸了 2 个小鸡玩玩就无了 1 个帖子 - 1 位参与者 阅读完整话题",
-      "comments": []
-    },
-    {
-      "title": "Claude Fable 5 在 Epoch FrontierMath v2 上碾压了 谷歌AI co-mathematician 与 GPT 5.5",
-      "link": "https://linux.do/t/topic/2392546",
-      "source": "Linux.do",
-      "time": "Sat, 13 Jun 2026 05:04:06 +0000",
-      "content": "我觉得，我希望，能尽快看到 5.5 pro 的成绩 12 个帖子 - 7 位参与者 阅读完整话题",
-      "comments": []
-    },
-    {
-      "title": "fable5没了，看消息通知推测GPT5.5感觉也危险啊",
-      "link": "https://linux.do/t/topic/2392540",
-      "source": "Linux.do",
-      "time": "Sat, 13 Jun 2026 05:02:54 +0000",
-      "content": "8 个帖子 - 8 位参与者 阅读完整话题",
-      "comments": []
-    },
-    {
-      "title": "claude code分类器问题",
-      "link": "https://linux.do/t/topic/2392519",
-      "source": "Linux.do",
-      "time": "Sat, 13 Jun 2026 04:59:23 +0000",
-      "content": "小白发问：用claude code对话时会反复出现分类器卡顿的情况，请各位大佬有方法避免吗 2 个帖子 - 2 位参与者 阅读完整话题",
-      "comments": []
-    },
-    {
-      "title": "人到中年，喜得爱女，和佬友们分享喜悦",
-      "link": "https://linux.do/t/topic/2392514",
-      "source": "Linux.do",
-      "time": "Sat, 13 Jun 2026 04:58:49 +0000",
-      "content": "楼主今年34了，怀孕时候，全家都想要个女儿，之前在私立医院做大排畸的时候，人家暗示是个男孩 ，还以为这辈子有个小棉袄的梦想破灭了（没有要二胎的想法），没想到生出来让我去确认的时候，是个女孩，真的是意外之喜，太开心了 ，把喜悦分享给各位佬友，也希望大家能够诸事顺遂，梦想成真 18 个帖子 - 17 位参与者 阅读完整话题",
-      "comments": []
-    },
-    {
-      "title": "codex team用户邀请最多可以5次，工作区可以总计邀请10次，有人用过吗",
-      "link": "https://linux.do/t/topic/2392509",
-      "source": "Linux.do",
-      "time": "Sat, 13 Jun 2026 04:58:09 +0000",
-      "content": "今天自己48team母号，5小时限额跑光额度时候出现一个新按钮，点开之后看到的。有人用过么，看起来比plus个人用户邀请次数多一些 但是这个250点额度是啥意思，不是一次重置机会么？team用户这个是共500刀额外的额度用量，还是500creit，我记得1:40吧，如果时500creit不是只有12.5刀，那也太少了吧。 此外，不知道邀请一个新用户是不是工作区就多给人，要按席位付费啊？那不是亏麻了~ 1 个帖子 - 1 位参与者 阅读完整话题",
-      "comments": []
-    },
-    {
-      "title": "家用nas有推荐吗",
-      "link": "https://linux.do/t/topic/2392507",
-      "source": "Linux.do",
-      "time": "Sat, 13 Jun 2026 04:58:04 +0000",
-      "content": "打算买一台nas用于家庭存储 预算1500内(不含硬盘) 有推荐吗佬们 5 个帖子 - 4 位参与者 阅读完整话题",
-      "comments": []
-    },
-    {
-      "title": "Notion提示无法使用，请问有解决的办法吗？",
-      "link": "https://linux.do/t/topic/2392503",
-      "source": "Linux.do",
-      "time": "Sat, 13 Jun 2026 04:56:46 +0000",
-      "content": "就是Notion的AI经常遇到这个问题， 提示：此操作当前不可用。请稍后再试，如果问题仍然存在，请联系支持人员。 工作区正常，会员也正常。但是一直有这个提示，应该网络问题，但是切换网络和提示都没有有效恢复。请问佬友知道还有什么办法，能立马解决吗 1 个帖子 - 1 位参与者 阅读完整话题",
-      "comments": []
-    },
-    {
-      "title": "佬友们，发现一个绕过SIRI AI地理围栏的方法",
-      "link": "https://linux.do/t/topic/2392502",
-      "source": "Linux.do",
-      "time": "Sat, 13 Jun 2026 04:56:22 +0000",
-      "content": "不用尾插，分享方法的话是不是应该加个lv限制比较好 1 个帖子 - 1 位参与者 阅读完整话题",
-      "comments": []
-    },
-    {
-      "title": "claude fable 5没了。。。。",
-      "link": "https://linux.do/t/topic/2392499",
-      "source": "Linux.do",
-      "time": "Sat, 13 Jun 2026 04:56:06 +0000",
-      "content": "还没开始蹬就下线了 1 个帖子 - 1 位参与者 阅读完整话题",
       "comments": []
     },
     {
@@ -427,43 +494,11 @@
       "comments": []
     },
     {
-      "title": "“日本游戏大赏2026”年度作品部门公众投票现已开始",
-      "link": "https://www.gcores.com/articles/215820",
-      "source": "Gaming | 机核网",
-      "time": "Fri, 12 Jun 2026 14:01:14 +0800",
-      "content": "一般社团法人计算机娱乐协会（CESA）宣布，2026年6月12日起，“日本游戏大赏2026”年度作品部门的公众投票正式开启。投票截止时间为7月17日23:59（日本时间）。 本次投票的对象为2025年6月1日至2026年5月31日期间在日本国内发售的所有游戏作品，涵盖家用机、掌机、PC、智能手机等全平台，也包括海外游戏的日本版移植作品。每人限投一作。投票结束后，日本游戏大赏选考委员会将根据游戏设计、编程、图形、音效、剧本、用户评价六项标准进行评审，最终选出“大赏”和“优秀赏”等奖项。此外，“特别赏”“突破赏”等将由委员会另行推荐决定。作为投票激励，CESA 准备了约350份奖品，包括 PlayStation 5 Pro（3名）、Nintendo Switch 2（3名）、Xbox Series X（3名）等主机，以及受赏软件、相关周边、东京游戏展2026入场券和颁奖典礼邀请等。去年（2025年）的大赏得主为《暗喻幻想：ReFantazio》，2024年则为《塞尔达传说 王国之泪》。颁奖典礼定于2026年9月15日18:00在东京希尔顿酒店举行，并计划线上直播。",
-      "comments": []
-    },
-    {
-      "title": "BOOOMSeek 提名名单公布，咱们 ChinaJoy 见~",
-      "link": "https://www.gcores.com/articles/215819",
-      "source": "Gaming | 机核网",
-      "time": "Fri, 12 Jun 2026 13:59:15 +0800",
-      "content": "2026 BOOOM 游戏创想大赛 BOOOMSeek 移动端游戏征集赛道的评选工作已经完成啦，五个奖项的提名名单今天正式公布～经过评审团的评审和讨论，五个奖项各选出了 5 款提名游戏。有趣的是，「玩家之选奖」和「最佳玩法奖」的提名名单完全一致——《翡翠刮刮刮》、《力力普的工坊》、《萌宝比特》、《茫室》、《爪爪特攻》，综合表现和玩法创意两边都被它们拿下了；而「最佳美术奖」和「骁龙最佳技术突破奖」则完全是另一批作品的面貌。 每一款优秀作品的诞生，都离不开开发者对创意的执着与对技术的探索。作为本次大赛的同行者，骁龙也一直在为游戏生态提供底层支持——无论开发者是借助骁龙的高效工具链来加速创意落地，还是依靠其强悍的图形算力去冲击更极致的画面表达，骁龙都致力于为每一个灵感提供更广阔的施展舞台。以上奖项最终获奖结果，将在 ChinaJoy 期间揭晓其中「玩家之选奖」「最佳玩法奖」「最佳美术奖」由 ChinaJoy 现场玩家投票选出，「骁龙最佳游戏」和「骁龙最佳技术突破奖」由骁龙评审团在 ChinaJoy 期间投票评出。 所有提名游戏将出展 ChinaJoy 骁龙展位欢迎感兴趣的朋友们来现场体验交流～ 感谢以下陪伴「BOOOM 暴造」的伙伴们：骁龙、机核发行！ 关于首席赞助商「骁龙」 骁龙（Snapdragon）是高通公司（Qualcomm）打造的业界领先智能移动平台，为智能手机、平板电脑、笔记本电脑、智能汽车、XR 终端及可穿戴等多元设备提供芯片及系统级软件支持。从手机到汽车，骁龙让万物互联更智能、更高效。 了解详情 关于商业化伙伴「GCORES PUBLISHING」 GCORES PUBLISHING 是机核精心打造的独立游戏发行业务，专注为中小型独立开发团队提供从孵化到发行的全方位支持。我们热爱游戏，擅长发掘那些闪闪发光的创意宝藏，帮助好游戏被更多玩家发现、喜爱。我们的使命是拥抱每一份游戏的乐趣，与开发者并肩前行，将创意变为现实，让精彩的游戏体验触达世界各地的玩家。 了解详情",
-      "comments": []
-    },
-    {
       "title": "WWDC 26 发布会上，Apple 没告诉你的那些事",
       "link": "https://sspai.com/post/110967",
       "source": "少数派",
       "time": "Fri, 12 Jun 2026 11:40:54 +0800",
       "content": "除了大谈特谈的 AI，今年的 WWDC 开幕式上还有这些有趣的细节值得注意。查看全文",
-      "comments": []
-    },
-    {
-      "title": "《狸狸：胖哒的夏日》Steam新品节demo现已上线，CRITICAL REFLEX公布多款新作动态",
-      "link": "https://www.gcores.com/articles/215808",
-      "source": "Gaming | 机核网",
-      "time": "Fri, 12 Jun 2026 11:31:52 +0800",
-      "content": "独立游戏发行商CRITICAL REFLEX近期在夏日游戏节期间集中更新了多款新作消息。其中，温馨治愈的《狸狸：胖哒的夏日》在IGN Live上首播了全新预告片，在Steam上推出了全面重制的试玩版，并且将参与接下来的Steam新品节。 &lt;内嵌内容，请前往机核查看&gt;在《狸狸：胖哒的夏日》中，你将扮演一只毛茸茸的狸猫Pon，在一个风景如画的日本小镇里兼职邮递员，递送包裹、表演BMX特技、帮助街坊邻居解决各种零活，并在夏季末的祭典前修复大狸猫神社。本次试玩版在去年发布的基础上进行了扩展，增加了更多内容、改进了系统并新增了游戏功能。试玩版包含游戏开场前三天的2-3小时内容，涵盖教程、Pon在邮局的第一天以及猫社建造。全新试玩版特点： 体验游戏的前三天 完成六个任务，接受BMX挑战，并访问BMX喷漆店 以非线性任务进度和更新的导航系统探索小镇 发现新的猫社装饰品、角色语音以及扩展的语言支持 存档数据可继承至正式版 除了《狸狸：胖哒的夏日》，CR还分享了其不断扩大的游戏阵容中的其他新动态。独特的沉浸式模拟游戏《警目如炬》在 IGN Live 上发布了全新实机预告片，展示了玩家与巨型警察巨人之间令人不安的猫鼠关系。而在上周日的PC Gaming Show上公布的怪诞烹饪肉鸽《餍》和联机恐怖合作游戏《Pipes.exe》也已加入发行阵容。《餍》中玩家需用一台被诅咒的冰箱为怪物顾客烹制骇人菜肴；《Pipes.exe》则支持1-4人联机，扮演QA员工在超现实系统中攀爬管道、躲避bug并保持职场礼仪，其首个公开测试现已在Steam上线。 现在就将《狸狸：胖哒的夏日》《Pipes.exe》《餍》和《警目如炬》加入Steam愿望单！其中《狸狸》还将在发售时首发加入XGP。更多计划和更新信息将在夏季陆续放出。感兴趣的玩家现在即可前往Steam下载试玩。",
-      "comments": []
-    },
-    {
-      "title": "《烤串大厨! 餐厅模拟器》1.0正式版现已在Steam发布，已获7,000余篇玩家评价",
-      "link": "https://www.gcores.com/articles/215806",
-      "source": "Gaming | 机核网",
-      "time": "Fri, 12 Jun 2026 11:10:29 +0800",
-      "content": "游戏开发商兼发行商Biotech Gameworks今日宣布，《烤串大厨! 餐厅模拟器》(Kebab Chefs) 已在Steam正式推出1.0版本，结束抢先体验阶段，带来迄今为止最完整的餐厅经营模拟体验。为庆祝1.0版本正式上线，《烤串大厨! 餐厅模拟器》现推出为期两周的首发优惠，折扣力度高达六折，促销期间售价为40.8元。 《烤串大厨! 餐厅模拟器》于两年前进入抢先体验阶段，已在玩家、主播及内容创作者群体中引起了广泛关注。目前已有多个相关视频取得亮眼的播放成绩，其中不乏播放量突破380万、210万及150万的热门内容。 不止于烧烤——全方位体验餐厅经营《烤串大厨! 餐厅模拟器》是一款烹饪与餐厅经营模拟游戏，支持单人游玩或最多四人在线合作。玩家将继承一家小餐厅，凭借自己的经营能力决定它的命运。这家餐厅究竟会走向衰败，还是蜕变为一座五星级的美食殿堂？经过两年多的持续开发和玩家反馈，《烤串大厨! 餐厅模拟器》1.0版将呈上一份完整的餐馆经营体验。玩家可以自由建造并装修自己的餐厅，烹饪来自世界各地的多样料理，体验各个季节的特色活动，调配员工，管理账目，一步步将一家本地小餐馆发展为属于自己的餐饮帝国。《烤串大厨! 餐厅模拟器》的名字或许会让人产生误解，但这款游戏远不止是一个烤肉串摊位模拟器。玩家可以供应的菜品种类繁多，涵盖烧烤、披萨、甜点、烘焙食品、炸鸡等各式料理。此外，游戏还更新了日式料理，新增拉面、寿司等特色菜品。 1.0版本亮点 支持最多四人在线合作 烹饪流程丰富多样，包括揉面、烤串、制作甜点、炸鸡等 可自由布置餐厅、管理员工及财务 新增日式料理，包含拉面、寿司等特色菜品 抢先体验的成功与来自社区的支持自2024年1月进入抢先体验阶段以来，《烤串大厨! 餐厅模拟器》已获得数以千计的玩家，目前在Steam上获得了\"特别好评\"，累计收获超7,000篇玩家评论。 &lt;内嵌内容，请前往机核查看&gt;开发团队根据社区反馈一直在对游戏进行改进，1.0版本将提供迄今为止最全面的餐厅经营模拟体验。",
       "comments": []
     },
     {
@@ -552,6 +587,1113 @@
       "source": "阮一峰的网志",
       "time": "Fri, 05 Jun 2026 08:07:45 +0800",
       "content": "这里记录每周值得分享的科技内容，周五发布。 本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。 封面图 本周开馆的深圳国际美术馆。（via） 中国 AI 大厂访问记 今年5月上旬，一个美国访问团来到中国，访问了14家 AI 和机器人公司。 访问对象包括 DeepSeek、月之暗面、MiniMax、智谱、字节跳动、阿里、蚂蚁、小米、零一万物、宇树、魔搭社区等。 所有成员都是科技分析师，回到美国后，每个人都写了访问观感：Kevin Xu、afra Wang、Florian Brand、Nathan Lambert、 Azeem Azhar、Lily Ottinger and Kai Williams、Jasmine Sun、Lingua Sinica、Caithrin。 这些文章有很多有意思的内容，我做了一些摘录。为了保证阅读体验，就不单独注明每一段的出处了。 1、算力的差距 我们在每一家公司都听到一个共同的抱怨：算力不足。这使得实验次数减少，模型规模缩小。 中国的算力不足，主要是美国的芯片出口管制政策造成的。我们感兴趣的是亲眼目睹本土公司如何应对。 虽然供应并非完全短缺，中国公司仍然能够拿到英伟达的 H100、B200 和 B300 显卡，但是数量至少比美国竞争对手少一个数量级。 英伟达最新款的 GB300 NVL72 系统（72颗英伟达最新 GPU 组成一个系统）的实时推理速度比三年前的 H100 集群快30倍，每颗芯片的内存容量高出3.6倍，每次推理的能耗降低了25倍。美国公司正在大量订购这些系统，而中国公司却无法做到。 中国科技公司，尤其是华为，在研发 AI 芯片方面取得了长足进步。但即使是华为今年3月发布的最新芯片 Ascend 950PR，其性能也仅与2022年发布的 H100 大致相当。而且，这些芯片的出货量远低于 H100。据估计，英伟达仅在2025年10月之前就已出货了700万颗 Hopper 和 Blackwell GPU，而且出货速度还在不断增长。华为计划今年出货75万颗 Ascend 950PR 芯片，这仍然只有英伟达去年出货量的十分之一左右。 结果就是，美国在算力方面拥有巨大的领先优势。我们估计，2025年底美国 AI 行业的算力大约是中国的8倍。中国 AI 公司目前总的算力，大致相当于美国2023年的规模。 我们向中国研究人员分享了 OpenAI 内部每位研究人员拥有的 GPU 数量。他们听到这个数字时，简直惊呆了。然而，我们都知道，OpenAI 的研究人员，或者说西方所有 AI 公司的研究人员，仍然会抱怨他们的算力太少。 2、算力的分配 美国的大部分算力都用于模型训练，而非服务客户。但是，中国的情况不同，算力既要用来训练模型，又要服务于数亿消费者和快速增长的企业用户。 如果拿出一半的算力用于服务客户，那么可用于模型训练的算力就会减少。 还有另一个需要考虑的因素。美国的算力主要由五家公司主导：OpenAI、Anthropic、Google、Meta 和 xAI。而在中国，各大科技公司都在积极研发自己的前沿模型，算力池被进一步分割。 3、计算效率 如果按照这种逻辑，既然中国的算力规模比美国落少两年，那么中国模型也应该至少比美国落后两年。但是，情况并非如此。 许多分析都认为，中国模型只比美国模型落后几个月。事实上，在某些方面，两国模型似乎是并驾齐驱的。 原因是芯片管制反而促使中国公司提高计算效率。我们发现，中国公司的单位算力支持的 AI 智能是简单扩展下的 4-7 倍，这弥补了算力的不足。 4、开源的分歧 目前，最好的 AI 开源模型是中国公司发布的。但是，对于是否开源自己的模型，中国公司内部有分歧。 公司的财务状况和收入压力，会影响到开源意愿。目前，对于是否开源，有一条界限正变得越来越清晰：模型参数规模达到一万亿。 一些公司认为，开源一万亿或以上参数的模型是一种资源浪费，因为没人能在本地机器上运行如此庞大的模型，而开源模型的典型应用场景正是本地机器。发布一万亿参数模型的更好方式是将其托管在公司自身的云基础设施上，只发布它的 API，方便用户使用。 但是对于另一些公司，开源模型近乎一种信仰，而构建万亿参数级别的模型则是开源事业的入场券。 5、西方化还是中国化 有些中国 AI 公司呈现出典型的\"西方\"风格，处处洋溢着硅谷式的酷炫氛围，甚至连赠送的周边产品都体现了这一点。 另一些公司变得越来越\"中国化\"，把打造一个光鲜亮丽的展厅视为头等大事。这些展厅用来接待参观者，通常是国有企业 CEO 和地方干部。参观之后，还会举行晚宴招待。 我认为，这既是一种选择，也是一种无奈之举，源于创始人的背景以及公司选择的业务类型。 6、对其他公司的看法 我",
+      "comments": []
+    },
+    {
+      "title": "Serious discussion - what are ways to salvage an old game that failed financially?",
+      "link": "https://www.reddit.com/r/gamedev/comments/1u5bz49/serious_discussion_what_are_ways_to_salvage_an/",
+      "source": "Reddit | gamedev",
+      "time": "2026-06-14T04:59:01",
+      "content": "Hey, I think about this a lot because it seems one of the most interesting marketing problems and there aren't many answers I could find. Since he's quoted often, there is an old post from Chris Zukowski about this from 2017 but I don't think he agrees with himself there in every point. And it's m",
+      "comments": [
+        {
+          "author": "Moaning_Clock",
+          "text": "Relevant links Postmortem The Final Boss [https://www.reddit.com/r/gamedev/comments/lhg4my/how\\_to\\_lose\\_money\\_with\\_your\\_first\\_game/](https://w"
+        }
+      ]
+    },
+    {
+      "title": "Toggle collision on and off as a variable.",
+      "link": "https://www.reddit.com/r/unrealengine/comments/1u5btup/toggle_collision_on_and_off_as_a_variable/",
+      "source": "Reddit | unrealengine",
+      "time": "2026-06-14T04:51:20",
+      "content": "I am very new to unreal and casually working on a project. I’m currently stuck. I am trying to make a porch on a house optional with a Boolean. I have worked this every way I can think, used the “set collision enabled” and “set collision profile name”. I can get the visibility to go on and off no pr",
+      "comments": [
+        {
+          "author": "Striker01921",
+          "text": "Could you med use the Set Collision Nodeor just try and disable the actor or component entirely?"
+        },
+        {
+          "author": "MoonRay087",
+          "text": "Set the collision channel that interacts with your character to \"ignore\""
+        }
+      ]
+    },
+    {
+      "title": "Anyone know what causes this artifact and how to solve this?",
+      "link": "https://www.reddit.com/r/unrealengine/comments/1u5brr8/anyone_know_what_causes_this_artifact_and_how_to/",
+      "source": "Reddit | unrealengine",
+      "time": "2026-06-14T04:48:20",
+      "content": "https://youtu.be/q9Z8BWjdPUE",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "If you are looking for help, don‘t forget to check out the [official Unreal Engine forums](https://forums.unrealengine.com/) or [Unreal Slackers](http"
+        }
+      ]
+    },
+    {
+      "title": "My solo-developed horror game, does this atmosphere feel unsettling enough?",
+      "link": "https://www.reddit.com/r/Unity3D/comments/1u5bkdg/my_solodeveloped_horror_game_does_this_atmosphere/",
+      "source": "Reddit | Unity3D",
+      "time": "2026-06-14T04:37:37",
+      "content": "https://www.reddit.com/gallery/1u5bkdg",
+      "comments": [
+        {
+          "author": "CraftyPancake",
+          "text": "The sound is going to be key. Right now I’d go with a “not particularly”."
+        },
+        {
+          "author": "Malkalypse",
+          "text": "I like it. Unsettling is a good word for it, while also being a unique look that’s not like every other horror game."
+        }
+      ]
+    },
+    {
+      "title": "Pac-Man, but You're the Ghost",
+      "link": "https://garrit.xyz/posts/2026-06-13-pac-man-but-you-re-the-ghost",
+      "source": "HN | garrit.xyz",
+      "time": "2026-06-14T04:18:45",
+      "content": "Score: 8 | Comments: 9",
+      "comments": []
+    },
+    {
+      "title": "Software Architecture Guide",
+      "link": "https://martinfowler.com/architecture/",
+      "source": "HN | martinfowler.com",
+      "time": "2026-06-14T04:07:37",
+      "content": "Score: 18 | Comments: 2",
+      "comments": []
+    },
+    {
+      "title": "If I hate making art , what game engine, framework, or tool is most forgiving?",
+      "link": "https://www.reddit.com/r/gamedev/comments/1u5a1f9/if_i_hate_making_art_what_game_engine_framework/",
+      "source": "Reddit | gamedev",
+      "time": "2026-06-14T03:20:57",
+      "content": "I understand that sprite making or 3D blender stuff is a skillset on its own that's somewhat independent of the tool/platform, but man I just wanna focus on killer gameplay sometimes. I know the day will come where I will have to overcome the art barrier cause as an indie it's one of the only ways t",
+      "comments": [
+        {
+          "author": "shuanDang",
+          "text": "skip the art and go straight into building everything with particles and tofu blocks"
+        },
+        {
+          "author": "bird_feeder_bird",
+          "text": "Just make shitty art and then focus on making mechanics :p In the business this is known as ‘developer art’"
+        },
+        {
+          "author": "PedroAosh",
+          "text": "What about ASCII games? I love them!"
+        }
+      ]
+    },
+    {
+      "title": "The game trailer is extremely short.",
+      "link": "https://www.reddit.com/r/indiegames/comments/1u59xe7/the_game_trailer_is_extremely_short/",
+      "source": "Reddit | IndieGames",
+      "time": "2026-06-14T03:15:02",
+      "content": "https://v.redd.it/jnyt2ln8167h1",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
+        },
+        {
+          "author": "NerimaxDev",
+          "text": "i like it!"
+        },
+        {
+          "author": "Am_Biyori",
+          "text": "Looks fun. Is there a deno yet?"
+        }
+      ]
+    },
+    {
+      "title": "The Redistribution of Housing Wealth Caused by Rent Control [pdf]",
+      "link": "https://www.rhawa.org/file/secure/shs-the-impact-of-rent-control-in-st-paul.pdf",
+      "source": "HN | rhawa.org",
+      "time": "2026-06-14T02:59:34",
+      "content": "Score: 61 | Comments: 82",
+      "comments": []
+    },
+    {
+      "title": "Weave: Merging based on language structure and not lines",
+      "link": "https://ataraxy-labs.github.io/weave/",
+      "source": "HN | ataraxy-labs.github.io",
+      "time": "2026-06-14T02:45:38",
+      "content": "Score: 13 | Comments: 2",
+      "comments": []
+    },
+    {
+      "title": "[For Hire] 2D artist! I do characters, props, storyboards, and more",
+      "link": "https://www.reddit.com/r/gameDevJobs/comments/1u594fn/for_hire_2d_artist_i_do_characters_props/",
+      "source": "Reddit | gamedevjobs",
+      "time": "2026-06-14T02:34:14",
+      "content": "https://www.reddit.com/gallery/1szjuqd",
+      "comments": []
+    },
+    {
+      "title": "Building a serial and VGA \"everything console\"",
+      "link": "http://oldvcr.blogspot.com/2026/06/building-serial-and-vga-everything.html",
+      "source": "HN | oldvcr.blogspot.com",
+      "time": "2026-06-14T02:31:15",
+      "content": "Score: 13 | Comments: 0",
+      "comments": []
+    },
+    {
+      "title": "Does Anyone Hate Rendering UI Elements in World Space?",
+      "link": "https://www.reddit.com/r/unrealengine/comments/1u58x5m/does_anyone_hate_rendering_ui_elements_in_world/",
+      "source": "Reddit | unrealengine",
+      "time": "2026-06-14T02:24:12",
+      "content": "For real though. I went through the effort of having a beautifully made UI and then when it's rendered in the world it looks washed out and REALLY bad. And the only two things I can modify are emissive and opacity? That's pretty bad. Even after adjusting lighting, bloom, etc, it still looks bad.",
+      "comments": []
+    },
+    {
+      "title": "Apt Encounters of the Third Kind",
+      "link": "https://igor-blue.github.io/2021/03/24/apt1.html",
+      "source": "HN | igor-blue.github.io",
+      "time": "2026-06-14T02:17:13",
+      "content": "Score: 17 | Comments: 3",
+      "comments": []
+    },
+    {
+      "title": "I’m willing to work with almost anything. I’ve studied for years, and I’m full of ideas because of it.",
+      "link": "https://www.reddit.com/r/gameDevJobs/comments/1u57hcf/im_willing_to_work_with_almost_anything_ive/",
+      "source": "Reddit | gamedevjobs",
+      "time": "2026-06-14T01:12:14",
+      "content": "/r/Rants/comments/1u57gt0/im_willing_to_work_with_almost_anything_ive/",
+      "comments": []
+    },
+    {
+      "title": "For a game that I started developing a week ago, the gameplay isn't that bad, right?",
+      "link": "https://www.reddit.com/r/godot/comments/1u577s3/for_a_game_that_i_started_developing_a_week_ago/",
+      "source": "Reddit | godot",
+      "time": "2026-06-14T00:59:23",
+      "content": "https://v.redd.it/7xm6m9e1d57h1",
+      "comments": [
+        {
+          "author": "ididntgotoharvard",
+          "text": "I like the look. Not sure of the game loop but the animations and movement look quite good."
+        },
+        {
+          "author": "webdev-dreamer",
+          "text": "Love the details in the character animation; that's what makes this look super fun for me, along with the dodging aspects"
+        },
+        {
+          "author": "Logic_530",
+          "text": "Yeah Undertale here. Making clone is a good way to practice developing and you're definitely making great progress. But this kind of gameplay alone"
+        }
+      ]
+    },
+    {
+      "title": "10th Gen Honda Civic Updates Are Signed with AOSP Test Keys",
+      "link": "https://juniperspring.org/posts/honda-evil-valet/",
+      "source": "HN | juniperspring.org",
+      "time": "2026-06-14T00:49:46",
+      "content": "Score: 149 | Comments: 22",
+      "comments": []
+    },
+    {
+      "title": "I made a doohickey that does a thing using shader stuff",
+      "link": "https://www.reddit.com/r/godot/comments/1u56nsf/i_made_a_doohickey_that_does_a_thing_using_shader/",
+      "source": "Reddit | godot",
+      "time": "2026-06-14T00:31:48",
+      "content": "https://v.redd.it/il4iha6l757h1",
+      "comments": [
+        {
+          "author": "InvisGhost",
+          "text": "Love the emotion in the movement! You can never have enough micro expressions like that. What are you planning on making?"
+        },
+        {
+          "author": "chillermane",
+          "text": "This is awesome!!!"
+        },
+        {
+          "author": "MiusoftGames",
+          "text": "Pretty cool mechanics,, waiting to play this 🔥"
+        }
+      ]
+    },
+    {
+      "title": "One day I just started making it...",
+      "link": "https://www.reddit.com/r/indiegames/comments/1u56g91/one_day_i_just_started_making_it/",
+      "source": "Reddit | IndieGames",
+      "time": "2026-06-14T00:21:38",
+      "content": "https://v.redd.it/i56s78ew357h1",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
+        },
+        {
+          "author": "RareSoupStudio",
+          "text": "Demo available now: [https://store.steampowered.com/app/3882150/Grim\\_Axiom/](https://store.steampowered.com/app/3882150/Grim_Axiom/)"
+        },
+        {
+          "author": "NerimaxDev",
+          "text": "nice mood."
+        }
+      ]
+    },
+    {
+      "title": "Setting up UE5 for low poly is such an interesting challenge",
+      "link": "https://www.reddit.com/r/unrealengine/comments/1u55av1/setting_up_ue5_for_low_poly_is_such_an/",
+      "source": "Reddit | unrealengine",
+      "time": "2026-06-13T23:26:48",
+      "content": "So I'm doing a game jam little thing just for fun, not like an official one I'm just doing my own for learning purposes. Decided to try making a low poly game just the same I would in Godot or unity or something, but in unreal. So far I haven't gotten much done, The biggest challenge I've had is try",
+      "comments": [
+        {
+          "author": "Mippithedork",
+          "text": "Can you give examples of the type of stuff you're finding challenging to do this? Low poly style is pretty easy to do in my experience."
+        },
+        {
+          "author": "JabocShivery",
+          "text": "Would love for you to dive a little deeper into what changes you've made/want to make to make the engine better for low poly"
+        },
+        {
+          "author": "Hefty-Newspaper5796",
+          "text": "Download a UE4 project and import it into ue5. It will strip a ton of bloat by default."
+        }
+      ]
+    },
+    {
+      "title": "ReactOS (FOSS \"Windows\") achieves 3D-accelerated Half-Life on real hardware",
+      "link": "https://www.phoronix.com/news/ReactOS-Running-Half-Life",
+      "source": "HN | phoronix.com",
+      "time": "2026-06-13T23:22:05",
+      "content": "Score: 150 | Comments: 25",
+      "comments": []
+    },
+    {
+      "title": "on the default garment of metahuman",
+      "link": "https://www.reddit.com/r/unrealengine/comments/1u5499a/on_the_default_garment_of_metahuman/",
+      "source": "Reddit | unrealengine",
+      "time": "2026-06-13T22:38:05",
+      "content": "on the default garment of metahuman how do you keep only the t-shirt? i can't find option if i place another short/trousers i want, the default one goes on top, so i don't need that",
+      "comments": [
+        {
+          "author": "thehuskynutrition",
+          "text": "You'll want to disable the default clothing material slots in the skeletal mesh settings rather than trying to layer over them, otherwise you're fight"
+        }
+      ]
+    },
+    {
+      "title": "Cypher Runner - an Unreal Engine 5 animation. I've been working on this animation for quite some time, and I'm excited to finally share it.",
+      "link": "https://www.reddit.com/r/unrealengine/comments/1u545tm/cypher_runner_an_unreal_engine_5_animation_ive/",
+      "source": "Reddit | unrealengine",
+      "time": "2026-06-13T22:33:40",
+      "content": "https://youtu.be/AivZbm-qAok?si=pV3rC9_BGNtf7htY",
+      "comments": [
+        {
+          "author": "Objective_Area8284",
+          "text": "Looks good 👍"
+        }
+      ]
+    },
+    {
+      "title": "After years of learning Godot, I’m finally going all-in on my solo dev project",
+      "link": "https://www.reddit.com/r/godot/comments/1u53al9/after_years_of_learning_godot_im_finally_going/",
+      "source": "Reddit | godot",
+      "time": "2026-06-13T21:54:25",
+      "content": "https://v.redd.it/2owwygs1g47h1",
+      "comments": [
+        {
+          "author": "LoCoMogame",
+          "text": "For those that want to learn more: [LocoMo Steam page](https://store.steampowered.com/app/4327260/LocoMo/)"
+        },
+        {
+          "author": "brashacreage",
+          "text": "good luck with it. solo dev is brutal but godot makes it way more doable than before."
+        },
+        {
+          "author": "idontthinkthisisgary",
+          "text": "holy shit this reminds me of the old lego train game"
+        }
+      ]
+    },
+    {
+      "title": "Human Routers of Machine Words",
+      "link": "https://borretti.me/article/human-routers-of-machine-words",
+      "source": "HN | borretti.me",
+      "time": "2026-06-13T21:35:24",
+      "content": "Score: 51 | Comments: 25",
+      "comments": []
+    },
+    {
+      "title": "Is it a dumb idea to release a Steam demo soon if I'm not participating in this next fest?",
+      "link": "https://www.reddit.com/r/gamedev/comments/1u50jp0/is_it_a_dumb_idea_to_release_a_steam_demo_soon_if/",
+      "source": "Reddit | gamedev",
+      "time": "2026-06-13T19:58:14",
+      "content": "I'm pretty happy with the state of my demo and I really want to release it to get feedback. In my mind the earlier I release it the better. But I'm not registered for tomorrow's next fest, so is releasing it this week dumb? Should I just wait a couple weeks till after next fest? Edit: thanks fo",
+      "comments": [
+        {
+          "author": "ByerN",
+          "text": "It (next fest) doesn't matter if you don't have wishlists."
+        },
+        {
+          "author": "sinalta",
+          "text": "In principle, no. But you should be trying to make an event out of your release. Make it a marketing beat. Make a short trailer, post some clips of g"
+        },
+        {
+          "author": "dangerousbob",
+          "text": "Typically you want to get the demo out quickly and let it cook for awhile and then do next fest when you are closer to releasing the game."
+        }
+      ]
+    },
+    {
+      "title": "Police officer investigated for using AI to 'create evidence' in multiple cases",
+      "link": "https://news.sky.com/story/derbyshire-police-officer-investigated-for-using-ai-to-create-evidence-in-multiple-cases-13553661",
+      "source": "HN | news.sky.com",
+      "time": "2026-06-13T19:54:55",
+      "content": "Score: 275 | Comments: 133",
+      "comments": []
+    },
+    {
+      "title": "[Paid] 2D Gothic Fantasy Game Artist/Animator Needed",
+      "link": "https://www.reddit.com/r/gameDevJobs/comments/1u4zf3o/paid_2d_gothic_fantasy_game_artistanimator_needed/",
+      "source": "Reddit | gamedevjobs",
+      "time": "2026-06-13T19:11:18",
+      "content": "/r/gameDevClassifieds/comments/1u4upkj/paid_2d_gothic_fantasy_game_artistanimator_needed/",
+      "comments": []
+    },
+    {
+      "title": "FOR HIRE - Scriptwriter, Narrative Design, Project Manager, Or just a writer!",
+      "link": "https://www.reddit.com/r/gameDevJobs/comments/1u4z0ps/for_hire_scriptwriter_narrative_design_project/",
+      "source": "Reddit | gamedevjobs",
+      "time": "2026-06-13T18:55:01",
+      "content": "https://docs.google.com/document/d/1-1p__ji_tHfk3Q76vetXMg2OpLlyIYzgHd1ouvpy578/edit?usp=sharing",
+      "comments": []
+    },
+    {
+      "title": "Running DOS on Behringers DDX3216 with a DIY x86-Bios from Scratch",
+      "link": "https://chrisdevblog.com/2026/06/08/running-dos-on-behringers-ddx3216-using-a-diy-x86-bios/",
+      "source": "HN | chrisdevblog.com",
+      "time": "2026-06-13T18:32:22",
+      "content": "Score: 84 | Comments: 20",
+      "comments": []
+    },
+    {
+      "title": "My first incremental game just passed 3,300 wishlists on Steam — here's everything I did to get there (the wins and the mistakes)",
+      "link": "https://www.reddit.com/r/gamedev/comments/1u4yfo3/my_first_incremental_game_just_passed_3300/",
+      "source": "Reddit | gamedev",
+      "time": "2026-06-13T18:31:17",
+      "content": "https://ibb.co/spPGXtrQ",
+      "comments": [
+        {
+          "author": "ned_poreyra",
+          "text": "> Reddit ads: at ~$100/day and an average $0.40 CPC, that converted to about 60–70 wishlists/day. Not amazing, not terrible. Actually terrible. Nowad"
+        },
+        {
+          "author": "GoodOlBongo",
+          "text": "That's funny. I've been seeing your ad constantly on reddit. Cool write up and good luck with the game!"
+        },
+        {
+          "author": "GxM42",
+          "text": "Just remember, wishlists are not the end goal. You haven’t won. The game is not over."
+        }
+      ]
+    },
+    {
+      "title": "made a real-time black hole shader in Unity URP (light actually bends)",
+      "link": "https://www.reddit.com/r/Unity3D/comments/1u4yeas/made_a_realtime_black_hole_shader_in_unity_urp/",
+      "source": "Reddit | Unity3D",
+      "time": "2026-06-13T18:29:55",
+      "content": "https://v.redd.it/dfqntbbld37h1",
+      "comments": [
+        {
+          "author": "tanetanetan",
+          "text": "github: tantaneity"
+        },
+        {
+          "author": "AutumnKnightFall",
+          "text": "This is so cool. I have a character that enables a black hole for abilities, this effect would be so perfect."
+        },
+        {
+          "author": "Mountain-Smoke8826",
+          "text": "woah. I'd love to try it out I didn't find it on your github though"
+        }
+      ]
+    },
+    {
+      "title": "GameBoy Workboy",
+      "link": "https://tcrf.net/Workboy",
+      "source": "HN | tcrf.net",
+      "time": "2026-06-13T17:43:02",
+      "content": "Score: 173 | Comments: 61",
+      "comments": []
+    },
+    {
+      "title": "Game dev took my ability to have fun gaming.",
+      "link": "https://www.reddit.com/r/gamedev/comments/1u4wve3/game_dev_took_my_ability_to_have_fun_gaming/",
+      "source": "Reddit | gamedev",
+      "time": "2026-06-13T17:29:55",
+      "content": "Anybody else have this issue? I been developing for 6 months now. Loving it. Until I realized; i can't get myself to game the way I used to. &#x200B; The only way I can make sense of it is comparing it to when I learned guitar (17 years of guitar experience). Very quickly upon learning music; i",
+      "comments": [
+        {
+          "author": "Wespenwald",
+          "text": "It's gonna come back. You need to tell yourself that you're not gaming for research, otherwise you'd have a notebook open. That worked for me after a"
+        },
+        {
+          "author": "Mrcrest",
+          "text": "I’m the exact opposite. When I play games that do something cool or exciting I find myself thinking “how would I code this?” And having fun being impr"
+        },
+        {
+          "author": "Voidavor",
+          "text": "I had this for my first few years of game dev, now after over 10 years of game dev I love games more than ever and when I play a spectacular game I th"
+        }
+      ]
+    },
+    {
+      "title": "How To Make Procedural Splines In-Game",
+      "link": "https://www.reddit.com/r/unrealengine/comments/1u4wsiv/how_to_make_procedural_splines_ingame/",
+      "source": "Reddit | unrealengine",
+      "time": "2026-06-13T17:26:39",
+      "content": "https://youtu.be/0TxzHk_JPoc",
+      "comments": []
+    },
+    {
+      "title": "Just created \"infinite\" skins for my Horse (HAP) using Hue-Tint-Staturation + Mask textures.",
+      "link": "https://www.reddit.com/r/Unity3D/comments/1u4wrgu/just_created_infinite_skins_for_my_horse_hap/",
+      "source": "Reddit | Unity3D",
+      "time": "2026-06-13T17:25:27",
+      "content": "https://v.redd.it/sabuwlcq337h1",
+      "comments": [
+        {
+          "author": "GigglyGuineapig",
+          "text": "Looks really nice!"
+        },
+        {
+          "author": "Live-Common1015",
+          "text": "I feel like you could make a fun gene pool mechanic with this"
+        }
+      ]
+    },
+    {
+      "title": "Amazon CEO's talks with U.S. officials triggered crackdown on Anthropic models",
+      "link": "https://www.wsj.com/tech/ai/amazon-ceos-talks-with-u-s-officials-triggered-crackdown-on-anthropic-models-dcc90578?st=Yct6gx&reflink=desktopwebshare_permalink",
+      "source": "HN | wsj.com",
+      "time": "2026-06-13T16:57:49",
+      "content": "https:&#x2F;&#x2F;www.wsj.com&#x2F;tech&#x2F;ai&#x2F;amazon-ceos-talks-with-u-s-offic...",
+      "comments": []
+    },
+    {
+      "title": "My Godot game MOLDRISE has it's demo up on Steam!",
+      "link": "https://www.reddit.com/r/godot/comments/1u4vqj9/my_godot_game_moldrise_has_its_demo_up_on_steam/",
+      "source": "Reddit | godot",
+      "time": "2026-06-13T16:44:39",
+      "content": "https://v.redd.it/p9i9q6chw27h1",
+      "comments": [
+        {
+          "author": "oneandonlysealoftime",
+          "text": "Oh wow looks cool! Did you make all the models yourself? People look very unsettling, but fitting"
+        },
+        {
+          "author": "_Aethea_",
+          "text": "interesting inspired by parasitic brain control fungi in insects?"
+        },
+        {
+          "author": "B_bI_L",
+          "text": "\\> only thought is going up \\> looks inside \\> goes down \\\\j"
+        }
+      ]
+    },
+    {
+      "title": "When your game only needs to look good from one perspective",
+      "link": "https://www.reddit.com/r/Unity3D/comments/1u4vlpx/when_your_game_only_needs_to_look_good_from_one/",
+      "source": "Reddit | Unity3D",
+      "time": "2026-06-13T16:39:22",
+      "content": "https://v.redd.it/a8wczfi7v27h1",
+      "comments": [
+        {
+          "author": "LadyDeathKZN",
+          "text": "This is amazing!!! Welldone OP. Very smooth"
+        },
+        {
+          "author": "St4va",
+          "text": "That's the mindset of an actual game developer. You find a solution instead of waiting for the engine to add a feature. Keep going."
+        },
+        {
+          "author": "Streakflash",
+          "text": "behind the scenes are always amazing"
+        }
+      ]
+    },
+    {
+      "title": "GLM 5.2 Is Out",
+      "link": "https://twitter.com/jietang/status/2065784751345287314",
+      "source": "HN | twitter.com",
+      "time": "2026-06-13T16:18:31",
+      "content": "https:&#x2F;&#x2F;digg.com&#x2F;tech&#x2F;ii9xibgn",
+      "comments": []
+    },
+    {
+      "title": "This is our roguelite shooter where you can control TWO mice (Rust & Dust) to destroy killer robots!",
+      "link": "https://www.reddit.com/r/indiegames/comments/1u4tte8/this_is_our_roguelite_shooter_where_you_can/",
+      "source": "Reddit | IndieGames",
+      "time": "2026-06-13T15:27:04",
+      "content": "https://v.redd.it/4r4dn1zsi27h1",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
+        },
+        {
+          "author": "ProfessionalPetPof",
+          "text": "Love the parallax, looks good, specially the colors"
+        },
+        {
+          "author": "thibouf",
+          "text": "If yes, you can have a look at our Steam page : http://store.steampowered.com/app/4508260/Rust__Dust/"
+        }
+      ]
+    },
+    {
+      "title": "[For Hire] Let's Create a Model Sheet/ Turnaround for the Characthers in your game! | DM ME! ~[3/5] Slots.",
+      "link": "https://www.reddit.com/r/gameDevJobs/comments/1u4sncf/for_hire_lets_create_a_model_sheet_turnaround_for/",
+      "source": "Reddit | gamedevjobs",
+      "time": "2026-06-13T14:38:42",
+      "content": "https://www.reddit.com/gallery/1u4sncf",
+      "comments": []
+    },
+    {
+      "title": "Noise infusion banned from statistical products published by Census Bureau",
+      "link": "https://desfontain.es/blog/banning-noise.html",
+      "source": "HN | desfontain.es",
+      "time": "2026-06-13T13:54:56",
+      "content": "Score: 782 | Comments: 482",
+      "comments": []
+    },
+    {
+      "title": "[For Hire] I'm a VFX/Spell concept artist | Character design | Background art | 1/5 SLOTS",
+      "link": "https://www.reddit.com/r/gameDevJobs/comments/1u4ri6r/for_hire_im_a_vfxspell_concept_artist_character/",
+      "source": "Reddit | gamedevjobs",
+      "time": "2026-06-13T13:50:25",
+      "content": "https://www.reddit.com/gallery/1u4ri6r",
+      "comments": []
+    },
+    {
+      "title": "Treating pancreatic tumours may have revealed cancer's master switch",
+      "link": "https://economist.com/science-and-technology/2026/06/12/treating-pancreatic-tumours-may-have-revealed-cancers-master-switch",
+      "source": "HN | economist.com",
+      "time": "2026-06-13T13:34:00",
+      "content": "Score: 332 | Comments: 119",
+      "comments": []
+    },
+    {
+      "title": "I managed to get pre-rendered backgrounds working in Unity. This is what it actually looks like in-engine.",
+      "link": "https://www.reddit.com/r/Unity3D/comments/1u4qgy0/i_managed_to_get_prerendered_backgrounds_working/",
+      "source": "Reddit | Unity3D",
+      "time": "2026-06-13T13:04:28",
+      "content": "https://v.redd.it/xa4b01m7t17h1",
+      "comments": [
+        {
+          "author": "NostalgicBear",
+          "text": "Looks really good. Adventure Creator has fantastic support for this kind of game if anyone else is keen on using a ready made solution."
+        },
+        {
+          "author": "LtCalumbo",
+          "text": "Looks awesome! I miss this style of game 😛"
+        },
+        {
+          "author": "SpicyJamDev",
+          "text": "Lmao, never thought of doing something like this, how much performance does it save?"
+        }
+      ]
+    },
+    {
+      "title": "Every Frame Perfect",
+      "link": "https://tonsky.me/blog/every-frame-perfect/",
+      "source": "HN | tonsky.me",
+      "time": "2026-06-13T11:40:20",
+      "content": "Score: 637 | Comments: 205",
+      "comments": []
+    },
+    {
+      "title": "We finally made a proper trailer…",
+      "link": "https://www.reddit.com/r/indiegames/comments/1u4opet/we_finally_made_a_proper_trailer/",
+      "source": "Reddit | IndieGames",
+      "time": "2026-06-13T11:39:00",
+      "content": "https://v.redd.it/q84899xqd17h1",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
+        },
+        {
+          "author": "Forsaken-Sky-2645",
+          "text": "Congrats! Trailer looks solid af"
+        },
+        {
+          "author": "AzurowDev",
+          "text": "take out that ai slop ending image, other than that lovely trailer"
+        }
+      ]
+    },
+    {
+      "title": "Players weren't scared enough, so naturally I made the bad guy in my horror game 10x scarier",
+      "link": "https://www.reddit.com/r/indiegames/comments/1u4mxz0/players_werent_scared_enough_so_naturally_i_made/",
+      "source": "Reddit | IndieGames",
+      "time": "2026-06-13T09:59:53",
+      "content": "https://i.redd.it/qja8xes3v07h1.gif",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
+        },
+        {
+          "author": "Panic_Otaku",
+          "text": "Self incert is a bad habbit"
+        },
+        {
+          "author": "DoctaRoboto",
+          "text": "This looks kinda forced. But if you reskin the guy into EDP445, it will turn into a really scary game."
+        }
+      ]
+    },
+    {
+      "title": "A low-carbon computing platform from your retired phones",
+      "link": "https://research.google/blog/a-low-carbon-computing-platform-from-your-retired-phones/",
+      "source": "HN | research.google",
+      "time": "2026-06-13T09:38:32",
+      "content": "Score: 265 | Comments: 141",
+      "comments": []
+    },
+    {
+      "title": "Godot is beautiful",
+      "link": "https://www.reddit.com/r/godot/comments/1u4lcko/godot_is_beautiful/",
+      "source": "Reddit | godot",
+      "time": "2026-06-13T08:20:53",
+      "content": "https://www.reddit.com/gallery/1u4lcko",
+      "comments": [
+        {
+          "author": "FlockedAndLoaded",
+          "text": "No U R"
+        },
+        {
+          "author": "domiDotZer0",
+          "text": "I want to be able to make something this beautiful"
+        },
+        {
+          "author": "CaveJohnson376",
+          "text": "it's not godot that's beautiful it's your game that's beautiful"
+        }
+      ]
+    },
+    {
+      "title": "Python 3.14 garbage collection rigamarole",
+      "link": "https://theconsensus.dev/p/2026/06/06/python-3-14-garbage-collection-rigamarole.html",
+      "source": "HN | theconsensus.dev",
+      "time": "2026-06-12T11:59:40",
+      "content": "Score: 26 | Comments: 14",
+      "comments": []
+    },
+    {
+      "title": "Codex for open source",
+      "link": "https://openai.com/form/codex-for-oss/",
+      "source": "HN | openai.com",
+      "time": "2026-06-11T22:20:03",
+      "content": "Score: 203 | Comments: 69",
+      "comments": []
+    },
+    {
+      "title": "Release candidate: Godot 4.7 RC 2",
+      "link": "https://www.reddit.com/r/godot/comments/1u36fft/release_candidate_godot_47_rc_2/",
+      "source": "Reddit | godot",
+      "time": "2026-06-11T18:00:17",
+      "content": "https://godotengine.org/article/release-candidate-godot-4-7-rc-2/",
+      "comments": [
+        {
+          "author": "Olin3D",
+          "text": "We're all racing to see traits implemented!!!"
+        }
+      ]
+    },
+    {
+      "title": "(Re//Verse 2026) Taxonomy and Deobfuscation of a Real World Binary Obfuscator [pdf]",
+      "link": "https://github.com/AnalogCyberNuke/RE-Verse-2026-Slides/blob/main/Reverse26.pdf",
+      "source": "HN | github.com",
+      "time": "2026-06-11T15:06:28",
+      "content": "Score: 6 | Comments: 1",
+      "comments": []
+    },
+    {
+      "title": "FreeOberon – Open-Source, Cross-Platform, Free Pascal/Turbo Pascal-Like Language",
+      "link": "https://github.com/kekcleader/FreeOberon",
+      "source": "HN | github.com",
+      "time": "2026-06-11T14:34:46",
+      "content": "Score: 55 | Comments: 19",
+      "comments": []
+    },
+    {
+      "title": "The Unity Asset Store Summer Sale is live -- 50% off 400+ assets for the next 4 weeks",
+      "link": "https://www.reddit.com/r/Unity3D/comments/1u29a0n/the_unity_asset_store_summer_sale_is_live_50_off/",
+      "source": "Reddit | Unity3D",
+      "time": "2026-06-10T17:42:23",
+      "content": "https://on.unity.com/4eAPWKc",
+      "comments": [
+        {
+          "author": "JohnnyGoTime",
+          "text": "Sorry, this \"sale\" is disingenuous and a waste of time: *Here's a list of 400+ assets...but only TWO of them are a good (?) deal at a time!* So if y"
+        },
+        {
+          "author": "Reinfeldx",
+          "text": "Hi Trey, what did you find out about the instance of the indie team who had their accounts suspended by Unity for no apparent reason? I'm reluctant to"
+        }
+      ]
+    },
+    {
+      "title": "The Field Guide to CSS Grid Lanes",
+      "link": "https://gridlanes.webkit.org/",
+      "source": "HN | gridlanes.webkit.org",
+      "time": "2026-06-10T09:01:25",
+      "content": "Score: 17 | Comments: 2",
+      "comments": []
+    },
+    {
+      "title": "Appreciating Exif",
+      "link": "https://brentfitzgerald.com/posts/appreciating-exif/",
+      "source": "HN | brentfitzgerald.com",
+      "time": "2026-06-09T20:41:44",
+      "content": "Score: 144 | Comments: 30",
+      "comments": []
+    },
+    {
+      "title": "Pyodide 314.0: Python packages can now publish WebAssembly wheels to PyPI",
+      "link": "https://blog.pyodide.org/posts/314-release/",
+      "source": "HN | blog.pyodide.org",
+      "time": "2026-06-09T15:54:31",
+      "content": "Score: 102 | Comments: 26",
+      "comments": []
+    },
+    {
+      "title": "Creating games entirely on Android!",
+      "link": "https://www.reddit.com/r/godot/comments/1u0kgn4/creating_games_entirely_on_android/",
+      "source": "Reddit | godot",
+      "time": "2026-06-08T20:52:57",
+      "content": "https://godotengine.org/article/gabe-stable-release/",
+      "comments": [
+        {
+          "author": "ironowner",
+          "text": "I agree. I started teaching local kids at my place and plenty had access only to android devices, but no PC/laptops. Out of 20 leads i would say only"
+        },
+        {
+          "author": "AwayEntrepreneur4760",
+          "text": "What’s the point (genuine question)"
+        },
+        {
+          "author": "pianoboy777",
+          "text": "Me too !!!"
+        }
+      ]
+    },
+    {
+      "title": "6 years later, 20k+ copies sold, $135k revenue and I only launched on Console",
+      "link": "https://www.reddit.com/r/gamedev/comments/1tzff7r/6_years_later_20k_copies_sold_135k_revenue_and_i/",
+      "source": "Reddit | gamedev",
+      "time": "2026-06-07T15:38:54",
+      "content": "Ok so this comes a bit out of nowhere and I’m LATE to the party on making this postmortem but that graphic at Summer Games Fest of over 9k+ games being launched on steam had me thinking. So here this goes. Feel free to ask me anything and I’d be more than happy to chat about set up, who to contact,",
+      "comments": [
+        {
+          "author": "Nielscorn",
+          "text": "Why not post the game name 😩"
+        },
+        {
+          "author": "ChemistLow1346",
+          "text": "6 years on a single project shows real dedication. 20k copies on Itch alone is impressive. Curious, did the game spread mostly organically?"
+        },
+        {
+          "author": "natsuzoze",
+          "text": "That’s an interesting one. So you’re saying having a good steam wishlist helps, so would you recommend to release on Steam before considering consoles"
+        }
+      ]
+    },
+    {
+      "title": "Our game jam entry blew up and we turned it into a full release with 175,000 wishlists. It was also stolen multiple times and turned into AI slop.",
+      "link": "https://www.reddit.com/r/gamedev/comments/1tq3sv6/our_game_jam_entry_blew_up_and_we_turned_it_into/",
+      "source": "Reddit | gamedev",
+      "time": "2026-05-28T13:33:42",
+      "content": "Hi! I’m the lead artist and one of the creators of [Scale the Depths](https://store.steampowered.com/app/3198890/Scale_the_Depths/), a casual fishing and fish-scaling game that just launched today. We started out as a few friends who formed our team, Glass Gecko Games, back in university, and we’ve",
+      "comments": [
+        {
+          "author": "valeria_gamedevs",
+          "text": "congrats on the launch, that's a wild timeline. The copycat-as-accidental-marketing thing is the most cursed silver lining I've ever read haha Quick"
+        },
+        {
+          "author": "GardenDistrictWh0re",
+          "text": "Great read, thank you"
+        },
+        {
+          "author": "TokeEmUpJohnny",
+          "text": "Just saw the game drop on GOG (thank you!) and my missus apparently was one of your army of steam wishlisters, haha :D I share your hatred towards \""
+        }
+      ]
+    },
+    {
+      "title": "Indie Games Discord Server!",
+      "link": "https://www.reddit.com/r/indiegames/comments/1tod1b5/indie_games_discord_server/",
+      "source": "Reddit | IndieGames",
+      "time": "2026-05-26T17:00:07",
+      "content": "https://discord.gg/Ufs7DjnwQ2",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
+        }
+      ]
+    },
+    {
+      "title": "Mod post: open discussion on the future of r/Unity3D",
+      "link": "https://www.reddit.com/r/Unity3D/comments/1tliimb/mod_post_open_discussion_on_the_future_of_runity3d/",
+      "source": "Reddit | Unity3D",
+      "time": "2026-05-23T14:49:16",
+      "content": "Hello everyone, the mods here! Some of you may have noticed over these past few months there have been a lot of posts that some may consider ‘low effort’, advertisements, and/or ‘spam’. We’ve seen your concerns and complaints through your posts, comments and ModMails. In the past two months al",
+      "comments": [
+        {
+          "author": "SeanOfTheDev",
+          "text": "I'd much rather see wishlist posts for good looking games than posts for vibe-coded open source software."
+        },
+        {
+          "author": "loftier_fish",
+          "text": "I think you guys generally do a good job regulating self-promotion as is. There's definitely self promotion, but the way its handled is that straight"
+        },
+        {
+          "author": "kytheon",
+          "text": "I hope that if people post something, at least they're honest about their intentions. A question is a question, and an ad is an ad. Like if you're sh"
+        }
+      ]
+    },
+    {
+      "title": "What makes a good audio game? (by Talon) | Games for Blind Gamers 5 Jam",
+      "link": "https://www.reddit.com/r/indiegames/comments/1qloyo9/what_makes_a_good_audio_game_by_talon_games_for/",
+      "source": "Reddit | IndieGames",
+      "time": "2026-01-24T14:53:14",
+      "content": "## Summary **“What Makes a Good Audio Game?”** is an article written by Talon, a blind gamer and game developer, about games that are accessible to blind (and sighted!) players. Talon talks about his experience as a judge for the Games for Blind Gamers Jam, highlights good examples of games submitt",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
+        }
+      ]
+    },
+    {
+      "title": "- ATTENTION: READ ME - Job Board: Rules & Guidelines",
+      "link": "https://www.reddit.com/r/gameDevJobs/comments/xdpu98/attention_read_me_job_board_rules_guidelines/",
+      "source": "Reddit | gamedevjobs",
+      "time": "2022-09-14T02:22:05",
+      "content": "***Scroll down to see the job board rules under the existing updates*** \\---- **UPDATE 2022-09-13** **ATTENTION ALL ARTISTS AND ASSET SELLERS/GAME PROMOTERS**. This is a job board for those looking for work in the game industry or posting jobs related to the game industry. **THIS IS NOT** [Starvi",
+      "comments": [
+        {
+          "author": "hsandt",
+          "text": "Hey, I'm new here and I noticed in Rule 3. that you mention \"gameDevClassifieds\" but the sentence makes it sound like you mean \"this subreddit\" aka \"g"
+        },
+        {
+          "author": "None",
+          "text": "[removed]"
+        }
+      ]
+    },
+    {
+      "title": "苹果新增的「围绝经期」提醒，你该比 watchOS 27 多了解一点",
+      "link": "https://sspai.com/post/75419",
+      "source": "少数派",
+      "time": "Thu, 11 Jun 2026 11:41:47 +0800",
+      "content": "当它突然出现在生命里时，你就知道了该如何面对；当它出现在身边人身上，你也知道该如何帮助她们步入这个全新的人生阶段。查看全文",
+      "comments": []
+    },
+    {
+      "title": "chatgpt pro/plus 与中转站",
+      "link": "https://linux.do/t/topic/2392611",
+      "source": "Linux.do",
+      "time": "Sat, 13 Jun 2026 05:15:51 +0000",
+      "content": "在L站看到好多佬在发plus 20x拼车，当前我用的是中转站的pro，感觉价格上也还行，能接受，一天下来也就十几块二十块，所以想问问各位佬，为什么会选择自己拼车开plus呢？毕竟这种方案还需要自己建服务器走反代，还可能被封，而中转站的话就不需要担心这种风险了啊 1 个帖子 - 1 位参与者 阅读完整话题",
+      "comments": [
+        {
+          "author": "徐霞客",
+          "text": "在L站看到好多佬在发plus 20x拼车，当前我用的是中转站的pro，感觉价格上也还行，能接受，一天下来也就十几块二十块，所以想问问各位佬，为什么会选择自己拼车开plus呢？毕竟这种方案还需要自己建服务器走反代，还可能被封，而中转站的话就不需要担心这种风险了啊 阅读完整话题"
+        }
+      ]
+    },
+    {
+      "title": "发现控制浏览器还是这个genericagent好用啊，",
+      "link": "https://linux.do/t/topic/2392610",
+      "source": "Linux.do",
+      "time": "Sat, 13 Jun 2026 05:15:49 +0000",
+      "content": "闲着没事儿自动注册点账号，workbuddy hermes codex hanako marvis genericagent分别测试了这几个， ga处理的速最快，最方便，马维斯也能搞，但是比较慢。其他几个都差强人意，要不然搞不定各种问题，codex加gpt5.5也是很慢，而且各种问题搞不定，盛名之下其实难负 ，或者说术业有专攻？ 1 个帖子 - 1 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "谁知道我在干嘛",
+      "link": "https://linux.do/t/topic/2392608",
+      "source": "Linux.do",
+      "time": "Sat, 13 Jun 2026 05:15:44 +0000",
+      "content": "1 个帖子 - 1 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "y7000p已过保如何续保",
+      "link": "https://linux.do/t/topic/2392607",
+      "source": "Linux.do",
+      "time": "Sat, 13 Jun 2026 05:15:12 +0000",
+      "content": "请问一下佬友们，本人机器是拯救者y7000p，已经过保，还有什么解决方案可以续保嘛 1 个帖子 - 1 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "MiniMax M3 会有更大参数量版本",
+      "link": "https://linux.do/t/topic/2392600",
+      "source": "Linux.do",
+      "time": "Sat, 13 Jun 2026 05:13:46 +0000",
+      "content": "根据 M3 负责人阿岛与 MiniMax X 官方账号，M3 系列应该存在一个大参数量版本，对应之前“~500B，~1T”的传言 https://x.com/MiniMax_AI/status/2065583301440806960 https://x.com/SkylerMiao7/status/2065438597055127841 2 个帖子 - 2 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "好事儿从来轮不到我:sob:",
+      "link": "https://linux.do/t/topic/2392597",
+      "source": "Linux.do",
+      "time": "Sat, 13 Jun 2026 05:13:36 +0000",
+      "content": "昨天看到几个佬友发帖都领到了 2 个帖子 - 2 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "凡人修仙传新一季剧情怎么样",
+      "link": "https://linux.do/t/topic/2392586",
+      "source": "Linux.do",
+      "time": "Sat, 13 Jun 2026 05:12:10 +0000",
+      "content": "在这里聊聊凡人修仙传新一季的剧情，大家可以敞开的讨论 2 个帖子 - 2 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "这个意思是说 GPT 5.5 也要被美国政府禁用吗",
+      "link": "https://linux.do/t/topic/2392575",
+      "source": "Linux.do",
+      "time": "Sat, 13 Jun 2026 05:09:33 +0000",
+      "content": "这意思是不是 claude 天天AI 安全，zg威胁论，挖坑把自己埋了，也要拉GPT一起下水。这家公司真的没有一点底线。 2 个帖子 - 2 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "新人，为什么我今天LDC没有增加",
+      "link": "https://linux.do/t/topic/2392571",
+      "source": "Linux.do",
+      "time": "Sat, 13 Jun 2026 05:09:19 +0000",
+      "content": "刚注册的号，今天是第二天登录，手机登录的。记录里面只看到昨天的50，今天的怎么没有呢 2 个帖子 - 2 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "【请教】Codex二次接码的号码是一个吗？第一次和第二次必须是一个吗？",
+      "link": "https://linux.do/t/topic/2392566",
+      "source": "Linux.do",
+      "time": "Sat, 13 Jun 2026 05:09:00 +0000",
+      "content": "rt，请大佬解答下。目前免费的codex login要接码，我后面准备长期订阅使用，想知道找临时接码的可以不，后面二次接码是不是要第一次接码的号码？ 4 个帖子 - 4 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "Digtal Ocean 的 GitHub 学生优惠无了？",
+      "link": "https://linux.do/t/topic/2392547",
+      "source": "Linux.do",
+      "time": "Sat, 13 Jun 2026 05:04:31 +0000",
+      "content": "上个月刚刚开通了 GitHub 学生包，这个月就收到了 DigitalOcean 的邮件，反馈学生优惠取得的积分将在下个月底过期。 才撸了 2 个小鸡玩玩就无了 1 个帖子 - 1 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "Claude Fable 5 在 Epoch FrontierMath v2 上碾压了 谷歌AI co-mathematician 与 GPT 5.5",
+      "link": "https://linux.do/t/topic/2392546",
+      "source": "Linux.do",
+      "time": "Sat, 13 Jun 2026 05:04:06 +0000",
+      "content": "我觉得，我希望，能尽快看到 5.5 pro 的成绩 12 个帖子 - 7 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "fable5没了，看消息通知推测GPT5.5感觉也危险啊",
+      "link": "https://linux.do/t/topic/2392540",
+      "source": "Linux.do",
+      "time": "Sat, 13 Jun 2026 05:02:54 +0000",
+      "content": "8 个帖子 - 8 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "claude code分类器问题",
+      "link": "https://linux.do/t/topic/2392519",
+      "source": "Linux.do",
+      "time": "Sat, 13 Jun 2026 04:59:23 +0000",
+      "content": "小白发问：用claude code对话时会反复出现分类器卡顿的情况，请各位大佬有方法避免吗 2 个帖子 - 2 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "人到中年，喜得爱女，和佬友们分享喜悦",
+      "link": "https://linux.do/t/topic/2392514",
+      "source": "Linux.do",
+      "time": "Sat, 13 Jun 2026 04:58:49 +0000",
+      "content": "楼主今年34了，怀孕时候，全家都想要个女儿，之前在私立医院做大排畸的时候，人家暗示是个男孩 ，还以为这辈子有个小棉袄的梦想破灭了（没有要二胎的想法），没想到生出来让我去确认的时候，是个女孩，真的是意外之喜，太开心了 ，把喜悦分享给各位佬友，也希望大家能够诸事顺遂，梦想成真 18 个帖子 - 17 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "codex team用户邀请最多可以5次，工作区可以总计邀请10次，有人用过吗",
+      "link": "https://linux.do/t/topic/2392509",
+      "source": "Linux.do",
+      "time": "Sat, 13 Jun 2026 04:58:09 +0000",
+      "content": "今天自己48team母号，5小时限额跑光额度时候出现一个新按钮，点开之后看到的。有人用过么，看起来比plus个人用户邀请次数多一些 但是这个250点额度是啥意思，不是一次重置机会么？team用户这个是共500刀额外的额度用量，还是500creit，我记得1:40吧，如果时500creit不是只有12.5刀，那也太少了吧。 此外，不知道邀请一个新用户是不是工作区就多给人，要按席位付费啊？那不是亏麻了~ 1 个帖子 - 1 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "家用nas有推荐吗",
+      "link": "https://linux.do/t/topic/2392507",
+      "source": "Linux.do",
+      "time": "Sat, 13 Jun 2026 04:58:04 +0000",
+      "content": "打算买一台nas用于家庭存储 预算1500内(不含硬盘) 有推荐吗佬们 5 个帖子 - 4 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "Notion提示无法使用，请问有解决的办法吗？",
+      "link": "https://linux.do/t/topic/2392503",
+      "source": "Linux.do",
+      "time": "Sat, 13 Jun 2026 04:56:46 +0000",
+      "content": "就是Notion的AI经常遇到这个问题， 提示：此操作当前不可用。请稍后再试，如果问题仍然存在，请联系支持人员。 工作区正常，会员也正常。但是一直有这个提示，应该网络问题，但是切换网络和提示都没有有效恢复。请问佬友知道还有什么办法，能立马解决吗 1 个帖子 - 1 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "佬友们，发现一个绕过SIRI AI地理围栏的方法",
+      "link": "https://linux.do/t/topic/2392502",
+      "source": "Linux.do",
+      "time": "Sat, 13 Jun 2026 04:56:22 +0000",
+      "content": "不用尾插，分享方法的话是不是应该加个lv限制比较好 1 个帖子 - 1 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "claude fable 5没了。。。。",
+      "link": "https://linux.do/t/topic/2392499",
+      "source": "Linux.do",
+      "time": "Sat, 13 Jun 2026 04:56:06 +0000",
+      "content": "还没开始蹬就下线了 1 个帖子 - 1 位参与者 阅读完整话题",
+      "comments": []
+    },
+    {
+      "title": "“日本游戏大赏2026”年度作品部门公众投票现已开始",
+      "link": "https://www.gcores.com/articles/215820",
+      "source": "Gaming | 机核网",
+      "time": "Fri, 12 Jun 2026 14:01:14 +0800",
+      "content": "一般社团法人计算机娱乐协会（CESA）宣布，2026年6月12日起，“日本游戏大赏2026”年度作品部门的公众投票正式开启。投票截止时间为7月17日23:59（日本时间）。 本次投票的对象为2025年6月1日至2026年5月31日期间在日本国内发售的所有游戏作品，涵盖家用机、掌机、PC、智能手机等全平台，也包括海外游戏的日本版移植作品。每人限投一作。投票结束后，日本游戏大赏选考委员会将根据游戏设计、编程、图形、音效、剧本、用户评价六项标准进行评审，最终选出“大赏”和“优秀赏”等奖项。此外，“特别赏”“突破赏”等将由委员会另行推荐决定。作为投票激励，CESA 准备了约350份奖品，包括 PlayStation 5 Pro（3名）、Nintendo Switch 2（3名）、Xbox Series X（3名）等主机，以及受赏软件、相关周边、东京游戏展2026入场券和颁奖典礼邀请等。去年（2025年）的大赏得主为《暗喻幻想：ReFantazio》，2024年则为《塞尔达传说 王国之泪》。颁奖典礼定于2026年9月15日18:00在东京希尔顿酒店举行，并计划线上直播。",
+      "comments": []
+    },
+    {
+      "title": "BOOOMSeek 提名名单公布，咱们 ChinaJoy 见~",
+      "link": "https://www.gcores.com/articles/215819",
+      "source": "Gaming | 机核网",
+      "time": "Fri, 12 Jun 2026 13:59:15 +0800",
+      "content": "2026 BOOOM 游戏创想大赛 BOOOMSeek 移动端游戏征集赛道的评选工作已经完成啦，五个奖项的提名名单今天正式公布～经过评审团的评审和讨论，五个奖项各选出了 5 款提名游戏。有趣的是，「玩家之选奖」和「最佳玩法奖」的提名名单完全一致——《翡翠刮刮刮》、《力力普的工坊》、《萌宝比特》、《茫室》、《爪爪特攻》，综合表现和玩法创意两边都被它们拿下了；而「最佳美术奖」和「骁龙最佳技术突破奖」则完全是另一批作品的面貌。 每一款优秀作品的诞生，都离不开开发者对创意的执着与对技术的探索。作为本次大赛的同行者，骁龙也一直在为游戏生态提供底层支持——无论开发者是借助骁龙的高效工具链来加速创意落地，还是依靠其强悍的图形算力去冲击更极致的画面表达，骁龙都致力于为每一个灵感提供更广阔的施展舞台。以上奖项最终获奖结果，将在 ChinaJoy 期间揭晓其中「玩家之选奖」「最佳玩法奖」「最佳美术奖」由 ChinaJoy 现场玩家投票选出，「骁龙最佳游戏」和「骁龙最佳技术突破奖」由骁龙评审团在 ChinaJoy 期间投票评出。 所有提名游戏将出展 ChinaJoy 骁龙展位欢迎感兴趣的朋友们来现场体验交流～ 感谢以下陪伴「BOOOM 暴造」的伙伴们：骁龙、机核发行！ 关于首席赞助商「骁龙」 骁龙（Snapdragon）是高通公司（Qualcomm）打造的业界领先智能移动平台，为智能手机、平板电脑、笔记本电脑、智能汽车、XR 终端及可穿戴等多元设备提供芯片及系统级软件支持。从手机到汽车，骁龙让万物互联更智能、更高效。 了解详情 关于商业化伙伴「GCORES PUBLISHING」 GCORES PUBLISHING 是机核精心打造的独立游戏发行业务，专注为中小型独立开发团队提供从孵化到发行的全方位支持。我们热爱游戏，擅长发掘那些闪闪发光的创意宝藏，帮助好游戏被更多玩家发现、喜爱。我们的使命是拥抱每一份游戏的乐趣，与开发者并肩前行，将创意变为现实，让精彩的游戏体验触达世界各地的玩家。 了解详情",
+      "comments": []
+    },
+    {
+      "title": "《狸狸：胖哒的夏日》Steam新品节demo现已上线，CRITICAL REFLEX公布多款新作动态",
+      "link": "https://www.gcores.com/articles/215808",
+      "source": "Gaming | 机核网",
+      "time": "Fri, 12 Jun 2026 11:31:52 +0800",
+      "content": "独立游戏发行商CRITICAL REFLEX近期在夏日游戏节期间集中更新了多款新作消息。其中，温馨治愈的《狸狸：胖哒的夏日》在IGN Live上首播了全新预告片，在Steam上推出了全面重制的试玩版，并且将参与接下来的Steam新品节。 &lt;内嵌内容，请前往机核查看&gt;在《狸狸：胖哒的夏日》中，你将扮演一只毛茸茸的狸猫Pon，在一个风景如画的日本小镇里兼职邮递员，递送包裹、表演BMX特技、帮助街坊邻居解决各种零活，并在夏季末的祭典前修复大狸猫神社。本次试玩版在去年发布的基础上进行了扩展，增加了更多内容、改进了系统并新增了游戏功能。试玩版包含游戏开场前三天的2-3小时内容，涵盖教程、Pon在邮局的第一天以及猫社建造。全新试玩版特点： 体验游戏的前三天 完成六个任务，接受BMX挑战，并访问BMX喷漆店 以非线性任务进度和更新的导航系统探索小镇 发现新的猫社装饰品、角色语音以及扩展的语言支持 存档数据可继承至正式版 除了《狸狸：胖哒的夏日》，CR还分享了其不断扩大的游戏阵容中的其他新动态。独特的沉浸式模拟游戏《警目如炬》在 IGN Live 上发布了全新实机预告片，展示了玩家与巨型警察巨人之间令人不安的猫鼠关系。而在上周日的PC Gaming Show上公布的怪诞烹饪肉鸽《餍》和联机恐怖合作游戏《Pipes.exe》也已加入发行阵容。《餍》中玩家需用一台被诅咒的冰箱为怪物顾客烹制骇人菜肴；《Pipes.exe》则支持1-4人联机，扮演QA员工在超现实系统中攀爬管道、躲避bug并保持职场礼仪，其首个公开测试现已在Steam上线。 现在就将《狸狸：胖哒的夏日》《Pipes.exe》《餍》和《警目如炬》加入Steam愿望单！其中《狸狸》还将在发售时首发加入XGP。更多计划和更新信息将在夏季陆续放出。感兴趣的玩家现在即可前往Steam下载试玩。",
+      "comments": []
+    },
+    {
+      "title": "《烤串大厨! 餐厅模拟器》1.0正式版现已在Steam发布，已获7,000余篇玩家评价",
+      "link": "https://www.gcores.com/articles/215806",
+      "source": "Gaming | 机核网",
+      "time": "Fri, 12 Jun 2026 11:10:29 +0800",
+      "content": "游戏开发商兼发行商Biotech Gameworks今日宣布，《烤串大厨! 餐厅模拟器》(Kebab Chefs) 已在Steam正式推出1.0版本，结束抢先体验阶段，带来迄今为止最完整的餐厅经营模拟体验。为庆祝1.0版本正式上线，《烤串大厨! 餐厅模拟器》现推出为期两周的首发优惠，折扣力度高达六折，促销期间售价为40.8元。 《烤串大厨! 餐厅模拟器》于两年前进入抢先体验阶段，已在玩家、主播及内容创作者群体中引起了广泛关注。目前已有多个相关视频取得亮眼的播放成绩，其中不乏播放量突破380万、210万及150万的热门内容。 不止于烧烤——全方位体验餐厅经营《烤串大厨! 餐厅模拟器》是一款烹饪与餐厅经营模拟游戏，支持单人游玩或最多四人在线合作。玩家将继承一家小餐厅，凭借自己的经营能力决定它的命运。这家餐厅究竟会走向衰败，还是蜕变为一座五星级的美食殿堂？经过两年多的持续开发和玩家反馈，《烤串大厨! 餐厅模拟器》1.0版将呈上一份完整的餐馆经营体验。玩家可以自由建造并装修自己的餐厅，烹饪来自世界各地的多样料理，体验各个季节的特色活动，调配员工，管理账目，一步步将一家本地小餐馆发展为属于自己的餐饮帝国。《烤串大厨! 餐厅模拟器》的名字或许会让人产生误解，但这款游戏远不止是一个烤肉串摊位模拟器。玩家可以供应的菜品种类繁多，涵盖烧烤、披萨、甜点、烘焙食品、炸鸡等各式料理。此外，游戏还更新了日式料理，新增拉面、寿司等特色菜品。 1.0版本亮点 支持最多四人在线合作 烹饪流程丰富多样，包括揉面、烤串、制作甜点、炸鸡等 可自由布置餐厅、管理员工及财务 新增日式料理，包含拉面、寿司等特色菜品 抢先体验的成功与来自社区的支持自2024年1月进入抢先体验阶段以来，《烤串大厨! 餐厅模拟器》已获得数以千计的玩家，目前在Steam上获得了\"特别好评\"，累计收获超7,000篇玩家评论。 &lt;内嵌内容，请前往机核查看&gt;开发团队根据社区反馈一直在对游戏进行改进，1.0版本将提供迄今为止最全面的餐厅经营模拟体验。",
       "comments": []
     },
     {
@@ -1297,42 +2439,12 @@
       "comments": []
     },
     {
-      "title": "Release candidate: Godot 4.7 RC 2",
-      "link": "https://www.reddit.com/r/godot/comments/1u36fft/release_candidate_godot_47_rc_2/",
-      "source": "Reddit | godot",
-      "time": "2026-06-11T18:00:17",
-      "content": "https://godotengine.org/article/release-candidate-godot-4-7-rc-2/",
-      "comments": [
-        {
-          "author": "Olin3D",
-          "text": "We're all racing to see traits implemented!!!"
-        }
-      ]
-    },
-    {
       "title": "H.R. 6028 would fundamentally change the U.S. Copyright Office",
       "link": "https://www.eff.org/deeplinks/2026/06/congress-just-rushed-through-disastrous-copyright-office-overhaul",
       "source": "HN | eff.org",
       "time": "2026-06-11T00:00:42",
       "content": "Score: 180 | Comments: 56",
       "comments": []
-    },
-    {
-      "title": "The Unity Asset Store Summer Sale is live -- 50% off 400+ assets for the next 4 weeks",
-      "link": "https://www.reddit.com/r/Unity3D/comments/1u29a0n/the_unity_asset_store_summer_sale_is_live_50_off/",
-      "source": "Reddit | Unity3D",
-      "time": "2026-06-10T17:42:23",
-      "content": "https://on.unity.com/4eAPWKc",
-      "comments": [
-        {
-          "author": "JohnnyGoTime",
-          "text": "Sorry, this \"sale\" is disingenuous and a waste of time: *Here's a list of 400+ assets...but only TWO of them are a good (?) deal at a time!* So if y"
-        },
-        {
-          "author": "Reinfeldx",
-          "text": "Hi Trey, what did you find out about the instance of the indie team who had their accounts suspended by Unity for no apparent reason? I'm reluctant to"
-        }
-      ]
     },
     {
       "title": "A key remapping daemon for Linux",
@@ -1365,133 +2477,6 @@
       "time": "2026-06-09T18:42:58",
       "content": "Score: 9 | Comments: 1",
       "comments": []
-    },
-    {
-      "title": "Creating games entirely on Android!",
-      "link": "https://www.reddit.com/r/godot/comments/1u0kgn4/creating_games_entirely_on_android/",
-      "source": "Reddit | godot",
-      "time": "2026-06-08T20:52:57",
-      "content": "https://godotengine.org/article/gabe-stable-release/",
-      "comments": [
-        {
-          "author": "ironowner",
-          "text": "I agree. I started teaching local kids at my place and plenty had access only to android devices, but no PC/laptops. Out of 20 leads i would say only"
-        },
-        {
-          "author": "AwayEntrepreneur4760",
-          "text": "What’s the point (genuine question)"
-        },
-        {
-          "author": "pianoboy777",
-          "text": "Me too !!!"
-        }
-      ]
-    },
-    {
-      "title": "6 years later, 20k+ copies sold, $135k revenue and I only launched on Console",
-      "link": "https://www.reddit.com/r/gamedev/comments/1tzff7r/6_years_later_20k_copies_sold_135k_revenue_and_i/",
-      "source": "Reddit | gamedev",
-      "time": "2026-06-07T15:38:54",
-      "content": "Ok so this comes a bit out of nowhere and I’m LATE to the party on making this postmortem but that graphic at Summer Games Fest of over 9k+ games being launched on steam had me thinking. So here this goes. Feel free to ask me anything and I’d be more than happy to chat about set up, who to contact,",
-      "comments": [
-        {
-          "author": "Nielscorn",
-          "text": "Why not post the game name 😩"
-        },
-        {
-          "author": "ChemistLow1346",
-          "text": "6 years on a single project shows real dedication. 20k copies on Itch alone is impressive. Curious, did the game spread mostly organically?"
-        },
-        {
-          "author": "natsuzoze",
-          "text": "That’s an interesting one. So you’re saying having a good steam wishlist helps, so would you recommend to release on Steam before considering consoles"
-        }
-      ]
-    },
-    {
-      "title": "Our game jam entry blew up and we turned it into a full release with 175,000 wishlists. It was also stolen multiple times and turned into AI slop.",
-      "link": "https://www.reddit.com/r/gamedev/comments/1tq3sv6/our_game_jam_entry_blew_up_and_we_turned_it_into/",
-      "source": "Reddit | gamedev",
-      "time": "2026-05-28T13:33:42",
-      "content": "Hi! I’m the lead artist and one of the creators of [Scale the Depths](https://store.steampowered.com/app/3198890/Scale_the_Depths/), a casual fishing and fish-scaling game that just launched today. We started out as a few friends who formed our team, Glass Gecko Games, back in university, and we’ve",
-      "comments": [
-        {
-          "author": "valeria_gamedevs",
-          "text": "congrats on the launch, that's a wild timeline. The copycat-as-accidental-marketing thing is the most cursed silver lining I've ever read haha Quick"
-        },
-        {
-          "author": "GardenDistrictWh0re",
-          "text": "Great read, thank you"
-        },
-        {
-          "author": "TokeEmUpJohnny",
-          "text": "Just saw the game drop on GOG (thank you!) and my missus apparently was one of your army of steam wishlisters, haha :D I share your hatred towards \""
-        }
-      ]
-    },
-    {
-      "title": "Indie Games Discord Server!",
-      "link": "https://www.reddit.com/r/indiegames/comments/1tod1b5/indie_games_discord_server/",
-      "source": "Reddit | IndieGames",
-      "time": "2026-05-26T17:00:07",
-      "content": "https://discord.gg/Ufs7DjnwQ2",
-      "comments": [
-        {
-          "author": "AutoModerator",
-          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
-        }
-      ]
-    },
-    {
-      "title": "Mod post: open discussion on the future of r/Unity3D",
-      "link": "https://www.reddit.com/r/Unity3D/comments/1tliimb/mod_post_open_discussion_on_the_future_of_runity3d/",
-      "source": "Reddit | Unity3D",
-      "time": "2026-05-23T14:49:16",
-      "content": "Hello everyone, the mods here! Some of you may have noticed over these past few months there have been a lot of posts that some may consider ‘low effort’, advertisements, and/or ‘spam’. We’ve seen your concerns and complaints through your posts, comments and ModMails. In the past two months al",
-      "comments": [
-        {
-          "author": "SeanOfTheDev",
-          "text": "I'd much rather see wishlist posts for good looking games than posts for vibe-coded open source software."
-        },
-        {
-          "author": "loftier_fish",
-          "text": "I think you guys generally do a good job regulating self-promotion as is. There's definitely self promotion, but the way its handled is that straight"
-        },
-        {
-          "author": "kytheon",
-          "text": "I hope that if people post something, at least they're honest about their intentions. A question is a question, and an ad is an ad. Like if you're sh"
-        }
-      ]
-    },
-    {
-      "title": "What makes a good audio game? (by Talon) | Games for Blind Gamers 5 Jam",
-      "link": "https://www.reddit.com/r/indiegames/comments/1qloyo9/what_makes_a_good_audio_game_by_talon_games_for/",
-      "source": "Reddit | IndieGames",
-      "time": "2026-01-24T14:53:14",
-      "content": "## Summary **“What Makes a Good Audio Game?”** is an article written by Talon, a blind gamer and game developer, about games that are accessible to blind (and sighted!) players. Talon talks about his experience as a judge for the Games for Blind Gamers Jam, highlights good examples of games submitt",
-      "comments": [
-        {
-          "author": "AutoModerator",
-          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
-        }
-      ]
-    },
-    {
-      "title": "- ATTENTION: READ ME - Job Board: Rules & Guidelines",
-      "link": "https://www.reddit.com/r/gameDevJobs/comments/xdpu98/attention_read_me_job_board_rules_guidelines/",
-      "source": "Reddit | gamedevjobs",
-      "time": "2022-09-14T02:22:05",
-      "content": "***Scroll down to see the job board rules under the existing updates*** \\---- **UPDATE 2022-09-13** **ATTENTION ALL ARTISTS AND ASSET SELLERS/GAME PROMOTERS**. This is a job board for those looking for work in the game industry or posting jobs related to the game industry. **THIS IS NOT** [Starvi",
-      "comments": [
-        {
-          "author": "hsandt",
-          "text": "Hey, I'm new here and I noticed in Rule 3. that you mention \"gameDevClassifieds\" but the sentence makes it sound like you mean \"this subreddit\" aka \"g"
-        },
-        {
-          "author": "None",
-          "text": "[removed]"
-        }
-      ]
     },
     {
       "title": "线下活动｜周日到广州来，给你一张过去的 CD",

@@ -1,18 +1,10 @@
 {
   "metadata": {
-    "last_updated": "2026-10-25T05:35:49.145509",
-    "total_count": 15818,
+    "last_updated": "2026-10-26T05:42:45.295757",
+    "total_count": 15889,
     "ai_summary": "§ SYSTEM_ERROR: AI_LINK_UNAVAILABLE (Key Missing)"
   },
   "items": [
-    {
-      "title": "社区速递 162 | MUJI 靠垫、中兴路由器与派友们的长假吃灰装备",
-      "link": "https://sspai.com/post/116820",
-      "source": "少数派",
-      "time": "Wed, 21 Oct 2026 17:00:00 +0800",
-      "content": "除了首页时间流和侧栏的精选展位，少数派Matrix社区还有很多优秀内容因条件所限无法得到有效曝光，因此我们决定重启Matrix周报，并在此基础上添加更多社区内容、作者投稿新玩意呈现给大家。上周社区速递 ...查看全文",
-      "comments": []
-    },
     {
       "title": "定了！2026星图游戏嘉年华12月18日登陆上海，200+创新游戏亮相",
       "link": "https://www.yystv.cn/p/14524",
@@ -46,14 +38,6 @@
       "comments": []
     },
     {
-      "title": "主流大模型挑战最高难度《杀戮尖塔》，全都死于太过稳健……",
-      "link": "https://www.yystv.cn/p/14518",
-      "source": "Gaming | 游研社",
-      "time": "Tue, 20 Oct 2026 00:00:00 +0800",
-      "content": "“血量只有快没有的时候才是有用的资源”，AI大人。上个星期，加拿大Vector研究所与荷兰Radboud大学的研究人员在论文预印本平台arXiv上发布了一项最新研究，论文题为《SpireBench：用〈杀戮尖塔〉评估智能体模型的长期战略能力》。顾名思义，这项被命名为\"SpireBench\"的研究，目的在于通过知名肉鸽卡牌构筑游戏《杀戮尖塔》，来测试当前的大语言模型能否在频繁应对战斗的同时做出长线规划——选择路线、管理资源、构筑牌组。AI们将一路爬塔，最终尝试实现通关这个终极目标。这并非第一次\"让AI打《杀戮尖塔》\"的实验。不过此前的相关测试都有明显的缩水：有的只用了8张牌和5个孤立战斗场景，测的是微操而非完整对局；有的虽然驱动了真实游戏，但难度选在最低的A0，模型只负责战斗出牌和选卡牌奖励，不涉及路线规划、商店购物、营火决策等其他抉择。所以这次使用20个大模型测试游戏顶级难度A20的“SpireBench”，算是头一次使用多模型，挑战《杀戮尖塔》完整原作最高难度的系统性研究。根据实验结果，20个大模型统一使用铁甲战士角色，各自开到最高推理档位，在A20难度下挑战了相同的10个全新种子。拢共200局游戏下来，最终只有GPT-5.6 Sol作为独苗，通关了一次心脏。通关率如此惨淡，研究发现一大重要因素在于：AI实在是太稳健了。1在解释AI为什么输之前，需要先解释一下《杀戮尖塔》对于AI难在哪里。众所周知，在一众知名肉鸽游戏中，《杀戮尖塔》对玩家资源管理水平的考验是最严格的，或许没有之一。玩家需要精准把控自身的血量，进而以此获取卡牌、药水、遗物，构筑相应的BD套路，应对不同的挑战。尤其在高难度下，浪费一次微小的资源几乎就意味着死亡。这次研究进一步把游戏拆分为五层时间维度：每一回合，AI要思考出哪些牌，什么顺序，打哪个敌人；每场战斗，AI要思考怎样用血量和药水换取胜利；每一阶段，AI要思考走哪条路线，承担多大风险；每整局，AI要思考自身的成长速度能否跟上游戏难度的增长；多局之间，AI要思考有什么值得记住，帮助自己更好地通关。其中难点在于，游戏没有所谓的标准答案。有经验的玩家想必深有体会，前期拿的战力卡能救一时之急，后期却可能阻碍卡组启动；打精英怪可能暴毙，同时也可能奖励强力的遗物或卡牌；不同的敌人类型，考验卡组的不同能力……《杀戮尖塔》把大大小小的挑战浓缩在一局游戏中，战斗中的操作、构筑牌组的规划、选路线和管理资源的宏观战略，层层嵌套，牵一发而动全身。当下的大模型用来执行即时任务往往表现得不错，但其能不能在几百个决策点上保持连贯的战略判断？能不能权衡眼前小亏和长远大利？能不能从失败中学到东西？实验结果显示，表现最好的四个模型分别是Claude Fable 5.1（平均通过1.6个阶段）、GPT-6 Astra（1.5个阶段）、Claude Opus 5（1.3个阶段）和GPT-5.6 Sol（1.1个阶段），这些最聪明的AI超越了人类玩家的平均水平，但和真正的高手相比显然还存在不小的距离。所以《杀戮尖塔》给出的答案是：AI的长期战略能力，暂时还得练。2问题出在哪里？最显著的就是AI太过稳健，以至于到了“怂”的地步。实验选取了4位高手游戏主播的逐局数据作为对比，发现AI在第一幕平均只打约0.9—1.4场精英战，主播约为2.6场；AI在57%—75%的营火选择回血，高手约为9%。即使抵达营火时血量仍有七成以上，模型也会在31%的情况下选择休息——相同情况下所有主播均选择升级卡牌。这就导致，AI往往带着满血、却较弱的卡组进入BOSS房。例如上述“最强”的四个模型，进入第一阶段BOSS战时，血量往往处于上限的90%左右，而主播这个时候大多只剩半血，同时却拥有更强力的遗物和升级过的卡牌，损失的血量转化成了后续战斗的优势。以人类玩家数据为例，采取保守策略（少打精英、多休息）的玩家在第二阶段只有15%的通关率，而积极打精英的玩家则有38%。这一定程度解释了AI通关率低的原因。不仅如此，AI还有一个\"攒牌\"的坏习惯。战斗胜利后的卡牌奖励，人类玩家考虑到最终的卡组构建，会跳过23%（因为并非每张牌都值得拿），而AI只跳过3%-13%，导致牌组越来越臃肿。数据显示，第一阶段BOSS战时，AI的牌组平均有19.3张牌，人类只有16.8张——而在《杀戮尖塔》中，一副臃肿的牌组通常意味着你想要的关键牌更难抽到。学习组建小卡组可能是每个《杀戮尖塔》玩家入门的第一课这些问题综合到一起，你可能会觉得AI太笨了，压根玩不来《杀戮尖塔》，但这么说其实也不准确，事实上，如果仅以第一阶段为评判标准，AI已经达到了顶尖高手的水准。仅看第一阶段，高手主播的通关率大概在85%-92%之间，而表现最好的三个模型，在第一阶段的通关率也达到了90%，两者几乎持平。不过随着游戏的进行，第",
-      "comments": []
-    },
-    {
       "title": "来看看《赛博朋克 2077》｜“边缘行者 2” 版本更新 2.5 为夜之城带来了哪些内容！",
       "link": "https://www.yystv.cn/p/14536",
       "source": "Gaming | 游研社",
@@ -67,30 +51,6 @@
       "source": "少数派",
       "time": "Thu, 22 Oct 2026 17:10:03 +0800",
       "content": "Matrix首页推荐Matrix是少数派的写作社区，我们主张分享真实的产品体验，有实用价值的经验与思考。我们会不定期挑选Matrix最优质的文章，展示来自用户的最真实的体验和观点。文章代表作者个人观点 ...查看全文",
-      "comments": []
-    },
-    {
-      "title": "前瞻｜Apple 新品看点：MacBook 或将推出 OLED 触屏版本",
-      "link": "https://sspai.com/post/116923",
-      "source": "少数派",
-      "time": "Thu, 22 Oct 2026 15:00:00 +0800",
-      "content": "配备触摸屏的 OLED 版 MacBook 型号很可能是这次活动的主角。查看全文",
-      "comments": []
-    },
-    {
-      "title": "终于吃到了那颗梦寐以求的小药丸：我的 ADHD 诊疗记",
-      "link": "https://sspai.com/post/115090",
-      "source": "少数派",
-      "time": "Thu, 22 Oct 2026 11:36:57 +0800",
-      "content": "药物不能解决所有问题，这是是我学到的重要一课。查看全文",
-      "comments": []
-    },
-    {
-      "title": "派早报：荣耀发布 WIN2 系列新品、Google 开源 TorchTPU 等",
-      "link": "https://sspai.com/post/116953",
-      "source": "少数派",
-      "time": "Thu, 22 Oct 2026 08:29:05 +0800",
-      "content": "OpenBSD 8.0 正式发布、腾讯宣布元宝搜索对外开放等。查看全文",
       "comments": []
     },
     {
@@ -142,11 +102,35 @@
       "comments": []
     },
     {
+      "title": "行走江湖前你需要知道的事儿：《影之刃》世界观设定",
+      "link": "https://www.gcores.com/radios/221017",
+      "source": "Gaming | 机核网",
+      "time": "Sun, 25 Oct 2026 23:00:00 +0800",
+      "content": "本期时间轴制作：天行 很多玩家对即将上线的这部《影之刃零》，已经是望眼欲穿了。不过想必大家对于这个游戏的世界观——\"影境\"，还是一知半解。本期节目，Jerry 来当一回茶馆说书先生：给大家讲讲，在主角开始他的冒险之前，这个江湖究竟是什么样子的？这个武林中又曾经发生过哪些大事？* 本期内容基于《雨血》及《影之刃》前作设定整理。《影之刃零》是系列故事的重启之作，部分设定可能不完全对应最终剧情 *",
+      "comments": []
+    },
+    {
+      "title": "60 元打造你的 vibe coding 神器：小米蓝牙遥控器 2 pro",
+      "link": "https://sspai.com/post/114741",
+      "source": "少数派",
+      "time": "Sun, 25 Oct 2026 14:30:31 +0800",
+      "content": "Matrix首页推荐Matrix是少数派的写作社区，我们主张分享真实的产品体验，有实用价值的经验与思考。我们会不定期挑选Matrix最优质的文章，展示来自用户的最真实的体验和观点。文章代表作者个人观点 ...查看全文",
+      "comments": []
+    },
+    {
+      "title": "BOE（京东方）亮相2026核聚变嘉年华北京站 以创新显示技术力促电竞产业升级",
+      "link": "https://www.yystv.cn/p/14542",
+      "source": "Gaming | 游研社",
+      "time": "Sun, 25 Oct 2026 13:40:00 +0800",
+      "content": "10月24日至25日，2026核聚变游戏嘉年华北京站在北京石景山首钢国际会展中心举行。BOE（京东方）再度作为独家显示技术战略合作伙伴重磅参展，携手京东、多家终端品牌及电竞高阶联盟伙伴，以“热爱同屏，睛彩核聚”为主题，围绕《三角洲行动》、《无畏契约》等多个热门游戏IP，集中展示裸眼3D、原生FHD 1000Hz、5K高刷、移动电竞等创新显示技术应用及18款电竞新品。此外，现场还设置了沉浸式体验、水友赛、互动游戏等丰富活动。通过持续推动技术创新与电竞场景融合，BOE（京东方）不断拓展显示技术应用边界，并与产业链合作伙伴共建开放协同的电竞产业生态，以技术赋能生态伙伴，共同推动电竞体验升级与产业高质量发展。裸眼3D显示拓展视觉维度 探索游戏体验新形态随着游戏场景与交互方式日益丰富，显示技术不仅影响画面的清晰度与流畅度，也在拓展玩家感知游戏世界的方式，3D电竞显示为电竞显示创新带来了新的探索方向。作为全球显示行业龙头企业，BOE（京东方）持续深耕裸眼3D电竞显示技术，依托ADS Pro技术，结合新一代可切换3D光学透镜阵列与眼动追踪技术，推动裸眼3D电竞显示技术与多元电竞场景深度融合。BOE（京东方）创新研发的新一代3D光学透镜阵列技术，通过调控光线传播方向，使左右眼接收到不同视点的图像，在无需佩戴3D眼镜的情况下呈现具有空间深度的立体画面，并支持2D/3D灵活切换，为玩家带来更丰富的视觉体验。相较于传统二维画面，裸眼3D能够呈现更具层次感与空间纵深的视觉效果，让游戏中的角色、场景与画面细节展现出更鲜明的立体感，拓展玩家感知游戏世界的视觉维度。活动现场，BOE（京东方）设置ADS Pro 3D电竞显示体验区，集中展示泰坦军团M27E6V-3D、雷神银翼GU27F180L-3D、Acer宏碁掠夺者XB273K-3D、AOC U27G4FD-3D等产品，并结合《三角洲行动》热门游戏IP，让玩家在实际操作中直观感受裸眼3D电竞显示带来的空间层次与沉浸式视觉体验，展现前沿显示技术与游戏内容融合的应用潜力。多元显示技术协同创新 焕新电竞视觉体验依托ADS Pro与自主研发的Oxide高迁移率技术，BOE（京东方）实现FHD分辨率下原生1000Hz刷新率，实现氧化物技术的全新突破，持续推动高刷新率显示技术在电竞领域的应用发展。在活动现场，BOE（京东方）设置ADS Pro千帧对战区，集中展示爱攻AGON AGP257FT原生千帧护眼电竞显示器、EVNIA弈威霹雳X² Pro 25M4P5200T真千帧超高刷护眼电竞显示器等产品。现场玩家可通过《无畏契约》等强调快速反应与精准瞄准的竞技游戏，直观感受原生千帧技术带来的流畅体验。该技术能够更清晰地呈现高速运动画面，帮助玩家及时捕捉目标动态，进一步提升游戏过程中的视觉流畅度与连贯性。在高画质电竞领域，此前，BOE（京东方）携手冠捷在BOE IPC电竞嘉年华发布爱攻AGON AGP327KG 5K 144Hz G-SYNC Pulsar电竞显示器，该产品此次首次亮相玩家活动现场，为现场玩家提供近距离体验产品的机会，也充分展现了BOE（京东方）在高分辨率与高刷新率协同发展方面的产品探索。对于具有丰富场景、精细角色设计与复杂技能特效的游戏，高品质显示能够更充分地呈现画面细节、色彩层次与光影变化，让玩家更好地感受游戏内容的美术设计与视觉表现。在移动电竞领域，由BOE（京东方）f-OLED显示技术品牌赋能的185Hz屏下全面屏手机——红魔12 Pro+在本次活动首次亮相，并结合热门游戏内容，呈现移动终端与游戏场景的融合应用。通过新品展示与实际游戏体验相结合，现场观众得以感受移动电竞的多元应用形态，也进一步展现了电竞体验向不同终端和使用场景拓展的趋势。 依托“Best of Esports”电竞战略，共建电竞显示产业生态电竞显示产业的发展不仅需要持续的技术创新，也离不开显示技术、终端产品、游戏内容与渠道资源的协同。BOE（京东方）持续推动技术创新与产业合作，携手生态伙伴探索显示技术从研发创新走向场景应用的更多路径。2022年，BOE（京东方）率先提出“Best of Esports”电竞战略；2023年，联合京东及终端品牌成立“Best of Esports电竞高阶联盟”。此后，联盟持续汇聚全球产业力量，目前已集结34家全球一线品牌及生态伙伴，涵盖显示技术、终端设备、游戏内容与渠道等领域，推动产业链各环节优势互补、协同发展，为电竞显示创新与终端应用搭建协作平台。面向未来，BOE（京东方）将持续以玩家需求为导向，把电竞显示作为显示技术连接年轻用户、走向多元场景的重要窗口，携手生态伙伴推动电竞显示技术与应用场景协同演进，为电竞产业高质量发展注入新动能。",
+      "comments": []
+    },
+    {
       "title": "我们想做一个玩家能记住的女主！对话《湮灭之潮》开发组【视频播客音频版】",
       "link": "https://www.gcores.com/radios/221449",
       "source": "Gaming | 机核网",
       "time": "Sun, 25 Oct 2026 13:17:08 +0800",
-      "content": "欢迎回到“核电波”！《湮灭之潮》是一款以圆桌骑士为背景的国产动作冒险游戏，今天我们邀请到了游戏的开发团队，和他们聊聊国人如何编写西方奇幻，以及游戏玩起来到底是什么样。 本期主播：Nadya / Ryoma 本期嘉宾：《湮灭之潮》游戏监制兼公司联席CEO陈琦 / 《湮灭之潮》主策划鹏飞",
+      "content": "欢迎回到“核电波”！《湮灭之潮》是一款以圆桌骑士为背景的国产动作冒险游戏，今天我们邀请到了游戏的开发团队，和他们聊聊国人如何编写西方奇幻，以及游戏玩起来到底是什么样。本期为机核视频播客节目音频版，若大家想看我们在录节目的时候究竟是什么样的状态,可以关注我们的B站账号【核电波】 本期主播：Nadya / Ryoma 本期嘉宾：《湮灭之潮》游戏监制兼公司联席CEO陈琦 / 《湮灭之潮》主策划鹏飞",
       "comments": []
     },
     {
@@ -210,7 +194,7 @@
       "link": "https://www.gcores.com/articles/221408",
       "source": "Gaming | 机核网",
       "time": "Sat, 24 Oct 2026 08:00:00 +0800",
-      "content": "机核网核聚变游戏嘉年华北京站已于今日开幕。不能亲临现场？今年，机核网也同步在 Steam 开启线上展示会，大家可以在家中了解超过140款参展核聚变2026北京站精品阵容，部分游戏更公布了发售日期。 &lt;「核聚变游戏节」北京站线上Steam展示会 &gt; 除了 GCORES PUBLISHING 发行作品《CATO 黄油猫》《星幕协约 A.A.A.》《S4U: 都市朋克2011与爱的重拳》《腐根之里》《恶魔召唤》《爱与机器人维修技术》《神力有限公司》《虫虫生态箱》《并非山洞》《NOOK FALL：西区》《小黑鹂》以及《超级肉肉男孩 3D》之外，包括《异病侦探》《天外来袭》《魔法大战略：穆瑞耶之心》在内的诸多游戏均可下载 Demo 试玩。 此外，《RuneScape: Dragonwilds 符文世界：龙之荒野》《恶魔轮盘》《缄默祸运》以及《Galactic Vault》等作品开启了特价促销，更有部分游戏开启了开发者直播。点击下方卡片，即可查看本次 Steam 线上展示会的更多详情！ &lt;「核聚变游戏节」北京站线上Steam展示会&gt; 活动地址：点我进入",
+      "content": "机核网核聚变游戏嘉年华北京站已于今日开幕。不能亲临现场？今年，机核网也同步在 Steam 开启线上展示会，大家可以在家中了解超过140款参展核聚变2026北京站精品阵容，部分游戏更公布了发售日期。 &lt;「核聚变游戏节」北京站线上Steam展示会 &gt; (点击Steam首页横幅即可进入) 除了 GCORES PUBLISHING 发行作品《CATO 黄油猫》《星幕协约 A.A.A.》《S4U: 都市朋克2011与爱的重拳》《腐根之里》《恶魔召唤》《爱与机器人维修技术》《神力有限公司》《虫虫生态箱》《并非山洞》《NOOK FALL：西区》《小黑鹂》以及《超级肉肉男孩 3D》等作品之外，包括《异病侦探》《天外来袭》《魔法大战略：穆瑞耶之心》在内的诸多游戏均可下载 Demo 试玩。 此外，《RuneScape: Dragonwilds 符文世界：龙之荒野》《恶魔轮盘》《缄默祸运》以及《Galactic Vault》等作品开启了特价促销，更有部分游戏开启了开发者直播。点击下方卡片，即可查看本次 Steam 线上展示会的更多详情！ &lt;「核聚变游戏节」北京站线上Steam展示会&gt; 活动地址：点我进入",
       "comments": []
     },
     {
@@ -227,6 +211,78 @@
       "source": "Gaming | 机核网",
       "time": "Sat, 24 Oct 2026 06:00:00 +0800",
       "content": "主播：蛋挞、金花、小朱、野人 《鬼武者》最新作，给蛋挞打爽了，这期不只是讲最新作，也把历代作品做了简单梳理。据蛋老师说，录的时候聊得有点兴奋少说了一个信息，在这里补上。蛋挞：“补充：新鬼武者队友天海为前作主人公明智左马介” 后期：蛋挞 你的点赞、评论、转发和订阅对超游很重要，在此再次谢谢大家的支持了！",
+      "comments": []
+    },
+    {
+      "title": "均分88：《影之刃零》媒体评分汇总",
+      "link": "https://www.gcores.com/articles/221488",
+      "source": "Gaming | 机核网",
+      "time": "Mon, 26 Oct 2026 13:02:01 +0800",
+      "content": "《影之刃零》是由灵游坊自主研发及发行，虚幻5引擎打造的暗黑武侠动作冒险游戏。你将化身心脏遭受重创的剑客，在仅余六十六天的生命里，逃亡于刀光剑影和腥风血雨之间，并粉碎一桩笼罩在整个武林上方的惊天阴谋。在失序末法的武林中以身证道，以命寻心。 随着游戏将于10月28日发售，媒体评分汇总网站 Metacritic 也汇总了各大媒体的评分。截至发稿前，本作的均分为88分。值得一提的是，本作开分为91分，一度获得了“不可不玩”殊荣，随后稳定至88。汇总如下：IGN 给本作打出了9分。评测者表示，本作是近年来玩过的最出色的动作游戏之一。在50小时的游玩中，战斗体验始终保持新鲜。游戏世界风格鲜明，评测者对此印象深刻。复仇故事整体较为保守，隐形边界与技术问题也带来了一些困扰。然而，绝大部分游玩时间的体验十分出色。 评测者指出，游戏的格挡与闪避机制只需几分钟便能上手。武器、连招、特殊能力与升级系统的开放节奏合理。游戏提供数十种武器，每种都有独特的招式。切换武器还能恢复架势条，因此玩家需要经常更换装备。同时，Boss 战是游戏最出彩的部分。数十场 Boss 战设计各异，评测者因此将首周目玩成了全收集流程。评测者以最高难度游玩，大多数 Boss 在两三次尝试内被击败。游戏在玩家死亡后无需重复已通过的阶段，减少了挫败感。 此外，本作的地形判定问题较为明显。主角经常卡在地形上，场景中也存在隐形边界。评测者死亡近200次，其中约一半源于坠落或被环境卡住。IGN 还认为，剧情堆砌了大量术语与人物，时间线也过于复杂。GameSpot 则给本作打出了8分。评测者认为，本作的战斗风格出众，每个瞬间都像置身于中国武侠电影之中。游戏并非没有缺陷，这些问题限制了作品跻身类型的顶端。然而，游戏的高光时刻尤为突出。 评测者表示，本作将武侠电影中攻防同时进行的设计融入了战斗机制。攻击不会锁定动画，玩家即使在连招中途也能立即切换为格挡或弹反。部分攻击还会自动弹开来袭的招式。出色的动作捕捉也让整体战斗显得流畅。游戏提供了种类丰富的武器，升级材料可以返还，玩家不必被某一把武器绑定。副武器和招式技能增加了战斗的层次。Boss 战是战斗最出彩的部分，敌人造型各异，场面华丽。 与此同时，本作最大的缺陷在于难度失衡。即便在最高难度下，大多数普通敌人也可以通过连按按键击败，切换锁定目标还较为繁琐。然而，Boss 战依然具备足够的挑战，评测者不得不将难度调回中等。此外，评测者表示剧情线索分散，人物关系难以梳理，也很难对故事产生兴趣。GamesRadar+ 给出了9分。评测者表示，本作并非类魂游戏，战斗与世界观源自武侠叙事传统。评测者认为，本作拥有近年来少见的出色战斗系统，战斗既好看又好玩。游戏共有30把常规武器，每把都有独特的特性，并会随着升级获得新的效果。值得注意的是，游戏带有轻度的银河恶魔城要素，存档点设置较为宽松，敌人也几乎不会重生。评测者还认为，剧情质量参差不齐，场景中散落的大量文本显得过多。游戏流程约30到35小时，评测者通关后得到的是较为仓促的坏结局。 给出满分的 PCGamesN 认为，本作是动作角色扮演游戏的新标杆。评测者表示，游戏拥有出色的战斗、优美的世界，以及自信的原创故事。评测者指出，游戏本质上是一款设计精巧的银河恶魔城，探索、折返、隐藏 Boss 和被封锁的道路是体验的关键。评测者强调，本作的关卡设计是游戏的精髓。游戏分为五个主要区域，每张地图约需五小时才能完整探索。击败 Boss 获得的武器，往往能解锁十到二十小时前无法通过的路线。Metacritic 上评分最低的是 Eurogamer 的60分。评测者表示，本作实现了流畅且富有电影感的功夫战斗，但平衡与品质问题削弱了整体体验。评测者认为，游戏受到 FromSoftware 的影响，更接近轻量版类魂。 面对普通敌人时，武器表现出色，处决动画丰富。然而面对 Boss 时，武器威力骤减，大部分 Boss 的血量显得过厚，战斗冗长。评测解禁前两天，开发商发布了67GB 的更新，调整了 Boss 与武器数值。评测者回到旧存档后发现，部分 Boss 战依然存在这一问题。Eurogamer 还指出，游戏存在一系列细节问题。主角容易卡在地形上，Boss 会跳出场地，隔着隐形墙发动攻击，部分支线任务的地图指引也有误。评测者遇到了严重的帧率下降，更新后有所改善。评测者认为，叙事和背景设定也较为平淡。多家媒体在评测中提到了帧率和细节方面的问题。有媒体表示，个别地图的帧率表现不稳定，开发商称将在发售前修复。另有媒体遇到了角色卡在场景中的情况。预计这些问题可以通过首日补丁修复。",
+      "comments": []
+    },
+    {
+      "title": "vol.086 《控制：共振》B-side丨音乐&剧情漫谈",
+      "link": "https://www.gcores.com/radios/221487",
+      "source": "Gaming | 机核网",
+      "time": "Mon, 26 Oct 2026 11:39:21 +0800",
+      "content": "【进听友群+v Recallmikey】主播｜Even 夜猫子嘉宾丨舞雩子始于游戏，归于生活。欢迎收听《游戏开始｜GameStart》第八十六期节目。终于来到了下半场，我们继续来聊聊《控制：共振》的音乐与剧情，舞雩子老师将带给我们一些游戏中难以察觉的设计与巧思，欢迎收听~",
+      "comments": []
+    },
+    {
+      "title": "曲高和寡、终成绝唱：傲腾 P5800X 测试报告",
+      "link": "https://sspai.com/post/115074",
+      "source": "少数派",
+      "time": "Mon, 26 Oct 2026 11:26:35 +0800",
+      "content": "一起来看看 3D XPoint 这夸张的性能表现吧。查看全文",
+      "comments": []
+    },
+    {
+      "title": "少数派×红树林基金会｜候鸟季公益直播，邀你共护湿地",
+      "link": "https://sspai.com/post/117180",
+      "source": "少数派",
+      "time": "Mon, 26 Oct 2026 11:00:13 +0800",
+      "content": "每年秋冬，深圳湾都会迎来一批特殊的「旅客」。它们从北方出发，沿着迁徙路线飞越山海，有的在这里短暂停歇，有的则留下越冬。随着潮水涨落，水鸟在滩涂上低头觅食，鸟群掠过海面，也让我们熟悉的海湾多了几分热闹。 ...查看全文",
+      "comments": []
+    },
+    {
+      "title": "AI修仙《不问凡尘》亮相2026核聚变北京站",
+      "link": "https://www.gcores.com/articles/221485",
+      "source": "Gaming | 机核网",
+      "time": "Mon, 26 Oct 2026 10:51:01 +0800",
+      "content": "非正经AI修仙《不问凡尘》（World Apart）参展了2026核聚变北京站，于10月24日至25日在北京首钢国际会展中心与玩家见面。本作以“真人”超写实视觉呈现修仙世界，将AI NPC互动、策略回合制战斗与自由修仙养成相结合，邀请各位道友亲身感受一段可以深入体验的修仙故事。 本次参展，《不问凡尘》带来了EA版本体验，从角色演出到修行日常，从人物相遇到斗法历练，希望让玩家走进修仙小说中的世界、亲自参与其中。 在《不问凡尘》中，NPC有各自的性格与经历。玩家可以通过自然语言与他们交流，从闲谈中了解人物、打听消息，也可以尝试说服和交涉，在往来中发现新的机缘。面对不同的修士，同一句话也可能得到不同的回应，让每一次相遇都有值得探索的空间。围绕修仙成长，本作还提供功法与法宝搭配、策略回合制战斗，以及炼丹炼器、探索寻宝等玩法。玩家可以在历练中积累修为，结识性情各异的修士，在人物关系与成长选择之间，逐步走出自己的修行道路。 目前，《不问凡尘》已在Steam开启抢先体验，上线三周销量突破26万，获得了近90%的Steam好评，并持续更新剧情、玩法与角色互动内容。玩家可前往Steam商店了解本作，关注官方渠道获取后续版本信息，《不问凡尘》期待与各位道友相遇！官方链接Steam主页：https://store.steampowered.com/app/4209920/ 小黑盒：https://www.xiaoheihe.cn/app/topic/game/pc/4209920 B站：不问凡尘制作组 抖音：不问凡尘制作组 微博：不问凡尘官方",
+      "comments": []
+    },
+    {
+      "title": "Creative Assembly：《全面战争：幕府将军2》完全版系纯外包作品",
+      "link": "https://www.gcores.com/articles/221467",
+      "source": "Gaming | 机核网",
+      "time": "Mon, 26 Oct 2026 09:10:00 +0800",
+      "content": "此前，《全面战争：幕府将军2》完全版发售后遭遇了海量的玩家差评。世嘉不得不从数字商店下架，并重新恢复上线2011年的原始版本。 Creative Assembly 对此回应称，该版本完全是外包团队打造，也未接受其内部质量保证检测。 Creative Assembly副总裁罗杰·柯勒姆在官方论坛表示，他们与玩家同样愤怒。虽然柯勒姆在文中未直接提及实际负责开发本次完全版的第三方工作室 Mataboo ，但他反复强调 Creative Assembly 未参与项目，以此拉开与这次风波的距离。针对完全版使用 AI 的质疑，柯勒姆称 Creative Assembly 严格禁止使用生成式 AI ，且这一标准同样适用于所有外部合作开发商。",
+      "comments": []
+    },
+    {
+      "title": "Steam个人日历功能正式发布",
+      "link": "https://www.gcores.com/articles/221465",
+      "source": "Gaming | 机核网",
+      "time": "Mon, 26 Oct 2026 09:05:00 +0800",
+      "content": "随着日前的 Steam 更新，个人日历功能正式结束 Steam 实验室的实验，成为 Steam 商店的正式功能。玩家可以在自己的 Steam 商店主页找到个人日历，也可以通过这里的链接查看。 V社表示， Steam 个人日历提供了另一种方式来查看算法推荐的游戏。这个功能会将近期发行的游戏和即将推出的游戏进行筛选，然后将V社认为您最有可能感兴趣的一系列游戏呈现在您眼前。 算法会利用玩家近期玩过的游戏来查找与您游戏时间情况相似的玩家，然后查看他们都给自己的愿望单添加了什么游戏，又或者一直在玩什么游戏。 基于您常玩的游戏：系统会重点关注您在玩得最多的游戏上花费的游戏时间。因此，花几分钟时间尝试一两款新游戏并不会过多影响对您进行的推荐，但是花很多时间玩一款新的心头好则会有很大影响。 每日刷新：这个推荐系统每天都会进行重新训练，纳入最新的数据。实际上，您不太可能看到为您进行的推荐每天有很大变化，但随着时间流逝，您可以明显看到，随着 8 周的日历范围不断向前更新，或是随着游戏锁定了其发行日期，新的内容会不断出现。 扩展探索游戏的方式Steam 商店有多种不同的游戏推荐方式。首页的某些栏目倾向于展示更热门的游戏，而另一些栏目则倾向于展示与您玩的游戏类似的游戏，并不考虑这些游戏已发行多久。 个人日历旨在填补两者之间的空白：在最近推出或即将发行的游戏中，帮助玩家发现他们可能感兴趣的热门和小众之作。这种做法似乎引起了许多玩家的强烈共鸣，因为V社看到许多人大量探索和点击个人日历中的游戏。举例而言，以每 24 小时的平均值计，玩家们在 Steam 个人日历中点击了超过 2000 款不同的游戏。这表明，不仅个人日历成功地为玩家匹配到了他们最可能感兴趣的游戏，而且玩家还会深入探索自己的日历，查看有哪些新作问世，又有哪些游戏会在较远的未来推出。为什么要进 Steam 实验室？个人日历在 2025 年 10 月首次作为 Steam 实验室的实验推出。 Steam 实验室是V社给新的商店和探索功能所设置的，V社觉得这些功能很有意思，但还需要更有针对性的反馈，才能不断打磨成为完善的产品。经过 11 个月里玩家和开发者不断的反馈，V社终于能够将个人日历打磨成为一个发现新游戏的绝佳方式。 在这项功能于 Steam 实验室的开发过程中，V社进行了大大小小多项改进。例如，V社为游戏开发者添加了一项功能，可以指定将游戏从抢先体验转为 1.0 版发行的预计日期，这样V社就可以在日历上列出这些游戏。V社也为加入愿望单的游戏、抢先体验游戏及 DLC 等内容添加了更好的筛选工具和显示选项。此外，V社还投入了大量的工作，让这个新功能可以在不同设备——包括台式 PC、移动设备和 Steam 设备——上都顺畅运作。常见问题问：这其中有任何游戏是付费而得到显示的吗？答：没有。V社不会出售 Steam 个人日历上或 Steam 上任意其他地方的广告位。个人日历也并非手动鉴选的。个人日历中的展示是通过算法进行的，会针对每个用户进行个性化调整。问：我是否会困在推荐的信息茧房中，只看到与我最近在玩的游戏类似的内容？答：官方也担心困在信息茧房（即获得的推荐范围过窄）中的可能，因此努力保持内容的多样性。在个人日历中，不太可能每天都有与您在玩的游戏类型/主题相同的游戏发行，且该游戏也很适合推荐给您。因此，个人日历生成的推荐最终会从每天发行的各种类型的游戏中产生，范围会更广。",
+      "comments": []
+    },
+    {
+      "title": "《欧洲卡车模拟2》“冰岛”DLC将于11月11日发售",
+      "link": "https://www.gcores.com/articles/221470",
+      "source": "Gaming | 机核网",
+      "time": "Mon, 26 Oct 2026 08:55:00 +0800",
+      "content": "《欧洲卡车模拟2》“冰岛”DLC将于11月11日发售。据悉，这项地图扩展将带来一条环冰岛的旅游风景线，连接一系列迷人的城市和偏远的定居点，它们都坐落在一个冰与火交织的世界里。雄伟的山脉、无尽的平原、险峻的悬崖、火山口、咆哮的河流和倾流而下的瀑布，这些都由我们的地图设计师精心重现。 开发者表示，这是一项绝无仅有的 DLC，有着丰富的景色与未受污染的自然。冰岛是地球上最非凡的国家之一，拥有独一无二的地貌和无与伦比的自然风光。这个岛国拥有令人惊叹的自然奇观：屹立的火山、庞大的冰川、黑色的沙滩、奔流的瀑布、壮观的火山口等等，使其成为世界各地游客的梦想之地。现在，你将有机会以真正独特的视角，驾驶开车感受这一切。 由于冰岛独特的地理位置，请不要期待看到密集的高速公路网或熙熙攘攘的城市群。取而代之的是，准备好迎接一场感受地球上最震撼的自然风光之一的旅程吧。 每一公里均捕捉冰岛原始、未受破坏的环境的壮丽与真实性。如果你曾想驾车感受大自然的壮丽，那么现在就是完美的机会。你可以期待在环岛公路（Hringvegur）运送货物，这条公路长约1,400公里，环绕整个冰岛。除了其他城市和定居点外，这项地图扩展的亮点之一是首都雷克雅未克，一座充满活力、创意迸发、由惊人自然美景环绕的城市。",
+      "comments": []
+    },
+    {
+      "title": "派早报：iFixit 拆解 iPhone Duo，肯定可维修性但指出内屏隐患",
+      "link": "https://sspai.com/post/117460",
+      "source": "少数派",
+      "time": "Mon, 26 Oct 2026 07:36:36 +0800",
+      "content": "iFixit 拆解 iPhone Duo，肯定可维修性但指出内屏隐患Spotify 将要求家庭组成员定期扫码验证Arc 浏览器宣布下线央广总台澄清「国补停止」说法谷歌建设虚拟电厂，付费激励电网用户省电留给 AIiTunes Store 重受歌手青睐看看就行的简讯少数派的近期动态你可能错过的好文章查看全文",
       "comments": []
     },
     {
@@ -262,38 +318,6 @@
       "comments": []
     },
     {
-      "title": "（爆音注意）北京核聚变前夜实录，录音笔VOL.810",
-      "link": "https://www.gcores.com/radios/221368",
-      "source": "Gaming | 机核网",
-      "time": "Fri, 23 Oct 2026 18:00:00 +0800",
-      "content": "【录音笔】是GPASS推出的一档会员专享节目，内容来自机核办公室日程生活和工作中的一些短小记录，每期时长十几分钟左右（大概吧）。内容也许是一些不成体统的碎碎念，也许是一些突然发疯的暴言，还有可能是哪个缺德的把办公室里真实的日常对话（dui ma）偷偷录了下来，总之就连我们自己现在也不知道每期会有哪些人参与，会录些什么。",
-      "comments": []
-    },
-    {
-      "title": "双厨狂喜！游戏联动的神与鬼 | 走神大师229",
-      "link": "https://www.gcores.com/radios/221420",
-      "source": "Gaming | 机核网",
-      "time": "Fri, 23 Oct 2026 17:30:00 +0800",
-      "content": "双厨狂喜！游戏联动的神与鬼 | 走神大师229 参与者：九尺獠牙、时雨、Lost、化身伊陆 OP：うぬぼれ刑事のテーマ〜2010 ED：君は薔薇より美しい(Cover) 哪些游戏联动让我们印象深刻？哪些游戏联动转眼就忘？在本期节目中，我们将从“还原度、适应性、营养度”三个维度，细品几个让我们印象深刻的游戏联动案例。 02:32 《赛博朋克:边缘行者》在那个世界的故事… 12:13 《堡垒之夜》里可真是什么都有 28:41 育碧能将各种IP拉到自己世界观里 35:23 贝希摩斯真是太强了 43:50 《黎明杀机》里的联动地图居然能…！ 67:15 《杀手》与演员们的联动 74:43 世界上把IP大融合做到终极的《任天堂明星大乱斗终极版》 81:26 第一个反面案例——《人中北斗》 87:08 街霸X铁拳也太欺负人了 90:28 自由讨论：什么样的联动算好，什么样的算坏？ 94:03 谈到细胞分裂男主变成0，罗斯特疯了。 106:57 梦游大师：你希望看到哪两个游戏IP联动？ 116:10 为什么日厂角色这么难联动？听专业人士来揭秘！",
-      "comments": []
-    },
-    {
-      "title": "冠军键盘正式亮相｜IQUNIX 参展 2026 北京核聚变",
-      "link": "https://www.gcores.com/articles/221311",
-      "source": "Gaming | 机核网",
-      "time": "Fri, 23 Oct 2026 17:00:00 +0800",
-      "content": "核聚变游戏嘉年华北京站即将开幕，热门新游试玩、精彩舞台活动、限定周边收集、沉浸式体验最热烈的玩家氛围！10 月 24、25 日，我们首钢国际会展中心见！ &lt;官方网站&gt;IQUNIX是一家高端计算机周边产品品牌，2014 年于深圳前海成立。我们的初衷是为用户提供优质的计算机周边产品，提升用户的数字生活体验；在坚持长期主义美学与对用户需求的长期关注下，通过不断探索创新，成为用户信赖的高端计算机周边产品品牌。 目前，IQUNIX 深耕于电竞与游戏领域，目前已推出 EV63、EZ63、EZ75、EZ80 等多款高端旗舰磁轴键盘产品。同时，IQUNIX 的王牌产品 EV63，独占行业第三代霍尔传感器，加上自研的超竞固件，为用户带来无与伦比的产品体验。 在 2026 年无畏契约上海全球冠军赛上，冠军队伍 LOUD 使用 EV63 获得了年度总冠军，让专业电竞体验更上一层楼。此外，IQUNIX 在电竞生态与领域持续投入。目前已与中国电竞豪门 EDG 俱乐部无畏契约分部、美洲俱乐部 MIBR 俱乐部无畏契约分部等俱乐部进行合作，让电竞生态更丰富，用户体验与竞技体验更进一步。 10 月 24 日至 25 日，IQUNIX 将正式参与核聚变北京展会，展位号 B11。我们为到来展位的每位观众与用户，赠送出合作俱乐部的相关周边，也希望可以与热爱电竞的你相聚。 展会详情展会时间： 2026 年 10 月 24 日（周六）9：00-17：00（16：00停止入场） 2026 年 10 月 25 日（周日）9：00-17：00（16：00停止入场） 展会地点：北京石景山 · 首钢国际会展中心 1、3 号馆温馨提示场馆内为官方影像采集区域，涵盖活动全展区、主舞台区域、体验试玩区、蓄水功能区及场内所有通行活动空间，您在场期间的肖像、语音、现场影像等个人视听信息存在被拍摄、录制、会被记录。隐私使用声明 本次现场采集所得含您肖像、声音在内的视听素材，仅用于本活动主办方及关联授权主体的品牌宣传、活动推广使用； 素材使用渠道包括但不限于：主办方自有线上运营平台、官方网站、新媒体账号、线下活动物料、纸质宣传手册、线下户外及场内广告载体等； 若您不愿自身影像、声音被记录，可主动避开官方拍摄机位、录制点位。",
-      "comments": []
-    },
-    {
-      "title": "北京站逛展攻略请查收｜BOE电竞高阶联盟邀你一起开玩！",
-      "link": "https://www.gcores.com/articles/221361",
-      "source": "Gaming | 机核网",
-      "time": "Fri, 23 Oct 2026 16:00:00 +0800",
-      "content": "核聚变游戏嘉年华北京站即将开幕，热门新游试玩、精彩舞台活动、限定周边收集、沉浸式体验最热烈的玩家氛围！10 月 24、25 日，我们首钢国际会展中心见！ &lt;官方网站&gt;10 月 24 日-25 日，北京石景山·首钢国际会展中心 1 号馆A01，BOE电竞高阶联盟邀你一起开玩！四大热门游戏IP、多款电竞展品集结，解锁BOE显示技术带来的游戏新体验！✅ ADS Pro原生千帧 ×「无畏契约」 体验FHD 1000Hz原生千帧显示，感受高速移动、瞄准跟枪时的清晰流畅。✅ ADS Pro裸眼 3D ×「三角洲行动」 无需佩戴 3D 眼镜，感受立体场景与战场纵深，体验不一样的搜打撤。✅ ADS Pro 高画质动态清晰「无畏契约」全新体验 5K高清画面搭配 144Hz 刷新率，细腻呈现战场细节，畅享流畅对战。✅ ADS Pro与α-MLED 极致画质体验 双技术呈现细腻画质，畅游开放世界，尽览沿途风景与光影之美。✅ 更多IP沉浸体验 手机、平板、显示器等多种终端现场体验，沉浸探索各大热门游戏IP，感受精彩战斗。现场参与体验挑战与集章互动，还有机会赢取电竞好礼🎁 展会详情展会时间： 2026 年 10 月 24 日（周六）9：00-17：00（16：00停止入场） 2026 年 10 月 25 日（周日）9：00-17：00（16：00停止入场） 展会地点：北京石景山 · 首钢国际会展中心 1、3 号馆温馨提示场馆内为官方影像采集区域，涵盖活动全展区、主舞台区域、体验试玩区、蓄水功能区及场内所有通行活动空间，您在场期间的肖像、语音、现场影像等个人视听信息存在被拍摄、录制、会被记录。隐私使用声明 本次现场采集所得含您肖像、声音在内的视听素材，仅用于本活动主办方及关联授权主体的品牌宣传、活动推广使用； 素材使用渠道包括但不限于：主办方自有线上运营平台、官方网站、新媒体账号、线下活动物料、纸质宣传手册、线下户外及场内广告载体等； 若您不愿自身影像、声音被记录，可主动避开官方拍摄机位、录制点位。",
-      "comments": []
-    },
-    {
       "title": "2026北京亦庄·未来游戏电竞科技大会 成功举办",
       "link": "https://www.yystv.cn/p/14539",
       "source": "Gaming | 游研社",
@@ -302,35 +326,11 @@
       "comments": []
     },
     {
-      "title": "燕云十六声丨核聚变参展情报",
-      "link": "https://www.gcores.com/articles/221360",
-      "source": "Gaming | 机核网",
-      "time": "Fri, 23 Oct 2026 15:00:00 +0800",
-      "content": "核聚变游戏嘉年华北京站即将开幕，热门新游试玩、精彩舞台活动、限定周边收集、沉浸式体验最热烈的玩家氛围！10 月 24、25 日，我们首钢国际会展中心见！ &lt;官方网站&gt;燕起四方，聚于此间，同侠论义 声出江湖，登于台榭，与君共聆核聚变2026启幕在即，参展情报为各位游侠奉上！ 展会详情展会时间： 2026 年 10 月 24 日（周六）9：00-17：00（16：00停止入场） 2026 年 10 月 25 日（周日）9：00-17：00（16：00停止入场） 展会地点：北京石景山 · 首钢国际会展中心 1、3 号馆温馨提示场馆内为官方影像采集区域，涵盖活动全展区、主舞台区域、体验试玩区、蓄水功能区及场内所有通行活动空间，您在场期间的肖像、语音、现场影像等个人视听信息存在被拍摄、录制、会被记录。隐私使用声明 本次现场采集所得含您肖像、声音在内的视听素材，仅用于本活动主办方及关联授权主体的品牌宣传、活动推广使用； 素材使用渠道包括但不限于：主办方自有线上运营平台、官方网站、新媒体账号、线下活动物料、纸质宣传手册、线下户外及场内广告载体等； 若您不愿自身影像、声音被记录，可主动避开官方拍摄机位、录制点位。",
-      "comments": []
-    },
-    {
       "title": "TDS REVIEW｜OPPO Enco X4 降噪真无线耳机体验",
       "link": "https://sspai.com/post/116398",
       "source": "少数派",
       "time": "Fri, 23 Oct 2026 15:00:00 +0800",
       "content": "放在欧加体系里，Enco X4 显然是值得买的：它在千元档有着第一档的降噪综合能力且没有明显短板，有着手机厂产品里不错的素质和相对饱满、流行化但不过分两头翘的调音，同时操作和细节体验没有明显问题……查看全文",
-      "comments": []
-    },
-    {
-      "title": "致态参展核聚变游戏嘉年华北京站",
-      "link": "https://www.gcores.com/articles/221310",
-      "source": "Gaming | 机核网",
-      "time": "Fri, 23 Oct 2026 14:00:00 +0800",
-      "content": "核聚变游戏嘉年华北京站即将开幕，热门新游试玩、精彩舞台活动、限定周边收集、沉浸式体验最热烈的玩家氛围！10 月 24、25 日，我们首钢国际会展中心见！ &lt;官方网站&gt;致态首次参加核聚变游戏嘉年华北京站!本次参展，我们将在现场展示多款致态产品，并在现场官宣与某神秘3A大作达成战略合作，官宣仪式也将在 24 日下午 14 点举行！ 官宣仪式之后，我们还会以有奖问答的形式为现场玩家准备多重好礼，包括 SSD 产品、游戏兑换码等。致态展位内，我们还设计了打卡拍照、互动游戏等迎接各位的到来，并在 2 天内准备京东 e 卡、某 3A游戏兑换码作为抽奖奖品！核聚变北京站，我们不见不散！ 展会详情展会时间： 2026 年 10 月 24 日（周六）9：00-17：00（16：00停止入场） 2026 年 10 月 25 日（周日）9：00-17：00（16：00停止入场） 展会地点：北京石景山 · 首钢国际会展中心 1、3 号馆温馨提示场馆内为官方影像采集区域，涵盖活动全展区、主舞台区域、体验试玩区、蓄水功能区及场内所有通行活动空间，您在场期间的肖像、语音、现场影像等个人视听信息存在被拍摄、录制、会被记录。隐私使用声明 本次现场采集所得含您肖像、声音在内的视听素材，仅用于本活动主办方及关联授权主体的品牌宣传、活动推广使用； 素材使用渠道包括但不限于：主办方自有线上运营平台、官方网站、新媒体账号、线下活动物料、纸质宣传手册、线下户外及场内广告载体等； 若您不愿自身影像、声音被记录，可主动避开官方拍摄机位、录制点位。",
-      "comments": []
-    },
-    {
-      "title": "「更新直播页」核电波Live｜2026北京核聚变舞台活动",
-      "link": "https://www.gcores.com/articles/220877",
-      "source": "Gaming | 机核网",
-      "time": "Fri, 23 Oct 2026 13:00:00 +0800",
-      "content": "扫码查看直播间专题页 10月24、25日，请锁定b站核电波、机核GCORES直播间！核聚变游戏嘉年华北京站即将开幕，热门新游试玩、精彩舞台活动、限定周边收集、沉浸式体验最热烈的玩家氛围！10 月 24、25 日，我们首钢国际会展中心见！核电波Live2026核聚变游戏嘉年华北京站的舞台活动全程由核电波主持，届时也会在b站的核电波、机核GCORES账号同时进行直播，现场和线上的观众均可享受到我们准备的精彩内容！ (（舞台效果图）)节目预告 10月24、25日，请锁定b站核电波、机核GCORES直播间！ 展会详情展会时间： 2026 年 10 月 24 日（周六）9：00-17：00（16：00停止入场） 2026 年 10 月 25 日（周日）9：00-17：00（16：00停止入场） 展会地点：北京石景山 · 首钢国际会展中心 1、3 号馆温馨提示场馆内为官方影像采集区域，涵盖活动全展区、主舞台区域、体验试玩区、蓄水功能区及场内所有通行活动空间，您在场期间的肖像、语音、现场影像等个人视听信息存在被拍摄、录制、会被记录。隐私使用声明 本次现场采集所得含您肖像、声音在内的视听素材，仅用于本活动主办方及关联授权主体的品牌宣传、活动推广使用； 素材使用渠道包括但不限于：主办方自有线上运营平台、官方网站、新媒体账号、线下活动物料、纸质宣传手册、线下户外及场内广告载体等； 若您不愿自身影像、声音被记录，可主动避开官方拍摄机位、录制点位。",
       "comments": []
     },
     {
@@ -387,6 +387,1045 @@
       "source": "阮一峰的网志",
       "time": "Fri, 04 Sep 2026 07:59:05 +0800",
       "content": "这里记录每周值得分享的科技内容，周五发布。 本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。 封面图 宁夏西夏陵使用金属网，将残片还原成石像生。（via） OpenClaw 2.0 是一个缩影 本周，OpenClaw 发布了2.0版。 是不是很久没听到这个名字了？现在很少有人提到它，不过就是半年。 回想今年春节，它一夜走红，引发了全民热议。一时间，上门安装龙虾成了热门服务，还真有不少人付费。 仅仅过了半年，它就成了昨日黄花，已经被遗忘了。AI 时代就是这样，新事物层出不穷，再大的热门也就走红几天。 用了半年，它终于从1.0版升级到2.0版。 大家知道，OpenClaw 的代码几乎百分之百都是 AI 生成，早期每天发一个版本。后来发现不能这样，会把用户累死，于是从7月份开始，改成每月发一个版本。 以八月为例，月初的时候发布了测试版 2026.8.1-beta1，月中又发了 beta2 和 beta3，到了月底就发了8月正式版。同时，也发了9月的测试版 2026.9.1.beta1。 这种发布节奏，对用户比较舒适，每月更新一次就 OK。 因为8月版的改动特别多，所以这个版本就是2.0版。根据发布公告，它共有933位贡献者，合并了16000个 PR。 这个数字比较恐怖。根据官网，OpenClaw 的开发团队全职9人，兼职26人。就算这些人全部参与，我觉得也没办法一个月合并掉16000个 PR。 每天一睁开眼，就是500多个 PR 等着合并，这些人怎么看得过来嘛？ 唯一的结论只能是，这些 PR 没有经过代码审查，都是 AI 合并的！ 我猜想，只要管理员觉得这个 PR 是合理的，AI 审核和测试都过了，就会合并进仓库。 这种做法也没什么，大规模的 Vibe Coding 只可能是这种结果。问题是 OpenClaw 这个工具，主要作用就是自主调用各种外部工具，测试用例很难涵盖各个平台的所有情况，一定有很多地方是测试不到的。 所以，16000个 PR 到底引入了多少 Bug，有多少隐藏的风险，真的很难让人有信心。 还是跟以前一样，我建议大家千万不要在自己的工作电脑上运行 OpenClaw，而要在独立的物理机/虚拟机/云端运行它。 OpenClaw 的开发模式，就是 AI 开发的缩影。大量软件正迅速向它靠拢，都是由 AI 编写或合并 PR。 我怀疑，将来的应用软件也许都不应该运行本机上。本机只运行系统，应用软件全部运行在虚拟机或云端。 这样说起来，鸿蒙运行安卓 App 的\"卓易通\"模式，反而是符合 AI 时代的方向。 没人为你的堆栈辩护 前端 JS 框架 SolidJS 的创始人莱恩·卡尼亚托（Ryan Carniato），最近发表一篇文章《没人为你的堆栈辩护》。 他感叹（也可以说是抱怨），有了 AI 以后，大家纷纷迁移到主流技术堆栈。 Cursor 的主站和 Anthropic 的文档站，都从 SolidJS 迁移到 React。作为 SolidJS 创始人，他心里不是滋味。 我的第一反应并不好，我多年的心血竟然成了人们想要抛弃的典型案例。而且，就在同一周，我们发布了项目史上规模最大的新版本。这确实让我感到痛苦，我无法否认。 他认为，技术堆栈的迁移，是成本和风险都很大的事情。以前很少有人敢做。但现在，AI 可以重写代码，让迁移变得容易。于是，管理层纷纷建议向主流技术栈迁移。 其他例子还有，Cognition 公司的营销网站，从 Astro 迁移到了 Next.js；Bun 从 Zig 迁移到 Rust。 没有反复的论证、数年的考察，也许只是公司内部的一场会议，就会导致放弃当前技术栈，改用更流行的技术栈。 根本没人会为当前使用的堆栈辩护，大家争前恐后拥抱最佳实践。 他的结论就是：\"这样下去，除了少数例外，每一层最终都会变为当下最流行的解决方案。前端趋向 React，系统趋向 Rust，脚本趋向 Python，甚至连页面本身都趋向 Next.js，完全无视适配性。\" 他认为，AI 往往采用最流行的技术，导致小众的技术无人问津。长此以往，软件生态将单一化，多样性不复存在。 那么，我们不禁要问，没有多样性的土壤，也没有充分的试验和试错，软件生态的下一个创意从何而来？，或者 AI 编程无所谓创新，生成的代码只要能运行就行？ 科技动态 1、地月双向激光通信 中国科学院最近成功在地球和月亮之间，完成了双向高速激光通信。 太空的激光通信有三大难题：（1）发射端和接收端相隔几十万公里，光束难以精准对准；（2）信号传到地面时已经弱得几乎收不到；（3）传输速度也一直提不上去。这次据说将这三大难题都解决了。 本次实验的通信速度，达到了上行 1.25Mbps、下行 100Mbps，相当于达",
+      "comments": []
+    },
+    {
+      "title": "Building my portfolio",
+      "link": "https://www.reddit.com/r/gameDevJobs/comments/1xfob00/building_my_portfolio/",
+      "source": "Reddit | gamedevjobs",
+      "time": "2026-10-26T05:29:52",
+      "content": "/r/INAT/comments/1xfoaao/hobby/",
+      "comments": []
+    },
+    {
+      "title": "PEKIN 🦆 A Tekken-inspired duck fighting game",
+      "link": "https://www.reddit.com/r/Unity3D/comments/1xfndwe/pekin_a_tekkeninspired_duck_fighting_game/",
+      "source": "Reddit | Unity3D",
+      "time": "2026-10-26T04:35:57",
+      "content": "https://v.redd.it/do71ak0qpqxh1",
+      "comments": [
+        {
+          "author": "TheDevilsAdvokaat",
+          "text": "Are you calling it Dukken ?"
+        },
+        {
+          "author": "Onphone_irl",
+          "text": "imagine somehow this stumbles on some really amazing gameplay mechanics by accident and becomes nonironically one of the greatest competitive fighting"
+        },
+        {
+          "author": "Empuda",
+          "text": "Quackwondo (or \"Taequackdo\")"
+        }
+      ]
+    },
+    {
+      "title": "Show HN: Proc-CLI – An agent-friendly CLI tool for process and port management",
+      "link": "https://proc-cli.com/",
+      "source": "HN | proc-cli.com",
+      "time": "2026-10-26T04:14:35",
+      "content": "Score: 3 | Comments: 0",
+      "comments": []
+    },
+    {
+      "title": "Behind the scenes at the NeXT Computer office",
+      "link": "https://exhibits.stanford.edu/menuez/browse/next-computer-inc?per_page=96&sort=pub_year_isi+asc%2C+title_sort+asc&view=masonry",
+      "source": "HN | exhibits.stanford.edu",
+      "time": "2026-10-26T03:31:11",
+      "content": "Score: 37 | Comments: 18",
+      "comments": []
+    },
+    {
+      "title": "PaperPilot – Zero-Cloud, Pure-Rust PDF Engine with WASM and MCP",
+      "link": "https://github.com/KrushnaVardhanReddy/PaperPilot",
+      "source": "HN | github.com",
+      "time": "2026-10-26T03:29:05",
+      "content": "Score: 41 | Comments: 5",
+      "comments": []
+    },
+    {
+      "title": "Show HN: TitleArt – Make text like it's 1997",
+      "link": "https://titleart.dvy.io/",
+      "source": "HN | titleart.dvy.io",
+      "time": "2026-10-26T03:23:57",
+      "content": "Score: 64 | Comments: 12",
+      "comments": []
+    },
+    {
+      "title": "Microsoft Decision-1: 9B Qwen Model Launch Explained",
+      "link": "https://shattered.io/microsoft-decision-1-qwen3-5-9b-model-2026/",
+      "source": "HN | shattered.io",
+      "time": "2026-10-26T03:12:05",
+      "content": "Score: 24 | Comments: 6",
+      "comments": []
+    },
+    {
+      "title": "A Youtuber changed the future of my indie game.",
+      "link": "https://www.reddit.com/r/indiegames/comments/1xflj3r/a_youtuber_changed_the_future_of_my_indie_game/",
+      "source": "Reddit | IndieGames",
+      "time": "2026-10-26T02:57:18",
+      "content": "https://i.redd.it/ny8xmthi7qxh1.png",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
+        },
+        {
+          "author": "Lagoserter",
+          "text": "DF, Drae, Blitz, and Wanderbots are like, 4 four horsemen of good luck, istg"
+        }
+      ]
+    },
+    {
+      "title": "Building your own custom tools in Godot is not discussed enough",
+      "link": "https://www.reddit.com/r/godot/comments/1xfl8qs/building_your_own_custom_tools_in_godot_is_not/",
+      "source": "Reddit | godot",
+      "time": "2026-10-26T02:42:38",
+      "content": "https://v.redd.it/yvlhvx2h5qxh1",
+      "comments": [
+        {
+          "author": "vezwyx",
+          "text": "It's cool that you're trying to start a discussion, but this post isn't discussing very much"
+        },
+        {
+          "author": "Akrucious",
+          "text": "Being so deep in your own project you need to build custom tools for it is weirdly satisfying imho."
+        },
+        {
+          "author": "autumns",
+          "text": "I now have a movement gym, a lab for tweaking the creatures in my game, a full map building tool, and juice lab"
+        }
+      ]
+    },
+    {
+      "title": "My custom engine generates isometric 2D dungeons straight to .tscn with occluders!",
+      "link": "https://www.reddit.com/r/godot/comments/1xfl2xd/my_custom_engine_generates_isometric_2d_dungeons/",
+      "source": "Reddit | godot",
+      "time": "2026-10-26T02:34:27",
+      "content": "https://www.reddit.com/gallery/1xfl2xd",
+      "comments": [
+        {
+          "author": "justneedsmoresalt",
+          "text": "Oh man I'm loving this aesthetic!"
+        }
+      ]
+    },
+    {
+      "title": "Do I use Materials or Material Instances for my meshes?",
+      "link": "https://www.reddit.com/r/unrealengine/comments/1xfkr8h/do_i_use_materials_or_material_instances_for_my/",
+      "source": "Reddit | unrealengine",
+      "time": "2026-10-26T02:17:59",
+      "content": "I've been learning Materials for my game and I'm confused, one of the indept material tutorials states to never put Master Materials on objects because it's very heavy and to use material instances instead, but when I watch other tutorials they don't even bother with material instances. So what's th",
+      "comments": [
+        {
+          "author": "PlatypusAdventures",
+          "text": "Use material instances. The more use you can get out of a single master material, the better it will scale with your project!"
+        },
+        {
+          "author": "chadmv",
+          "text": "Use material instances."
+        },
+        {
+          "author": "Greyh4m",
+          "text": "As a good practice you should try using inheritance whenever you can because it's efficient and the more scalability you build into your project, the"
+        }
+      ]
+    },
+    {
+      "title": "Self-Crediting on Social Media - Yes or No?",
+      "link": "https://www.reddit.com/r/gamedev/comments/1xfkg42/selfcrediting_on_social_media_yes_or_no/",
+      "source": "Reddit | gamedev",
+      "time": "2026-10-26T02:03:00",
+      "content": "Hey guys, looking for some help from folks more experienced with navigating NDAs, any help would be appreciated! Recently I've worked on a major release (GoTY Contender) as a freelance consultant and script editor; since my role was very limited, I will not be in the credits. The NDA I signed was",
+      "comments": [
+        {
+          "author": "Klightgrove",
+          "text": "ask them"
+        },
+        {
+          "author": "Franks2000inchTV",
+          "text": "I think this is a \"forgiveness is easier than permission\" situation. Just make it very clear that you were a freelancer and consulting. Make sure it"
+        },
+        {
+          "author": "KBGSgames",
+          "text": "When you sign anything there should be very clear rules on what you can and can;t legally do, without reading your contract we can't tell. And if you"
+        }
+      ]
+    },
+    {
+      "title": "IBM CEO says open weight models are now good and cheap on-prem",
+      "link": "https://www.theregister.com/systems/2026/10/22/ibm-ceo-says-open-weight-models-are-now-irresistibly-good-and-cheap-on-prem/5304640",
+      "source": "HN | theregister.com",
+      "time": "2026-10-26T01:47:46",
+      "content": "Score: 124 | Comments: 78",
+      "comments": []
+    },
+    {
+      "title": "iPhone Duo Teardown",
+      "link": "https://www.ifixit.com/News/119895/iphone-duo-teardown",
+      "source": "HN | ifixit.com",
+      "time": "2026-10-26T01:23:24",
+      "content": "Score: 91 | Comments: 51",
+      "comments": []
+    },
+    {
+      "title": "[For Hire] (Rates in the description) Illustrator and character artist available for work",
+      "link": "https://www.reddit.com/r/gameDevJobs/comments/1xfj977/for_hire_rates_in_the_description_illustrator_and/",
+      "source": "Reddit | gamedevjobs",
+      "time": "2026-10-26T01:06:09",
+      "content": "https://www.reddit.com/gallery/1xfj977",
+      "comments": []
+    },
+    {
+      "title": "Removing Next.js Got My Blog to 100 on Every Lighthouse Category",
+      "link": "https://korindiehacker.bloffy.blog/en/removing-nextjs-got-my-blog-to-100-on-every-lighthouse-category",
+      "source": "HN | korindiehacker.bloffy.blog",
+      "time": "2026-10-26T01:03:39",
+      "content": "Score: 91 | Comments: 46",
+      "comments": []
+    },
+    {
+      "title": "Galactic Intervention - You play an Alien sent to destroy human civilisation. Destruction based game.",
+      "link": "https://www.reddit.com/r/Unity3D/comments/1xfj6j2/galactic_intervention_you_play_an_alien_sent_to/",
+      "source": "Reddit | Unity3D",
+      "time": "2026-10-26T01:02:43",
+      "content": "https://v.redd.it/qzdppjv7zoxh1",
+      "comments": [
+        {
+          "author": "AutoLiMax",
+          "text": "Haha sick. Have you ever heard of g-police? First thing I thought when I saw this."
+        },
+        {
+          "author": "Ecoste",
+          "text": "I love the ufo with the wrecking ball"
+        },
+        {
+          "author": "SubpixelJimmie",
+          "text": "This looks awesome, reminds me of Rampage but aliens / mechs"
+        }
+      ]
+    },
+    {
+      "title": "[Looking for a long term partners*PAID*] - Building a start up Game Development Studio Seeking Long-Term Partners",
+      "link": "https://www.reddit.com/r/gameDevJobs/comments/1xfimne/looking_for_a_long_term_partnerspaid_building_a/",
+      "source": "Reddit | gamedevjobs",
+      "time": "2026-10-26T00:36:48",
+      "content": "https://i.redd.it/ylxghwh95fxh1.png",
+      "comments": []
+    },
+    {
+      "title": "Lula wins election after final votes tallied",
+      "link": "https://www.reuters.com/live/brazil-election-live-lula-bolsonaro-face-off-presidential-runoff-2026-10-25/",
+      "source": "HN | reuters.com",
+      "time": "2026-10-26T00:31:07",
+      "content": "Score: 277 | Comments: 267",
+      "comments": []
+    },
+    {
+      "title": "Steal My Bitcoin CTF PoC",
+      "link": "https://github.com/KillaBoi/StealMyBitcoin-PoC",
+      "source": "HN | github.com",
+      "time": "2026-10-26T00:15:17",
+      "content": "Score: 58 | Comments: 8",
+      "comments": []
+    },
+    {
+      "title": "Attention Is Not What You Need (2025)",
+      "link": "https://arxiv.org/abs/2512.19428",
+      "source": "HN | arxiv.org",
+      "time": "2026-10-25T23:52:05",
+      "content": "Score: 63 | Comments: 24",
+      "comments": []
+    },
+    {
+      "title": "Issue with fetching actors with specific gameplay tags.",
+      "link": "https://www.reddit.com/r/unrealengine/comments/1xfhgbh/issue_with_fetching_actors_with_specific_gameplay/",
+      "source": "Reddit | unrealengine",
+      "time": "2026-10-25T23:44:27",
+      "content": "Hello all, I'm putting together a prototype for a cover shooter. I need the red enemy ball blip to move to an 'available' cover point (a cover piece that isn't currently occupied) which are marked by the smaller yellow spheres \\[Photo 1\\]. The cover marker has a Gameplay Tag Container. I do hav",
+      "comments": [
+        {
+          "author": "TheLoneK",
+          "text": "It's been a while since I've had to dive into tag issues. I'll try to help with most common issues first. Does your actor implement the gameplay tag"
+        },
+        {
+          "author": "AutoModerator",
+          "text": "If you are looking for help, don‘t forget to check out the [official Unreal Engine forums](https://forums.unrealengine.com/) or [Unreal Slackers](http"
+        }
+      ]
+    },
+    {
+      "title": "F-Zero X on Nintendo 3DS",
+      "link": "https://hypnotize.works/gdx-3ds/postmortem/index.html",
+      "source": "HN | hypnotize.works",
+      "time": "2026-10-25T23:27:30",
+      "content": "Score: 90 | Comments: 43",
+      "comments": []
+    },
+    {
+      "title": "Galactic Intervention - You play an Alien sent to destroy human civilisation. Destruction based game.",
+      "link": "https://www.reddit.com/r/indiegames/comments/1xfga30/galactic_intervention_you_play_an_alien_sent_to/",
+      "source": "Reddit | IndieGames",
+      "time": "2026-10-25T22:51:21",
+      "content": "https://v.redd.it/qzdppjv7zoxh1",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
+        },
+        {
+          "author": "TradMoon",
+          "text": "Looks awesome! But it feels a bit lacking in detail — right now tearing down buildings is basically just destroying an empty box... I wanna see the l"
+        },
+        {
+          "author": "Tiny_Flatworm4726",
+          "text": "Looks cool buy waayyyy too pixelated - when it's like this it hurts your eyes to play/watch"
+        }
+      ]
+    },
+    {
+      "title": "I made skeletons that fall apart when you kill them and rebuild themselves bone by bone",
+      "link": "https://www.reddit.com/r/Unity3D/comments/1xffksl/i_made_skeletons_that_fall_apart_when_you_kill/",
+      "source": "Reddit | Unity3D",
+      "time": "2026-10-25T22:20:33",
+      "content": "https://v.redd.it/5dl0sjhqtoxh1",
+      "comments": [
+        {
+          "author": "henryeaterofpies",
+          "text": "Love the idea. Reminds me of Mario Dry Bones"
+        },
+        {
+          "author": "JeeCharns",
+          "text": "Cool! Love the art style and great work on the animations they look and sound great"
+        },
+        {
+          "author": "dilberry",
+          "text": "Curious if you can share your process for making them? Seems pretty tricky based on what I've been working on. Is it an animation that plays?"
+        }
+      ]
+    },
+    {
+      "title": "every godot UI tutorial",
+      "link": "https://www.reddit.com/r/godot/comments/1xfede1/every_godot_ui_tutorial/",
+      "source": "Reddit | godot",
+      "time": "2026-10-25T21:28:35",
+      "content": "https://v.redd.it/6q2tpumkloxh1",
+      "comments": [
+        {
+          "author": "National-Bluebird941",
+          "text": "This is the one thing i dont like about godot. Having to add a dozen children ; when components would make things much cleaner."
+        },
+        {
+          "author": "InappropriatelyHard",
+          "text": "Seems about right, happens for photoshop tutorials too, higher APM than Starcraft II tournament players."
+        },
+        {
+          "author": "SweetBabyAlaska",
+          "text": "every \"main menu\" tutorial: \\- MarginContainer -> VBox -> 3 Buttons \\- connect signals \\`get\\_tree().quit()\\` and \\`get\\_tree().change\\_scene\\_to\\_p"
+        }
+      ]
+    },
+    {
+      "title": "My game is getting blackmailed?",
+      "link": "https://www.reddit.com/r/indiegames/comments/1xfe6ek/my_game_is_getting_blackmailed/",
+      "source": "Reddit | IndieGames",
+      "time": "2026-10-25T21:20:18",
+      "content": "https://v.redd.it/tjougdlyjoxh1",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
+        },
+        {
+          "author": "BoringPostcards",
+          "text": "You should take this to one of the gaming or tech news sites, show them your video and tell them the story just as you told it here. This deserves to"
+        },
+        {
+          "author": "Brilliant-Reality884",
+          "text": "Imagine trying to make review bombing an extortion method. How stupid are these kids?"
+        }
+      ]
+    },
+    {
+      "title": "I don’t think anything feels as rewarding as seeing “100% Positive” as an indie dev",
+      "link": "https://www.reddit.com/r/gamedev/comments/1xfdmlo/i_dont_think_anything_feels_as_rewarding_as/",
+      "source": "Reddit | gamedev",
+      "time": "2026-10-25T20:57:50",
+      "content": "I’ve been building *Stick Wars: The Laneborn* alone, in the evenings and on weekends, next to my full-time job. Today I noticed my Steam page finally shows a review label, and every single one of the 10 reviews is positive. I know it’s “just” 10 reviews, but for a solo dev this means the world. Eve",
+      "comments": [
+        {
+          "author": "Vegetable-Tooth8463",
+          "text": "OP you know this means some troll is going to give a bad review."
+        },
+        {
+          "author": "EliteACEz",
+          "text": "this is a brilliant mash up of genres. Nicely done and well deserved!"
+        },
+        {
+          "author": "RogueSleepy",
+          "text": "I'd be shocked if this isn't violating the trademark of the original Stick War games, have you reached out to their creators to work something out wit"
+        }
+      ]
+    },
+    {
+      "title": "US Military vs Millions of Zombies. Who's gonna win?",
+      "link": "https://www.reddit.com/r/godot/comments/1xfdjob/us_military_vs_millions_of_zombies_whos_gonna_win/",
+      "source": "Reddit | godot",
+      "time": "2026-10-25T20:54:32",
+      "content": "https://v.redd.it/hh35613deoxh1",
+      "comments": [
+        {
+          "author": "Remarkable-Box1090",
+          "text": "American taxpayer be like ![gif](giphy|1BPvv1QvbKV156jyul)"
+        },
+        {
+          "author": "VizDevBoston",
+          "text": "convert the buildings to pressure eating depth maps so the pressure wave doesn't move through buildings, perhaps?"
+        },
+        {
+          "author": "stankuslee",
+          "text": "https://store.steampowered.com/app/1597480/Zombie\\_Gunship\\_Survival/"
+        }
+      ]
+    },
+    {
+      "title": "The State of Context Engineering",
+      "link": "https://www.dbreunig.com/2026/10/24/the-state-of-context-engineering.html",
+      "source": "HN | dbreunig.com",
+      "time": "2026-10-25T20:32:31",
+      "content": "Score: 134 | Comments: 36",
+      "comments": []
+    },
+    {
+      "title": "What goes into making an animated film?",
+      "link": "https://www.disneyanimation.com/process/",
+      "source": "HN | disneyanimation.com",
+      "time": "2026-10-25T20:27:09",
+      "content": "Score: 122 | Comments: 51",
+      "comments": []
+    },
+    {
+      "title": "We have just released Steam Page for Nascor Descent, first person dungeon crawler inspired by Demon's Souls, Fear & Hunger and King's Field",
+      "link": "https://www.reddit.com/r/Unity3D/comments/1xfckk4/we_have_just_released_steam_page_for_nascor/",
+      "source": "Reddit | Unity3D",
+      "time": "2026-10-25T20:15:09",
+      "content": "https://v.redd.it/ljb9qd227oxh1",
+      "comments": [
+        {
+          "author": "JankyByDesign",
+          "text": "Looks so cool!"
+        },
+        {
+          "author": "Baker_Pantheon",
+          "text": "Looks super good"
+        },
+        {
+          "author": "kshell11724",
+          "text": "Hell yeah!!!"
+        }
+      ]
+    },
+    {
+      "title": "[For Hire] Freelance Illustrator - Character illustration, Character Design, Concept art.",
+      "link": "https://www.reddit.com/r/gameDevJobs/comments/1xfckd0/for_hire_freelance_illustrator_character/",
+      "source": "Reddit | gamedevjobs",
+      "time": "2026-10-25T20:14:56",
+      "content": "https://www.reddit.com/gallery/1xfckd0",
+      "comments": [
+        {
+          "author": "LuizpxxxTNG",
+          "text": "Contacts and profiles. Instagram: [https://www.instagram.com/yasoop\\_](https://www.instagram.com/yasoop_) X: [https://x.com/luizpxxxtng](https:/"
+        }
+      ]
+    },
+    {
+      "title": "Written resources for game design, level design etc",
+      "link": "https://www.reddit.com/r/gamedev/comments/1xfc1ay/written_resources_for_game_design_level_design_etc/",
+      "source": "Reddit | gamedev",
+      "time": "2026-10-25T19:54:26",
+      "content": "Tried looking before posting but most posts seem to be about how to start game development, which is not needed in my case because I've already been making games for 2 years. I'm more looking for resources talking about game design, level design and other stuff like that. I know that one answer prob",
+      "comments": [
+        {
+          "author": "Strict_Bench_6264",
+          "text": "I wrote a post with some book recommendations a few years ago, on my blog: [https://playtank.io/2022/05/18/books-for-game-designers/](https://playtank"
+        },
+        {
+          "author": "AutoModerator",
+          "text": "Here are several links for beginner resources to read up on, you can also find them in the sidebar along with an invite to the subreddit discord where"
+        },
+        {
+          "author": "Danfable",
+          "text": "The Level Design Book is free and mostly written, with diagrams and examples rather than programming tutorials. These are good starting chapters: B"
+        }
+      ]
+    },
+    {
+      "title": "[FOR HIRE] Hello! I work with illustration, design, concept and others. Feel free to send me a dm!",
+      "link": "https://www.reddit.com/r/gameDevJobs/comments/1xfbmwd/for_hire_hello_i_work_with_illustration_design/",
+      "source": "Reddit | gamedevjobs",
+      "time": "2026-10-25T19:38:41",
+      "content": "https://www.reddit.com/gallery/1xfbmwd",
+      "comments": []
+    },
+    {
+      "title": "Why I Am a Programmer",
+      "link": "https://www.alfie.wtf/programming/why-i-am-a-programmer.html",
+      "source": "HN | alfie.wtf",
+      "time": "2026-10-25T19:11:31",
+      "content": "Score: 183 | Comments: 58",
+      "comments": []
+    },
+    {
+      "title": "I showcased my game at a gaming expo with over 60,000 attendees! Here's how it went!",
+      "link": "https://www.reddit.com/r/gamedev/comments/1xfa2q2/i_showcased_my_game_at_a_gaming_expo_with_over/",
+      "source": "Reddit | gamedev",
+      "time": "2026-10-25T18:37:01",
+      "content": "Hey everyone! Thanks to the Indie Games Poland Foundation, I had the opportunity to showcase my game, Dark Roll 2, for three whole days at Poznań Game Arena, the biggest gaming expo in Poland! For free! I wanted to share how it all went and what I learned along the way. Hopefully, my experience ca",
+      "comments": [
+        {
+          "author": "Yazirro",
+          "text": "Speaking of bubbles, it was nice meeting you! (Trains Together dev here ;) ) We've managed 70 wishlist since we started the page on friday, that woul"
+        },
+        {
+          "author": "playardent",
+          "text": "Thanks for sharing your post. I've exhibited at a couple of cons and I can say I've seen the same positives as you have. Really rewarding to have peop"
+        },
+        {
+          "author": "Liam_Jacobs",
+          "text": "Take the positives and learn from the experience. Seeing people play your game is beautiful. And it would do you great to listen to their feedback and"
+        }
+      ]
+    },
+    {
+      "title": "What distinguishes a good game designer from a bad one?",
+      "link": "https://www.reddit.com/r/gamedev/comments/1xf9rmt/what_distinguishes_a_good_game_designer_from_a/",
+      "source": "Reddit | gamedev",
+      "time": "2026-10-25T18:24:44",
+      "content": "I admire Edmund (creator of TBOI, meat boy, mewgenics), his ideas are absolute nonsense, but he is so incredible",
+      "comments": [
+        {
+          "author": "PhilippTheProgrammer",
+          "text": "They design games from the perspective of the player, not the perspective of the developer."
+        },
+        {
+          "author": "darrigaz",
+          "text": "It's fairly subjective but my view as a lead designer who has to hire other designer is: A bad designer is really excited by their ideas and tries to"
+        },
+        {
+          "author": "GrumpyCornGames",
+          "text": "Finishing games. The worst game designer who actually follows through and finishes is still better than the best who never finishes a project."
+        }
+      ]
+    },
+    {
+      "title": "Dolly Parton's Imagination Library",
+      "link": "https://imaginationlibrary.com/",
+      "source": "HN | imaginationlibrary.com",
+      "time": "2026-10-25T18:23:54",
+      "content": "With today&#x27;s news, I thought I&#x27;d share this great program:“When I was growing up in the hills of East Tennessee, I knew my dreams would come true. I know there are children in your community with their own dreams. They dream of becoming a doctor or an inventor or a minister. Who knows, maybe there is a little girl whose dream is to be a writer and singer.The seeds of these dreams are often found in books and the seeds you help plant in your community can grow across the world.”",
+      "comments": []
+    },
+    {
+      "title": "Learning to Be Me (1990) [pdf]",
+      "link": "https://gwern.net/doc/fiction/science-fiction/1995-egan.pdf",
+      "source": "HN | gwern.net",
+      "time": "2026-10-25T17:43:20",
+      "content": "Score: 7 | Comments: 2",
+      "comments": []
+    },
+    {
+      "title": "I tried UI Toolkit and it's fantastic",
+      "link": "https://www.reddit.com/r/Unity3D/comments/1xf8kze/i_tried_ui_toolkit_and_its_fantastic/",
+      "source": "Reddit | Unity3D",
+      "time": "2026-10-25T17:37:52",
+      "content": "https://www.reddit.com/gallery/1xf8kze",
+      "comments": [
+        {
+          "author": "Yodzilla",
+          "text": "Maybe it’s a me thing but I don’t like how disconnected it feels from the rest of Unity."
+        },
+        {
+          "author": "phthalo-azure",
+          "text": "I was a software engineer in a previous life, and the UI Toolkit was one of the best Unity experiences for me learning the engine and all its systems."
+        },
+        {
+          "author": "TheWobling",
+          "text": "I think if they can get this experimental figma to unity workflow working well it will be a lot nicer for UX/UI designers who work in figma"
+        }
+      ]
+    },
+    {
+      "title": "A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis",
+      "link": "https://lynchlab.net/llm-skin-cancer",
+      "source": "HN | lynchlab.net",
+      "time": "2026-10-25T17:15:38",
+      "content": "Score: 503 | Comments: 227",
+      "comments": []
+    },
+    {
+      "title": "INSTANT CITY - city builder with story",
+      "link": "https://www.reddit.com/r/unrealengine/comments/1xf809v/instant_city_city_builder_with_story/",
+      "source": "Reddit | unrealengine",
+      "time": "2026-10-25T17:15:01",
+      "content": "https://youtube.com/watch?v=OFzRoOrW9u4&si=TJSJVc4N8RjLeC2J",
+      "comments": []
+    },
+    {
+      "title": "Godot XR Community Game Jam VI",
+      "link": "https://www.reddit.com/r/godot/comments/1xf7mhn/godot_xr_community_game_jam_vi/",
+      "source": "Reddit | godot",
+      "time": "2026-10-25T17:00:16",
+      "content": "https://godotengine.org/article/godot-xr-update-oct2026/",
+      "comments": []
+    },
+    {
+      "title": "[PAID] Looking for 2D Artist – Watercolor Illustration & UI for a Strategy Game",
+      "link": "https://www.reddit.com/r/gameDevJobs/comments/1xf63h5/paid_looking_for_2d_artist_watercolor/",
+      "source": "Reddit | gamedevjobs",
+      "time": "2026-10-25T16:01:07",
+      "content": "/r/gameDevClassifieds/comments/1xf61uo/paid_looking_for_2d_artist_watercolor/",
+      "comments": [
+        {
+          "author": "lucas_renrd",
+          "text": "Hello! I'm a professional 2D Game Artist with experience at Ubisoft + indie projects. Portfolio: [https://www.artstation.com/mister\\_fox](https:/"
+        },
+        {
+          "author": "joao_phillipe_art",
+          "text": "Hi! I'm interested in this illustration opportunity. I'm always open for negotiations! Here's my portfolio: [https://www.artstation.com/joaophilli"
+        }
+      ]
+    },
+    {
+      "title": "Heads up to people buying assets and plugins for Unreal Engine on Fab or other places",
+      "link": "https://www.reddit.com/r/unrealengine/comments/1xf2vv8/heads_up_to_people_buying_assets_and_plugins_for/",
+      "source": "Reddit | unrealengine",
+      "time": "2026-10-25T13:50:35",
+      "content": "***TLDR:*** *Contact developer before buying if you don't think they're support the product any more, try demos, investigate existing features before buying, read descriptions carefully, and go with your gut feelings.* I wanted to share some things to look out for when buying assets, especially if",
+      "comments": [
+        {
+          "author": "CaledoniaInteractive",
+          "text": "If the marketplace asset is something like 3D artwork or sound but its no longer supported its very easy to just download whatever copy of Unreal engi"
+        },
+        {
+          "author": "ApprehensiveName8365",
+          "text": "I highly recommend filtering out ai shit because that stuff isn't going to be supported at all. That stuff requires the dev to spend more money on gen"
+        },
+        {
+          "author": "TiomiSang",
+          "text": "Valuable information. I’ve run across items directly on FAB that say they are compatible with 5.8 and most assuredly they are not. A lot of UE4 assets"
+        }
+      ]
+    },
+    {
+      "title": "COP BASTARD - VHS style FPS inpired by 90s action movies",
+      "link": "https://www.reddit.com/r/indiegames/comments/1xf29mh/cop_bastard_vhs_style_fps_inpired_by_90s_action/",
+      "source": "Reddit | IndieGames",
+      "time": "2026-10-25T13:22:46",
+      "content": "https://v.redd.it/27j87usm6mxh1",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
+        },
+        {
+          "author": "Seed_man",
+          "text": "Standard US cop bodycam footage"
+        },
+        {
+          "author": "askyidroppedthesoap",
+          "text": "Fuck! Goddamn! That's some gory gameplay, you can take my money...wishlisted"
+        }
+      ]
+    },
+    {
+      "title": "You can play the demo of my game right now on Steam!",
+      "link": "https://www.reddit.com/r/indiegames/comments/1xf1ksi/you_can_play_the_demo_of_my_game_right_now_on/",
+      "source": "Reddit | IndieGames",
+      "time": "2026-10-25T12:51:46",
+      "content": "https://v.redd.it/d0olaavrzlxh1",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
+        },
+        {
+          "author": "DeepSlap-Interactive",
+          "text": "Damn, looks good!"
+        },
+        {
+          "author": "nuclear_porridge",
+          "text": "Pedal to the metal surely... Unless petal is intentional?"
+        }
+      ]
+    },
+    {
+      "title": "Is Epic Pushing AI Because They Can Afford to Throw Money on Tokens?",
+      "link": "https://www.reddit.com/r/unrealengine/comments/1xezr38/is_epic_pushing_ai_because_they_can_afford_to/",
+      "source": "Reddit | unrealengine",
+      "time": "2026-10-25T11:16:06",
+      "content": "This might be a strange take, but most game developers I know don't have much money to spare. Plenty get into it hoping to make a good living, then discover how difficult that is and stick around because they love making games. A company (like Epic) with that kind of money and infrastructure can af",
+      "comments": [
+        {
+          "author": "The_Qbx",
+          "text": "This is a tinfoil hat thing I've been thinking about but ... With Fortnite slowly winding down (no game lasts forever) and their recurring revenue"
+        },
+        {
+          "author": "SeniorePlatypus",
+          "text": "You are looking at it the wrong way around. No company cares about hopeful indies. They don't generate revenue and don't keep the lights on. For an a"
+        },
+        {
+          "author": "redditscraperbot2",
+          "text": "When someone says they spent $2000 on tokens, take that number with a **huge** asterisks. What they actually mean 99% of the time they spend the equiv"
+        }
+      ]
+    },
+    {
+      "title": "Why do control nodes never do what I want them to 😭",
+      "link": "https://www.reddit.com/r/godot/comments/1xez2fw/why_do_control_nodes_never_do_what_i_want_them_to/",
+      "source": "Reddit | godot",
+      "time": "2026-10-25T10:37:32",
+      "content": "https://i.redd.it/k1y1645idlxh1.jpeg",
+      "comments": [
+        {
+          "author": "DirtyNorf",
+          "text": "My current game is 90% UI and the thing I've learned about Control nodes is that they work when you have double the number you thought you'd need"
+        },
+        {
+          "author": "Voffvoff",
+          "text": "Godot is by far the best engine I've worked with for doing UI. To quote a friend of mine the first time he saw it: \"Oh my god, they just figured it ou"
+        },
+        {
+          "author": "Hot_Hour8474",
+          "text": "im developing a turn-based rpg. the entire game is a menu 😭"
+        }
+      ]
+    },
+    {
+      "title": "Simple studio cinematic",
+      "link": "https://www.reddit.com/r/unrealengine/comments/1xeym9j/simple_studio_cinematic/",
+      "source": "Reddit | unrealengine",
+      "time": "2026-10-25T10:11:03",
+      "content": "https://youtu.be/wkv-BLrEw6w",
+      "comments": []
+    },
+    {
+      "title": "I made a tower defense game where the enemy is a flood",
+      "link": "https://www.reddit.com/r/indiegames/comments/1xesdg5/i_made_a_tower_defense_game_where_the_enemy_is_a/",
+      "source": "Reddit | IndieGames",
+      "time": "2026-10-25T03:59:37",
+      "content": "https://v.redd.it/pw26krvmdjxh1",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
+        },
+        {
+          "author": "IronicStrikes",
+          "text": "It's an interesting idea, but it does look quite weird the way it's presented. Using flamethrowers and towers makes more sense for a setting where the"
+        },
+        {
+          "author": "Switchblade88",
+          "text": "Reminds me of Creeper World"
+        }
+      ]
+    },
+    {
+      "title": "Show HN: A Truly Modular Keyboard",
+      "link": "https://github.com/notaroomba/keybytes",
+      "source": "HN | github.com",
+      "time": "2026-10-25T03:47:56",
+      "content": "Score: 59 | Comments: 18",
+      "comments": []
+    },
+    {
+      "title": "Show HN: ADRs for AI – Deliberation records for human–AI work, versioned in Git",
+      "link": "https://adrs.systems",
+      "source": "HN | adrs.systems",
+      "time": "2026-10-25T00:43:47",
+      "content": "Why is this worth your time? Essentially, this solves two problems of AI-assisted programming:(a) the first problem is how to do oversight and what do oversight of and this is solved through the ORRCF (for Options, Recommendation, Rationale, Confidence, Falsifier) question format (in which models are supposed to surface all their doubts with fully fleshed out recommendations, with falsifier, to be approved or overridden)(b) the second problem is how to scaffold sustainable AI-written code; the ADRs (Architectural Deliberation Records, after Nygard&#x27;s decision records) written by the models, summarize all the thought process involved in any design decision and provides the blueprint for the code.In tandem, the records provide both the reason why certain non-obvious design choices were made, from a constant, to a library choice, to an ordering in an operation; and also under what conditions different decisions would be made, for instance, in a different platform, or under different latency requirements, or for a different audience, and so on.This is a framework I&#x27;ve been working for over a year, that is the starting point of all my projects. It involves a lot of moving parts and my challenge is figuring out onboarding. I&#x27;m hoping the plugin, ADRs4AI&#x2F;plugins, just created and now also submitted to Anthropic&#x27;s marketplace, will make it easier. I am also in the process of recording introductory videos.I would like feedback on the onboarding, on what you make of the currently online materials, and how I could make any of this clearer. Thanks!",
+      "comments": []
+    },
+    {
+      "title": "Unreal 5.8 - Materials Masterclass - Chapter 11: UI Materials",
+      "link": "https://www.reddit.com/r/unrealengine/comments/1xecvlb/unreal_58_materials_masterclass_chapter_11_ui/",
+      "source": "Reddit | unrealengine",
+      "time": "2026-10-24T16:21:50",
+      "content": "https://youtu.be/vsgqs8eENGQ",
+      "comments": [
+        {
+          "author": "Digital-Caffeine",
+          "text": "Haven't watched all the way through yet, but this seems so incredibly thorough and I'm glad performance is top of mind while you are building. Thank y"
+        }
+      ]
+    },
+    {
+      "title": "The Fall of Scientific American",
+      "link": "https://www.thenation.com/article/society/scientific-american-springer-nature-trump/",
+      "source": "HN | thenation.com",
+      "time": "2026-10-24T06:03:30",
+      "content": "Score: 28 | Comments: 6",
+      "comments": []
+    },
+    {
+      "title": "Who Cares Whether Academics Use AI to Write?",
+      "link": "https://www.chronicle.com/article/who-cares-whether-academics-use-ai-to-write",
+      "source": "HN | chronicle.com",
+      "time": "2026-10-23T15:29:32",
+      "content": "Score: 3 | Comments: 2",
+      "comments": []
+    },
+    {
+      "title": "The 2026 Official Unity Game Jam starts November 5th!",
+      "link": "https://www.reddit.com/r/Unity3D/comments/1xcuvxh/the_2026_official_unity_game_jam_starts_november/",
+      "source": "Reddit | Unity3D",
+      "time": "2026-10-22T21:08:27",
+      "content": "https://itch.io/jam/official-unity-game-jam-2026",
+      "comments": [
+        {
+          "author": "db9dreamer",
+          "text": "Are we allowed to submit games that don't use generative AI?"
+        },
+        {
+          "author": "timee_bot",
+          "text": "View in your timezone: [Thursday, Nov 5 at 9 AM PT][1] [Saturday, Nov 14 at 12:00 UTC][2] [1]: https://timee.io/20261105T1700?tl=The+2026+Offic"
+        }
+      ]
+    },
+    {
+      "title": "Iron Age salt-mining complex found beneath Hallstatt in Austria",
+      "link": "https://archaeologymag.com/2026/09/iron-age-salt-mining-complex-beneath-hallstatt/",
+      "source": "HN | archaeologymag.com",
+      "time": "2026-10-22T21:00:14",
+      "content": "Score: 32 | Comments: 3",
+      "comments": []
+    },
+    {
+      "title": "Overgrown, when plants invade your abandoned tabs",
+      "link": "https://charliegerard.dev/blog/overgrown-extension/",
+      "source": "HN | charliegerard.dev",
+      "time": "2026-10-22T15:52:21",
+      "content": "Score: 215 | Comments: 68",
+      "comments": []
+    },
+    {
+      "title": "Amazon’s “digital pacifier” for toddlers",
+      "link": "https://oligarchwatch.substack.com/p/amazons-digital-pacifier-for-toddlers",
+      "source": "HN | oligarchwatch.substack.com",
+      "time": "2026-10-21T18:37:48",
+      "content": "Score: 137 | Comments: 206",
+      "comments": []
+    },
+    {
+      "title": "Dev snapshot: Godot 4.8 beta 1",
+      "link": "https://www.reddit.com/r/godot/comments/1x71jcc/dev_snapshot_godot_48_beta_1/",
+      "source": "Reddit | godot",
+      "time": "2026-10-16T00:00:17",
+      "content": "https://godotengine.org/article/dev-snapshot-godot-4-8-beta-1/",
+      "comments": [
+        {
+          "author": "Urser",
+          "text": "Oh sweet, looks like you can set both 2D and 3D views as floating docks so you can edit 2D/3D simultaneously."
+        },
+        {
+          "author": "-NiMa-",
+          "text": "Trail3D 🤩"
+        },
+        {
+          "author": "Thhaki",
+          "text": "Already saw it in the dev builds but Godot 4.8 is coming strong with those rendering additions, I feel like this built in solutions for the new multi-"
+        }
+      ]
+    },
+    {
+      "title": "/r/GameDev Updates to Rule 3: No Showcasing Projects",
+      "link": "https://www.reddit.com/r/gamedev/comments/1x6s41i/rgamedev_updates_to_rule_3_no_showcasing_projects/",
+      "source": "Reddit | gamedev",
+      "time": "2026-10-15T17:35:09",
+      "content": "This community has often allowed people to share free tools and assets but it has always been subjective about where the line crosses regarding self-promotion or showing off a project. We have updated rule 3 to make the following clarification about sharing tools in our community: 1. All of your ow",
+      "comments": [
+        {
+          "author": "Klightgrove",
+          "text": "I keep seeing some confusion in the comments so I updated the post, but we have not updated any rules to disallow paid tools. That part of rule 6 has"
+        },
+        {
+          "author": "RiftHunter4",
+          "text": "All tools, engines, and assets should be held to the same standard. We don't ban Unity3D or Unreal or any of the either tools for having paid services"
+        },
+        {
+          "author": "JorbyPls",
+          "text": ">However we are still left with the open-ended question of **what to do with assets**. People often share free assets made by others, but what is the"
+        }
+      ]
+    },
+    {
+      "title": "Introducing BRUTAL | A free C# framework that helped RimWorld make its own engine and break free of Unity. Now you can too.",
+      "link": "https://www.reddit.com/r/gamedev/comments/1x6d2dy/introducing_brutal_a_free_c_framework_that_helped/",
+      "source": "Reddit | gamedev",
+      "time": "2026-10-15T05:13:10",
+      "content": "Our industry is rotting from its core, outwards in every direction, and it has been for some time. Driven by greed, driven by a race to the bottom on price. It is my position that the games industry was already heading somewhere unsustainable before reverse-engineering and powerful agentic processes",
+      "comments": [
+        {
+          "author": "KevinDL",
+          "text": "Putting on my moderator hat for a moment, I have mixed feelings about how a post like this fits within r/gamedev's self-promotion rules. We've tradit"
+        },
+        {
+          "author": "KSP_HarvesteR",
+          "text": "I said this to Dean, and it bears repeating, I can't thank him enough for not only including me in KSA, but introducing me to BRUTAL. He saved me fr"
+        },
+        {
+          "author": "Thatar",
+          "text": "I love frameworks. I learned how to make games using XNA. There is something cozy about never leaving your coding ide when making a game. And its a fa"
+        }
+      ]
+    },
+    {
+      "title": "[MegaThread] Account blocked and suspended",
+      "link": "https://www.reddit.com/r/Unity3D/comments/1x5tldh/megathread_account_blocked_and_suspended/",
+      "source": "Reddit | Unity3D",
+      "time": "2026-10-14T15:03:32",
+      "content": "Hello everyone, As many of you may have noticed; some people had their account(s) suspended. In the past few weeks Unity had sent out emails to reset your two-factor authentication (2FA) credentials. **So what's next? See the link on bottom of this post OR Unity's pinned comment.** **September 14t",
+      "comments": [
+        {
+          "author": "unitytechnologies",
+          "text": "Hi everyone, Edit: A new knowledge base article on contacting support and what to send is available [here](https://support.unity.com/hc/en-us/article"
+        },
+        {
+          "author": "tolgatr0n",
+          "text": "They only said you can be suspended in just the last e-mail which is 3 days ago. Other e-mails were advising to remove your 2FA and didn't mention any"
+        },
+        {
+          "author": "10mo3",
+          "text": "I'm sorry but did y'all not see this becoming a massive issue? 😭"
+        }
+      ]
+    },
+    {
+      "title": "Indie Games Discord Server!",
+      "link": "https://www.reddit.com/r/indiegames/comments/1x526sv/indie_games_discord_server/",
+      "source": "Reddit | IndieGames",
+      "time": "2026-10-13T17:00:25",
+      "content": "https://discord.gg/Ufs7DjnwQ2",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
+        }
+      ]
+    },
+    {
+      "title": "- ATTENTION: READ ME - Job Board: Rules & Guidelines",
+      "link": "https://www.reddit.com/r/gameDevJobs/comments/xdpu98/attention_read_me_job_board_rules_guidelines/",
+      "source": "Reddit | gamedevjobs",
+      "time": "2022-09-14T02:22:05",
+      "content": "***Scroll down to see the job board rules under the existing updates*** \\---- **UPDATE 2022-09-13** **ATTENTION ALL ARTISTS AND ASSET SELLERS/GAME PROMOTERS**. This is a job board for those looking for work in the game industry or posting jobs related to the game industry. **THIS IS NOT** [Starvi",
+      "comments": [
+        {
+          "author": "hsandt",
+          "text": "Hey, I'm new here and I noticed in Rule 3. that you mention \"gameDevClassifieds\" but the sentence makes it sound like you mean \"this subreddit\" aka \"g"
+        },
+        {
+          "author": "None",
+          "text": "[removed]"
+        },
+        {
+          "author": "OutrageousLadder7065",
+          "text": "Are indi game developers encouraged not to reach out to these artists? I'm just curious as a indie game developer looking for artists right now in the"
+        }
+      ]
+    },
+    {
+      "title": "社区速递 162 | MUJI 靠垫、中兴路由器与派友们的长假吃灰装备",
+      "link": "https://sspai.com/post/116820",
+      "source": "少数派",
+      "time": "Wed, 21 Oct 2026 17:00:00 +0800",
+      "content": "除了首页时间流和侧栏的精选展位，少数派Matrix社区还有很多优秀内容因条件所限无法得到有效曝光，因此我们决定重启Matrix周报，并在此基础上添加更多社区内容、作者投稿新玩意呈现给大家。上周社区速递 ...查看全文",
+      "comments": []
+    },
+    {
+      "title": "主流大模型挑战最高难度《杀戮尖塔》，全都死于太过稳健……",
+      "link": "https://www.yystv.cn/p/14518",
+      "source": "Gaming | 游研社",
+      "time": "Tue, 20 Oct 2026 00:00:00 +0800",
+      "content": "“血量只有快没有的时候才是有用的资源”，AI大人。上个星期，加拿大Vector研究所与荷兰Radboud大学的研究人员在论文预印本平台arXiv上发布了一项最新研究，论文题为《SpireBench：用〈杀戮尖塔〉评估智能体模型的长期战略能力》。顾名思义，这项被命名为\"SpireBench\"的研究，目的在于通过知名肉鸽卡牌构筑游戏《杀戮尖塔》，来测试当前的大语言模型能否在频繁应对战斗的同时做出长线规划——选择路线、管理资源、构筑牌组。AI们将一路爬塔，最终尝试实现通关这个终极目标。这并非第一次\"让AI打《杀戮尖塔》\"的实验。不过此前的相关测试都有明显的缩水：有的只用了8张牌和5个孤立战斗场景，测的是微操而非完整对局；有的虽然驱动了真实游戏，但难度选在最低的A0，模型只负责战斗出牌和选卡牌奖励，不涉及路线规划、商店购物、营火决策等其他抉择。所以这次使用20个大模型测试游戏顶级难度A20的“SpireBench”，算是头一次使用多模型，挑战《杀戮尖塔》完整原作最高难度的系统性研究。根据实验结果，20个大模型统一使用铁甲战士角色，各自开到最高推理档位，在A20难度下挑战了相同的10个全新种子。拢共200局游戏下来，最终只有GPT-5.6 Sol作为独苗，通关了一次心脏。通关率如此惨淡，研究发现一大重要因素在于：AI实在是太稳健了。1在解释AI为什么输之前，需要先解释一下《杀戮尖塔》对于AI难在哪里。众所周知，在一众知名肉鸽游戏中，《杀戮尖塔》对玩家资源管理水平的考验是最严格的，或许没有之一。玩家需要精准把控自身的血量，进而以此获取卡牌、药水、遗物，构筑相应的BD套路，应对不同的挑战。尤其在高难度下，浪费一次微小的资源几乎就意味着死亡。这次研究进一步把游戏拆分为五层时间维度：每一回合，AI要思考出哪些牌，什么顺序，打哪个敌人；每场战斗，AI要思考怎样用血量和药水换取胜利；每一阶段，AI要思考走哪条路线，承担多大风险；每整局，AI要思考自身的成长速度能否跟上游戏难度的增长；多局之间，AI要思考有什么值得记住，帮助自己更好地通关。其中难点在于，游戏没有所谓的标准答案。有经验的玩家想必深有体会，前期拿的战力卡能救一时之急，后期却可能阻碍卡组启动；打精英怪可能暴毙，同时也可能奖励强力的遗物或卡牌；不同的敌人类型，考验卡组的不同能力……《杀戮尖塔》把大大小小的挑战浓缩在一局游戏中，战斗中的操作、构筑牌组的规划、选路线和管理资源的宏观战略，层层嵌套，牵一发而动全身。当下的大模型用来执行即时任务往往表现得不错，但其能不能在几百个决策点上保持连贯的战略判断？能不能权衡眼前小亏和长远大利？能不能从失败中学到东西？实验结果显示，表现最好的四个模型分别是Claude Fable 5.1（平均通过1.6个阶段）、GPT-6 Astra（1.5个阶段）、Claude Opus 5（1.3个阶段）和GPT-5.6 Sol（1.1个阶段），这些最聪明的AI超越了人类玩家的平均水平，但和真正的高手相比显然还存在不小的距离。所以《杀戮尖塔》给出的答案是：AI的长期战略能力，暂时还得练。2问题出在哪里？最显著的就是AI太过稳健，以至于到了“怂”的地步。实验选取了4位高手游戏主播的逐局数据作为对比，发现AI在第一幕平均只打约0.9—1.4场精英战，主播约为2.6场；AI在57%—75%的营火选择回血，高手约为9%。即使抵达营火时血量仍有七成以上，模型也会在31%的情况下选择休息——相同情况下所有主播均选择升级卡牌。这就导致，AI往往带着满血、却较弱的卡组进入BOSS房。例如上述“最强”的四个模型，进入第一阶段BOSS战时，血量往往处于上限的90%左右，而主播这个时候大多只剩半血，同时却拥有更强力的遗物和升级过的卡牌，损失的血量转化成了后续战斗的优势。以人类玩家数据为例，采取保守策略（少打精英、多休息）的玩家在第二阶段只有15%的通关率，而积极打精英的玩家则有38%。这一定程度解释了AI通关率低的原因。不仅如此，AI还有一个\"攒牌\"的坏习惯。战斗胜利后的卡牌奖励，人类玩家考虑到最终的卡组构建，会跳过23%（因为并非每张牌都值得拿），而AI只跳过3%-13%，导致牌组越来越臃肿。数据显示，第一阶段BOSS战时，AI的牌组平均有19.3张牌，人类只有16.8张——而在《杀戮尖塔》中，一副臃肿的牌组通常意味着你想要的关键牌更难抽到。学习组建小卡组可能是每个《杀戮尖塔》玩家入门的第一课这些问题综合到一起，你可能会觉得AI太笨了，压根玩不来《杀戮尖塔》，但这么说其实也不准确，事实上，如果仅以第一阶段为评判标准，AI已经达到了顶尖高手的水准。仅看第一阶段，高手主播的通关率大概在85%-92%之间，而表现最好的三个模型，在第一阶段的通关率也达到了90%，两者几乎持平。不过随着游戏的进行，第",
+      "comments": []
+    },
+    {
+      "title": "前瞻｜Apple 新品看点：MacBook 或将推出 OLED 触屏版本",
+      "link": "https://sspai.com/post/116923",
+      "source": "少数派",
+      "time": "Thu, 22 Oct 2026 15:00:00 +0800",
+      "content": "配备触摸屏的 OLED 版 MacBook 型号很可能是这次活动的主角。查看全文",
+      "comments": []
+    },
+    {
+      "title": "终于吃到了那颗梦寐以求的小药丸：我的 ADHD 诊疗记",
+      "link": "https://sspai.com/post/115090",
+      "source": "少数派",
+      "time": "Thu, 22 Oct 2026 11:36:57 +0800",
+      "content": "药物不能解决所有问题，这是是我学到的重要一课。查看全文",
+      "comments": []
+    },
+    {
+      "title": "派早报：荣耀发布 WIN2 系列新品、Google 开源 TorchTPU 等",
+      "link": "https://sspai.com/post/116953",
+      "source": "少数派",
+      "time": "Thu, 22 Oct 2026 08:29:05 +0800",
+      "content": "OpenBSD 8.0 正式发布、腾讯宣布元宝搜索对外开放等。查看全文",
+      "comments": []
+    },
+    {
+      "title": "（爆音注意）北京核聚变前夜实录，录音笔VOL.810",
+      "link": "https://www.gcores.com/radios/221368",
+      "source": "Gaming | 机核网",
+      "time": "Fri, 23 Oct 2026 18:00:00 +0800",
+      "content": "【录音笔】是GPASS推出的一档会员专享节目，内容来自机核办公室日程生活和工作中的一些短小记录，每期时长十几分钟左右（大概吧）。内容也许是一些不成体统的碎碎念，也许是一些突然发疯的暴言，还有可能是哪个缺德的把办公室里真实的日常对话（dui ma）偷偷录了下来，总之就连我们自己现在也不知道每期会有哪些人参与，会录些什么。",
+      "comments": []
+    },
+    {
+      "title": "双厨狂喜！游戏联动的神与鬼 | 走神大师229",
+      "link": "https://www.gcores.com/radios/221420",
+      "source": "Gaming | 机核网",
+      "time": "Fri, 23 Oct 2026 17:30:00 +0800",
+      "content": "双厨狂喜！游戏联动的神与鬼 | 走神大师229 参与者：九尺獠牙、时雨、Lost、化身伊陆 OP：うぬぼれ刑事のテーマ〜2010 ED：君は薔薇より美しい(Cover) 哪些游戏联动让我们印象深刻？哪些游戏联动转眼就忘？在本期节目中，我们将从“还原度、适应性、营养度”三个维度，细品几个让我们印象深刻的游戏联动案例。 02:32 《赛博朋克:边缘行者》在那个世界的故事… 12:13 《堡垒之夜》里可真是什么都有 28:41 育碧能将各种IP拉到自己世界观里 35:23 贝希摩斯真是太强了 43:50 《黎明杀机》里的联动地图居然能…！ 67:15 《杀手》与演员们的联动 74:43 世界上把IP大融合做到终极的《任天堂明星大乱斗终极版》 81:26 第一个反面案例——《人中北斗》 87:08 街霸X铁拳也太欺负人了 90:28 自由讨论：什么样的联动算好，什么样的算坏？ 94:03 谈到细胞分裂男主变成0，罗斯特疯了。 106:57 梦游大师：你希望看到哪两个游戏IP联动？ 116:10 为什么日厂角色这么难联动？听专业人士来揭秘！",
+      "comments": []
+    },
+    {
+      "title": "冠军键盘正式亮相｜IQUNIX 参展 2026 北京核聚变",
+      "link": "https://www.gcores.com/articles/221311",
+      "source": "Gaming | 机核网",
+      "time": "Fri, 23 Oct 2026 17:00:00 +0800",
+      "content": "核聚变游戏嘉年华北京站即将开幕，热门新游试玩、精彩舞台活动、限定周边收集、沉浸式体验最热烈的玩家氛围！10 月 24、25 日，我们首钢国际会展中心见！ &lt;官方网站&gt;IQUNIX是一家高端计算机周边产品品牌，2014 年于深圳前海成立。我们的初衷是为用户提供优质的计算机周边产品，提升用户的数字生活体验；在坚持长期主义美学与对用户需求的长期关注下，通过不断探索创新，成为用户信赖的高端计算机周边产品品牌。 目前，IQUNIX 深耕于电竞与游戏领域，目前已推出 EV63、EZ63、EZ75、EZ80 等多款高端旗舰磁轴键盘产品。同时，IQUNIX 的王牌产品 EV63，独占行业第三代霍尔传感器，加上自研的超竞固件，为用户带来无与伦比的产品体验。 在 2026 年无畏契约上海全球冠军赛上，冠军队伍 LOUD 使用 EV63 获得了年度总冠军，让专业电竞体验更上一层楼。此外，IQUNIX 在电竞生态与领域持续投入。目前已与中国电竞豪门 EDG 俱乐部无畏契约分部、美洲俱乐部 MIBR 俱乐部无畏契约分部等俱乐部进行合作，让电竞生态更丰富，用户体验与竞技体验更进一步。 10 月 24 日至 25 日，IQUNIX 将正式参与核聚变北京展会，展位号 B11。我们为到来展位的每位观众与用户，赠送出合作俱乐部的相关周边，也希望可以与热爱电竞的你相聚。 展会详情展会时间： 2026 年 10 月 24 日（周六）9：00-17：00（16：00停止入场） 2026 年 10 月 25 日（周日）9：00-17：00（16：00停止入场） 展会地点：北京石景山 · 首钢国际会展中心 1、3 号馆温馨提示场馆内为官方影像采集区域，涵盖活动全展区、主舞台区域、体验试玩区、蓄水功能区及场内所有通行活动空间，您在场期间的肖像、语音、现场影像等个人视听信息存在被拍摄、录制、会被记录。隐私使用声明 本次现场采集所得含您肖像、声音在内的视听素材，仅用于本活动主办方及关联授权主体的品牌宣传、活动推广使用； 素材使用渠道包括但不限于：主办方自有线上运营平台、官方网站、新媒体账号、线下活动物料、纸质宣传手册、线下户外及场内广告载体等； 若您不愿自身影像、声音被记录，可主动避开官方拍摄机位、录制点位。",
+      "comments": []
+    },
+    {
+      "title": "北京站逛展攻略请查收｜BOE电竞高阶联盟邀你一起开玩！",
+      "link": "https://www.gcores.com/articles/221361",
+      "source": "Gaming | 机核网",
+      "time": "Fri, 23 Oct 2026 16:00:00 +0800",
+      "content": "核聚变游戏嘉年华北京站即将开幕，热门新游试玩、精彩舞台活动、限定周边收集、沉浸式体验最热烈的玩家氛围！10 月 24、25 日，我们首钢国际会展中心见！ &lt;官方网站&gt;10 月 24 日-25 日，北京石景山·首钢国际会展中心 1 号馆A01，BOE电竞高阶联盟邀你一起开玩！四大热门游戏IP、多款电竞展品集结，解锁BOE显示技术带来的游戏新体验！✅ ADS Pro原生千帧 ×「无畏契约」 体验FHD 1000Hz原生千帧显示，感受高速移动、瞄准跟枪时的清晰流畅。✅ ADS Pro裸眼 3D ×「三角洲行动」 无需佩戴 3D 眼镜，感受立体场景与战场纵深，体验不一样的搜打撤。✅ ADS Pro 高画质动态清晰「无畏契约」全新体验 5K高清画面搭配 144Hz 刷新率，细腻呈现战场细节，畅享流畅对战。✅ ADS Pro与α-MLED 极致画质体验 双技术呈现细腻画质，畅游开放世界，尽览沿途风景与光影之美。✅ 更多IP沉浸体验 手机、平板、显示器等多种终端现场体验，沉浸探索各大热门游戏IP，感受精彩战斗。现场参与体验挑战与集章互动，还有机会赢取电竞好礼🎁 展会详情展会时间： 2026 年 10 月 24 日（周六）9：00-17：00（16：00停止入场） 2026 年 10 月 25 日（周日）9：00-17：00（16：00停止入场） 展会地点：北京石景山 · 首钢国际会展中心 1、3 号馆温馨提示场馆内为官方影像采集区域，涵盖活动全展区、主舞台区域、体验试玩区、蓄水功能区及场内所有通行活动空间，您在场期间的肖像、语音、现场影像等个人视听信息存在被拍摄、录制、会被记录。隐私使用声明 本次现场采集所得含您肖像、声音在内的视听素材，仅用于本活动主办方及关联授权主体的品牌宣传、活动推广使用； 素材使用渠道包括但不限于：主办方自有线上运营平台、官方网站、新媒体账号、线下活动物料、纸质宣传手册、线下户外及场内广告载体等； 若您不愿自身影像、声音被记录，可主动避开官方拍摄机位、录制点位。",
+      "comments": []
+    },
+    {
+      "title": "燕云十六声丨核聚变参展情报",
+      "link": "https://www.gcores.com/articles/221360",
+      "source": "Gaming | 机核网",
+      "time": "Fri, 23 Oct 2026 15:00:00 +0800",
+      "content": "核聚变游戏嘉年华北京站即将开幕，热门新游试玩、精彩舞台活动、限定周边收集、沉浸式体验最热烈的玩家氛围！10 月 24、25 日，我们首钢国际会展中心见！ &lt;官方网站&gt;燕起四方，聚于此间，同侠论义 声出江湖，登于台榭，与君共聆核聚变2026启幕在即，参展情报为各位游侠奉上！ 展会详情展会时间： 2026 年 10 月 24 日（周六）9：00-17：00（16：00停止入场） 2026 年 10 月 25 日（周日）9：00-17：00（16：00停止入场） 展会地点：北京石景山 · 首钢国际会展中心 1、3 号馆温馨提示场馆内为官方影像采集区域，涵盖活动全展区、主舞台区域、体验试玩区、蓄水功能区及场内所有通行活动空间，您在场期间的肖像、语音、现场影像等个人视听信息存在被拍摄、录制、会被记录。隐私使用声明 本次现场采集所得含您肖像、声音在内的视听素材，仅用于本活动主办方及关联授权主体的品牌宣传、活动推广使用； 素材使用渠道包括但不限于：主办方自有线上运营平台、官方网站、新媒体账号、线下活动物料、纸质宣传手册、线下户外及场内广告载体等； 若您不愿自身影像、声音被记录，可主动避开官方拍摄机位、录制点位。",
+      "comments": []
+    },
+    {
+      "title": "致态参展核聚变游戏嘉年华北京站",
+      "link": "https://www.gcores.com/articles/221310",
+      "source": "Gaming | 机核网",
+      "time": "Fri, 23 Oct 2026 14:00:00 +0800",
+      "content": "核聚变游戏嘉年华北京站即将开幕，热门新游试玩、精彩舞台活动、限定周边收集、沉浸式体验最热烈的玩家氛围！10 月 24、25 日，我们首钢国际会展中心见！ &lt;官方网站&gt;致态首次参加核聚变游戏嘉年华北京站!本次参展，我们将在现场展示多款致态产品，并在现场官宣与某神秘3A大作达成战略合作，官宣仪式也将在 24 日下午 14 点举行！ 官宣仪式之后，我们还会以有奖问答的形式为现场玩家准备多重好礼，包括 SSD 产品、游戏兑换码等。致态展位内，我们还设计了打卡拍照、互动游戏等迎接各位的到来，并在 2 天内准备京东 e 卡、某 3A游戏兑换码作为抽奖奖品！核聚变北京站，我们不见不散！ 展会详情展会时间： 2026 年 10 月 24 日（周六）9：00-17：00（16：00停止入场） 2026 年 10 月 25 日（周日）9：00-17：00（16：00停止入场） 展会地点：北京石景山 · 首钢国际会展中心 1、3 号馆温馨提示场馆内为官方影像采集区域，涵盖活动全展区、主舞台区域、体验试玩区、蓄水功能区及场内所有通行活动空间，您在场期间的肖像、语音、现场影像等个人视听信息存在被拍摄、录制、会被记录。隐私使用声明 本次现场采集所得含您肖像、声音在内的视听素材，仅用于本活动主办方及关联授权主体的品牌宣传、活动推广使用； 素材使用渠道包括但不限于：主办方自有线上运营平台、官方网站、新媒体账号、线下活动物料、纸质宣传手册、线下户外及场内广告载体等； 若您不愿自身影像、声音被记录，可主动避开官方拍摄机位、录制点位。",
+      "comments": []
+    },
+    {
+      "title": "「更新直播页」核电波Live｜2026北京核聚变舞台活动",
+      "link": "https://www.gcores.com/articles/220877",
+      "source": "Gaming | 机核网",
+      "time": "Fri, 23 Oct 2026 13:00:00 +0800",
+      "content": "扫码查看直播间专题页 10月24、25日，请锁定b站核电波、机核GCORES直播间！核聚变游戏嘉年华北京站即将开幕，热门新游试玩、精彩舞台活动、限定周边收集、沉浸式体验最热烈的玩家氛围！10 月 24、25 日，我们首钢国际会展中心见！核电波Live2026核聚变游戏嘉年华北京站的舞台活动全程由核电波主持，届时也会在b站的核电波、机核GCORES账号同时进行直播，现场和线上的观众均可享受到我们准备的精彩内容！ (（舞台效果图）)节目预告 10月24、25日，请锁定b站核电波、机核GCORES直播间！ 展会详情展会时间： 2026 年 10 月 24 日（周六）9：00-17：00（16：00停止入场） 2026 年 10 月 25 日（周日）9：00-17：00（16：00停止入场） 展会地点：北京石景山 · 首钢国际会展中心 1、3 号馆温馨提示场馆内为官方影像采集区域，涵盖活动全展区、主舞台区域、体验试玩区、蓄水功能区及场内所有通行活动空间，您在场期间的肖像、语音、现场影像等个人视听信息存在被拍摄、录制、会被记录。隐私使用声明 本次现场采集所得含您肖像、声音在内的视听素材，仅用于本活动主办方及关联授权主体的品牌宣传、活动推广使用； 素材使用渠道包括但不限于：主办方自有线上运营平台、官方网站、新媒体账号、线下活动物料、纸质宣传手册、线下户外及场内广告载体等； 若您不愿自身影像、声音被记录，可主动避开官方拍摄机位、录制点位。",
       "comments": []
     },
     {
@@ -846,14 +1885,6 @@
       "comments": []
     },
     {
-      "title": "Unreal 5.8 - Materials Masterclass - Chapter 11: UI Materials",
-      "link": "https://www.reddit.com/r/unrealengine/comments/1xecvlb/unreal_58_materials_masterclass_chapter_11_ui/",
-      "source": "Reddit | unrealengine",
-      "time": "2026-10-24T16:21:50",
-      "content": "https://youtu.be/vsgqs8eENGQ",
-      "comments": []
-    },
-    {
       "title": "Intro scene for my game",
       "link": "https://www.reddit.com/r/Unity3D/comments/1xecmix/intro_scene_for_my_game/",
       "source": "Reddit | Unity3D",
@@ -1138,23 +2169,6 @@
       "comments": []
     },
     {
-      "title": "The 2026 Official Unity Game Jam starts November 5th!",
-      "link": "https://www.reddit.com/r/Unity3D/comments/1xcuvxh/the_2026_official_unity_game_jam_starts_november/",
-      "source": "Reddit | Unity3D",
-      "time": "2026-10-22T21:08:27",
-      "content": "https://itch.io/jam/official-unity-game-jam-2026",
-      "comments": [
-        {
-          "author": "db9dreamer",
-          "text": "Are we allowed to submit games that don't use generative AI?"
-        },
-        {
-          "author": "timee_bot",
-          "text": "View in your timezone: [Thursday, Nov 5 at 9 AM PT][1] [Saturday, Nov 14 at 12:00 UTC][2] [1]: https://timee.io/20261105T1700?tl=The+2026+Offic"
-        }
-      ]
-    },
-    {
       "title": "Monoidal computer I: Basic computability by string diagrams (2012)",
       "link": "https://arxiv.org/abs/1208.5205",
       "source": "HN | arxiv.org",
@@ -1201,124 +2215,6 @@
       "time": "2026-10-20T17:06:48",
       "content": "Score: 27 | Comments: 1",
       "comments": []
-    },
-    {
-      "title": "Dev snapshot: Godot 4.8 beta 1",
-      "link": "https://www.reddit.com/r/godot/comments/1x71jcc/dev_snapshot_godot_48_beta_1/",
-      "source": "Reddit | godot",
-      "time": "2026-10-16T00:00:17",
-      "content": "https://godotengine.org/article/dev-snapshot-godot-4-8-beta-1/",
-      "comments": [
-        {
-          "author": "Urser",
-          "text": "Oh sweet, looks like you can set both 2D and 3D views as floating docks so you can edit 2D/3D simultaneously."
-        },
-        {
-          "author": "-NiMa-",
-          "text": "Trail3D 🤩"
-        },
-        {
-          "author": "Thhaki",
-          "text": "Already saw it in the dev builds but Godot 4.8 is coming strong with those rendering additions, I feel like this built in solutions for the new multi-"
-        }
-      ]
-    },
-    {
-      "title": "/r/GameDev Updates to Rule 3: No Showcasing Projects",
-      "link": "https://www.reddit.com/r/gamedev/comments/1x6s41i/rgamedev_updates_to_rule_3_no_showcasing_projects/",
-      "source": "Reddit | gamedev",
-      "time": "2026-10-15T17:35:09",
-      "content": "This community has often allowed people to share free tools and assets but it has always been subjective about where the line crosses regarding self-promotion or showing off a project. We have updated rule 3 to make the following clarification about sharing tools in our community: 1. All of your ow",
-      "comments": [
-        {
-          "author": "Klightgrove",
-          "text": "I keep seeing some confusion in the comments so I updated the post, but we have not updated any rules to disallow paid tools. That part of rule 6 has"
-        },
-        {
-          "author": "RiftHunter4",
-          "text": "All tools, engines, and assets should be held to the same standard. We don't ban Unity3D or Unreal or any of the either tools for having paid services"
-        },
-        {
-          "author": "JorbyPls",
-          "text": ">However we are still left with the open-ended question of **what to do with assets**. People often share free assets made by others, but what is the"
-        }
-      ]
-    },
-    {
-      "title": "Introducing BRUTAL | A free C# framework that helped RimWorld make its own engine and break free of Unity. Now you can too.",
-      "link": "https://www.reddit.com/r/gamedev/comments/1x6d2dy/introducing_brutal_a_free_c_framework_that_helped/",
-      "source": "Reddit | gamedev",
-      "time": "2026-10-15T05:13:10",
-      "content": "Our industry is rotting from its core, outwards in every direction, and it has been for some time. Driven by greed, driven by a race to the bottom on price. It is my position that the games industry was already heading somewhere unsustainable before reverse-engineering and powerful agentic processes",
-      "comments": [
-        {
-          "author": "KevinDL",
-          "text": "Putting on my moderator hat for a moment, I have mixed feelings about how a post like this fits within r/gamedev's self-promotion rules. We've tradit"
-        },
-        {
-          "author": "KSP_HarvesteR",
-          "text": "I said this to Dean, and it bears repeating, I can't thank him enough for not only including me in KSA, but introducing me to BRUTAL. He saved me fr"
-        },
-        {
-          "author": "Thatar",
-          "text": "I love frameworks. I learned how to make games using XNA. There is something cozy about never leaving your coding ide when making a game. And its a fa"
-        }
-      ]
-    },
-    {
-      "title": "[MegaThread] Account blocked and suspended",
-      "link": "https://www.reddit.com/r/Unity3D/comments/1x5tldh/megathread_account_blocked_and_suspended/",
-      "source": "Reddit | Unity3D",
-      "time": "2026-10-14T15:03:32",
-      "content": "Hello everyone, As many of you may have noticed; some people had their account(s) suspended. In the past few weeks Unity had sent out emails to reset your two-factor authentication (2FA) credentials. **So what's next? See the link on bottom of this post OR Unity's pinned comment.** **September 14t",
-      "comments": [
-        {
-          "author": "unitytechnologies",
-          "text": "Hi everyone, Edit: A new knowledge base article on contacting support and what to send is available [here](https://support.unity.com/hc/en-us/article"
-        },
-        {
-          "author": "tolgatr0n",
-          "text": "They only said you can be suspended in just the last e-mail which is 3 days ago. Other e-mails were advising to remove your 2FA and didn't mention any"
-        },
-        {
-          "author": "10mo3",
-          "text": "I'm sorry but did y'all not see this becoming a massive issue? 😭"
-        }
-      ]
-    },
-    {
-      "title": "Indie Games Discord Server!",
-      "link": "https://www.reddit.com/r/indiegames/comments/1x526sv/indie_games_discord_server/",
-      "source": "Reddit | IndieGames",
-      "time": "2026-10-13T17:00:25",
-      "content": "https://discord.gg/Ufs7DjnwQ2",
-      "comments": [
-        {
-          "author": "AutoModerator",
-          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
-        }
-      ]
-    },
-    {
-      "title": "- ATTENTION: READ ME - Job Board: Rules & Guidelines",
-      "link": "https://www.reddit.com/r/gameDevJobs/comments/xdpu98/attention_read_me_job_board_rules_guidelines/",
-      "source": "Reddit | gamedevjobs",
-      "time": "2022-09-14T02:22:05",
-      "content": "***Scroll down to see the job board rules under the existing updates*** \\---- **UPDATE 2022-09-13** **ATTENTION ALL ARTISTS AND ASSET SELLERS/GAME PROMOTERS**. This is a job board for those looking for work in the game industry or posting jobs related to the game industry. **THIS IS NOT** [Starvi",
-      "comments": [
-        {
-          "author": "hsandt",
-          "text": "Hey, I'm new here and I noticed in Rule 3. that you mention \"gameDevClassifieds\" but the sentence makes it sound like you mean \"this subreddit\" aka \"g"
-        },
-        {
-          "author": "None",
-          "text": "[removed]"
-        },
-        {
-          "author": "OutrageousLadder7065",
-          "text": "Are indi game developers encouraged not to reach out to these artists? I'm just curious as a indie game developer looking for artists right now in the"
-        }
-      ]
     },
     {
       "title": "Vitals：什么在拖慢你的 Mac？它比「活动监视器」更直观易用",

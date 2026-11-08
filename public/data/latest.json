@@ -1,18 +1,10 @@
 {
   "metadata": {
-    "last_updated": "2026-11-07T06:47:07.455467",
-    "total_count": 16836,
+    "last_updated": "2026-11-08T06:53:31.002161",
+    "total_count": 16897,
     "ai_summary": "§ SYSTEM_ERROR: AI_LINK_UNAVAILABLE (Key Missing)"
   },
   "items": [
-    {
-      "title": "你不知道的客户端开发：AI 时代下的选型、原生与借力",
-      "link": "https://sspai.com/post/117713",
-      "source": "少数派",
-      "time": "Wed, 04 Nov 2026 20:25:55 +0800",
-      "content": "选型选得好只是锦上添花，最终还是要先把用户最真实的需求解决好。查看全文",
-      "comments": []
-    },
     {
       "title": "腾讯投资5亿后，《奇异人生》开发商是如何走到破产边缘的？",
       "link": "https://www.yystv.cn/p/14585",
@@ -51,14 +43,6 @@
       "source": "阮一峰的网志",
       "time": "Thu, 08 Oct 2026 23:04:46 +0800",
       "content": "这里记录每周值得分享的科技内容，周五发布。 本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。 封面图 国产首列数字地铁列车 VELLINK，完全无人驾驶，车头改成了大幅玻璃，用于观光。（via） Jev 决策模型有什么用 上个月，最大的 AI 新闻不是 GPT 或 Claude 模型的新版本，而是一家名不见经传的公司 TypeSafe AI 发布了一种新类型的模型 Jev。 这种新模型跟以前的模型截然不同，叫做\"决策模型\"。 我看了以后，觉得不可置信，这么有用又这么（概念）简单的东西，以前怎么会没人想到？ Jev 模型的最大特点就是，其他模型返回文字，它返回一个浮点数，表示概率。 为什么返回概率就有用呢？因为我们可以用它处理\"是非题\"了。你问它\"'明天下雨'这句话对不对\"。它返回 0，表示正确的概率为0，即明天肯定不下雨；如果返回0.99，表示有99%的可能，这句话是真的，也就是明天必定下雨。 除了是非题，它还能处理\"选择题\"。你给它 ABCD 四个选项，它会返回每个选项正确的概率，因此你马上知道哪个选项最可能为真。 最后，它还有一个神奇的功能，叫做\"评分\"（score）。你告诉它一组评分标准，然后再给它一篇原始材料，它就会根据评分标准，对原始材料进行打分。 下面，我给大家看两个真实例子，你就会知道这个模型多么有用。它们都是使用 Jev 模型的浏览器插件。 第一个例子是《我用 Ctrl + F 寻找答案》。 大家知道，Ctrl + F 是浏览器的\"查找\"快捷键，用来查找某个单词或句子出现在哪里。 但是，作者把这个快捷键改造成\"语义查找\"。比如，在一个人物传记网页上，你按 Ctrl + F 输入\"青少年时代\"，查找的不是这个词，而真的是讲述人物小时候经历的那个段落。 它的实现原理很简单，就是依次拿出文章的每个段落，去问 Jev 模型\"本段落是否跟用户的搜索词相关？\"（是非题）。Jev 会返回一个相关度的概率，那么相关度最高的几个段落，就是用户需要的语义查找结果。 第二个是例子《我用 Jev 为网页打分》。 作者给出了一组标准，从低分到高分。 论点缺乏依据，或者纯粹在堆砌辞藻。 理由寥寥，或论证松散、流于修辞。 理由清晰，逻辑结构连贯。 推理结构严密，有实据支撑，并回应了反方观点。 他让 Jev 根据这些标准，自动为新打开的网页打分（评分题）。这样一来，他不用读网页，就能知道内容的质量。 上面两篇文章，里面都有代码，大家可以自己去看。看完你就明白了，一旦 AI 模型返回量化的结果，许多以前无法数字化处理的问题，顿时都能用计算机处理了。 著名开发者西蒙·威利斯（Simon Willison）的 Jev 介绍文章，我也推荐大家阅读。 他的评价一针见血：\"Jev 实际上代表着机器学习系统的倒退，走向黑箱系统。以前的大模型虽然不能保证正确，但至少你可以要求它们解释它们的决定。Jev 甚至连这点都不给你：你只会得到一个浮点数，这个数字是怎么来的，不知道。\" 他很担忧，有人会用 Jev 给求职者排名。 有了 Jev 以后，公司筛选简历、挑选面试人从未如此容易，复杂的评估被简化成一个评分题。 Markdown 正在变成源码 Markdown 格式以前只用于写文档。最近，我看到一篇文章，作者提出一个大胆的命题：Markdown 正在变成源码。 作者的理由听起来很有道理。 （1）Markdown 是纯文本，差异比较、搜索、审查都很容易。 （2）AI 可以像母语一样读写 Markdown。 （3）人类无需工具即可阅读和编辑 Markdown。 既然代码是 AI 根据 Markdown 提示词生成的，那么 Markdown 提示词就应该和生成的源码一起，提交到/src目录。 事实上，Markdown 已经作为 AGENTS.md 文件，成为了源码的一部分。 以后，我们必须要习惯，Markdown 文档也是源码。 不能摄像的摄像头 据传，苹果公司最近将发布一款智能家居摄像头。 这款产品最奇特的地方在于，它虽然是摄像头，但是不能录制视频。 你能想象吗，摄像头不能摄像，那还叫摄像头吗？ 它完全依靠 AI 分析周围环境，并报告检测到的内容。比如，陌生人敲门。其他摄像头会提供视频，它只会提供详细的文字描述。 虽然文字处理比较方便，但是很多时候确实需要视频记录（入室盗窃、包裹被盗等等），不知道苹果会如何处理这些情况。 RSA 因素分解的新纪录 RSA 是一种常用的密钥算法。如果被破解，许多软件顿时就毫无秘密可言了。 RSA 的破解难度，完全取决于它的公钥能否被因数分解。加密位数越多，越难破解，RSA 密钥破解以前的最高纪录是768位（二进制位）。 就是今年9月20日，Anthropic ",
-      "comments": []
-    },
-    {
-      "title": "盖棺论定说生软（上）：三个医生的龙之狂想",
-      "link": "https://www.gcores.com/radios/221703",
-      "source": "Gaming | 机核网",
-      "time": "Thu, 05 Nov 2026 23:00:00 +0800",
-      "content": "本期时间轴制作：猪猪米三十一年尘与土，生软盖棺论定时。10月21日，生软Bioware官宣关闭，旗下IP去向未卜。天下没有不散的宴席，此刻，我们将目光投向宴席开始之处：这既是三个医生的碰撞与莽撞，也是一个神话时代的开始与破灭。与生软的草创密切相关的，是当时的Interplay，后来的黑岛、黑曜石，以及更多曾经在游戏业界响亮的名号。从医疗服务软件开始，直到《博德之门》和《质量效应》，生软开辟了怎样的道路？“生软魔法”为何在最开始是祝福，在后来却变成了诅咒？请听本期节目",
       "comments": []
     },
     {
@@ -102,11 +86,27 @@
       "comments": []
     },
     {
-      "title": "派早报：腾讯发布混元 Hy4 正式版，Google 调整 K-12 教育 AI 政策等",
-      "link": "https://sspai.com/post/118498",
+      "title": "苹果产品那些不够颠覆，却值得被学习的细节",
+      "link": "https://sspai.com/post/118114",
       "source": "少数派",
-      "time": "Thu, 05 Nov 2026 08:16:27 +0800",
-      "content": "少数派的近期动态全新设计复古设备鼠标垫上架，会员可使用点数兑换。前往选购iPhone少数派共创配件上新，自由选择保护、充电、线缆和支架组合。欢迎选购你可能错过的文章国行Apple智能上手：这些功能已经 ...查看全文",
+      "time": "Sun, 08 Nov 2026 11:18:54 +0800",
+      "content": "Matrix首页推荐Matrix是少数派的写作社区，我们主张分享真实的产品体验，有实用价值的经验与思考。我们会不定期挑选Matrix最优质的文章，展示来自用户的最真实的体验和观点。文章代表作者个人观点 ...查看全文",
+      "comments": []
+    },
+    {
+      "title": "十年，核周报 11.7",
+      "link": "https://www.gcores.com/radios/221705",
+      "source": "Gaming | 机核网",
+      "time": "Sat, 07 Nov 2026 23:00:00 +0800",
+      "content": "本期时间轴制作：佟和本周要闻：《影之刃零》72 小时全平台 400 万份，Steam 周销双榜登顶；#SaveMassEffect 请愿突破 30 万签名，BioWare 联合创始人回应；工会指控微软 19 个月冻结招聘制造关闭借口；Switch 2 财年Q2 仅 267 万台、同比 降低41%；Valve 1公告承认审核积压：常规 3–5 个工作日的构建审核现已拉长到最多 12 个工作日；卡普空表示未来十年讲完生化危机「目前叙事」，系列本身不会完结等。",
+      "comments": []
+    },
+    {
+      "title": "一个 05 后的个人数码编年史",
+      "link": "https://sspai.com/post/116750",
+      "source": "少数派",
+      "time": "Sat, 07 Nov 2026 17:05:06 +0800",
+      "content": "我只想回应自己的感受，自己的记忆，只是因为那时候我满腔少年心气，对一切都充满好奇，对未来充满憧憬。查看全文",
       "comments": []
     },
     {
@@ -222,6 +222,14 @@
       "comments": []
     },
     {
+      "title": "Vol.100 一加 8T ×《赛博朋克2077》联名幕后",
+      "link": "https://www.gcores.com/radios/222039",
+      "source": "Gaming | 机核网",
+      "time": "Fri, 06 Nov 2026 15:02:20 +0800",
+      "content": "概述这期我们请来了一加 8T《赛博朋克2077》限定版当时的营销项目负责人阿呆，和参与软件定制的初号一起，回顾这台手机从一个想法变成产品的过程。对初号来说，这是他一直想找机会认真讲一讲的项目：六年过去，做成它时的兴奋还在，当时的意外和遗憾也记得很清楚。从一次会后闲聊里提出联名，到最后把手机做出来，中间远不止确定一个 IP、换一套外观那么简单。我们聊了当时为什么会选中《赛博朋克2077》，也聊外观、图标、铃声和相机滤镜是怎样一版版磨出来的。游戏三次延期，原定的研发和发布安排也跟着调整；有的变化反而给了团队更多发挥的空间，有的想法则因为时间和成本，没能留到最后。我们聊定制为什么不能停留在换颜色、贴图，也聊好点子遇到成本、工期和量产之后，哪些坚持了，哪些只能放下；聊这次合作为什么恰好能发生，以及同样的做法放到今天，还有多少实现的空间。回到阿呆和初号自己，这个项目留下的也不只是产品和经验。和一群兴趣相投的人，在老板愿意放手的情况下，自己想、自己推动，最后真的做出来，那种“原来我们能把事情做成”的自信，是他们到现在仍然很珍惜的东西。主播零号、初号——「两颗皮蛋」主理人，《皮蛋漫游记》主播嘉宾阿呆（Lulu）——一加 8T《赛博朋克2077》限定版营销项目负责人。时间轴00:00本期介绍：回顾一加 8T《赛博朋克2077》限定版项目 02:11一加为什么做联名：产品话题、用户破圈与品牌定位 04:57联名起点：为什么选择《赛博朋克2077》 09:37与 CDPR 建立联系，确认合作方向 16:46第一次延期：从一加 8 Pro 主题方案转向一加 8T 深度定制 17:35游戏尚未发售，怎样评估 IP 的合作价值与资源投入 22:32内部分享：让同事理解赛博朋克文化和项目方向 26:00软件定制的要求、范围与项目团队分工 31:11相机滤镜与联名周边的定制思路 36:10工业设计如何从游戏里的建筑、汽车和装备寻找灵感 40:00早期外观方案：大视窗、电致变色与锻碳 44:02外观定稿：黄色主视觉、量产可行性与日常使用 47:07三段式机背如何对应“高科技，低生活” 49:00OPPO Ace2 EVA 限定版带来的对比，以及配件定制的成本取舍 53:20第二次延期对研发优先级和发布计划的影响 59:20上海试玩与 UI 定制：游戏风格、图标辨识和第三方应用的一致性 01:05:32音效定制：游戏素材、铃声功能与手机实际听感 01:09:36开机动画：E3 致敬、摩尔斯电码与项目团队致谢 01:12:36未落地的文字游戏：通过充电触发游戏角色的求助 01:14:15第三次延期后的独立发布安排与一加 8T 发布会彩蛋 01:19:53重庆媒体沟通会：场地选择、氛围设计与滤镜拍摄体验 01:23:06媒体挂卡礼包与随机徽章的设计 01:25:16媒体沟通会的讲稿准备与第一次上台经历 01:29:34回看产品：Relic 芯片、时光 AOD 与禅定模式的结合设想 01:32:40其他游戏和影视 IP，为什么难以沿用同样的定制方式 01:35:09从氢 OS 到 ColorOS，系统框架对深度定制的影响 01:37:00“加州北部”与“夜之城”：滤镜命名和后续沿用 01:38:40在机核发布项目回顾，记录产品背后的思考 01:40:03项目复盘：个人成长、团队协作与资源取舍 01:45:51零号回看这次项目，以及与初号成为合伙人的缘起本文提及：《赛博朋克2077》定制款 OnePlus 8T 诞生记｜初号（dlqblue）当年的项目回顾一加 8T《赛博朋克2077》限定版｜iF Design 产品设计资料《朋克已死，霓虹依旧：当今的“赛博朋克”究竟是个啥？》｜机核《赛博老去，霓虹再起：千禧年之后赛博朋克的湮灭与卷土重来》｜机核《赛博朋克2077》官方网站",
+      "comments": []
+    },
+    {
       "title": "iPhone 变强了，但我没有",
       "link": "https://sspai.com/post/118250",
       "source": "少数派",
@@ -243,6 +251,14 @@
       "source": "Gaming | 机核网",
       "time": "Fri, 06 Nov 2026 14:30:00 +0800",
       "content": "🐧👉《再荐茶社》更新通知QQ群：1055561149感谢大家一直以来的赞赏、订阅和支持，欢迎朋友们在评论中和我们一起分享游戏体验！BGM:“LOW BATTERY” | New Jazz x West Coast Type Beat 2026「3%」Prod. 沐色 - - - - - - -03:59近期新闻雏选任天堂indie worldsteam送审新规则ea关闭生软宝可梦大集结关服18:52近期新游李选深空当铺：可能是偷的我们曾到此：明日遗踪疯狂灯塔Lighthouse of Madness蕾卡的移动工坊The Mailroom兔兔岛37:22影之刃零 1:20:42地渊珠宝匠demo 1:29:28恶魔城：贝尔蒙特的诅咒 1:39:25针影裁梦 1:55:34小宇宙线下活动",
+      "comments": []
+    },
+    {
+      "title": "133.追番的朋友们,我们的人生又更新了!",
+      "link": "https://www.gcores.com/radios/222040",
+      "source": "Gaming | 机核网",
+      "time": "Fri, 06 Nov 2026 13:10:13 +0800",
+      "content": "我倒要看看结婚和离婚怎么一块说Host：罗宾，萌仔，Mikasa邮箱：hxssmmw@163.com听友群：添加微信youjimeng666大家好！！！妙妙屋三傻好久没有坐下来正经聊天了，这次开录之前，我们真是攒了好些个人生大事要汇报。首先，Mikasa终于有猫了！领养了一只可爱的狸花猫，没想到刚上岗就得送去“返厂维修”。除此之外，她还举办了婚礼，结束了一年多的Gap生活，重新成为打工人。远在加拿大的罗宾，结束了一段亲密关系，搬到了新的城市，还解锁了新工作，每天与两百多个蔬果编码斗智斗勇。至于最近忙到失去人形的萌仔，她第一次认真地面对自己的心理健康问题，还在一次忐忑的返乡之旅中，收获了来自父母意想不到的理解。总而言之，本期节目又是妙妙屋经典的笑中带泪篇，人生这部连续剧，谁也不知道下一集会演什么。感谢一直追更妙妙屋的朋友们，也感谢妙妙屋，让我们三个即使相隔万里，依然可以不忘初心！！！（是的，真正意义上的不忘初心，这个台的建立就是为了和远方的朋友保持联系）【本期节目您将听到】01:28 Mikasa女士的新闻发布会：我终于有猫啦！ 40:41 人生大事之婚礼篇 1:04:32 人生大事之重新来过篇 1:27:05 失业姐妹联盟，竟然背着萌仔开了新播客 1:32:59 多年前没吃下的那瓶药 1:44:07 忐忑的返乡之旅 2:09:45 听友来信：谢谢你画下的妙妙屋！ED：岡崎律子 - For フルーツバスケット（致水果篮子）【Mikasa领养的猫：小不点女士】御猫苑店的初见↓（诚心推荐上海的朋友可以关注这家领养机构） 淡定的溜达猫↓ 到家两周就无奈返厂维修的小不点↓ 参加狂喜播客节的不点女士↓ 成天坐在篮子里但并不知道就是为她准备的小不点↓ 入驻3个月已经惬意融入这个家的不点女士↓ 【Mikasa婚礼上无处不在的罗宾】婚礼参加了↓ 席吃了↓ 酒喝了↓ 酒店也和大家一起住了↓ 并不完美但大家都在笑着的抓拍↓",
       "comments": []
     },
     {
@@ -318,14 +334,6 @@
       "comments": []
     },
     {
-      "title": "点击冒险新作《鬼灵精探》免费试玩版现已上线，向LucasArts经典冒险游戏致敬",
-      "link": "https://www.gcores.com/articles/221994",
-      "source": "Gaming | 机核网",
-      "time": "Fri, 06 Nov 2026 08:40:00 +0800",
-      "content": "Daedalic Entertainment 与 Three Headed Monkey Studios 宣布，《鬼灵精探》免费试玩版现已在 Steam 上线，并参与本期 Steam Point &amp; Click Showcase。这款2D点击式冒险游戏以精心绘制的像素画面、黑色幽默和年轻的吉吉，重现 LucasArts 经典作品的独特魅力。吉吉解决问题的方式，往往会让家具难以幸免。 试玩版提供英语和德语配音，并支持包含中文在内的12种语言的文本本地化。 &lt;内嵌内容，请前往机核查看&gt;当吉吉发现脾气暴躁的爷爷乔瓦尼竟是一位传奇驱魔人时，她得出了一个再合理不过的结论：既然鬼魂能来人间，那她也能去阴间把奶奶带回来。一只名叫 Baron Butt(er)nut 的南瓜恶魔愿意帮忙。至于先征得爷爷同意嘛——目前还不是优先事项。 &lt;内嵌内容，请前往机核查看&gt;在完整冒险中，经典谜题将与提示系统、得分系统、可交互区域高亮和快速旅行等现代功能相结合。Three Headed Monkey Studios 将对经典冒险游戏的热爱写进了工作室名称；而 Daedalic Entertainment 曾推出《德波尼亚》系列、《Edna &amp; Harvey》《The Whispered World》《肯·福莱特的〈圣殿春秋〉》等经典冒险游戏，自然也深谙此道。 Three Headed Monkey Studios 团队表示：“我们希望这段试玩能带给玩家一种感觉，就像重新发现了一款被遗忘多年的90年代冒险游戏——只不过这次不需要软盘。游戏在保留经典点击式冒险核心体验的同时，也加入了现代玩法功能：与古怪的角色交谈、组合各种荒诞物品，以及在谜题终于迎刃而解时收获的那份喜悦。希望大家玩得开心！吉吉肯定会玩得很开心。”试玩版将在 Steam Point &amp; Click Showcase结束后继续开放。《鬼灵精探》计划于2027年登陆 PC、Mac、Xbox、PlayStation、Nintendo Switch 和 Nintendo Switch 2。 语言支持：英语、德语提供完整本地化；简体中文、法语、意大利语、西班牙语（西班牙）、葡萄牙语（巴西）、繁体中文、日语、韩语、波兰语和俄语提供界面与字幕本地化。",
-      "comments": []
-    },
-    {
       "title": "派早报：国务院办公厅发布 2027 年部分节假日放假安排等",
       "link": "https://sspai.com/post/118587",
       "source": "少数派",
@@ -339,14 +347,6 @@
       "source": "阮一峰的网志",
       "time": "Fri, 06 Nov 2026 07:43:55 +0800",
       "content": "这里记录每周值得分享的科技内容，周五发布。 本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。 封面图 雄安新区正在建设的雄安大剧院，它的幕墙采用 3D 打印装饰板拼贴而成，是世界最大的 3D 打印建筑幕墙。（via） 如果科技停止在21世纪初 （1） 网上流行一道题目，大家应该都见过：\"如果可以穿越，你愿意生活在哪个朝代？\" 我觉得，这个题目有点侮辱智商，因为答案显而易见。正常人肯定只愿意生活在现代，而且越现代越好。 理由很简单，古人没有科技，生活之艰难，现代人难以想象，更不要说亲身体验了。我随便说几点：食物调料只有盐，其他调料很少，更没有糖；没有冰箱保存食物，只能腌制和烟熏来长期保存；晚上点油灯或柴火照明；平均寿命30多岁。这样的生活，你愿意过吗？ （2） 但是，前几天读到一篇文章，却让我陷入了沉思。 作者明确希望，回到21世纪开始的那几年，而且人类文明就停在那里，不要再向前发展了。 他认为，技术并不是越现代越好，而是需要与人类平衡。21世纪初才是科技与现实生活的完美平衡点，人类既能生活得足够轻松方便，又能有生活的主导权。 再往后发展，到了现在，技术完全占据了主导，控制了社会，人类反倒成了附庸，自主权几乎丧失。 （3） 具体来说，就是他想回到2007年6月29日之前，最佳时期是2003年左右。 那一天，苹果公司发布了 iPhone，标志人类进入智能手机时代。 在此之前，大部分人都用功能手机，那种手机有一些智能功能，但又不足够智能。 它可以打电话、发短信、玩贪吃蛇、浏览简单的网页，日常通信足够用了，但想用它做更多的事情就不行了。它的摄像头很烂，但拍出的照片也能看。 更重要的是，用这样的手机，你不会上瘾，不会每隔几十秒就忍不住低头滑一下屏幕。正因为它不那么智能，社会的主流依然是人与人的互动，而不是人与机器的互动，更不是机器与机器的互动。 那时，你想找人聊聊，就要打电话，而不是用聊天软件；想结识某人，就要去跟这个人见面，而不是访问他的社交媒体账户。 人类的生活还是实体的，而不是数字化的。科技的主要作用还依然是辅助真实世界，而不是建立线上的虚拟世界，开始取代真实世界。 （4） 那时，上网只是一种选择，你可以不上，完全离线的生活毫无问题。现在不行了，你已经不能离线了，人类的生活完全在线化了。 那时，世界还是实体的，聊天、约会、购物、娱乐、地图，都是一件件具体的事情或东西。现在，它们都是一款 App，不管你要做什么事，都需要先打开对应的 App。 以前，技术只是工具，不是生活方式。 （5） 人类的最佳生活时期，会不会就在刚刚过去的21世纪初：足够现代化，足够便利，但又不是那么现代化，那么便利。 你无需时刻接触科技，也能体验到科技带来的好处。大部分的生活没有被数字化，这意味着很多事情你通过互联网做不到，不得不亲自去做。 20年过去了，科技让一切变得更方便容易，提供更多可能性，我们回首才发现，曾经的生活是如此不同，缓慢生活和各种不便利，也有让人怀念的一面。 现在的科技永久改变了人类的生活方式，实体生活变得不那么重要了，大部分事情都转移到线上了。 尤其是 AI，创造了超越人类的智慧机器，让大多数人类技能都变得没有价值，但愿它能把我们带到一个更好的地方。 [本周软件] MonkeyAI（百智办公） 本周介绍一个开源的企业 AI 工作台 MonKeyAI（中文名\"百智办公\"），GitHub 已有5000颗星。 它可以私有化部署，所有员工通过它统一使用 AI，方便进行管理。 它允许指定模型，共享知识库、技能、MCP 等资源，所有数据保留在本地，并且提供强大的管理后台，进行权限管理和使用统计。 它本身提供一个单独的窗口，支持办公（处理文件、文档、表格、PPT 等）、编程、设计（平面设计、交互设计、短剧制作）三个核心场景，可以直接使用，不需要外部工具。 它提供各种客户端，包括 Web、iOS、安卓、Mac/Win/Linux，甚至还支持鸿蒙。服务器端也非常轻量化，仅需单核 CPU + 1G 内存的 Linux 服务器即可部署。 它免费使用，但如果团队超过10个人，则需要购买授权。 大家可以访问 Demo 进行试用，详细用法参考官方文档。 太空机房 谷歌本周宣布，它的太空机房实验成功。 它在太空部署了4颗 TPU 芯片，预装了Gemma 4 模型。工程师向卫星发出提示词： 请以一块绕地球飞行的 TPU 的视角，写一首俳句。 卫星成功返回了结果： 蓝色星球在下方，数据静静流淌，星光滋养着我的核心。 但是，这个实验很可能表明\"太空机房\"不那么可行。 因为这颗实验卫星每小时只能发1度电，且受散热限制，TPU 每次只能连续工作大约20分钟，就要停机散热。 可以推算，即使卫星的太阳板增大",
-      "comments": []
-    },
-    {
-      "title": "元语咒 Vol.197｜一代 VR 机皇 Quest 2 终将老去，但总有年轻人正在玩 Steam Frame",
-      "link": "https://www.gcores.com/radios/222005",
-      "source": "Gaming | 机核网",
-      "time": "Fri, 06 Nov 2026 06:00:00 +0800",
-      "content": "本期主播与嘉宾： 脑潘 / 潮玩VR 直播录制时间： 2026-11-04 ----------------------- 主观片面的「元语咒」是专属 VR 玩家的闲聊电台。 以虚拟圆桌的形式在某平台直播，以一刀不剪的态度在这里回放。 ----------------------- 章节： 00:00 “你最近还在玩 VR 游戏吗？” 02:44 新闻1：Quest 2 和 Quest Pro 即将落幕 25:44 新闻2：PS VR2 北美日区多地停售 35:19 “那你玩啥呢？” 36:37 「沉星之序」 37:37 「星球大战：银河赛车手」 42:02 「影之刃零」 46:56 为了那个游戏，准备带 PS5 出差了 51:22 「深空当铺：可能是偷的」 54:22 「影之刃零影之刃零影之刃零」 59:45 锐评：INMO影目新品发布 01:04:48 盘点：又一大波 VR Mod 社区项目 01:15:58 听友互动",
       "comments": []
     },
     {
@@ -390,11 +390,715 @@
       "comments": []
     },
     {
-      "title": "Precalculated tree fellings in my MMO",
-      "link": "https://www.reddit.com/r/gamedev/comments/1xpzrkt/precalculated_tree_fellings_in_my_mmo/",
+      "title": "[For Hire] character concept art, outfit designs, dm for details",
+      "link": "https://www.reddit.com/r/gameDevJobs/comments/1xqrx0z/for_hire_character_concept_art_outfit_designs_dm/",
+      "source": "Reddit | gamedevjobs",
+      "time": "2026-11-08T06:37:34",
+      "content": "https://www.reddit.com/gallery/1xqrx0z",
+      "comments": []
+    },
+    {
+      "title": "its the best",
+      "link": "https://www.reddit.com/r/indiegames/comments/1xqr79t/its_the_best/",
+      "source": "Reddit | IndieGames",
+      "time": "2026-11-08T05:53:01",
+      "content": "https://i.redd.it/1f6am5tfvb0i1.png",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
+        }
+      ]
+    },
+    {
+      "title": "This jellyfish is entirely lines, rendered at 4K in Unity",
+      "link": "https://www.reddit.com/r/Unity3D/comments/1xqqzku/this_jellyfish_is_entirely_lines_rendered_at_4k/",
+      "source": "Reddit | Unity3D",
+      "time": "2026-11-08T05:39:54",
+      "content": "https://v.redd.it/vmyg6xc2sb0i1",
+      "comments": [
+        {
+          "author": "CrazyNegotiation1934",
+          "text": "Is entirely lines or some parts are made in blender ? This is very confusing"
+        },
+        {
+          "author": "Chroma-fall",
+          "text": "Gorgeous 😍"
+        },
+        {
+          "author": "ArtPirates1978",
+          "text": "https://preview.redd.it/nxaj25bbtb0i1.png?width=1920&format=png&auto=webp&s=dfe20b01d5c9244577699ea3acab2b4e6abf32e0 Unity editor screenshots: the sc"
+        }
+      ]
+    },
+    {
+      "title": "[For Hire] 2D Game Artist and UI/UX Designer",
+      "link": "https://www.reddit.com/r/gameDevJobs/comments/1xqqvy4/for_hire_2d_game_artist_and_uiux_designer/",
+      "source": "Reddit | gamedevjobs",
+      "time": "2026-11-08T05:34:00",
+      "content": "https://www.reddit.com/gallery/1xqqvy4",
+      "comments": []
+    },
+    {
+      "title": "[For hire] Freelance Illustrator- Character Design, Concept Art, and Illustrations",
+      "link": "https://www.reddit.com/r/gameDevJobs/comments/1xqq762/for_hire_freelance_illustrator_character_design/",
+      "source": "Reddit | gamedevjobs",
+      "time": "2026-11-08T04:54:03",
+      "content": "https://www.reddit.com/gallery/1xqq762",
+      "comments": []
+    },
+    {
+      "title": "We made a pixel art street racer where your own music becomes the road, splitscreen, lan, plus a story mode :) Demo is out on itch.io!",
+      "link": "https://www.reddit.com/r/indiegames/comments/1xqpo7c/we_made_a_pixel_art_street_racer_where_your_own/",
+      "source": "Reddit | IndieGames",
+      "time": "2026-11-08T04:23:32",
+      "content": "https://v.redd.it/dtvh2jexdb0i1",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
+        },
+        {
+          "author": "dangerz",
+          "text": "I love the style! It's like a retro NFS."
+        },
+        {
+          "author": "djibouti2big",
+          "text": "What does music do to the road? Does it need microphone acces or does it use in-game music?"
+        }
+      ]
+    },
+    {
+      "title": "Kirlian Photography: Building Your Own Equipment",
+      "link": "https://imagesco.com/articles/kirlian/kirlian-photography.html",
+      "source": "HN | imagesco.com",
+      "time": "2026-11-08T04:14:12",
+      "content": "Score: 16 | Comments: 2",
+      "comments": []
+    },
+    {
+      "title": "[FOR HIRE] 3D Environment Artist / Props Artist",
+      "link": "https://www.reddit.com/r/gameDevJobs/comments/1xqomot/for_hire_3d_environment_artist_props_artist/",
+      "source": "Reddit | gamedevjobs",
+      "time": "2026-11-08T03:25:34",
+      "content": "https://www.reddit.com/gallery/1xqomot",
+      "comments": []
+    },
+    {
+      "title": "Goodbye Claude, Hello Pi",
+      "link": "https://caleb.software/posts/claude-to-pi.html",
+      "source": "HN | caleb.software",
+      "time": "2026-11-08T03:11:48",
+      "content": "Score: 130 | Comments: 75",
+      "comments": []
+    },
+    {
+      "title": "[For Hire] Character Designer and Artist",
+      "link": "https://www.reddit.com/r/gameDevJobs/comments/1xqo7ho/for_hire_character_designer_and_artist/",
+      "source": "Reddit | gamedevjobs",
+      "time": "2026-11-08T03:02:27",
+      "content": "https://www.reddit.com/gallery/1xqo7ho",
+      "comments": []
+    },
+    {
+      "title": "How do you keep branching dialogue and quest state manageable in a small CRPG?",
+      "link": "https://www.reddit.com/r/gamedev/comments/1xqo6yr/how_do_you_keep_branching_dialogue_and_quest/",
       "source": "Reddit | gamedev",
-      "time": "2026-11-07T06:41:59",
-      "content": "https://m.youtube.com/watch?v=jBgwq66WMrc",
+      "time": "2026-11-08T03:01:40",
+      "content": "I’m building a Fallout-style isometric dialogue CRPG and the first release will be a roughly one hour demo. I’m trying to set up the narrative pipeline before writing dialogue so I don’t have to rewrite too much of it later. My current plan is a flat list of flags and variables, dialogue nodes with",
+      "comments": [
+        {
+          "author": "QueasyPrior6654",
+          "text": "flat flags + conditions on nodes is what most small crpgs ship with, it breaks down in a few predictable spots: - flag names. once you have like 200"
+        },
+        {
+          "author": "bianceziwo",
+          "text": "im making a branching narrative game and writing it in ink."
+        },
+        {
+          "author": "ConfidentPoem6454",
+          "text": "Flat flags work fine for a one hour demo. Where it usually breaks is when one fact gets stored in two places, like a flag `met_doc` and also a quest s"
+        }
+      ]
+    },
+    {
+      "title": "Optimizing character movement for peer to peer networked game",
+      "link": "https://www.reddit.com/r/unrealengine/comments/1xqnixu/optimizing_character_movement_for_peer_to_peer/",
+      "source": "Reddit | unrealengine",
+      "time": "2026-11-08T02:25:32",
+      "content": "Hey all, I'm working on an arena brawler game in unreal engine 5.3 and finding some jitters in my character movement I'm hoping to clean up the best I can. I'm using Steam Advanced Sessions and Steam Sockets plugins for players to host their matches with the settings shown in the linked picture (ch",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "If you are looking for help, don‘t forget to check out the [official Unreal Engine forums](https://forums.unrealengine.com/) or [Unreal Slackers](http"
+        },
+        {
+          "author": "DMmotionarts",
+          "text": "This happens because Unreal Engine character movement automatically adds client correction. There is a smooth sync plugin on fab that replaces unrea"
+        }
+      ]
+    },
+    {
+      "title": "What do you think?",
+      "link": "https://www.reddit.com/r/Unity3D/comments/1xqn9bd/what_do_you_think/",
+      "source": "Reddit | Unity3D",
+      "time": "2026-11-08T02:11:05",
+      "content": "https://i.redd.it/fa6u7azwv70i1.jpeg",
+      "comments": [
+        {
+          "author": "GodAlpaca",
+          "text": "Well, first time I downloaded godot, some years ago, it was because of unity. And I never came back, so I guess he's right."
+        },
+        {
+          "author": "darkscyde",
+          "text": "There has never been a single AAA built using Godot for good reason."
+        },
+        {
+          "author": "PixelLunarJelly",
+          "text": "I understand shit talking Unity since they're competitors. But UE? Don't forget... Epic is *literally* funding Godot. Not very smart to bite the hand"
+        }
+      ]
+    },
+    {
+      "title": "Consumer brain wave headsets threaten privacy",
+      "link": "https://www.science.org/content/article/wearable-device-makers-are-harvesting-brain-data-train-ai-without-telling-users?referrer=https%3A%2F%2Fwww.google.com%2F",
+      "source": "HN | science.org",
+      "time": "2026-11-08T02:02:38",
+      "content": "Score: 19 | Comments: 5",
+      "comments": []
+    },
+    {
+      "title": "ZapFast: A fast, native WhatsApp client in Rust and egui",
+      "link": "https://github.com/crmne/zapfast",
+      "source": "HN | github.com",
+      "time": "2026-11-08T02:02:27",
+      "content": "Score: 50 | Comments: 25",
+      "comments": []
+    },
+    {
+      "title": "Accessing unaccesable audio files using Unreal Unpacking Tool",
+      "link": "https://www.reddit.com/r/unrealengine/comments/1xqmi2c/accessing_unaccesable_audio_files_using_unreal/",
+      "source": "Reddit | unrealengine",
+      "time": "2026-11-08T01:31:57",
+      "content": "Goal is to listen to uncompressed audio from one of my favorite steam games, and was told use an extractor. Then you take that file and convert it to audio from another app. From what I gather (.pak files -> .wem -> .wav) is the proper order. Most of the GitHub files I see are reviewed as o",
+      "comments": [
+        {
+          "author": "tumour_love",
+          "text": "I'm not at my home desktop but outdated depends on version of unreal game was built on, if you know that you'll have an easier time finding the right"
+        },
+        {
+          "author": "LostInTheRapGame",
+          "text": "Well, if the audio has already been compressed... there's no way to get that information back. It's gone. Converting it from a lossy audio format to l"
+        }
+      ]
+    },
+    {
+      "title": "The first mission in my helicopter support game. Burn aliens to the ground and conquer the island!",
+      "link": "https://www.reddit.com/r/Unity3D/comments/1xqllk7/the_first_mission_in_my_helicopter_support_game/",
+      "source": "Reddit | Unity3D",
+      "time": "2026-11-08T00:45:43",
+      "content": "https://v.redd.it/vcyn99ubca0i1",
+      "comments": [
+        {
+          "author": "Adulations",
+          "text": "Looks interesting and gives me early 2000s gaming vibes. The helicopter control and flight looks off though"
+        },
+        {
+          "author": "CryingZer0",
+          "text": "Looks cool as hell. Do you have an itch or steam page for it?"
+        },
+        {
+          "author": "aspinalll71286",
+          "text": "Oddly reminds me of stuff like Soviet strike"
+        }
+      ]
+    },
+    {
+      "title": "Not an artist, but I have a specific art style in mind. How did you handle art for your first game?",
+      "link": "https://www.reddit.com/r/gamedev/comments/1xql2rn/not_an_artist_but_i_have_a_specific_art_style_in/",
+      "source": "Reddit | gamedev",
+      "time": "2026-11-08T00:19:54",
+      "content": "I’m new to gamedev and learning GDScript from scratch. Gamedev clicked for me because I can pick it up and put it down without falling behind like I do with multiplayer games, and I like the idea of building my own world over a long time. My roadblock is art. I’m not an artistic person, but I have",
+      "comments": [
+        {
+          "author": "stoneraftgames",
+          "text": "Not an artistic person either, so I'm curious what others will suggest. I'd just repeat two pieces of advice I've seen elsewhere: 1. The guys from Bi"
+        },
+        {
+          "author": "me0here",
+          "text": "Do you have a Mood Board?"
+        },
+        {
+          "author": "joe-faron",
+          "text": "Not an artist either. For most of the years I've run my game, the art came from one freelance artist, and what made that work was me getting good at d"
+        }
+      ]
+    },
+    {
+      "title": "Commodore PET – The Worlds First Personal Computer",
+      "link": "https://www.commodore.ca/commodore-products/commodore-pet-the-worlds-first-personal-computer/",
+      "source": "HN | commodore.ca",
+      "time": "2026-11-07T23:15:34",
+      "content": "Score: 44 | Comments: 15",
+      "comments": []
+    },
+    {
+      "title": "GitHub New pull request overview page in public preview",
+      "link": "https://github.blog/changelog/2026-11-05-new-pull-request-overview-page-in-public-preview/",
+      "source": "HN | github.blog",
+      "time": "2026-11-07T23:09:40",
+      "content": "Score: 112 | Comments: 80",
+      "comments": []
+    },
+    {
+      "title": "Making any integer with four 2s (2025)",
+      "link": "https://eli.thegreenplace.net/2025/making-any-integer-with-four-2s/",
+      "source": "HN | eli.thegreenplace.net",
+      "time": "2026-11-07T22:38:58",
+      "content": "Score: 106 | Comments: 26",
+      "comments": []
+    },
+    {
+      "title": "Regolith: real-scale planets for Godot 4 with detailed atmosphere FX (Free/Open Source)",
+      "link": "https://www.reddit.com/r/godot/comments/1xqh7z6/regolith_realscale_planets_for_godot_4_with/",
+      "source": "Reddit | godot",
+      "time": "2026-11-07T21:19:03",
+      "content": "https://www.reddit.com/gallery/1xqh7z6",
+      "comments": [
+        {
+          "author": "JohnJohnathJohn",
+          "text": "https://preview.redd.it/02j4oac2f90i1.jpeg?width=640&format=pjpg&auto=webp&s=929d397722eec29132d624faf3031362e2a4d8e7"
+        },
+        {
+          "author": "LemonKing",
+          "text": "This is a cool project. But I'll approach this as if it were a PR. The code quality is very low it should be legible, and easily readable. I would w"
+        },
+        {
+          "author": "PM_ME_PANTYHOSE_LEGS",
+          "text": "Rule 10 of this sub: > [...] AI-generated content needs to verifiably stem from a model which was trained only on data submitted with the original c"
+        }
+      ]
+    },
+    {
+      "title": "A new boss fight and brutal finishers from my pixel-art soulslike, Ashen Trail",
+      "link": "https://www.reddit.com/r/indiegames/comments/1xqh4s9/a_new_boss_fight_and_brutal_finishers_from_my/",
+      "source": "Reddit | IndieGames",
+      "time": "2026-11-07T21:15:11",
+      "content": "https://v.redd.it/nyrvrua8a90i1",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
+        },
+        {
+          "author": "Pileisto",
+          "text": "i really like the graphics, but maybe add a hint of color sparsely. e.g. on the bell"
+        },
+        {
+          "author": "ardikus",
+          "text": "those leggies look awesome! bet they were a pain to program"
+        }
+      ]
+    },
+    {
+      "title": "Godot is GREAT for VFX",
+      "link": "https://www.reddit.com/r/godot/comments/1xqh2q9/godot_is_great_for_vfx/",
+      "source": "Reddit | godot",
+      "time": "2026-11-07T21:12:39",
+      "content": "https://v.redd.it/gbeyf995a90i1",
+      "comments": [
+        {
+          "author": "lorddrake4444",
+          "text": "Vfx is mostly engine agnostic so idk what your friend was smoking , the question is how does it perform"
+        },
+        {
+          "author": "The-Chartreuse-Moose",
+          "text": "Those look awesome. Good work!"
+        },
+        {
+          "author": "MrJesusAtWork",
+          "text": "These look incredible actually, really good work"
+        }
+      ]
+    },
+    {
+      "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+      "link": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+      "source": "HN | apiiro.com",
+      "time": "2026-11-07T20:45:32",
+      "content": "Score: 316 | Comments: 219",
+      "comments": []
+    },
+    {
+      "title": "128K Ultra High Resolution Rendering in Unreal Engine 5",
+      "link": "https://www.reddit.com/r/unrealengine/comments/1xqg9uw/128k_ultra_high_resolution_rendering_in_unreal/",
+      "source": "Reddit | unrealengine",
+      "time": "2026-11-07T20:36:50",
+      "content": "https://youtu.be/0jAm7fQ3j0g?si=Sio58-L2At4p7gZ8",
+      "comments": []
+    },
+    {
+      "title": "My demo has been downloaded almost 6000 times jn 5 days..",
+      "link": "https://www.reddit.com/r/gamedev/comments/1xqehs9/my_demo_has_been_downloaded_almost_6000_times_jn/",
+      "source": "Reddit | gamedev",
+      "time": "2026-11-07T19:19:30",
+      "content": "3500 people have played so far and my median play time is 45 minutes. There’s 600 people that have played 200+ minutes I didn’t expect this kinda traction and am kinda freaking out, are these viral game stats or just in the middle?",
+      "comments": [
+        {
+          "author": "Summitswrong",
+          "text": "45 minutes median on a demo sounds strong to me, plenty of demos lose most people in the first 15. i'd watch how many of those players wishlist, that"
+        },
+        {
+          "author": "zBla4814",
+          "text": "Those are great numbers! Good luck with your game!"
+        },
+        {
+          "author": "stoneraftgames",
+          "text": "Where can we find the demo?"
+        }
+      ]
+    },
+    {
+      "title": "Quixel Megascan Claim Script?",
+      "link": "https://www.reddit.com/r/unrealengine/comments/1xqday1/quixel_megascan_claim_script/",
+      "source": "Reddit | unrealengine",
+      "time": "2026-11-07T18:29:19",
+      "content": "I know they said that the assets will be free from now on but with how strange the history of quixel megascan's asset availability, you never really know. Are we sure this change is permanent? It feels so huge and out of nowhere. I want a script to claim them all just in case because they literally",
+      "comments": [
+        {
+          "author": "Shkouppi",
+          "text": "I asked Claude to make a script for me. After some back-and-forths I could claim them all. Obviously I can share it if anybody is interested."
+        },
+        {
+          "author": "AutoModerator",
+          "text": "If you are looking for help, don‘t forget to check out the [official Unreal Engine forums](https://forums.unrealengine.com/) or [Unreal Slackers](http"
+        },
+        {
+          "author": "ChrisTamalpaisGames",
+          "text": "I seen many such scripts, but don't worry, there would be several months warning like last time if they went unfree again. This whole buisness is stra"
+        }
+      ]
+    },
+    {
+      "title": "Unreal 5.8 - Materials Masterclass - Chapter 12: Post Process Materials",
+      "link": "https://www.reddit.com/r/unrealengine/comments/1xqcwgi/unreal_58_materials_masterclass_chapter_12_post/",
+      "source": "Reddit | unrealengine",
+      "time": "2026-11-07T18:12:24",
+      "content": "https://youtu.be/WzgSg8_MbOU",
+      "comments": []
+    },
+    {
+      "title": "What I run on my $10 USD OpenStick homelab",
+      "link": "https://blog.bosscher.ch/posts/openstick/",
+      "source": "HN | blog.bosscher.ch",
+      "time": "2026-11-07T18:12:12",
+      "content": "Score: 500 | Comments: 99",
+      "comments": []
+    },
+    {
+      "title": "The end of Microsoft Research's AI Frontiers group",
+      "link": "https://hunch.net/?p=13764006",
+      "source": "HN | hunch.net",
+      "time": "2026-11-07T18:02:17",
+      "content": "https:&#x2F;&#x2F;archive.is&#x2F;AaY5Ohttps:&#x2F;&#x2F;businessexaminer.ca&#x2F;victoria-articles&#x2F;item&#x2F;microsoft...",
+      "comments": []
+    },
+    {
+      "title": "what now",
+      "link": "https://www.reddit.com/r/Unity3D/comments/1xqclfg/what_now/",
+      "source": "Reddit | Unity3D",
+      "time": "2026-11-07T17:59:55",
+      "content": "https://i.redd.it/mdpcyn72c80i1.jpeg",
+      "comments": [
+        {
+          "author": "DatsLotus",
+          "text": "Hmm.. I really, REALLY don't want my license fees to fund the Saudi throne..."
+        },
+        {
+          "author": "maninthesky-95",
+          "text": "You don't get banned from the asset store now. You get sawed"
+        },
+        {
+          "author": "Undumed",
+          "text": "This will be the absolute marketing for Godot."
+        }
+      ]
+    },
+    {
+      "title": "GeoWorks, Microsoft Windows' Upstart '90s Competitor (2016)",
+      "link": "https://www.atlasobscura.com/articles/the-history-of-geoworks-microsoft-windows-upstart-90s-competitor",
+      "source": "HN | atlasobscura.com",
+      "time": "2026-11-07T17:54:56",
+      "content": "Score: 55 | Comments: 20",
+      "comments": []
+    },
+    {
+      "title": "I wrapped my horde shooter into a torus: a 51 m tube, 1 km around, with the horde on the walls and ceiling",
+      "link": "https://www.reddit.com/r/Unity3D/comments/1xqc7u1/i_wrapped_my_horde_shooter_into_a_torus_a_51_m/",
+      "source": "Reddit | Unity3D",
+      "time": "2026-11-07T17:43:46",
+      "content": "https://v.redd.it/uyjvl4c5980i1",
+      "comments": [
+        {
+          "author": "Halfspacer",
+          "text": "Somewhere, those people creating those fake mobile game ads are having a field day watching this. Looks amazing"
+        },
+        {
+          "author": "2barbarian4u",
+          "text": "It looks really good, but it might be a little nauseating (No offense)"
+        },
+        {
+          "author": "TramplexReal",
+          "text": "Strong Serious Sam SE vibes"
+        }
+      ]
+    },
+    {
+      "title": "Five memorable books about programming (2008)",
+      "link": "https://prog21.dadgum.com/19.html",
+      "source": "HN | prog21.dadgum.com",
+      "time": "2026-11-07T17:30:49",
+      "content": "Score: 107 | Comments: 65",
+      "comments": []
+    },
+    {
+      "title": "Show HN: Coldframe, a honeypot that poses as a supermarket fridge controller",
+      "link": "https://github.com/hedgerow-dev/coldframe",
+      "source": "HN | github.com",
+      "time": "2026-11-07T17:27:30",
+      "content": "I built Coldframe, a honeypot that pretends to be a supermarket refrigeration controller. Inspired by the events on industrial fridge installations in the past weeks, I wanted to see what people would try against a convincing fake.To learn more about this I built a honeypot that resembled perfectly the Danfoss AK-SM 800A and Dixell XWEB interfaces. Both of them are recognized on Shodan as real ones (an not as honeypots). It’s one Python file using only the standard library, and it builds on eppser&#x2F;danfoss-ak-sm-decoy and public research by Synacktiv, Claroty and Ironhackers.Things that were fun to get right:- Matching real units. I used Shodan records of real devices to match header order, page titles, certificate fields and TLS versions. The Danfoss persona sends nginx headers in the same order as a real AK-SM 800A. The Dixell persona sends no Server header and pads its page to exactly 8,202 bytes.- Recognising exploit attempts. It recognises CVE-2025-41450, the Danfoss “code of the day” login bypass, and records whether the submitted code is correct for today. It also tags attempts targeting three other Danfoss CVEs and the XWEB vulnerabilities.- Letting them in. Default logins open a fake store dashboard with defrost buttons, so you see the second move, not just the first. Nothing behind it is real.Two instances have been live for a day. So far they’ve only seen generic scanners and Shodan’s crawler, which is called refrigerator.census.shodan.io.Feedback welcome, especially from anyone who has seen these devices in the field!",
+      "comments": []
+    },
+    {
+      "title": "MaxxBench – \"Nice DeepSWE score. But is it true?\"",
+      "link": "https://maxxbench.unlap.ai/research/why-maxxbench/",
+      "source": "HN | maxxbench.unlap.ai",
+      "time": "2026-11-07T17:19:00",
+      "content": "Score: 271 | Comments: 74",
+      "comments": []
+    },
+    {
+      "title": "Apple’s grey list: Words and phrases your iPhone won’t help you spell",
+      "link": "https://www.theguardian.com/technology/2026/nov/06/struggling-to-spell-male-chauvinist-pig-apple-grey-list-means-your-iphone-wont-help-you",
+      "source": "HN | theguardian.com",
+      "time": "2026-11-07T17:06:36",
+      "content": "Score: 428 | Comments: 281",
+      "comments": []
+    },
+    {
+      "title": "Been working on new guns, animations and fx lately. Pretty happy how they turned out 🎉",
+      "link": "https://www.reddit.com/r/godot/comments/1xqaoor/been_working_on_new_guns_animations_and_fx_lately/",
+      "source": "Reddit | godot",
+      "time": "2026-11-07T16:39:21",
+      "content": "https://v.redd.it/nfa12j2wx70i1",
+      "comments": [
+        {
+          "author": "EfficientSoup",
+          "text": "i like it but the scale seems to be really off on some of the weapons. some are exactly proportional to the character, like how they would look in rea"
+        },
+        {
+          "author": "BigTrice",
+          "text": "Looks satisfying!"
+        },
+        {
+          "author": "Academic-Bench-8828",
+          "text": "it's a good start but could be a lot better- the gun flash needs to briefly create a second shadow of the player and effect the surroundings more. The"
+        }
+      ]
+    },
+    {
+      "title": "Godot's best ambassadors",
+      "link": "https://www.reddit.com/r/godot/comments/1xqaf55/godots_best_ambassadors/",
+      "source": "Reddit | godot",
+      "time": "2026-11-07T16:28:12",
+      "content": "https://i.redd.it/fa6u7azwv70i1.jpeg",
+      "comments": [
+        {
+          "author": "Cash4Duranium",
+          "text": "With Unity about to be bought by that Saudi private equity money, this only gets more and more real. Support Godot!"
+        },
+        {
+          "author": "teino22",
+          "text": "What happened?"
+        },
+        {
+          "author": "PatchyWhiskers",
+          "text": "I was on the fence about whether my next project was going to be Unity or Godot and now I’m sure it will be Godot. Even if they don’t end up selling t"
+        }
+      ]
+    },
+    {
+      "title": "Added tank to my game just because I can",
+      "link": "https://www.reddit.com/r/indiegames/comments/1xq9z3j/added_tank_to_my_game_just_because_i_can/",
+      "source": "Reddit | IndieGames",
+      "time": "2026-11-07T16:09:27",
+      "content": "https://v.redd.it/drim1nwbs70i1",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
+        },
+        {
+          "author": "markmarker",
+          "text": "this is actually pretty cool"
+        },
+        {
+          "author": "PersonalRate5105",
+          "text": "Scheiße"
+        }
+      ]
+    },
+    {
+      "title": "I no longer agree with the game's direction but don't want to lose my hard work",
+      "link": "https://www.reddit.com/r/gamedev/comments/1xq8scz/i_no_longer_agree_with_the_games_direction_but/",
+      "source": "Reddit | gamedev",
+      "time": "2026-11-07T15:18:48",
+      "content": "A friend and i built a game for a hackathon event a while ago. We're not the best of friends but we used to get along well. We decided it would be fun to redo some things ( we didn't win or place at all lol), make them better and release it ourselves because we loved the idea that much. Over time th",
+      "comments": [
+        {
+          "author": "PhilippTheProgrammer",
+          "text": "That's the #2 reason why hobby projects between friends die: creative differences. Reason #1 is one person feeling like they are putting in more work"
+        },
+        {
+          "author": "PJmath",
+          "text": "Effort is rarely wasted. You retain all the skills you improved and the experience you got, and that's the most valuable thing. In this case, probably"
+        },
+        {
+          "author": "PresentationNew5976",
+          "text": "Damn. That is a shame. Thing is, is there anything you could still work on as part of a portfolio? It doesn’t have to be released to be a demonstratio"
+        }
+      ]
+    },
+    {
+      "title": "A few days ago I released my first game on Steam! :)",
+      "link": "https://www.reddit.com/r/indiegames/comments/1xq8lma/a_few_days_ago_i_released_my_first_game_on_steam/",
+      "source": "Reddit | IndieGames",
+      "time": "2026-11-07T15:10:37",
+      "content": "https://v.redd.it/gde2s7xzh70i1",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
+        },
+        {
+          "author": "SecondShiftDev",
+          "text": "Wow the physics and the picture is good as hell"
+        },
+        {
+          "author": "CloudStrife012",
+          "text": "Will a young child enjoy this, or are the puzzles too complex?"
+        }
+      ]
+    },
+    {
+      "title": "Retro Song Bird: Plug in any Game Boy cartridge to hear the soundtrack",
+      "link": "https://www.retrosongbird.com/",
+      "source": "HN | retrosongbird.com",
+      "time": "2026-11-07T15:06:54",
+      "content": "Score: 63 | Comments: 16",
+      "comments": []
+    },
+    {
+      "title": "[FOR HIRE] 3d artist and Animator",
+      "link": "https://www.reddit.com/r/gameDevJobs/comments/1xq8egc/for_hire_3d_artist_and_animator/",
+      "source": "Reddit | gamedevjobs",
+      "time": "2026-11-07T15:01:57",
+      "content": "https://www.reddit.com/gallery/1xq8egc",
+      "comments": []
+    },
+    {
+      "title": "I interviewed the former Technical Director of Rockstar Games and the developer of the GTA games!",
+      "link": "https://www.reddit.com/r/gamedev/comments/1xq7u15/i_interviewed_the_former_technical_director_of/",
+      "source": "Reddit | gamedev",
+      "time": "2026-11-07T14:36:28",
+      "content": "https://x.com/andersonburak/status/2118984853412622466",
+      "comments": [
+        {
+          "author": "Klightgrove",
+          "text": "https://preview.redd.it/1sn4ol2j880i1.png?width=167&format=png&auto=webp&s=92e41ac3c607975bcca76a90b725efde1f56ccc7 Added to the highlights. Also poi"
+        },
+        {
+          "author": "cremvursti",
+          "text": "I feel like Obbe has already spoken at length about his time with Rockstar and we aren't really finding any new info from this type of interview. Gi"
+        },
+        {
+          "author": "None",
+          "text": "[removed]"
+        }
+      ]
+    },
+    {
+      "title": "150+ Hours of Hand-Coded Godot ZERO AI Courses",
+      "link": "https://www.reddit.com/r/godot/comments/1xq7lle/150_hours_of_handcoded_godot_zero_ai_courses/",
+      "source": "Reddit | godot",
+      "time": "2026-11-07T14:25:54",
+      "content": "https://i.redd.it/yo65nej3a70i1.png",
+      "comments": [
+        {
+          "author": "NoahPete",
+          "text": "Just a heads up for folks using this guy’s stuff: his tutorials/solutions “work” in the same way hot gluing training wheels to a broken bike will “wor"
+        },
+        {
+          "author": "lesschalkmoresighs",
+          "text": "People like you are why the Godot community is so amazing. Thanks!"
+        },
+        {
+          "author": "Adventurous-Hunter98",
+          "text": "Dont mind the ai comments, I checked out the courses and you are doing a great job for the community, I hope you will get more support on what you are"
+        }
+      ]
+    },
+    {
+      "title": "The $8 Linux Computer (2022)",
+      "link": "http://thelittleengineerthatcould.blogspot.com/2022/12/the-8-linux-computer.html",
+      "source": "HN | thelittleengineerthatcould.blogspot.com",
+      "time": "2026-11-07T14:00:20",
+      "content": "Score: 219 | Comments: 87",
+      "comments": []
+    },
+    {
+      "title": "UE 5.8 DX12 startup crash in NVIDIA driver during PSO precaching — how do you handle this?",
+      "link": "https://www.reddit.com/r/unrealengine/comments/1xq6zv3/ue_58_dx12_startup_crash_in_nvidia_driver_during/",
+      "source": "Reddit | unrealengine",
+      "time": "2026-11-07T13:58:32",
+      "content": "I’m developing a UE 5.8 horror game using Lumen. One player with an RTX 3050, i7-12700F, and 32 GB RAM crashes shortly after reaching the main menu in DX12. DX11 launches, but our lighting setup relies on Lumen. Two crash reports show an access violation inside `nvwgf2umx`, on a `PSOPrecompilePool`",
+      "comments": [
+        {
+          "author": "heyheyhey27",
+          "text": "In my experience unreal has been pretty buggy with dx12. I often switch to Vulkan to see if the error persists, and if the error message is any cleare"
+        },
+        {
+          "author": "IlWudi",
+          "text": "Double check if you have the proper swap chain for the dlss plugin and fg on or off; if your game is offering fsr4 be sure they are not competing for"
+        },
+        {
+          "author": "Bulky_Ad_3710",
+          "text": "Does temporarily disabling PSO precaching change whether the crash happens? I’d use that as a diagnostic, not a shipping fix. Compare the same build w"
+        }
+      ]
+    },
+    {
+      "title": "Every Windows 11 app should kill Electron, and Discord just showed why",
+      "link": "https://www.windowslatest.com/2026/11/06/every-windows-11-app-should-kill-electron-and-discord-just-showed-why-no-starting-screen-and-70-less-ram-even-with-two-accounts-signed-in/",
+      "source": "HN | windowslatest.com",
+      "time": "2026-11-07T11:11:15",
+      "content": "Score: 288 | Comments: 254",
+      "comments": []
+    },
+    {
+      "title": "Every Mac comes with an (undocumented) family member classifier",
+      "link": "https://8rank.ai/game/apple-intelligence-personal-knowledge-graph",
+      "source": "HN | 8rank.ai",
+      "time": "2026-11-07T09:46:03",
+      "content": "Score: 677 | Comments: 372",
+      "comments": []
+    },
+    {
+      "title": "Need for Speed Underground 2 online in the browser",
+      "link": "https://nfsu2.xyz/",
+      "source": "HN | nfsu2.xyz",
+      "time": "2026-11-07T09:36:36",
+      "content": "Score: 911 | Comments: 242",
       "comments": []
     },
     {
@@ -405,18 +1109,261 @@
       "content": "would you recommend it to others? do you regret it?",
       "comments": [
         {
+          "author": "ModelYodel",
+          "text": "I still work in AAA, we'll see what the next layoff round has to say about that though. You're working with the most incredible technical and creativ"
+        },
+        {
+          "author": "BubbishBoi",
+          "text": "25 years+ as an AAA dev, currently a principal designer on a game that pretty much everyone has played at some point in time. Every studio is compl"
+        },
+        {
           "author": "dnabyun",
           "text": "Been in games for 30 years. Loved it but it depends on the culture and people around you. Lots of overtime though."
-        },
-        {
-          "author": "08148694",
-          "text": "If you want to have the passion for gaming sucked out of you I’d highly recommend it"
-        },
-        {
-          "author": "Glad-Lynx-5007",
-          "text": "Hard work, lots of overtime including 7 day weeks approaching deadlines. Surrounded by people at the top of their game, mostly. Fine if you're young o"
         }
       ]
+    },
+    {
+      "title": "Asahi Linux Progress Linux 7.3",
+      "link": "https://asahilinux.org/2026/11/progress-report-7-3/",
+      "source": "HN | asahilinux.org",
+      "time": "2026-11-07T05:20:18",
+      "content": "Score: 358 | Comments: 305",
+      "comments": []
+    },
+    {
+      "title": "We shot a Bloodborne-inspired music video using Unreal Engine and an LED wall. Here's the BTS.",
+      "link": "https://www.reddit.com/r/unrealengine/comments/1xppz2t/we_shot_a_bloodborneinspired_music_video_using/",
+      "source": "Reddit | unrealengine",
+      "time": "2026-11-06T22:21:32",
+      "content": "https://www.youtube.com/watch?v=psm44CYFKKo&t=6s",
+      "comments": []
+    },
+    {
+      "title": "Godot Showcase - Sovereign Tower",
+      "link": "https://www.reddit.com/r/godot/comments/1xpo12m/godot_showcase_sovereign_tower/",
+      "source": "Reddit | godot",
+      "time": "2026-11-06T21:00:17",
+      "content": "https://godotengine.org/article/godot-showcase-sovereign-tower/",
+      "comments": []
+    },
+    {
+      "title": "Sailing Solo Around Britain",
+      "link": "https://sites.google.com/view/sailing-solo-around-britain/leisure-27-dark-star",
+      "source": "HN | sites.google.com",
+      "time": "2026-11-05T13:23:40",
+      "content": "Score: 3 | Comments: 1",
+      "comments": []
+    },
+    {
+      "title": "Uranium cubes reveal why the German nuclear project failed",
+      "link": "https://arstechnica.com/science/2026/11/uranium-cubes-reveal-why-the-german-nuclear-project-failed/",
+      "source": "HN | arstechnica.com",
+      "time": "2026-11-05T10:52:04",
+      "content": "Score: 109 | Comments: 71",
+      "comments": []
+    },
+    {
+      "title": "Turning every radio into a radar",
+      "link": "https://tiaminetworks.com/turning-every-radio-into-a-radar/",
+      "source": "HN | tiaminetworks.com",
+      "time": "2026-11-03T21:18:48",
+      "content": "Score: 53 | Comments: 12",
+      "comments": []
+    },
+    {
+      "title": "Amsterdam School",
+      "link": "https://architecture-history.org/schools/AMSTERDAM%20SCHOOL.html",
+      "source": "HN | architecture-history.org",
+      "time": "2026-11-03T13:50:19",
+      "content": "Score: 20 | Comments: 3",
+      "comments": []
+    },
+    {
+      "title": "Indie Games Discord Server!",
+      "link": "https://www.reddit.com/r/indiegames/comments/1xm4ej2/indie_games_discord_server/",
+      "source": "Reddit | IndieGames",
+      "time": "2026-11-02T18:00:15",
+      "content": "https://discord.gg/Ufs7DjnwQ2",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
+        }
+      ]
+    },
+    {
+      "title": "Dev snapshot: Godot 4.8 beta 2",
+      "link": "https://www.reddit.com/r/godot/comments/1xipmrh/dev_snapshot_godot_48_beta_2/",
+      "source": "Reddit | godot",
+      "time": "2026-10-29T17:00:17",
+      "content": "https://godotengine.org/article/dev-snapshot-godot-4-8-beta-2/",
+      "comments": [
+        {
+          "author": "hasslehaas",
+          "text": "4.8 is the first Godot release I’m really excited to update to. Gimme my streaming textures!"
+        },
+        {
+          "author": "dave0814",
+          "text": "I've switched a large Godot project from 4.7.2-stable to 4.8-beta2, and it seems to run properly, both in the Godot editor and in an Android (Pixel 8)"
+        },
+        {
+          "author": "NeoCiber",
+          "text": "Didn't expected to see Hermicraft here"
+        }
+      ]
+    },
+    {
+      "title": "Please report all these AI slop posts",
+      "link": "https://www.reddit.com/r/indiegames/comments/1xip8l2/please_report_all_these_ai_slop_posts/",
+      "source": "Reddit | IndieGames",
+      "time": "2026-10-29T16:46:09",
+      "content": "I’m not here to debate the ethics of AI. Games that use Generative ai for artwork, visuals, music, and capsule images are banned on this sub, and have been for quite a while. Every day there are dozens of low effort, AI slop “games” posted and downvoted to hell. Just downvoting does not stop this pr",
+      "comments": [
+        {
+          "author": "AutoModerator",
+          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
+        },
+        {
+          "author": "TheLastCraftsman",
+          "text": "I just browsed through and reported a bunch of them earlier today. Was thinking to myself \"I wonder if I'm bothering the mods too much with all these"
+        },
+        {
+          "author": "Doomgriever",
+          "text": "![gif](giphy|11tRBTlIlmb10k) Me at least 50 times a day in all indie subs 👌 (and thank you for your service!)"
+        }
+      ]
+    },
+    {
+      "title": "The 2026 Official Unity Game Jam starts November 5th!",
+      "link": "https://www.reddit.com/r/Unity3D/comments/1xcuvxh/the_2026_official_unity_game_jam_starts_november/",
+      "source": "Reddit | Unity3D",
+      "time": "2026-10-22T21:08:27",
+      "content": "https://itch.io/jam/official-unity-game-jam-2026",
+      "comments": [
+        {
+          "author": "db9dreamer",
+          "text": "Are we allowed to submit games that don't use generative AI?"
+        },
+        {
+          "author": "timee_bot",
+          "text": "View in your timezone: [Thursday, Nov 5 at 9 AM PT][1] [Saturday, Nov 14 at 12:00 UTC][2] [1]: https://timee.io/20261105T1700?tl=The+2026+Offic"
+        },
+        {
+          "author": "Room_Horror",
+          "text": "Para entrar na Jam junto do meu time eu preciso entrar na Jam sem inscreve-los? Porque ao entrar na Jam não existe nenhuma informação sobre definir mi"
+        }
+      ]
+    },
+    {
+      "title": "/r/GameDev Updates to Rule 3: No Showcasing Projects",
+      "link": "https://www.reddit.com/r/gamedev/comments/1x6s41i/rgamedev_updates_to_rule_3_no_showcasing_projects/",
+      "source": "Reddit | gamedev",
+      "time": "2026-10-15T17:35:09",
+      "content": "This community has often allowed people to share free tools and assets but it has always been subjective about where the line crosses regarding self-promotion or showing off a project. We have updated rule 3 to make the following clarification about sharing tools in our community: 1. All of your ow",
+      "comments": [
+        {
+          "author": "Klightgrove",
+          "text": "I keep seeing some confusion in the comments so I updated the post, but we have not updated any rules to disallow paid tools. That part of rule 6 has"
+        },
+        {
+          "author": "RiftHunter4",
+          "text": "All tools, engines, and assets should be held to the same standard. We don't ban Unity3D or Unreal or any of the either tools for having paid services"
+        },
+        {
+          "author": "JorbyPls",
+          "text": ">However we are still left with the open-ended question of **what to do with assets**. People often share free assets made by others, but what is the"
+        }
+      ]
+    },
+    {
+      "title": "[MegaThread] Account blocked and suspended",
+      "link": "https://www.reddit.com/r/Unity3D/comments/1x5tldh/megathread_account_blocked_and_suspended/",
+      "source": "Reddit | Unity3D",
+      "time": "2026-10-14T15:03:32",
+      "content": "Hello everyone, As many of you may have noticed; some people had their account(s) suspended. In the past few weeks Unity had sent out emails to reset your two-factor authentication (2FA) credentials. **So what's next? See the link on bottom of this post OR Unity's pinned comment.** **September 14t",
+      "comments": [
+        {
+          "author": "unitytechnologies",
+          "text": "Hi everyone, Edit: A new knowledge base article on contacting support and what to send is available [here](https://support.unity.com/hc/en-us/article"
+        },
+        {
+          "author": "tolgatr0n",
+          "text": "They only said you can be suspended in just the last e-mail which is 3 days ago. Other e-mails were advising to remove your 2FA and didn't mention any"
+        },
+        {
+          "author": "10mo3",
+          "text": "I'm sorry but did y'all not see this becoming a massive issue? 😭"
+        }
+      ]
+    },
+    {
+      "title": "- ATTENTION: READ ME - Job Board: Rules & Guidelines",
+      "link": "https://www.reddit.com/r/gameDevJobs/comments/xdpu98/attention_read_me_job_board_rules_guidelines/",
+      "source": "Reddit | gamedevjobs",
+      "time": "2022-09-14T02:22:05",
+      "content": "***Scroll down to see the job board rules under the existing updates*** \\---- **UPDATE 2022-09-13** **ATTENTION ALL ARTISTS AND ASSET SELLERS/GAME PROMOTERS**. This is a job board for those looking for work in the game industry or posting jobs related to the game industry. **THIS IS NOT** [Starvi",
+      "comments": [
+        {
+          "author": "hsandt",
+          "text": "Hey, I'm new here and I noticed in Rule 3. that you mention \"gameDevClassifieds\" but the sentence makes it sound like you mean \"this subreddit\" aka \"g"
+        },
+        {
+          "author": "None",
+          "text": "[removed]"
+        },
+        {
+          "author": "OutrageousLadder7065",
+          "text": "Are indi game developers encouraged not to reach out to these artists? I'm just curious as a indie game developer looking for artists right now in the"
+        }
+      ]
+    },
+    {
+      "title": "你不知道的客户端开发：AI 时代下的选型、原生与借力",
+      "link": "https://sspai.com/post/117713",
+      "source": "少数派",
+      "time": "Wed, 04 Nov 2026 20:25:55 +0800",
+      "content": "选型选得好只是锦上添花，最终还是要先把用户最真实的需求解决好。查看全文",
+      "comments": []
+    },
+    {
+      "title": "盖棺论定说生软（上）：三个医生的龙之狂想",
+      "link": "https://www.gcores.com/radios/221703",
+      "source": "Gaming | 机核网",
+      "time": "Thu, 05 Nov 2026 23:00:00 +0800",
+      "content": "本期时间轴制作：猪猪米三十一年尘与土，生软盖棺论定时。10月21日，生软Bioware官宣关闭，旗下IP去向未卜。天下没有不散的宴席，此刻，我们将目光投向宴席开始之处：这既是三个医生的碰撞与莽撞，也是一个神话时代的开始与破灭。与生软的草创密切相关的，是当时的Interplay，后来的黑岛、黑曜石，以及更多曾经在游戏业界响亮的名号。从医疗服务软件开始，直到《博德之门》和《质量效应》，生软开辟了怎样的道路？“生软魔法”为何在最开始是祝福，在后来却变成了诅咒？请听本期节目",
+      "comments": []
+    },
+    {
+      "title": "派早报：腾讯发布混元 Hy4 正式版，Google 调整 K-12 教育 AI 政策等",
+      "link": "https://sspai.com/post/118498",
+      "source": "少数派",
+      "time": "Thu, 05 Nov 2026 08:16:27 +0800",
+      "content": "少数派的近期动态全新设计复古设备鼠标垫上架，会员可使用点数兑换。前往选购iPhone少数派共创配件上新，自由选择保护、充电、线缆和支架组合。欢迎选购你可能错过的文章国行Apple智能上手：这些功能已经 ...查看全文",
+      "comments": []
+    },
+    {
+      "title": "点击冒险新作《鬼灵精探》免费试玩版现已上线，向LucasArts经典冒险游戏致敬",
+      "link": "https://www.gcores.com/articles/221994",
+      "source": "Gaming | 机核网",
+      "time": "Fri, 06 Nov 2026 08:40:00 +0800",
+      "content": "Daedalic Entertainment 与 Three Headed Monkey Studios 宣布，《鬼灵精探》免费试玩版现已在 Steam 上线，并参与本期 Steam Point &amp; Click Showcase。这款2D点击式冒险游戏以精心绘制的像素画面、黑色幽默和年轻的吉吉，重现 LucasArts 经典作品的独特魅力。吉吉解决问题的方式，往往会让家具难以幸免。 试玩版提供英语和德语配音，并支持包含中文在内的12种语言的文本本地化。 &lt;内嵌内容，请前往机核查看&gt;当吉吉发现脾气暴躁的爷爷乔瓦尼竟是一位传奇驱魔人时，她得出了一个再合理不过的结论：既然鬼魂能来人间，那她也能去阴间把奶奶带回来。一只名叫 Baron Butt(er)nut 的南瓜恶魔愿意帮忙。至于先征得爷爷同意嘛——目前还不是优先事项。 &lt;内嵌内容，请前往机核查看&gt;在完整冒险中，经典谜题将与提示系统、得分系统、可交互区域高亮和快速旅行等现代功能相结合。Three Headed Monkey Studios 将对经典冒险游戏的热爱写进了工作室名称；而 Daedalic Entertainment 曾推出《德波尼亚》系列、《Edna &amp; Harvey》《The Whispered World》《肯·福莱特的〈圣殿春秋〉》等经典冒险游戏，自然也深谙此道。 Three Headed Monkey Studios 团队表示：“我们希望这段试玩能带给玩家一种感觉，就像重新发现了一款被遗忘多年的90年代冒险游戏——只不过这次不需要软盘。游戏在保留经典点击式冒险核心体验的同时，也加入了现代玩法功能：与古怪的角色交谈、组合各种荒诞物品，以及在谜题终于迎刃而解时收获的那份喜悦。希望大家玩得开心！吉吉肯定会玩得很开心。”试玩版将在 Steam Point &amp; Click Showcase结束后继续开放。《鬼灵精探》计划于2027年登陆 PC、Mac、Xbox、PlayStation、Nintendo Switch 和 Nintendo Switch 2。 语言支持：英语、德语提供完整本地化；简体中文、法语、意大利语、西班牙语（西班牙）、葡萄牙语（巴西）、繁体中文、日语、韩语、波兰语和俄语提供界面与字幕本地化。",
+      "comments": []
+    },
+    {
+      "title": "元语咒 Vol.197｜一代 VR 机皇 Quest 2 终将老去，但总有年轻人正在玩 Steam Frame",
+      "link": "https://www.gcores.com/radios/222005",
+      "source": "Gaming | 机核网",
+      "time": "Fri, 06 Nov 2026 06:00:00 +0800",
+      "content": "本期主播与嘉宾： 脑潘 / 潮玩VR 直播录制时间： 2026-11-04 ----------------------- 主观片面的「元语咒」是专属 VR 玩家的闲聊电台。 以虚拟圆桌的形式在某平台直播，以一刀不剪的态度在这里回放。 ----------------------- 章节： 00:00 “你最近还在玩 VR 游戏吗？” 02:44 新闻1：Quest 2 和 Quest Pro 即将落幕 25:44 新闻2：PS VR2 北美日区多地停售 35:19 “那你玩啥呢？” 36:37 「沉星之序」 37:37 「星球大战：银河赛车手」 42:02 「影之刃零」 46:56 为了那个游戏，准备带 PS5 出差了 51:22 「深空当铺：可能是偷的」 54:22 「影之刃零影之刃零影之刃零」 59:45 锐评：INMO影目新品发布 01:04:48 盘点：又一大波 VR Mod 社区项目 01:15:58 听友互动",
+      "comments": []
+    },
+    {
+      "title": "Precalculated tree fellings in my MMO",
+      "link": "https://www.reddit.com/r/gamedev/comments/1xpzrkt/precalculated_tree_fellings_in_my_mmo/",
+      "source": "Reddit | gamedev",
+      "time": "2026-11-07T06:41:59",
+      "content": "https://m.youtube.com/watch?v=jBgwq66WMrc",
+      "comments": []
     },
     {
       "title": "[FOR HIRE] UI/UX artist and logo designer Looking for work! DM for more info.",
@@ -424,14 +1371,6 @@
       "source": "Reddit | gamedevjobs",
       "time": "2026-11-07T06:06:49",
       "content": "https://www.reddit.com/gallery/1xpz6au",
-      "comments": []
-    },
-    {
-      "title": "Asahi Linux Progress Linux 7.3",
-      "link": "https://asahilinux.org/2026/11/progress-report-7-3/",
-      "source": "HN | asahilinux.org",
-      "time": "2026-11-07T05:20:18",
-      "content": "Score: 45 | Comments: 10",
       "comments": []
     },
     {
@@ -601,14 +1540,6 @@
       ]
     },
     {
-      "title": "We shot a Bloodborne-inspired music video using Unreal Engine and an LED wall. Here's the BTS.",
-      "link": "https://www.reddit.com/r/unrealengine/comments/1xppz2t/we_shot_a_bloodborneinspired_music_video_using/",
-      "source": "Reddit | unrealengine",
-      "time": "2026-11-06T22:21:32",
-      "content": "https://www.youtube.com/watch?v=psm44CYFKKo&t=6s",
-      "comments": []
-    },
-    {
       "title": "cooked a tool that stops NPCs from moving in perfect sync. One switch, same crowd.",
       "link": "https://www.reddit.com/r/unrealengine/comments/1xppm6v/cooked_a_tool_that_stops_npcs_from_moving_in/",
       "source": "Reddit | unrealengine",
@@ -649,14 +1580,6 @@
           "text": "I just finished control resonant today so I’m finding this to go incredibly hard"
         }
       ]
-    },
-    {
-      "title": "Godot Showcase - Sovereign Tower",
-      "link": "https://www.reddit.com/r/godot/comments/1xpo12m/godot_showcase_sovereign_tower/",
-      "source": "Reddit | godot",
-      "time": "2026-11-06T21:00:17",
-      "content": "https://godotengine.org/article/godot-showcase-sovereign-tower/",
-      "comments": []
     },
     {
       "title": "I have to admit, I'm very proud of the little game we are making 🌻",
@@ -1169,103 +2092,6 @@
       "comments": []
     },
     {
-      "title": "Indie Games Discord Server!",
-      "link": "https://www.reddit.com/r/indiegames/comments/1xm4ej2/indie_games_discord_server/",
-      "source": "Reddit | IndieGames",
-      "time": "2026-11-02T18:00:15",
-      "content": "https://discord.gg/Ufs7DjnwQ2",
-      "comments": [
-        {
-          "author": "AutoModerator",
-          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
-        }
-      ]
-    },
-    {
-      "title": "Dev snapshot: Godot 4.8 beta 2",
-      "link": "https://www.reddit.com/r/godot/comments/1xipmrh/dev_snapshot_godot_48_beta_2/",
-      "source": "Reddit | godot",
-      "time": "2026-10-29T17:00:17",
-      "content": "https://godotengine.org/article/dev-snapshot-godot-4-8-beta-2/",
-      "comments": [
-        {
-          "author": "hasslehaas",
-          "text": "4.8 is the first Godot release I’m really excited to update to. Gimme my streaming textures!"
-        },
-        {
-          "author": "dave0814",
-          "text": "I've switched a large Godot project from 4.7.2-stable to 4.8-beta2, and it seems to run properly, both in the Godot editor and in an Android (Pixel 8)"
-        },
-        {
-          "author": "NeoCiber",
-          "text": "Didn't expected to see Hermicraft here"
-        }
-      ]
-    },
-    {
-      "title": "Please report all these AI slop posts",
-      "link": "https://www.reddit.com/r/indiegames/comments/1xip8l2/please_report_all_these_ai_slop_posts/",
-      "source": "Reddit | IndieGames",
-      "time": "2026-10-29T16:46:09",
-      "content": "I’m not here to debate the ethics of AI. Games that use Generative ai for artwork, visuals, music, and capsule images are banned on this sub, and have been for quite a while. Every day there are dozens of low effort, AI slop “games” posted and downvoted to hell. Just downvoting does not stop this pr",
-      "comments": [
-        {
-          "author": "AutoModerator",
-          "text": "Thanks for posting to r/IndieGames! Please take a look at the rules in our sidebar to ensure that your post abides by them! If you need any assistance"
-        },
-        {
-          "author": "TheLastCraftsman",
-          "text": "I just browsed through and reported a bunch of them earlier today. Was thinking to myself \"I wonder if I'm bothering the mods too much with all these"
-        },
-        {
-          "author": "Doomgriever",
-          "text": "![gif](giphy|11tRBTlIlmb10k) Me at least 50 times a day in all indie subs 👌 (and thank you for your service!)"
-        }
-      ]
-    },
-    {
-      "title": "The 2026 Official Unity Game Jam starts November 5th!",
-      "link": "https://www.reddit.com/r/Unity3D/comments/1xcuvxh/the_2026_official_unity_game_jam_starts_november/",
-      "source": "Reddit | Unity3D",
-      "time": "2026-10-22T21:08:27",
-      "content": "https://itch.io/jam/official-unity-game-jam-2026",
-      "comments": [
-        {
-          "author": "db9dreamer",
-          "text": "Are we allowed to submit games that don't use generative AI?"
-        },
-        {
-          "author": "timee_bot",
-          "text": "View in your timezone: [Thursday, Nov 5 at 9 AM PT][1] [Saturday, Nov 14 at 12:00 UTC][2] [1]: https://timee.io/20261105T1700?tl=The+2026+Offic"
-        },
-        {
-          "author": "Room_Horror",
-          "text": "Para entrar na Jam junto do meu time eu preciso entrar na Jam sem inscreve-los? Porque ao entrar na Jam não existe nenhuma informação sobre definir mi"
-        }
-      ]
-    },
-    {
-      "title": "/r/GameDev Updates to Rule 3: No Showcasing Projects",
-      "link": "https://www.reddit.com/r/gamedev/comments/1x6s41i/rgamedev_updates_to_rule_3_no_showcasing_projects/",
-      "source": "Reddit | gamedev",
-      "time": "2026-10-15T17:35:09",
-      "content": "This community has often allowed people to share free tools and assets but it has always been subjective about where the line crosses regarding self-promotion or showing off a project. We have updated rule 3 to make the following clarification about sharing tools in our community: 1. All of your ow",
-      "comments": [
-        {
-          "author": "Klightgrove",
-          "text": "I keep seeing some confusion in the comments so I updated the post, but we have not updated any rules to disallow paid tools. That part of rule 6 has"
-        },
-        {
-          "author": "RiftHunter4",
-          "text": "All tools, engines, and assets should be held to the same standard. We don't ban Unity3D or Unreal or any of the either tools for having paid services"
-        },
-        {
-          "author": "JorbyPls",
-          "text": ">However we are still left with the open-ended question of **what to do with assets**. People often share free assets made by others, but what is the"
-        }
-      ]
-    },
-    {
       "title": "Introducing BRUTAL | A free C# framework that helped RimWorld make its own engine and break free of Unity. Now you can too.",
       "link": "https://www.reddit.com/r/gamedev/comments/1x6d2dy/introducing_brutal_a_free_c_framework_that_helped/",
       "source": "Reddit | gamedev",
@@ -1283,48 +2109,6 @@
         {
           "author": "Thatar",
           "text": "I love frameworks. I learned how to make games using XNA. There is something cozy about never leaving your coding ide when making a game. And its a fa"
-        }
-      ]
-    },
-    {
-      "title": "[MegaThread] Account blocked and suspended",
-      "link": "https://www.reddit.com/r/Unity3D/comments/1x5tldh/megathread_account_blocked_and_suspended/",
-      "source": "Reddit | Unity3D",
-      "time": "2026-10-14T15:03:32",
-      "content": "Hello everyone, As many of you may have noticed; some people had their account(s) suspended. In the past few weeks Unity had sent out emails to reset your two-factor authentication (2FA) credentials. **So what's next? See the link on bottom of this post OR Unity's pinned comment.** **September 14t",
-      "comments": [
-        {
-          "author": "unitytechnologies",
-          "text": "Hi everyone, Edit: A new knowledge base article on contacting support and what to send is available [here](https://support.unity.com/hc/en-us/article"
-        },
-        {
-          "author": "tolgatr0n",
-          "text": "They only said you can be suspended in just the last e-mail which is 3 days ago. Other e-mails were advising to remove your 2FA and didn't mention any"
-        },
-        {
-          "author": "10mo3",
-          "text": "I'm sorry but did y'all not see this becoming a massive issue? 😭"
-        }
-      ]
-    },
-    {
-      "title": "- ATTENTION: READ ME - Job Board: Rules & Guidelines",
-      "link": "https://www.reddit.com/r/gameDevJobs/comments/xdpu98/attention_read_me_job_board_rules_guidelines/",
-      "source": "Reddit | gamedevjobs",
-      "time": "2022-09-14T02:22:05",
-      "content": "***Scroll down to see the job board rules under the existing updates*** \\---- **UPDATE 2022-09-13** **ATTENTION ALL ARTISTS AND ASSET SELLERS/GAME PROMOTERS**. This is a job board for those looking for work in the game industry or posting jobs related to the game industry. **THIS IS NOT** [Starvi",
-      "comments": [
-        {
-          "author": "hsandt",
-          "text": "Hey, I'm new here and I noticed in Rule 3. that you mention \"gameDevClassifieds\" but the sentence makes it sound like you mean \"this subreddit\" aka \"g"
-        },
-        {
-          "author": "None",
-          "text": "[removed]"
-        },
-        {
-          "author": "OutrageousLadder7065",
-          "text": "Are indi game developers encouraged not to reach out to these artists? I'm just curious as a indie game developer looking for artists right now in the"
         }
       ]
     },
